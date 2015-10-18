@@ -13,6 +13,7 @@ Then FlatUI is the theme you’re looking for :-)!
 
 Todo’s
 ------------------------------
+* Cleaning up
 * Styling BG’s of input? (Dunno if it is the right thing to do..)
 
 How to use
