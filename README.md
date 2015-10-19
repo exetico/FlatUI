@@ -30,7 +30,7 @@ Extra tips + Colorreq.
 
 Other themes
 * [Agent34](https://code.google.com/p/agent34/)
-* [Agent46](https://code.google.com/p/agent46/
+* [Agent46](https://code.google.com/p/agent46/)
 * [ruTorrent-themes collection](https://github.com/InAnimaTe/rutorrent-themes/)
 
 Thanks to
