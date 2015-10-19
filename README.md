@@ -28,13 +28,14 @@ Extra tips + Colorreq.
 * Need another color-version of FlatUI theme? Just make a report with the color scales, and i will try to fix it and add it to the repo.
 * Looking for a mobile-theme, i really recommend you to use [this plugin, by xombiemp](https://github.com/xombiemp/rutorrentMobile).
 
+Other themes
+* [Agent34](https://code.google.com/p/agent34/)
+* [Agent46](https://code.google.com/p/agent46/
+* [ruTorrent-themes collection](https://github.com/InAnimaTe/rutorrent-themes/)
 
 Thanks to
 ------------------------------
 * rTorrent and ruTorrent
-* Agent34: https://code.google.com/p/agent34/
-* Agent46: https://code.google.com/p/agent46/
-* OblivionBlue: https://github.com/InAnimaTe/rutorrent-themes/tree/master/OblivionBlue
 * FontAwesome
 * GoogleFonts
 
