@@ -41,7 +41,7 @@ Thanks to
 
 Screenshots
 ------------------------------
-### FlatUI_Dark
+__FlatUI_Dark__
 * [Overview](http://i.imgur.com/JG8QhqQ.png)
 * [Options, Menu and other stuff](http://i.imgur.com/9UIIN6N.png)
 
