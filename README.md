@@ -55,6 +55,7 @@ FAQ
 **2nd of the lines, is colored at the screenshots. It's missing here?**...
 
 Please navigate to the ruTorrent options, and enable "Alternative list background colour"
+<img title="Enable alternative list background colour" src="http://i.imgur.com/Z5tt8Kv.png" width="96%">
 
 Colorrequests & Tips
 ------------------------------
