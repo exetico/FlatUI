@@ -478,18 +478,18 @@ div#tdetails,div.tab,.stable-body tr,div.dlg-header,div#tdcont,div.table_tab,div
 	background-color:#fff!important;
 }
 
-.catpanel:hover,div#t:hover,div#CatList:hover,li.cat:hover,a.dlg-close:hover,input.Button:hover,.lm li a:hover{color:#000!important;}
+.catpanel:hover,div#t:hover,div#CatList:hover,li.cat:hover,a.dlg-close:hover,input.Button:hover,.lm li a:hover{color:#fff!important;}
 
 /* BG's used for li.sel and BG for hover-items */
 div#CatList ul li.sel,div#t a:hover,#query,.tabbar li:hover,
 .tabbar li#tab_gcont.selected a,.stable-body tr.selected td,
 #stg_c,.stg_con, div#stg .lm,div.dlg-window,ul.CMenu,ul.CMenu li,ul.CMenu li:hover ul li a,ul.CMenu li a.dis:hover,ul.CMenu li > ul > li > a.dis:hover,.lf_rru,.rf_rru,.lf_rru li input.TextboxNormal
 {
-	background-color:#FAFAFA!important;
+	background-color:#fafafa!important;
 }
 
-div#CatList ul li,.tabbar li.selected,input.Button,div#lcont,.stable-body tr:nth-child(odd),div.graph_tab,#hostcookies,.lm li a.focus,.lf_rru li input.TextboxFocus,input, select,textarea{
-	background-color:#eeeeee!important;
+div#CatList ul li,.tabbar li.selected,input.Button,div#lcont,div.graph_tab,#hostcookies,.lm li a.focus,.lf_rru li input.TextboxFocus,input, select,textarea,.stable-body tr.odd td{
+	background-color:#eee!important;
 }
 
 /* Font and FontAweSome icons Colors */
@@ -514,7 +514,7 @@ div#lcont,div#tdetails,a,.tabbar li.selected a,input.Button,.stable-body tr,.sta
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: #F6F5F6;
+	background-color: #f6f5f6;
 }
 
 /* Using #262626 in RGB - Boxshadow to settingsbox */

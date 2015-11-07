@@ -488,7 +488,7 @@ div#CatList ul li.sel,div#t a:hover,#query,.tabbar li:hover,
 	background-color:#2B2B2B!important;
 }
 
-div#CatList ul li,.tabbar li.selected,input.Button,div#lcont,.stable-body tr:nth-child(odd),div.graph_tab,#hostcookies,.lm li a.focus,.lf_rru li input.TextboxFocus,input, select,textarea{
+div#CatList ul li,.tabbar li.selected,input.Button,div#lcont,div.graph_tab,#hostcookies,.lm li a.focus,.lf_rru li input.TextboxFocus,input, select,textarea,.stable-body tr.odd td{
 	background-color:#333333!important;
 }
 
