@@ -50,6 +50,12 @@ sudo git clone git://github.com/exetico/FlatUI && cd FlatUI && sudo mv FlatUI_* 
 
 The lazy-script will move all themes to the current location, and remove the folder called "FlatUI".
 
+FAQ
+------------------------------
+**2nd of the lines, is colored at the screenshots. It's missing here?**...
+
+Please navigate to the ruTorrent options, and enable "Alternative list background colour"
+
 Colorrequests & Tips
 ------------------------------
 * Need another color-version of FlatUI theme? Just make a report with the color scales, and i will try to fix it and add it to the repo.
