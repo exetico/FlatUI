@@ -11,7 +11,7 @@ This is the theme you’re looking for :-)!
 
 Todo’s
 ------------------------------
-* Cleaning up (inuse images)
+* Cleaning up (images etc.)
 * Style of mnu_webuiUpdateToggle (pause webUI) and mnu_webuiRefresh (Refresh webUI)
 * Toggle-buttons
 
