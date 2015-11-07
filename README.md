@@ -15,7 +15,7 @@ Todo’s
 * Style of mnu_webuiUpdateToggle (pause webUI) and mnu_webuiRefresh (Refresh webUI)
 * Toggle-buttons
 
-Please let me know, if you find areas, where the style is missing. Just make a issue, and please me be know your version of ruTorrent and rTorrent. Remember to add a link, if the issues is with a specific plugin.
+Please let me know, if you find areas, where the style is missing. Just make a issue, and please let me know your current version of ruTorrent and rTorrent. Remember to add a link, if the issues is with a specific plugin. Screenshots of the issue, will be much appreciated. 
 
 Screenshots
 ------------------------------
