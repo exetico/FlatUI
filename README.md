@@ -28,6 +28,11 @@ __FlatUI_Light__
 <img title="Overview" src="http://i.imgur.com/OS1ArXa.png" width="48%">
 <img title="Options, Menu and other stuff" src="http://i.imgur.com/FGLSrTm.png" width="48%">
 
+__FlatUI_Material__
+
+<img title="Overview" src="http://i.imgur.com/kvnQPXx.png" width="48%">
+<img title="Options, Menu and other stuff" src="http://i.imgur.com/IqXlkuf.png" width="48%">
+
 How to use
 ------------------------------
 * Install the [theme plugin](https://code.google.com/p/rutorrent/wiki/PluginTheme).
