@@ -1,4 +1,4 @@
-/* Light theme styling by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing */
+/* FlatUI - Simple and beautiful theme for ruTorrent by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing - Download at https://github.com/exetico/FlatUI */
 
 @font-face {
   font-family: 'FontAwesome';
@@ -12,7 +12,7 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 
 /* Adding FontAwesome for spefic classes - Before and after content filter */
-.catpanel:before,.catpanel:after,div#t div:after,#-_-_-all-_-_-:before,#-_-_-dls-_-_-:before,#-_-_-com-_-_-:before,#-_-_-act-_-_-:before,#-_-_-iac-_-_-:before,#-_-_-err-_-_-:before,
+.catpanel:before,.catpanel:after,div#t div:after,div#t div:before,#-_-_-all-_-_-:before,#-_-_-dls-_-_-:before,#-_-_-com-_-_-:before,#-_-_-act-_-_-:before,#-_-_-iac-_-_-:before,#-_-_-err-_-_-:before,
 #StatusBar #meter-disk-td:before,
 #st_up > tbody > tr > td:nth-child(1):before,
 #st_down > tbody > tr > td:nth-child(1):before,
@@ -88,11 +88,6 @@ div#t div.TB_Separator {width: 1px; height: 22px; margin: 7px 0 0 5px; padding: 
 
 /* TOPMENU */
 
-/* Removing default images in menu and the background of the menu*/
-div#t div, div#t{
-	background-image:none!important;
-}
-
 /* Hiding content to Search in top-menu */
 #rrow > td:nth-child(3){display:none;}
 
@@ -101,6 +96,25 @@ div#t div:after{
 	margin-top:-6px;
 	margin-left:3px;
 }
+
+/* Stack box-icon around menu-icons */
+div#t div:before{
+	font-size: 25px;
+	margin-top:-4px;
+	margin-left:3px;
+}
+
+/* Smaller size for icons on box */
+div#t div#webuiUpdateToggle:after,div#t div#webuiRefresh:after{
+  font-size: 9px;
+  vertical-align: top;
+  margin-left: -14px;
+}
+
+/* Removing known styled images in menu and the background of the menu. OBS: If you want to remove all unknown images in menu, please use: div#t div, div#t{background-image:none!important;} - This change to support unknown plugins as well.*/
+div#t,div#t div#add, div#t div#create, div#t div#remove, div#t div#start, div#t div#pause, div#t div#stop, div#t div#moveu, div#t div#moved, div#t div#search, div#t div#rss, div#t div#setting, div#t div#help, div#t div#plugins
+{background-image:none!important;}
+
 
 /* FontAwesomeIcons Icons */
 div#t div#add:after {content: "\f0ac";}
@@ -117,6 +131,10 @@ div#t div#setting:after {content: "\f013";}
 
 div#t div#help:after {content: "\f129";padding-left:5px;} /* Use f128 (?) insted of (i) */
 div#t div#plugins:after {content: "\f12e";}
+
+/* Add-on style: PluginPause - https://github.com/Novik/ruTorrent/wiki/PluginPause */
+div#t div#webuiUpdateToggle:before {content: "\f096";} div#t div#webuiUpdateToggle:after {content: "\f04c";} div#t div#webuiUpdateToggle{background-image:none!important;}
+div#t div#webuiRefresh:before {content: "\f096";} div#t div#webuiRefresh:after {content: "\f021";} div#t div#webuiRefresh{background-image:none!important;}
 
 #rc {float: right; }
 #go {display:none;}
@@ -305,7 +323,7 @@ span#loadimg {padding: 20px; background: transparent url(images/ajax-loader.gif)
 div#HDivider:hover, div#VDivider:hover { background: #A0A0A0; }
 textarea { overflow: auto; }
 
-.catpanel { background: url(images/pnl_open.gif) 2px no-repeat; background-color: #F0F0F0; border:none; padding: 2px 21px; margin: 0px; line-height: 16px; font-size: 12px; 
+.catpanel { background: url(images/pnl_open.gif) 2px no-repeat; background-color: #F0F0F0; border:none; padding: 2px 21px; margin: 0px; line-height: 16px; font-size: 12px;
 font-family: 'Titillium Web', sans-serif;
 cursor: pointer; -moz-user-select: none; -moz-user-focus: normal; -moz-user-input: enabled }
 
@@ -338,8 +356,8 @@ div#tadd select { width: 220px }
 
 #bf {white-space:pre}
 
-@media only screen and (orientation:portrait) 
-{ 
+@media only screen and (orientation:portrait)
+{
 	#go { display: none }
 	#query { width: 80px }
 }

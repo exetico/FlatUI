@@ -12,10 +12,9 @@ This is the theme you’re looking for :-)!
 Todo’s
 ------------------------------
 * Cleaning up (images etc.)
-* Style of mnu_webuiUpdateToggle (pause webUI) and mnu_webuiRefresh (Refresh webUI)
 * Toggle-buttons
 
-Please let me know, if you find areas, where the style is missing. Just make a issue, and please let me know your current version of ruTorrent and rTorrent. Remember to add a link, if the issues is with a specific plugin. Screenshots of the issue, will be much appreciated. 
+Please let me know, if you find areas, where the style is missing. Just make a issue, and please let me know your current version of ruTorrent and rTorrent. Remember to add a link, if the issues is with a specific plugin. Screenshots of the issue, will be much appreciated.
 
 Screenshots
 ------------------------------
@@ -57,9 +56,10 @@ FAQ
 Please navigate to the ruTorrent options, and enable "Alternative list background colour"
 <img title="Enable alternative list background colour" src="http://i.imgur.com/Z5tt8Kv.png" width="96%">
 
-Colorrequests & Tips
+Colorrequests & Tips and other requests
 ------------------------------
 * Need another color-version of FlatUI theme? Just make a report with the color scales, and i will try to fix it and add it to the repo.
+* Need styling for a specific plugin to ruTorrent? Please let me know. Just create a new issue, and i will give it a look.
 * Looking for a mobile-theme? I really recommend you to use [this plugin, by xombiemp](https://github.com/xombiemp/rutorrentMobile).
 
 Other themes
