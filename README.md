@@ -42,8 +42,8 @@ How to use
 
 Lazy-script for adding the themes
 ------------------------------
-__Navigate to the themes folder ({rutorrentdir}/plugins/theme/themes) before running the script!__
-Make sure `curl` and `git` is installed before running.
+__Navigate to the themes folder ({rutorrentdir}/plugins/theme/themes) before running the script!__  
+Make sure `curl` and `git` is installed before running below command.
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/exetico/FlatUI/master/install.sh)"
 ```
