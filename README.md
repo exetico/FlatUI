@@ -42,14 +42,10 @@ How to use
 
 Lazy-script for adding the themes
 ------------------------------
-__Navigate to the themes folder ({rutorrentdir}/plugins/theme/themes) before running the script!__
-```sh
-git clone git://github.com/exetico/FlatUI && cd FlatUI && mv FlatUI_* ../ && cd .. && sudo rm -r FlatUI && echo -e "\n\033[1mThe following themes is now added from Git:\033[0m \n" FlatUI*
+__Navigate to the themes folder ({rutorrentdir}/plugins/theme/themes) before running the script!__  
+Make sure `curl` and `git` is installed before running below command.
 ```
-
-With sudo (Optinal)
-```sh
-sudo git clone git://github.com/exetico/FlatUI && cd FlatUI && sudo mv FlatUI_* ../ && cd .. && sudo rm -r FlatUI && sudo echo -e "\n\033[1mThe following themes is now added from Git:\033[0m \n" FlatUI*
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/exetico/FlatUI/master/install.sh)"
 ```
 
 The lazy-script will move all themes to the current location, and remove the folder called "FlatUI".
