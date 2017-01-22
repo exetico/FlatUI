@@ -1,5 +1,10 @@
 /* FlatUI - Simple and beautiful theme for ruTorrent by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing - Download at https://github.com/exetico/FlatUI */
 
+/*  Since 23 Jan - 2017. Bug-fixes and so on */
+.dlg-window{height:auto!important;}
+
+
+/* Original content */
 @font-face {
   font-family: 'FontAwesome';
   src: url('fonts/fontawesome-webfont.eot');
