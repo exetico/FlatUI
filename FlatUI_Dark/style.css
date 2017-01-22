@@ -146,6 +146,10 @@ div#t div#plugins:after {content: "\f12e";}
 div#t div#webuiUpdateToggle:before {content: "\f096";} div#t div#webuiUpdateToggle:after {content: "\f04c";} div#t div#webuiUpdateToggle{background-image:none!important;}
 div#t div#webuiRefresh:before {content: "\f096";} div#t div#webuiRefresh:after {content: "\f021";} div#t div#webuiRefresh{background-image:none!important;}
 
+/* Add-on style: autodl-rutorrent - https://github.com/autodl-community/autodl-rutorrent */
+div#t div#autodl-tb:after {content: "\f0d0";}
+div#t div#autodl-tb{background-image:none!important;}
+
 #rc {float: right; }
 #go {display:none;}
 #query {margin:;height:100%;padding: 0px 7px;}
