@@ -9,7 +9,7 @@ FlatUI will give you:
 
 This is the theme you’re looking for :-)!
 
-Todo’s
+Todo’s (*Sometime before 2020*)
 ------------------------------
 * Cleaning up (images etc.)
 * Toggle-buttons
