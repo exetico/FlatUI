@@ -1,562 +1,8725 @@
-/* FlatUI - Simple and beautiful theme for ruTorrent by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing - Download at https://github.com/exetico/FlatUI */
-
-/*  Since 23 Jan - 2017. Bug-fixes and so on */
-.dlg-window{height:auto!important;}
-
-
-/* Original content */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot');
-  src: url('fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2') format('woff2'), url('fonts/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+/* Icons, Fonts and Branding */
+/* Welcome Message */
+@import url("https://fonts.googleapis.com/css?family=Biryani:400,900");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+div#cover #msg {
+  border: none;
+  font-size: 0;
 }
-@import url(https://fonts.googleapis.com/css?family=Biryani:400,900);
 
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+div#cover #msg span#loadimg {
+  background-image: none !important;
+  height: 0px;
+}
+
+div#cover #msg span#loadimg:before {
+  content: "FlatUI";
+  font-size: 30px;
+}
+
+div#cover #msg span#loadimg:after {
+  content: "by exetico";
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+/*!
+ * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+div#t div#add:after,
+div#t div#create:after,
+div#t div#remove:after,
+div#t div#start:after,
+div#t div#pause:after,
+div#t div#stop:after,
+div#t div#moveu:after,
+div#t div#moved:after,
+div#t div#search:after,
+div#t div#rss:after,
+div#t div#setting:after,
+div#t div#help:after,
+div#t div#plugins:after,
+div#t div#webuiUpdateToggle:after,
+div#t div#webuiRefresh:after,
+div#t div#autodl-tb:after,
+.catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before,
+.catpanel#plabel:before,
+.catpanel#pstate:before,
+.catpanel#psearch:before,
+.catpanel#ptrackers:before,
+.catpanel#prss:before,
+#StatusBar #meter-disk-td:before,
+#StatusBar #meter-cpu-td:before,
+#st_up > tbody > tr > td:nth-child(1):before,
+#st_down > tbody > tr > td:nth-child(1):before,
+#StatusBar #port-td.pstatus0:before,
+#StatusBar #port-td.pstatus1:before,
+#StatusBar #port-td.pstatus2:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+#dlgHelp-header.dlg-header:before,
+#dlgAddRSS-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tadd-header:before,
+div#tcreate-header:before,
+div#t #ind:after,
+#StatusBar #firstStatusRow td.statusCell #st_system .stval:before,
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before,
+#-_-_-dls-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-err-_-_-:before,
+li.teg:before,
+.far,
+div#t div#webuiUpdateToggle:before,
+div#t div#webuiRefresh:before,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+div#t div#add:after, div#t div#create:after, div#t div#remove:after, div#t div#start:after, div#t div#pause:after, div#t div#stop:after, div#t div#moveu:after, div#t div#moved:after, div#t div#search:after, div#t div#rss:after, div#t div#setting:after, div#t div#help:after, div#t div#plugins:after, div#t div#webuiUpdateToggle:before, div#t div#webuiUpdateToggle:after, div#t div#webuiRefresh:before, div#t div#webuiRefresh:after, div#t div#autodl-tb:after, .catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before, .catpanel#plabel:before, .catpanel#pstate:before, .catpanel#psearch:before, .catpanel#ptrackers:before, .catpanel#prss:before, #StatusBar #meter-disk-td:before, #StatusBar #meter-cpu-td:before, #st_up > tbody > tr > td:nth-child(1):before, #st_down > tbody > tr > td:nth-child(1):before, #StatusBar #port-td.pstatus0:before, #StatusBar #port-td.pstatus1:before, #StatusBar #port-td.pstatus2:before, #stg-header.dlg-header:before, #dlgEditRules-header.dlg-header:before, #dlgHelp-header.dlg-header:before, #dlgAddRSS-header.dlg-header:before, div#dlgLabel div.dlg-header:before, div#yesnoDlg-header:before, div#tadd-header:before, div#tcreate-header:before, div#t #ind:after, #StatusBar #firstStatusRow td.statusCell #st_system .stval:before, #-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before, #-_-_-dls-_-_-:before, #-_-_-com-_-_-:before, #-_-_-act-_-_-:before, #-_-_-iac-_-_-:before, #-_-_-err-_-_-:before, li.teg:before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -.0667em;
+}
+
+.fa-xs {
+  font-size: .75em;
+}
+
+.fa-sm {
+  font-size: .875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+  padding: .2em .25em .15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+div#t div.fa-pull-left#add:after,
+div#t div.fa-pull-left#create:after,
+div#t div.fa-pull-left#remove:after,
+div#t div.fa-pull-left#start:after,
+div#t div.fa-pull-left#pause:after,
+div#t div.fa-pull-left#stop:after,
+div#t div.fa-pull-left#moveu:after,
+div#t div.fa-pull-left#moved:after,
+div#t div.fa-pull-left#search:after,
+div#t div.fa-pull-left#rss:after,
+div#t div.fa-pull-left#setting:after,
+div#t div.fa-pull-left#help:after,
+div#t div.fa-pull-left#plugins:after,
+div#t div.fa-pull-left#webuiUpdateToggle:after,
+div#t div.fa-pull-left#webuiRefresh:after,
+div#t div.fa-pull-left#autodl-tb:after,
+.fa-pull-left.catpanel#flabel:not(:first-of-type):before,
+.fa-pull-left.catpanel#fsearch:before,
+.fa-pull-left.catpanel#plabel:before,
+.fa-pull-left.catpanel#pstate:before,
+.fa-pull-left.catpanel#psearch:before,
+.fa-pull-left.catpanel#ptrackers:before,
+.fa-pull-left.catpanel#prss:before,
+#StatusBar .fa-pull-left#meter-disk-td:before,
+#StatusBar .fa-pull-left#meter-cpu-td:before,
+#st_up > tbody > tr > td.fa-pull-left:nth-child(1):before,
+#st_down > tbody > tr > td.fa-pull-left:nth-child(1):before,
+#StatusBar .fa-pull-left#port-td.pstatus0:before,
+#StatusBar .fa-pull-left#port-td.pstatus1:before,
+#StatusBar .fa-pull-left#port-td.pstatus2:before,
+.fa-pull-left#stg-header.dlg-header:before,
+.fa-pull-left#dlgEditRules-header.dlg-header:before,
+.fa-pull-left#dlgHelp-header.dlg-header:before,
+.fa-pull-left#dlgAddRSS-header.dlg-header:before,
+div#dlgLabel div.fa-pull-left.dlg-header:before,
+div.fa-pull-left#yesnoDlg-header:before,
+div.fa-pull-left#tadd-header:before,
+div.fa-pull-left#tcreate-header:before,
+div#t .fa-pull-left#ind:after,
+#StatusBar #firstStatusRow td.statusCell #st_system .fa-pull-left.stval:before,
+.fa-pull-left#-_-_-all-_-_-:before,
+.fa-pull-left.-_-_-all-_-_-:before,
+div#CatList ul li.fa-pull-left.RSS:before,
+.fa-pull-left#-_-_-dls-_-_-:before,
+.fa-pull-left#-_-_-com-_-_-:before,
+.fa-pull-left#-_-_-act-_-_-:before,
+.fa-pull-left#-_-_-iac-_-_-:before,
+.fa-pull-left#-_-_-err-_-_-:before,
+li.fa-pull-left.teg:before,
+.far.fa-pull-left,
+div#t div.fa-pull-left#webuiUpdateToggle:before,
+div#t div.fa-pull-left#webuiRefresh:before,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: .3em;
+}
+
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+div#t div.fa-pull-right#add:after,
+div#t div.fa-pull-right#create:after,
+div#t div.fa-pull-right#remove:after,
+div#t div.fa-pull-right#start:after,
+div#t div.fa-pull-right#pause:after,
+div#t div.fa-pull-right#stop:after,
+div#t div.fa-pull-right#moveu:after,
+div#t div.fa-pull-right#moved:after,
+div#t div.fa-pull-right#search:after,
+div#t div.fa-pull-right#rss:after,
+div#t div.fa-pull-right#setting:after,
+div#t div.fa-pull-right#help:after,
+div#t div.fa-pull-right#plugins:after,
+div#t div.fa-pull-right#webuiUpdateToggle:after,
+div#t div.fa-pull-right#webuiRefresh:after,
+div#t div.fa-pull-right#autodl-tb:after,
+.fa-pull-right.catpanel#flabel:not(:first-of-type):before,
+.fa-pull-right.catpanel#fsearch:before,
+.fa-pull-right.catpanel#plabel:before,
+.fa-pull-right.catpanel#pstate:before,
+.fa-pull-right.catpanel#psearch:before,
+.fa-pull-right.catpanel#ptrackers:before,
+.fa-pull-right.catpanel#prss:before,
+#StatusBar .fa-pull-right#meter-disk-td:before,
+#StatusBar .fa-pull-right#meter-cpu-td:before,
+#st_up > tbody > tr > td.fa-pull-right:nth-child(1):before,
+#st_down > tbody > tr > td.fa-pull-right:nth-child(1):before,
+#StatusBar .fa-pull-right#port-td.pstatus0:before,
+#StatusBar .fa-pull-right#port-td.pstatus1:before,
+#StatusBar .fa-pull-right#port-td.pstatus2:before,
+.fa-pull-right#stg-header.dlg-header:before,
+.fa-pull-right#dlgEditRules-header.dlg-header:before,
+.fa-pull-right#dlgHelp-header.dlg-header:before,
+.fa-pull-right#dlgAddRSS-header.dlg-header:before,
+div#dlgLabel div.fa-pull-right.dlg-header:before,
+div.fa-pull-right#yesnoDlg-header:before,
+div.fa-pull-right#tadd-header:before,
+div.fa-pull-right#tcreate-header:before,
+div#t .fa-pull-right#ind:after,
+#StatusBar #firstStatusRow td.statusCell #st_system .fa-pull-right.stval:before,
+.fa-pull-right#-_-_-all-_-_-:before,
+.fa-pull-right.-_-_-all-_-_-:before,
+div#CatList ul li.fa-pull-right.RSS:before,
+.fa-pull-right#-_-_-dls-_-_-:before,
+.fa-pull-right#-_-_-com-_-_-:before,
+.fa-pull-right#-_-_-act-_-_-:before,
+.fa-pull-right#-_-_-iac-_-_-:before,
+.fa-pull-right#-_-_-err-_-_-:before,
+li.fa-pull-right.teg:before,
+.far.fa-pull-right,
+div#t div.fa-pull-right#webuiUpdateToggle:before,
+div#t div.fa-pull-right#webuiRefresh:before,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: .3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+readers do not read off random characters that represent icons */
+.fa-500px:before {
+  content: "\f26e";
+}
+
+.fa-accessible-icon:before {
+  content: "\f368";
+}
+
+.fa-accusoft:before {
+  content: "\f369";
+}
+
+.fa-acquisitions-incorporated:before {
+  content: "\f6af";
+}
+
+.fa-ad:before {
+  content: "\f641";
+}
+
+.fa-address-book:before {
+  content: "\f2b9";
+}
+
+.fa-address-card:before {
+  content: "\f2bb";
+}
+
+.fa-adjust:before {
+  content: "\f042";
+}
+
+.fa-adn:before {
+  content: "\f170";
+}
+
+.fa-adobe:before {
+  content: "\f778";
+}
+
+.fa-adversal:before {
+  content: "\f36a";
+}
+
+.fa-affiliatetheme:before {
+  content: "\f36b";
+}
+
+.fa-air-freshener:before {
+  content: "\f5d0";
+}
+
+.fa-airbnb:before {
+  content: "\f834";
+}
+
+.fa-algolia:before {
+  content: "\f36c";
+}
+
+.fa-align-center:before {
+  content: "\f037";
+}
+
+.fa-align-justify:before {
+  content: "\f039";
+}
+
+.fa-align-left:before {
+  content: "\f036";
+}
+
+.fa-align-right:before {
+  content: "\f038";
+}
+
+.fa-alipay:before {
+  content: "\f642";
+}
+
+.fa-allergies:before {
+  content: "\f461";
+}
+
+.fa-amazon:before {
+  content: "\f270";
+}
+
+.fa-amazon-pay:before {
+  content: "\f42c";
+}
+
+.fa-ambulance:before {
+  content: "\f0f9";
+}
+
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+
+.fa-amilia:before {
+  content: "\f36d";
+}
+
+.fa-anchor:before {
+  content: "\f13d";
+}
+
+.fa-android:before {
+  content: "\f17b";
+}
+
+.fa-angellist:before {
+  content: "\f209";
+}
+
+.fa-angle-double-down:before {
+  content: "\f103";
+}
+
+.fa-angle-double-left:before {
+  content: "\f100";
+}
+
+.fa-angle-double-right:before {
+  content: "\f101";
+}
+
+.fa-angle-double-up:before {
+  content: "\f102";
+}
+
+.fa-angle-down:before {
+  content: "\f107";
+}
+
+.fa-angle-left:before {
+  content: "\f104";
+}
+
+.fa-angle-right:before {
+  content: "\f105";
+}
+
+.fa-angle-up:before {
+  content: "\f106";
+}
+
+.fa-angry:before {
+  content: "\f556";
+}
+
+.fa-angrycreative:before {
+  content: "\f36e";
+}
+
+.fa-angular:before {
+  content: "\f420";
+}
+
+.fa-ankh:before {
+  content: "\f644";
+}
+
+.fa-app-store:before {
+  content: "\f36f";
+}
+
+.fa-app-store-ios:before {
+  content: "\f370";
+}
+
+.fa-apper:before {
+  content: "\f371";
+}
+
+.fa-apple:before {
+  content: "\f179";
+}
+
+.fa-apple-alt:before {
+  content: "\f5d1";
+}
+
+.fa-apple-pay:before {
+  content: "\f415";
+}
+
+.fa-archive:before {
+  content: "\f187";
+}
+
+.fa-archway:before {
+  content: "\f557";
+}
+
+.fa-arrow-alt-circle-down:before {
+  content: "\f358";
+}
+
+.fa-arrow-alt-circle-left:before {
+  content: "\f359";
+}
+
+.fa-arrow-alt-circle-right:before {
+  content: "\f35a";
+}
+
+.fa-arrow-alt-circle-up:before {
+  content: "\f35b";
+}
+
+.fa-arrow-circle-down:before {
+  content: "\f0ab";
+}
+
+.fa-arrow-circle-left:before {
+  content: "\f0a8";
+}
+
+.fa-arrow-circle-right:before {
+  content: "\f0a9";
+}
+
+.fa-arrow-circle-up:before {
+  content: "\f0aa";
+}
+
+.fa-arrow-down:before {
+  content: "\f063";
+}
+
+.fa-arrow-left:before {
+  content: "\f060";
+}
+
+.fa-arrow-right:before {
+  content: "\f061";
+}
+
+.fa-arrow-up:before {
+  content: "\f062";
+}
+
+.fa-arrows-alt:before {
+  content: "\f0b2";
+}
+
+.fa-arrows-alt-h:before {
+  content: "\f337";
+}
+
+.fa-arrows-alt-v:before {
+  content: "\f338";
+}
+
+.fa-artstation:before {
+  content: "\f77a";
+}
+
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+
+.fa-asterisk:before {
+  content: "\f069";
+}
+
+.fa-asymmetrik:before {
+  content: "\f372";
+}
+
+.fa-at:before {
+  content: "\f1fa";
+}
+
+.fa-atlas:before {
+  content: "\f558";
+}
+
+.fa-atlassian:before {
+  content: "\f77b";
+}
+
+.fa-atom:before {
+  content: "\f5d2";
+}
+
+.fa-audible:before {
+  content: "\f373";
+}
+
+.fa-audio-description:before {
+  content: "\f29e";
+}
+
+.fa-autoprefixer:before {
+  content: "\f41c";
+}
+
+.fa-avianex:before {
+  content: "\f374";
+}
+
+.fa-aviato:before {
+  content: "\f421";
+}
+
+.fa-award:before {
+  content: "\f559";
+}
+
+.fa-aws:before {
+  content: "\f375";
+}
+
+.fa-baby:before {
+  content: "\f77c";
+}
+
+.fa-baby-carriage:before {
+  content: "\f77d";
+}
+
+.fa-backspace:before {
+  content: "\f55a";
+}
+
+.fa-backward:before {
+  content: "\f04a";
+}
+
+.fa-bacon:before {
+  content: "\f7e5";
+}
+
+.fa-bacteria:before {
+  content: "\e059";
+}
+
+.fa-bacterium:before {
+  content: "\e05a";
+}
+
+.fa-bahai:before {
+  content: "\f666";
+}
+
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+
+.fa-balance-scale-left:before {
+  content: "\f515";
+}
+
+.fa-balance-scale-right:before {
+  content: "\f516";
+}
+
+.fa-ban:before {
+  content: "\f05e";
+}
+
+.fa-band-aid:before {
+  content: "\f462";
+}
+
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+
+.fa-barcode:before {
+  content: "\f02a";
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+.fa-baseball-ball:before {
+  content: "\f433";
+}
+
+.fa-basketball-ball:before {
+  content: "\f434";
+}
+
+.fa-bath:before {
+  content: "\f2cd";
+}
+
+.fa-battery-empty:before {
+  content: "\f244";
+}
+
+.fa-battery-full:before {
+  content: "\f240";
+}
+
+.fa-battery-half:before {
+  content: "\f242";
+}
+
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+
+.fa-battle-net:before {
+  content: "\f835";
+}
+
+.fa-bed:before {
+  content: "\f236";
+}
+
+.fa-beer:before {
+  content: "\f0fc";
+}
+
+.fa-behance:before {
+  content: "\f1b4";
+}
+
+.fa-behance-square:before {
+  content: "\f1b5";
+}
+
+.fa-bell:before {
+  content: "\f0f3";
+}
+
+.fa-bell-slash:before {
+  content: "\f1f6";
+}
+
+.fa-bezier-curve:before {
+  content: "\f55b";
+}
+
+.fa-bible:before {
+  content: "\f647";
+}
+
+.fa-bicycle:before {
+  content: "\f206";
+}
+
+.fa-biking:before {
+  content: "\f84a";
+}
+
+.fa-bimobject:before {
+  content: "\f378";
+}
+
+.fa-binoculars:before {
+  content: "\f1e5";
+}
+
+.fa-biohazard:before {
+  content: "\f780";
+}
+
+.fa-birthday-cake:before {
+  content: "\f1fd";
+}
+
+.fa-bitbucket:before {
+  content: "\f171";
+}
+
+.fa-bitcoin:before {
+  content: "\f379";
+}
+
+.fa-bity:before {
+  content: "\f37a";
+}
+
+.fa-black-tie:before {
+  content: "\f27e";
+}
+
+.fa-blackberry:before {
+  content: "\f37b";
+}
+
+.fa-blender:before {
+  content: "\f517";
+}
+
+.fa-blender-phone:before {
+  content: "\f6b6";
+}
+
+.fa-blind:before {
+  content: "\f29d";
+}
+
+.fa-blog:before {
+  content: "\f781";
+}
+
+.fa-blogger:before {
+  content: "\f37c";
+}
+
+.fa-blogger-b:before {
+  content: "\f37d";
+}
+
+.fa-bluetooth:before {
+  content: "\f293";
+}
+
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+
+.fa-bold:before {
+  content: "\f032";
+}
+
+.fa-bolt:before {
+  content: "\f0e7";
+}
+
+.fa-bomb:before {
+  content: "\f1e2";
+}
+
+.fa-bone:before {
+  content: "\f5d7";
+}
+
+.fa-bong:before {
+  content: "\f55c";
+}
+
+.fa-book:before {
+  content: "\f02d";
+}
+
+.fa-book-dead:before {
+  content: "\f6b7";
+}
+
+.fa-book-medical:before {
+  content: "\f7e6";
+}
+
+.fa-book-open:before {
+  content: "\f518";
+}
+
+.fa-book-reader:before {
+  content: "\f5da";
+}
+
+.fa-bookmark:before {
+  content: "\f02e";
+}
+
+.fa-bootstrap:before {
+  content: "\f836";
+}
+
+.fa-border-all:before {
+  content: "\f84c";
+}
+
+.fa-border-none:before {
+  content: "\f850";
+}
+
+.fa-border-style:before {
+  content: "\f853";
+}
+
+.fa-bowling-ball:before {
+  content: "\f436";
+}
+
+.fa-box:before {
+  content: "\f466";
+}
+
+.fa-box-open:before {
+  content: "\f49e";
+}
+
+.fa-box-tissue:before {
+  content: "\e05b";
+}
+
+.fa-boxes:before {
+  content: "\f468";
+}
+
+.fa-braille:before {
+  content: "\f2a1";
+}
+
+.fa-brain:before {
+  content: "\f5dc";
+}
+
+.fa-bread-slice:before {
+  content: "\f7ec";
+}
+
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+
+.fa-briefcase-medical:before {
+  content: "\f469";
+}
+
+.fa-broadcast-tower:before {
+  content: "\f519";
+}
+
+.fa-broom:before {
+  content: "\f51a";
+}
+
+.fa-brush:before {
+  content: "\f55d";
+}
+
+.fa-btc:before {
+  content: "\f15a";
+}
+
+.fa-buffer:before {
+  content: "\f837";
+}
+
+.fa-bug:before {
+  content: "\f188";
+}
+
+.fa-building:before {
+  content: "\f1ad";
+}
+
+.fa-bullhorn:before {
+  content: "\f0a1";
+}
+
+.fa-bullseye:before {
+  content: "\f140";
+}
+
+.fa-burn:before {
+  content: "\f46a";
+}
+
+.fa-buromobelexperte:before {
+  content: "\f37f";
+}
+
+.fa-bus:before {
+  content: "\f207";
+}
+
+.fa-bus-alt:before {
+  content: "\f55e";
+}
+
+.fa-business-time:before {
+  content: "\f64a";
+}
+
+.fa-buy-n-large:before {
+  content: "\f8a6";
+}
+
+.fa-buysellads:before {
+  content: "\f20d";
+}
+
+.fa-calculator:before {
+  content: "\f1ec";
+}
+
+.fa-calendar:before {
+  content: "\f133";
+}
+
+.fa-calendar-alt:before {
+  content: "\f073";
+}
+
+.fa-calendar-check:before {
+  content: "\f274";
+}
+
+.fa-calendar-day:before {
+  content: "\f783";
+}
+
+.fa-calendar-minus:before {
+  content: "\f272";
+}
+
+.fa-calendar-plus:before {
+  content: "\f271";
+}
+
+.fa-calendar-times:before {
+  content: "\f273";
+}
+
+.fa-calendar-week:before {
+  content: "\f784";
+}
+
+.fa-camera:before {
+  content: "\f030";
+}
+
+.fa-camera-retro:before {
+  content: "\f083";
+}
+
+.fa-campground:before {
+  content: "\f6bb";
+}
+
+.fa-canadian-maple-leaf:before {
+  content: "\f785";
+}
+
+.fa-candy-cane:before {
+  content: "\f786";
+}
+
+.fa-cannabis:before {
+  content: "\f55f";
+}
+
+.fa-capsules:before {
+  content: "\f46b";
+}
+
+.fa-car:before {
+  content: "\f1b9";
+}
+
+.fa-car-alt:before {
+  content: "\f5de";
+}
+
+.fa-car-battery:before {
+  content: "\f5df";
+}
+
+.fa-car-crash:before {
+  content: "\f5e1";
+}
+
+.fa-car-side:before {
+  content: "\f5e4";
+}
+
+.fa-caravan:before {
+  content: "\f8ff";
+}
+
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+
+.fa-caret-left:before {
+  content: "\f0d9";
+}
+
+.fa-caret-right:before {
+  content: "\f0da";
+}
+
+.fa-caret-square-down:before {
+  content: "\f150";
+}
+
+.fa-caret-square-left:before {
+  content: "\f191";
+}
+
+.fa-caret-square-right:before {
+  content: "\f152";
+}
+
+.fa-caret-square-up:before {
+  content: "\f151";
+}
+
+.fa-caret-up:before {
+  content: "\f0d8";
+}
+
+.fa-carrot:before {
+  content: "\f787";
+}
+
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+
+.fa-cart-plus:before {
+  content: "\f217";
+}
+
+.fa-cash-register:before {
+  content: "\f788";
+}
+
+.fa-cat:before {
+  content: "\f6be";
+}
+
+.fa-cc-amazon-pay:before {
+  content: "\f42d";
+}
+
+.fa-cc-amex:before {
+  content: "\f1f3";
+}
+
+.fa-cc-apple-pay:before {
+  content: "\f416";
+}
+
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+
+.fa-cc-discover:before {
+  content: "\f1f2";
+}
+
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+
+.fa-cc-mastercard:before {
+  content: "\f1f1";
+}
+
+.fa-cc-paypal:before {
+  content: "\f1f4";
+}
+
+.fa-cc-stripe:before {
+  content: "\f1f5";
+}
+
+.fa-cc-visa:before {
+  content: "\f1f0";
+}
+
+.fa-centercode:before {
+  content: "\f380";
+}
+
+.fa-centos:before {
+  content: "\f789";
+}
+
+.fa-certificate:before {
+  content: "\f0a3";
+}
+
+.fa-chair:before {
+  content: "\f6c0";
+}
+
+.fa-chalkboard:before {
+  content: "\f51b";
+}
+
+.fa-chalkboard-teacher:before {
+  content: "\f51c";
+}
+
+.fa-charging-station:before {
+  content: "\f5e7";
+}
+
+.fa-chart-area:before {
+  content: "\f1fe";
+}
+
+.fa-chart-bar:before {
+  content: "\f080";
+}
+
+.fa-chart-line:before {
+  content: "\f201";
+}
+
+.fa-chart-pie:before {
+  content: "\f200";
+}
+
+.fa-check:before {
+  content: "\f00c";
+}
+
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+.fa-check-double:before {
+  content: "\f560";
+}
+
+.fa-check-square:before {
+  content: "\f14a";
+}
+
+.fa-cheese:before {
+  content: "\f7ef";
+}
+
+.fa-chess:before {
+  content: "\f439";
+}
+
+.fa-chess-bishop:before {
+  content: "\f43a";
+}
+
+.fa-chess-board:before {
+  content: "\f43c";
+}
+
+.fa-chess-king:before {
+  content: "\f43f";
+}
+
+.fa-chess-knight:before {
+  content: "\f441";
+}
+
+.fa-chess-pawn:before {
+  content: "\f443";
+}
+
+.fa-chess-queen:before {
+  content: "\f445";
+}
+
+.fa-chess-rook:before {
+  content: "\f447";
+}
+
+.fa-chevron-circle-down:before {
+  content: "\f13a";
+}
+
+.fa-chevron-circle-left:before {
+  content: "\f137";
+}
+
+.fa-chevron-circle-right:before {
+  content: "\f138";
+}
+
+.fa-chevron-circle-up:before {
+  content: "\f139";
+}
+
+.fa-chevron-down:before {
+  content: "\f078";
+}
+
+.fa-chevron-left:before {
+  content: "\f053";
+}
+
+.fa-chevron-right:before {
+  content: "\f054";
+}
+
+.fa-chevron-up:before {
+  content: "\f077";
+}
+
+.fa-child:before {
+  content: "\f1ae";
+}
+
+.fa-chrome:before {
+  content: "\f268";
+}
+
+.fa-chromecast:before {
+  content: "\f838";
+}
+
+.fa-church:before {
+  content: "\f51d";
+}
+
+.fa-circle:before {
+  content: "\f111";
+}
+
+.fa-circle-notch:before {
+  content: "\f1ce";
+}
+
+.fa-city:before {
+  content: "\f64f";
+}
+
+.fa-clinic-medical:before {
+  content: "\f7f2";
+}
+
+.fa-clipboard:before {
+  content: "\f328";
+}
+
+.fa-clipboard-check:before {
+  content: "\f46c";
+}
+
+.fa-clipboard-list:before {
+  content: "\f46d";
+}
+
+.fa-clock:before {
+  content: "\f017";
+}
+
+.fa-clone:before {
+  content: "\f24d";
+}
+
+.fa-closed-captioning:before {
+  content: "\f20a";
+}
+
+.fa-cloud:before {
+  content: "\f0c2";
+}
+
+.fa-cloud-download-alt:before {
+  content: "\f381";
+}
+
+.fa-cloud-meatball:before {
+  content: "\f73b";
+}
+
+.fa-cloud-moon:before {
+  content: "\f6c3";
+}
+
+.fa-cloud-moon-rain:before {
+  content: "\f73c";
+}
+
+.fa-cloud-rain:before {
+  content: "\f73d";
+}
+
+.fa-cloud-showers-heavy:before {
+  content: "\f740";
+}
+
+.fa-cloud-sun:before {
+  content: "\f6c4";
+}
+
+.fa-cloud-sun-rain:before {
+  content: "\f743";
+}
+
+.fa-cloud-upload-alt:before {
+  content: "\f382";
+}
+
+.fa-cloudscale:before {
+  content: "\f383";
+}
+
+.fa-cloudsmith:before {
+  content: "\f384";
+}
+
+.fa-cloudversify:before {
+  content: "\f385";
+}
+
+.fa-cocktail:before {
+  content: "\f561";
+}
+
+.fa-code:before {
+  content: "\f121";
+}
+
+.fa-code-branch:before {
+  content: "\f126";
+}
+
+.fa-codepen:before {
+  content: "\f1cb";
+}
+
+.fa-codiepie:before {
+  content: "\f284";
+}
+
+.fa-coffee:before {
+  content: "\f0f4";
+}
+
+.fa-cog:before {
+  content: "\f013";
+}
+
+.fa-cogs:before {
+  content: "\f085";
+}
+
+.fa-coins:before {
+  content: "\f51e";
+}
+
+.fa-columns:before {
+  content: "\f0db";
+}
+
+.fa-comment:before {
+  content: "\f075";
+}
+
+.fa-comment-alt:before {
+  content: "\f27a";
+}
+
+.fa-comment-dollar:before {
+  content: "\f651";
+}
+
+.fa-comment-dots:before {
+  content: "\f4ad";
+}
+
+.fa-comment-medical:before {
+  content: "\f7f5";
+}
+
+.fa-comment-slash:before {
+  content: "\f4b3";
+}
+
+.fa-comments:before {
+  content: "\f086";
+}
+
+.fa-comments-dollar:before {
+  content: "\f653";
+}
+
+.fa-compact-disc:before {
+  content: "\f51f";
+}
+
+.fa-compass:before {
+  content: "\f14e";
+}
+
+.fa-compress:before {
+  content: "\f066";
+}
+
+.fa-compress-alt:before {
+  content: "\f422";
+}
+
+.fa-compress-arrows-alt:before {
+  content: "\f78c";
+}
+
+.fa-concierge-bell:before {
+  content: "\f562";
+}
+
+.fa-confluence:before {
+  content: "\f78d";
+}
+
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+
+.fa-contao:before {
+  content: "\f26d";
+}
+
+.fa-cookie:before {
+  content: "\f563";
+}
+
+.fa-cookie-bite:before {
+  content: "\f564";
+}
+
+.fa-copy:before {
+  content: "\f0c5";
+}
+
+.fa-copyright:before {
+  content: "\f1f9";
+}
+
+.fa-cotton-bureau:before {
+  content: "\f89e";
+}
+
+.fa-couch:before {
+  content: "\f4b8";
+}
+
+.fa-cpanel:before {
+  content: "\f388";
+}
+
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+
+.fa-creative-commons-by:before {
+  content: "\f4e7";
+}
+
+.fa-creative-commons-nc:before {
+  content: "\f4e8";
+}
+
+.fa-creative-commons-nc-eu:before {
+  content: "\f4e9";
+}
+
+.fa-creative-commons-nc-jp:before {
+  content: "\f4ea";
+}
+
+.fa-creative-commons-nd:before {
+  content: "\f4eb";
+}
+
+.fa-creative-commons-pd:before {
+  content: "\f4ec";
+}
+
+.fa-creative-commons-pd-alt:before {
+  content: "\f4ed";
+}
+
+.fa-creative-commons-remix:before {
+  content: "\f4ee";
+}
+
+.fa-creative-commons-sa:before {
+  content: "\f4ef";
+}
+
+.fa-creative-commons-sampling:before {
+  content: "\f4f0";
+}
+
+.fa-creative-commons-sampling-plus:before {
+  content: "\f4f1";
+}
+
+.fa-creative-commons-share:before {
+  content: "\f4f2";
+}
+
+.fa-creative-commons-zero:before {
+  content: "\f4f3";
+}
+
+.fa-credit-card:before {
+  content: "\f09d";
+}
+
+.fa-critical-role:before {
+  content: "\f6c9";
+}
+
+.fa-crop:before {
+  content: "\f125";
+}
+
+.fa-crop-alt:before {
+  content: "\f565";
+}
+
+.fa-cross:before {
+  content: "\f654";
+}
+
+.fa-crosshairs:before {
+  content: "\f05b";
+}
+
+.fa-crow:before {
+  content: "\f520";
+}
+
+.fa-crown:before {
+  content: "\f521";
+}
+
+.fa-crutch:before {
+  content: "\f7f7";
+}
+
+.fa-css3:before {
+  content: "\f13c";
+}
+
+.fa-css3-alt:before {
+  content: "\f38b";
+}
+
+.fa-cube:before {
+  content: "\f1b2";
+}
+
+.fa-cubes:before {
+  content: "\f1b3";
+}
+
+.fa-cut:before {
+  content: "\f0c4";
+}
+
+.fa-cuttlefish:before {
+  content: "\f38c";
+}
+
+.fa-d-and-d:before {
+  content: "\f38d";
+}
+
+.fa-d-and-d-beyond:before {
+  content: "\f6ca";
+}
+
+.fa-dailymotion:before {
+  content: "\e052";
+}
+
+.fa-dashcube:before {
+  content: "\f210";
+}
+
+.fa-database:before {
+  content: "\f1c0";
+}
+
+.fa-deaf:before {
+  content: "\f2a4";
+}
+
+.fa-deezer:before {
+  content: "\e077";
+}
+
+.fa-delicious:before {
+  content: "\f1a5";
+}
+
+.fa-democrat:before {
+  content: "\f747";
+}
+
+.fa-deploydog:before {
+  content: "\f38e";
+}
+
+.fa-deskpro:before {
+  content: "\f38f";
+}
+
+.fa-desktop:before {
+  content: "\f108";
+}
+
+.fa-dev:before {
+  content: "\f6cc";
+}
+
+.fa-deviantart:before {
+  content: "\f1bd";
+}
+
+.fa-dharmachakra:before {
+  content: "\f655";
+}
+
+.fa-dhl:before {
+  content: "\f790";
+}
+
+.fa-diagnoses:before {
+  content: "\f470";
+}
+
+.fa-diaspora:before {
+  content: "\f791";
+}
+
+.fa-dice:before {
+  content: "\f522";
+}
+
+.fa-dice-d20:before {
+  content: "\f6cf";
+}
+
+.fa-dice-d6:before {
+  content: "\f6d1";
+}
+
+.fa-dice-five:before {
+  content: "\f523";
+}
+
+.fa-dice-four:before {
+  content: "\f524";
+}
+
+.fa-dice-one:before {
+  content: "\f525";
+}
+
+.fa-dice-six:before {
+  content: "\f526";
+}
+
+.fa-dice-three:before {
+  content: "\f527";
+}
+
+.fa-dice-two:before {
+  content: "\f528";
+}
+
+.fa-digg:before {
+  content: "\f1a6";
+}
+
+.fa-digital-ocean:before {
+  content: "\f391";
+}
+
+.fa-digital-tachograph:before {
+  content: "\f566";
+}
+
+.fa-directions:before {
+  content: "\f5eb";
+}
+
+.fa-discord:before {
+  content: "\f392";
+}
+
+.fa-discourse:before {
+  content: "\f393";
+}
+
+.fa-disease:before {
+  content: "\f7fa";
+}
+
+.fa-divide:before {
+  content: "\f529";
+}
+
+.fa-dizzy:before {
+  content: "\f567";
+}
+
+.fa-dna:before {
+  content: "\f471";
+}
+
+.fa-dochub:before {
+  content: "\f394";
+}
+
+.fa-docker:before {
+  content: "\f395";
+}
+
+.fa-dog:before {
+  content: "\f6d3";
+}
+
+.fa-dollar-sign:before {
+  content: "\f155";
+}
+
+.fa-dolly:before {
+  content: "\f472";
+}
+
+.fa-dolly-flatbed:before {
+  content: "\f474";
+}
+
+.fa-donate:before {
+  content: "\f4b9";
+}
+
+.fa-door-closed:before {
+  content: "\f52a";
+}
+
+.fa-door-open:before {
+  content: "\f52b";
+}
+
+.fa-dot-circle:before {
+  content: "\f192";
+}
+
+.fa-dove:before {
+  content: "\f4ba";
+}
+
+.fa-download:before {
+  content: "\f019";
+}
+
+.fa-draft2digital:before {
+  content: "\f396";
+}
+
+.fa-drafting-compass:before {
+  content: "\f568";
+}
+
+.fa-dragon:before {
+  content: "\f6d5";
+}
+
+.fa-draw-polygon:before {
+  content: "\f5ee";
+}
+
+.fa-dribbble:before {
+  content: "\f17d";
+}
+
+.fa-dribbble-square:before {
+  content: "\f397";
+}
+
+.fa-dropbox:before {
+  content: "\f16b";
+}
+
+.fa-drum:before {
+  content: "\f569";
+}
+
+.fa-drum-steelpan:before {
+  content: "\f56a";
+}
+
+.fa-drumstick-bite:before {
+  content: "\f6d7";
+}
+
+.fa-drupal:before {
+  content: "\f1a9";
+}
+
+.fa-dumbbell:before {
+  content: "\f44b";
+}
+
+.fa-dumpster:before {
+  content: "\f793";
+}
+
+.fa-dumpster-fire:before {
+  content: "\f794";
+}
+
+.fa-dungeon:before {
+  content: "\f6d9";
+}
+
+.fa-dyalog:before {
+  content: "\f399";
+}
+
+.fa-earlybirds:before {
+  content: "\f39a";
+}
+
+.fa-ebay:before {
+  content: "\f4f4";
+}
+
+.fa-edge:before {
+  content: "\f282";
+}
+
+.fa-edge-legacy:before {
+  content: "\e078";
+}
+
+.fa-edit:before {
+  content: "\f044";
+}
+
+.fa-egg:before {
+  content: "\f7fb";
+}
+
+.fa-eject:before {
+  content: "\f052";
+}
+
+.fa-elementor:before {
+  content: "\f430";
+}
+
+.fa-ellipsis-h:before {
+  content: "\f141";
+}
+
+.fa-ellipsis-v:before {
+  content: "\f142";
+}
+
+.fa-ello:before {
+  content: "\f5f1";
+}
+
+.fa-ember:before {
+  content: "\f423";
+}
+
+.fa-empire:before {
+  content: "\f1d1";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+
+.fa-envelope-open-text:before {
+  content: "\f658";
+}
+
+.fa-envelope-square:before {
+  content: "\f199";
+}
+
+.fa-envira:before {
+  content: "\f299";
+}
+
+.fa-equals:before {
+  content: "\f52c";
+}
+
+.fa-eraser:before {
+  content: "\f12d";
+}
+
+.fa-erlang:before {
+  content: "\f39d";
+}
+
+.fa-ethereum:before {
+  content: "\f42e";
+}
+
+.fa-ethernet:before {
+  content: "\f796";
+}
+
+.fa-etsy:before {
+  content: "\f2d7";
+}
+
+.fa-euro-sign:before {
+  content: "\f153";
+}
+
+.fa-evernote:before {
+  content: "\f839";
+}
+
+.fa-exchange-alt:before {
+  content: "\f362";
+}
+
+.fa-exclamation:before {
+  content: "\f12a";
+}
+
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+
+.fa-exclamation-triangle:before {
+  content: "\f071";
+}
+
+.fa-expand:before {
+  content: "\f065";
+}
+
+.fa-expand-alt:before {
+  content: "\f424";
+}
+
+.fa-expand-arrows-alt:before {
+  content: "\f31e";
+}
+
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+
+.fa-external-link-alt:before {
+  content: "\f35d";
+}
+
+.fa-external-link-square-alt:before {
+  content: "\f360";
+}
+
+.fa-eye:before {
+  content: "\f06e";
+}
+
+.fa-eye-dropper:before {
+  content: "\f1fb";
+}
+
+.fa-eye-slash:before {
+  content: "\f070";
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-facebook-f:before {
+  content: "\f39e";
+}
+
+.fa-facebook-messenger:before {
+  content: "\f39f";
+}
+
+.fa-facebook-square:before {
+  content: "\f082";
+}
+
+.fa-fan:before {
+  content: "\f863";
+}
+
+.fa-fantasy-flight-games:before {
+  content: "\f6dc";
+}
+
+.fa-fast-backward:before {
+  content: "\f049";
+}
+
+.fa-fast-forward:before {
+  content: "\f050";
+}
+
+.fa-faucet:before {
+  content: "\e005";
+}
+
+.fa-fax:before {
+  content: "\f1ac";
+}
+
+.fa-feather:before {
+  content: "\f52d";
+}
+
+.fa-feather-alt:before {
+  content: "\f56b";
+}
+
+.fa-fedex:before {
+  content: "\f797";
+}
+
+.fa-fedora:before {
+  content: "\f798";
+}
+
+.fa-female:before {
+  content: "\f182";
+}
+
+.fa-fighter-jet:before {
+  content: "\f0fb";
+}
+
+.fa-figma:before {
+  content: "\f799";
+}
+
+.fa-file:before {
+  content: "\f15b";
+}
+
+.fa-file-alt:before {
+  content: "\f15c";
+}
+
+.fa-file-archive:before {
+  content: "\f1c6";
+}
+
+.fa-file-audio:before {
+  content: "\f1c7";
+}
+
+.fa-file-code:before {
+  content: "\f1c9";
+}
+
+.fa-file-contract:before {
+  content: "\f56c";
+}
+
+.fa-file-csv:before {
+  content: "\f6dd";
+}
+
+.fa-file-download:before {
+  content: "\f56d";
+}
+
+.fa-file-excel:before {
+  content: "\f1c3";
+}
+
+.fa-file-export:before {
+  content: "\f56e";
+}
+
+.fa-file-image:before {
+  content: "\f1c5";
+}
+
+.fa-file-import:before {
+  content: "\f56f";
+}
+
+.fa-file-invoice:before {
+  content: "\f570";
+}
+
+.fa-file-invoice-dollar:before {
+  content: "\f571";
+}
+
+.fa-file-medical:before {
+  content: "\f477";
+}
+
+.fa-file-medical-alt:before {
+  content: "\f478";
+}
+
+.fa-file-pdf:before {
+  content: "\f1c1";
+}
+
+.fa-file-powerpoint:before {
+  content: "\f1c4";
+}
+
+.fa-file-prescription:before {
+  content: "\f572";
+}
+
+.fa-file-signature:before {
+  content: "\f573";
+}
+
+.fa-file-upload:before {
+  content: "\f574";
+}
+
+.fa-file-video:before {
+  content: "\f1c8";
+}
+
+.fa-file-word:before {
+  content: "\f1c2";
+}
+
+.fa-fill:before {
+  content: "\f575";
+}
+
+.fa-fill-drip:before {
+  content: "\f576";
+}
+
+.fa-film:before {
+  content: "\f008";
+}
+
+.fa-filter:before {
+  content: "\f0b0";
+}
+
+.fa-fingerprint:before {
+  content: "\f577";
+}
+
+.fa-fire:before {
+  content: "\f06d";
+}
+
+.fa-fire-alt:before {
+  content: "\f7e4";
+}
+
+.fa-fire-extinguisher:before {
+  content: "\f134";
+}
+
+.fa-firefox:before {
+  content: "\f269";
+}
+
+.fa-firefox-browser:before {
+  content: "\e007";
+}
+
+.fa-first-aid:before {
+  content: "\f479";
+}
+
+.fa-first-order:before {
+  content: "\f2b0";
+}
+
+.fa-first-order-alt:before {
+  content: "\f50a";
+}
+
+.fa-firstdraft:before {
+  content: "\f3a1";
+}
+
+.fa-fish:before {
+  content: "\f578";
+}
+
+.fa-fist-raised:before {
+  content: "\f6de";
+}
+
+.fa-flag:before {
+  content: "\f024";
+}
+
+.fa-flag-checkered:before {
+  content: "\f11e";
+}
+
+.fa-flag-usa:before {
+  content: "\f74d";
+}
+
+.fa-flask:before {
+  content: "\f0c3";
+}
+
+.fa-flickr:before {
+  content: "\f16e";
+}
+
+.fa-flipboard:before {
+  content: "\f44d";
+}
+
+.fa-flushed:before {
+  content: "\f579";
+}
+
+.fa-fly:before {
+  content: "\f417";
+}
+
+.fa-folder:before {
+  content: "\f07b";
+}
+
+.fa-folder-minus:before {
+  content: "\f65d";
+}
+
+.fa-folder-open:before {
+  content: "\f07c";
+}
+
+.fa-folder-plus:before {
+  content: "\f65e";
+}
+
+.fa-font:before {
+  content: "\f031";
+}
+
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+
+.fa-font-awesome-alt:before {
+  content: "\f35c";
+}
+
+.fa-font-awesome-flag:before {
+  content: "\f425";
+}
+
+.fa-font-awesome-logo-full:before {
+  content: "\f4e6";
+}
+
+.fa-fonticons:before {
+  content: "\f280";
+}
+
+.fa-fonticons-fi:before {
+  content: "\f3a2";
+}
+
+.fa-football-ball:before {
+  content: "\f44e";
+}
+
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+
+.fa-fort-awesome-alt:before {
+  content: "\f3a3";
+}
+
+.fa-forumbee:before {
+  content: "\f211";
+}
+
+.fa-forward:before {
+  content: "\f04e";
+}
+
+.fa-foursquare:before {
+  content: "\f180";
+}
+
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+
+.fa-freebsd:before {
+  content: "\f3a4";
+}
+
+.fa-frog:before {
+  content: "\f52e";
+}
+
+.fa-frown:before {
+  content: "\f119";
+}
+
+.fa-frown-open:before {
+  content: "\f57a";
+}
+
+.fa-fulcrum:before {
+  content: "\f50b";
+}
+
+.fa-funnel-dollar:before {
+  content: "\f662";
+}
+
+.fa-futbol:before {
+  content: "\f1e3";
+}
+
+.fa-galactic-republic:before {
+  content: "\f50c";
+}
+
+.fa-galactic-senate:before {
+  content: "\f50d";
+}
+
+.fa-gamepad:before {
+  content: "\f11b";
+}
+
+.fa-gas-pump:before {
+  content: "\f52f";
+}
+
+.fa-gavel:before {
+  content: "\f0e3";
+}
+
+.fa-gem:before {
+  content: "\f3a5";
+}
+
+.fa-genderless:before {
+  content: "\f22d";
+}
+
+.fa-get-pocket:before {
+  content: "\f265";
+}
+
+.fa-gg:before {
+  content: "\f260";
+}
+
+.fa-gg-circle:before {
+  content: "\f261";
+}
+
+.fa-ghost:before {
+  content: "\f6e2";
+}
+
+.fa-gift:before {
+  content: "\f06b";
+}
+
+.fa-gifts:before {
+  content: "\f79c";
+}
+
+.fa-git:before {
+  content: "\f1d3";
+}
+
+.fa-git-alt:before {
+  content: "\f841";
+}
+
+.fa-git-square:before {
+  content: "\f1d2";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+.fa-github-alt:before {
+  content: "\f113";
+}
+
+.fa-github-square:before {
+  content: "\f092";
+}
+
+.fa-gitkraken:before {
+  content: "\f3a6";
+}
+
+.fa-gitlab:before {
+  content: "\f296";
+}
+
+.fa-gitter:before {
+  content: "\f426";
+}
+
+.fa-glass-cheers:before {
+  content: "\f79f";
+}
+
+.fa-glass-martini:before {
+  content: "\f000";
+}
+
+.fa-glass-martini-alt:before {
+  content: "\f57b";
+}
+
+.fa-glass-whiskey:before {
+  content: "\f7a0";
+}
+
+.fa-glasses:before {
+  content: "\f530";
+}
+
+.fa-glide:before {
+  content: "\f2a5";
+}
+
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+
+.fa-globe:before {
+  content: "\f0ac";
+}
+
+.fa-globe-africa:before {
+  content: "\f57c";
+}
+
+.fa-globe-americas:before {
+  content: "\f57d";
+}
+
+.fa-globe-asia:before {
+  content: "\f57e";
+}
+
+.fa-globe-europe:before {
+  content: "\f7a2";
+}
+
+.fa-gofore:before {
+  content: "\f3a7";
+}
+
+.fa-golf-ball:before {
+  content: "\f450";
+}
+
+.fa-goodreads:before {
+  content: "\f3a8";
+}
+
+.fa-goodreads-g:before {
+  content: "\f3a9";
+}
+
+.fa-google:before {
+  content: "\f1a0";
+}
+
+.fa-google-drive:before {
+  content: "\f3aa";
+}
+
+.fa-google-pay:before {
+  content: "\e079";
+}
+
+.fa-google-play:before {
+  content: "\f3ab";
+}
+
+.fa-google-plus:before {
+  content: "\f2b3";
+}
+
+.fa-google-plus-g:before {
+  content: "\f0d5";
+}
+
+.fa-google-plus-square:before {
+  content: "\f0d4";
+}
+
+.fa-google-wallet:before {
+  content: "\f1ee";
+}
+
+.fa-gopuram:before {
+  content: "\f664";
+}
+
+.fa-graduation-cap:before {
+  content: "\f19d";
+}
+
+.fa-gratipay:before {
+  content: "\f184";
+}
+
+.fa-grav:before {
+  content: "\f2d6";
+}
+
+.fa-greater-than:before {
+  content: "\f531";
+}
+
+.fa-greater-than-equal:before {
+  content: "\f532";
+}
+
+.fa-grimace:before {
+  content: "\f57f";
+}
+
+.fa-grin:before {
+  content: "\f580";
+}
+
+.fa-grin-alt:before {
+  content: "\f581";
+}
+
+.fa-grin-beam:before {
+  content: "\f582";
+}
+
+.fa-grin-beam-sweat:before {
+  content: "\f583";
+}
+
+.fa-grin-hearts:before {
+  content: "\f584";
+}
+
+.fa-grin-squint:before {
+  content: "\f585";
+}
+
+.fa-grin-squint-tears:before {
+  content: "\f586";
+}
+
+.fa-grin-stars:before {
+  content: "\f587";
+}
+
+.fa-grin-tears:before {
+  content: "\f588";
+}
+
+.fa-grin-tongue:before {
+  content: "\f589";
+}
+
+.fa-grin-tongue-squint:before {
+  content: "\f58a";
+}
+
+.fa-grin-tongue-wink:before {
+  content: "\f58b";
+}
+
+.fa-grin-wink:before {
+  content: "\f58c";
+}
+
+.fa-grip-horizontal:before {
+  content: "\f58d";
+}
+
+.fa-grip-lines:before {
+  content: "\f7a4";
+}
+
+.fa-grip-lines-vertical:before {
+  content: "\f7a5";
+}
+
+.fa-grip-vertical:before {
+  content: "\f58e";
+}
+
+.fa-gripfire:before {
+  content: "\f3ac";
+}
+
+.fa-grunt:before {
+  content: "\f3ad";
+}
+
+.fa-guitar:before {
+  content: "\f7a6";
+}
+
+.fa-gulp:before {
+  content: "\f3ae";
+}
+
+.fa-h-square:before {
+  content: "\f0fd";
+}
+
+.fa-hacker-news:before {
+  content: "\f1d4";
+}
+
+.fa-hacker-news-square:before {
+  content: "\f3af";
+}
+
+.fa-hackerrank:before {
+  content: "\f5f7";
+}
+
+.fa-hamburger:before {
+  content: "\f805";
+}
+
+.fa-hammer:before {
+  content: "\f6e3";
+}
+
+.fa-hamsa:before {
+  content: "\f665";
+}
+
+.fa-hand-holding:before {
+  content: "\f4bd";
+}
+
+.fa-hand-holding-heart:before {
+  content: "\f4be";
+}
+
+.fa-hand-holding-medical:before {
+  content: "\e05c";
+}
+
+.fa-hand-holding-usd:before {
+  content: "\f4c0";
+}
+
+.fa-hand-holding-water:before {
+  content: "\f4c1";
+}
+
+.fa-hand-lizard:before {
+  content: "\f258";
+}
+
+.fa-hand-middle-finger:before {
+  content: "\f806";
+}
+
+.fa-hand-paper:before {
+  content: "\f256";
+}
+
+.fa-hand-peace:before {
+  content: "\f25b";
+}
+
+.fa-hand-point-down:before {
+  content: "\f0a7";
+}
+
+.fa-hand-point-left:before {
+  content: "\f0a5";
+}
+
+.fa-hand-point-right:before {
+  content: "\f0a4";
+}
+
+.fa-hand-point-up:before {
+  content: "\f0a6";
+}
+
+.fa-hand-pointer:before {
+  content: "\f25a";
+}
+
+.fa-hand-rock:before {
+  content: "\f255";
+}
+
+.fa-hand-scissors:before {
+  content: "\f257";
+}
+
+.fa-hand-sparkles:before {
+  content: "\e05d";
+}
+
+.fa-hand-spock:before {
+  content: "\f259";
+}
+
+.fa-hands:before {
+  content: "\f4c2";
+}
+
+.fa-hands-helping:before {
+  content: "\f4c4";
+}
+
+.fa-hands-wash:before {
+  content: "\e05e";
+}
+
+.fa-handshake:before {
+  content: "\f2b5";
+}
+
+.fa-handshake-alt-slash:before {
+  content: "\e05f";
+}
+
+.fa-handshake-slash:before {
+  content: "\e060";
+}
+
+.fa-hanukiah:before {
+  content: "\f6e6";
+}
+
+.fa-hard-hat:before {
+  content: "\f807";
+}
+
+.fa-hashtag:before {
+  content: "\f292";
+}
+
+.fa-hat-cowboy:before {
+  content: "\f8c0";
+}
+
+.fa-hat-cowboy-side:before {
+  content: "\f8c1";
+}
+
+.fa-hat-wizard:before {
+  content: "\f6e8";
+}
+
+.fa-hdd:before {
+  content: "\f0a0";
+}
+
+.fa-head-side-cough:before {
+  content: "\e061";
+}
+
+.fa-head-side-cough-slash:before {
+  content: "\e062";
+}
+
+.fa-head-side-mask:before {
+  content: "\e063";
+}
+
+.fa-head-side-virus:before {
+  content: "\e064";
+}
+
+.fa-heading:before {
+  content: "\f1dc";
+}
+
+.fa-headphones:before {
+  content: "\f025";
+}
+
+.fa-headphones-alt:before {
+  content: "\f58f";
+}
+
+.fa-headset:before {
+  content: "\f590";
+}
+
+.fa-heart:before {
+  content: "\f004";
+}
+
+.fa-heart-broken:before {
+  content: "\f7a9";
+}
+
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+
+.fa-helicopter:before {
+  content: "\f533";
+}
+
+.fa-highlighter:before {
+  content: "\f591";
+}
+
+.fa-hiking:before {
+  content: "\f6ec";
+}
+
+.fa-hippo:before {
+  content: "\f6ed";
+}
+
+.fa-hips:before {
+  content: "\f452";
+}
+
+.fa-hire-a-helper:before {
+  content: "\f3b0";
+}
+
+.fa-history:before {
+  content: "\f1da";
+}
+
+.fa-hockey-puck:before {
+  content: "\f453";
+}
+
+.fa-holly-berry:before {
+  content: "\f7aa";
+}
+
+.fa-home:before {
+  content: "\f015";
+}
+
+.fa-hooli:before {
+  content: "\f427";
+}
+
+.fa-hornbill:before {
+  content: "\f592";
+}
+
+.fa-horse:before {
+  content: "\f6f0";
+}
+
+.fa-horse-head:before {
+  content: "\f7ab";
+}
+
+.fa-hospital:before {
+  content: "\f0f8";
+}
+
+.fa-hospital-alt:before {
+  content: "\f47d";
+}
+
+.fa-hospital-symbol:before {
+  content: "\f47e";
+}
+
+.fa-hospital-user:before {
+  content: "\f80d";
+}
+
+.fa-hot-tub:before {
+  content: "\f593";
+}
+
+.fa-hotdog:before {
+  content: "\f80f";
+}
+
+.fa-hotel:before {
+  content: "\f594";
+}
+
+.fa-hotjar:before {
+  content: "\f3b1";
+}
+
+.fa-hourglass:before {
+  content: "\f254";
+}
+
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+
+.fa-house-damage:before {
+  content: "\f6f1";
+}
+
+.fa-house-user:before {
+  content: "\e065";
+}
+
+.fa-houzz:before {
+  content: "\f27c";
+}
+
+.fa-hryvnia:before {
+  content: "\f6f2";
+}
+
+.fa-html5:before {
+  content: "\f13b";
+}
+
+.fa-hubspot:before {
+  content: "\f3b2";
+}
+
+.fa-i-cursor:before {
+  content: "\f246";
+}
+
+.fa-ice-cream:before {
+  content: "\f810";
+}
+
+.fa-icicles:before {
+  content: "\f7ad";
+}
+
+.fa-icons:before {
+  content: "\f86d";
+}
+
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+
+.fa-id-card:before {
+  content: "\f2c2";
+}
+
+.fa-id-card-alt:before {
+  content: "\f47f";
+}
+
+.fa-ideal:before {
+  content: "\e013";
+}
+
+.fa-igloo:before {
+  content: "\f7ae";
+}
+
+.fa-image:before {
+  content: "\f03e";
+}
+
+.fa-images:before {
+  content: "\f302";
+}
+
+.fa-imdb:before {
+  content: "\f2d8";
+}
+
+.fa-inbox:before {
+  content: "\f01c";
+}
+
+.fa-indent:before {
+  content: "\f03c";
+}
+
+.fa-industry:before {
+  content: "\f275";
+}
+
+.fa-infinity:before {
+  content: "\f534";
+}
+
+.fa-info:before {
+  content: "\f129";
+}
+
+.fa-info-circle:before {
+  content: "\f05a";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+.fa-instagram-square:before {
+  content: "\e055";
+}
+
+.fa-intercom:before {
+  content: "\f7af";
+}
+
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+
+.fa-invision:before {
+  content: "\f7b0";
+}
+
+.fa-ioxhost:before {
+  content: "\f208";
+}
+
+.fa-italic:before {
+  content: "\f033";
+}
+
+.fa-itch-io:before {
+  content: "\f83a";
+}
+
+.fa-itunes:before {
+  content: "\f3b4";
+}
+
+.fa-itunes-note:before {
+  content: "\f3b5";
+}
+
+.fa-java:before {
+  content: "\f4e4";
+}
+
+.fa-jedi:before {
+  content: "\f669";
+}
+
+.fa-jedi-order:before {
+  content: "\f50e";
+}
+
+.fa-jenkins:before {
+  content: "\f3b6";
+}
+
+.fa-jira:before {
+  content: "\f7b1";
+}
+
+.fa-joget:before {
+  content: "\f3b7";
+}
+
+.fa-joint:before {
+  content: "\f595";
+}
+
+.fa-joomla:before {
+  content: "\f1aa";
+}
+
+.fa-journal-whills:before {
+  content: "\f66a";
+}
+
+.fa-js:before {
+  content: "\f3b8";
+}
+
+.fa-js-square:before {
+  content: "\f3b9";
+}
+
+.fa-jsfiddle:before {
+  content: "\f1cc";
+}
+
+.fa-kaaba:before {
+  content: "\f66b";
+}
+
+.fa-kaggle:before {
+  content: "\f5fa";
+}
+
+.fa-key:before {
+  content: "\f084";
+}
+
+.fa-keybase:before {
+  content: "\f4f5";
+}
+
+.fa-keyboard:before {
+  content: "\f11c";
+}
+
+.fa-keycdn:before {
+  content: "\f3ba";
+}
+
+.fa-khanda:before {
+  content: "\f66d";
+}
+
+.fa-kickstarter:before {
+  content: "\f3bb";
+}
+
+.fa-kickstarter-k:before {
+  content: "\f3bc";
+}
+
+.fa-kiss:before {
+  content: "\f596";
+}
+
+.fa-kiss-beam:before {
+  content: "\f597";
+}
+
+.fa-kiss-wink-heart:before {
+  content: "\f598";
+}
+
+.fa-kiwi-bird:before {
+  content: "\f535";
+}
+
+.fa-korvue:before {
+  content: "\f42f";
+}
+
+.fa-landmark:before {
+  content: "\f66f";
+}
+
+.fa-language:before {
+  content: "\f1ab";
+}
+
+.fa-laptop:before {
+  content: "\f109";
+}
+
+.fa-laptop-code:before {
+  content: "\f5fc";
+}
+
+.fa-laptop-house:before {
+  content: "\e066";
+}
+
+.fa-laptop-medical:before {
+  content: "\f812";
+}
+
+.fa-laravel:before {
+  content: "\f3bd";
+}
+
+.fa-lastfm:before {
+  content: "\f202";
+}
+
+.fa-lastfm-square:before {
+  content: "\f203";
+}
+
+.fa-laugh:before {
+  content: "\f599";
+}
+
+.fa-laugh-beam:before {
+  content: "\f59a";
+}
+
+.fa-laugh-squint:before {
+  content: "\f59b";
+}
+
+.fa-laugh-wink:before {
+  content: "\f59c";
+}
+
+.fa-layer-group:before {
+  content: "\f5fd";
+}
+
+.fa-leaf:before {
+  content: "\f06c";
+}
+
+.fa-leanpub:before {
+  content: "\f212";
+}
+
+.fa-lemon:before {
+  content: "\f094";
+}
+
+.fa-less:before {
+  content: "\f41d";
+}
+
+.fa-less-than:before {
+  content: "\f536";
+}
+
+.fa-less-than-equal:before {
+  content: "\f537";
+}
+
+.fa-level-down-alt:before {
+  content: "\f3be";
+}
+
+.fa-level-up-alt:before {
+  content: "\f3bf";
+}
+
+.fa-life-ring:before {
+  content: "\f1cd";
+}
+
+.fa-lightbulb:before {
+  content: "\f0eb";
+}
+
+.fa-line:before {
+  content: "\f3c0";
+}
+
+.fa-link:before {
+  content: "\f0c1";
+}
+
+.fa-linkedin:before {
+  content: "\f08c";
+}
+
+.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+
+.fa-linode:before {
+  content: "\f2b8";
+}
+
+.fa-linux:before {
+  content: "\f17c";
+}
+
+.fa-lira-sign:before {
+  content: "\f195";
+}
+
+.fa-list:before {
+  content: "\f03a";
+}
+
+.fa-list-alt:before {
+  content: "\f022";
+}
+
+.fa-list-ol:before {
+  content: "\f0cb";
+}
+
+.fa-list-ul:before {
+  content: "\f0ca";
+}
+
+.fa-location-arrow:before {
+  content: "\f124";
+}
+
+.fa-lock:before {
+  content: "\f023";
+}
+
+.fa-lock-open:before {
+  content: "\f3c1";
+}
+
+.fa-long-arrow-alt-down:before {
+  content: "\f309";
+}
+
+.fa-long-arrow-alt-left:before {
+  content: "\f30a";
+}
+
+.fa-long-arrow-alt-right:before {
+  content: "\f30b";
+}
+
+.fa-long-arrow-alt-up:before {
+  content: "\f30c";
+}
+
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+
+.fa-luggage-cart:before {
+  content: "\f59d";
+}
+
+.fa-lungs:before {
+  content: "\f604";
+}
+
+.fa-lungs-virus:before {
+  content: "\e067";
+}
+
+.fa-lyft:before {
+  content: "\f3c3";
+}
+
+.fa-magento:before {
+  content: "\f3c4";
+}
+
+.fa-magic:before {
+  content: "\f0d0";
+}
+
+.fa-magnet:before {
+  content: "\f076";
+}
+
+.fa-mail-bulk:before {
+  content: "\f674";
+}
+
+.fa-mailchimp:before {
+  content: "\f59e";
+}
+
+.fa-male:before {
+  content: "\f183";
+}
+
+.fa-mandalorian:before {
+  content: "\f50f";
+}
+
+.fa-map:before {
+  content: "\f279";
+}
+
+.fa-map-marked:before {
+  content: "\f59f";
+}
+
+.fa-map-marked-alt:before {
+  content: "\f5a0";
+}
+
+.fa-map-marker:before {
+  content: "\f041";
+}
+
+.fa-map-marker-alt:before {
+  content: "\f3c5";
+}
+
+.fa-map-pin:before {
+  content: "\f276";
+}
+
+.fa-map-signs:before {
+  content: "\f277";
+}
+
+.fa-markdown:before {
+  content: "\f60f";
+}
+
+.fa-marker:before {
+  content: "\f5a1";
+}
+
+.fa-mars:before {
+  content: "\f222";
+}
+
+.fa-mars-double:before {
+  content: "\f227";
+}
+
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+
+.fa-mask:before {
+  content: "\f6fa";
+}
+
+.fa-mastodon:before {
+  content: "\f4f6";
+}
+
+.fa-maxcdn:before {
+  content: "\f136";
+}
+
+.fa-mdb:before {
+  content: "\f8ca";
+}
+
+.fa-medal:before {
+  content: "\f5a2";
+}
+
+.fa-medapps:before {
+  content: "\f3c6";
+}
+
+.fa-medium:before {
+  content: "\f23a";
+}
+
+.fa-medium-m:before {
+  content: "\f3c7";
+}
+
+.fa-medkit:before {
+  content: "\f0fa";
+}
+
+.fa-medrt:before {
+  content: "\f3c8";
+}
+
+.fa-meetup:before {
+  content: "\f2e0";
+}
+
+.fa-megaport:before {
+  content: "\f5a3";
+}
+
+.fa-meh:before {
+  content: "\f11a";
+}
+
+.fa-meh-blank:before {
+  content: "\f5a4";
+}
+
+.fa-meh-rolling-eyes:before {
+  content: "\f5a5";
+}
+
+.fa-memory:before {
+  content: "\f538";
+}
+
+.fa-mendeley:before {
+  content: "\f7b3";
+}
+
+.fa-menorah:before {
+  content: "\f676";
+}
+
+.fa-mercury:before {
+  content: "\f223";
+}
+
+.fa-meteor:before {
+  content: "\f753";
+}
+
+.fa-microblog:before {
+  content: "\e01a";
+}
+
+.fa-microchip:before {
+  content: "\f2db";
+}
+
+.fa-microphone:before {
+  content: "\f130";
+}
+
+.fa-microphone-alt:before {
+  content: "\f3c9";
+}
+
+.fa-microphone-alt-slash:before {
+  content: "\f539";
+}
+
+.fa-microphone-slash:before {
+  content: "\f131";
+}
+
+.fa-microscope:before {
+  content: "\f610";
+}
+
+.fa-microsoft:before {
+  content: "\f3ca";
+}
+
+.fa-minus:before {
+  content: "\f068";
+}
+
+.fa-minus-circle:before {
+  content: "\f056";
+}
+
+.fa-minus-square:before {
+  content: "\f146";
+}
+
+.fa-mitten:before {
+  content: "\f7b5";
+}
+
+.fa-mix:before {
+  content: "\f3cb";
+}
+
+.fa-mixcloud:before {
+  content: "\f289";
+}
+
+.fa-mixer:before {
+  content: "\e056";
+}
+
+.fa-mizuni:before {
+  content: "\f3cc";
+}
+
+.fa-mobile:before {
+  content: "\f10b";
+}
+
+.fa-mobile-alt:before {
+  content: "\f3cd";
+}
+
+.fa-modx:before {
+  content: "\f285";
+}
+
+.fa-monero:before {
+  content: "\f3d0";
+}
+
+.fa-money-bill:before {
+  content: "\f0d6";
+}
+
+.fa-money-bill-alt:before {
+  content: "\f3d1";
+}
+
+.fa-money-bill-wave:before {
+  content: "\f53a";
+}
+
+.fa-money-bill-wave-alt:before {
+  content: "\f53b";
+}
+
+.fa-money-check:before {
+  content: "\f53c";
+}
+
+.fa-money-check-alt:before {
+  content: "\f53d";
+}
+
+.fa-monument:before {
+  content: "\f5a6";
+}
+
+.fa-moon:before {
+  content: "\f186";
+}
+
+.fa-mortar-pestle:before {
+  content: "\f5a7";
+}
+
+.fa-mosque:before {
+  content: "\f678";
+}
+
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+
+.fa-mountain:before {
+  content: "\f6fc";
+}
+
+.fa-mouse:before {
+  content: "\f8cc";
+}
+
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+
+.fa-mug-hot:before {
+  content: "\f7b6";
+}
+
+.fa-music:before {
+  content: "\f001";
+}
+
+.fa-napster:before {
+  content: "\f3d2";
+}
+
+.fa-neos:before {
+  content: "\f612";
+}
+
+.fa-network-wired:before {
+  content: "\f6ff";
+}
+
+.fa-neuter:before {
+  content: "\f22c";
+}
+
+.fa-newspaper:before {
+  content: "\f1ea";
+}
+
+.fa-nimblr:before {
+  content: "\f5a8";
+}
+
+.fa-node:before {
+  content: "\f419";
+}
+
+.fa-node-js:before {
+  content: "\f3d3";
+}
+
+.fa-not-equal:before {
+  content: "\f53e";
+}
+
+.fa-notes-medical:before {
+  content: "\f481";
+}
+
+.fa-npm:before {
+  content: "\f3d4";
+}
+
+.fa-ns8:before {
+  content: "\f3d5";
+}
+
+.fa-nutritionix:before {
+  content: "\f3d6";
+}
+
+.fa-object-group:before {
+  content: "\f247";
+}
+
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+
+.fa-oil-can:before {
+  content: "\f613";
+}
+
+.fa-old-republic:before {
+  content: "\f510";
+}
+
+.fa-om:before {
+  content: "\f679";
+}
+
+.fa-opencart:before {
+  content: "\f23d";
+}
+
+.fa-openid:before {
+  content: "\f19b";
+}
+
+.fa-opera:before {
+  content: "\f26a";
+}
+
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+
+.fa-orcid:before {
+  content: "\f8d2";
+}
+
+.fa-osi:before {
+  content: "\f41a";
+}
+
+.fa-otter:before {
+  content: "\f700";
+}
+
+.fa-outdent:before {
+  content: "\f03b";
+}
+
+.fa-page4:before {
+  content: "\f3d7";
+}
+
+.fa-pagelines:before {
+  content: "\f18c";
+}
+
+.fa-pager:before {
+  content: "\f815";
+}
+
+.fa-paint-brush:before {
+  content: "\f1fc";
+}
+
+.fa-paint-roller:before {
+  content: "\f5aa";
+}
+
+.fa-palette:before {
+  content: "\f53f";
+}
+
+.fa-palfed:before {
+  content: "\f3d8";
+}
+
+.fa-pallet:before {
+  content: "\f482";
+}
+
+.fa-paper-plane:before {
+  content: "\f1d8";
+}
+
+.fa-paperclip:before {
+  content: "\f0c6";
+}
+
+.fa-parachute-box:before {
+  content: "\f4cd";
+}
+
+.fa-paragraph:before {
+  content: "\f1dd";
+}
+
+.fa-parking:before {
+  content: "\f540";
+}
+
+.fa-passport:before {
+  content: "\f5ab";
+}
+
+.fa-pastafarianism:before {
+  content: "\f67b";
+}
+
+.fa-paste:before {
+  content: "\f0ea";
+}
+
+.fa-patreon:before {
+  content: "\f3d9";
+}
+
+.fa-pause:before {
+  content: "\f04c";
+}
+
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+
+.fa-paw:before {
+  content: "\f1b0";
+}
+
+.fa-paypal:before {
+  content: "\f1ed";
+}
+
+.fa-peace:before {
+  content: "\f67c";
+}
+
+.fa-pen:before {
+  content: "\f304";
+}
+
+.fa-pen-alt:before {
+  content: "\f305";
+}
+
+.fa-pen-fancy:before {
+  content: "\f5ac";
+}
+
+.fa-pen-nib:before {
+  content: "\f5ad";
+}
+
+.fa-pen-square:before {
+  content: "\f14b";
+}
+
+.fa-pencil-alt:before {
+  content: "\f303";
+}
+
+.fa-pencil-ruler:before {
+  content: "\f5ae";
+}
+
+.fa-penny-arcade:before {
+  content: "\f704";
+}
+
+.fa-people-arrows:before {
+  content: "\e068";
+}
+
+.fa-people-carry:before {
+  content: "\f4ce";
+}
+
+.fa-pepper-hot:before {
+  content: "\f816";
+}
+
+.fa-percent:before {
+  content: "\f295";
+}
+
+.fa-percentage:before {
+  content: "\f541";
+}
+
+.fa-periscope:before {
+  content: "\f3da";
+}
+
+.fa-person-booth:before {
+  content: "\f756";
+}
+
+.fa-phabricator:before {
+  content: "\f3db";
+}
+
+.fa-phoenix-framework:before {
+  content: "\f3dc";
+}
+
+.fa-phoenix-squadron:before {
+  content: "\f511";
+}
+
+.fa-phone:before {
+  content: "\f095";
+}
+
+.fa-phone-alt:before {
+  content: "\f879";
+}
+
+.fa-phone-slash:before {
+  content: "\f3dd";
+}
+
+.fa-phone-square:before {
+  content: "\f098";
+}
+
+.fa-phone-square-alt:before {
+  content: "\f87b";
+}
+
+.fa-phone-volume:before {
+  content: "\f2a0";
+}
+
+.fa-photo-video:before {
+  content: "\f87c";
+}
+
+.fa-php:before {
+  content: "\f457";
+}
+
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+
+.fa-pied-piper-alt:before {
+  content: "\f1a8";
+}
+
+.fa-pied-piper-hat:before {
+  content: "\f4e5";
+}
+
+.fa-pied-piper-pp:before {
+  content: "\f1a7";
+}
+
+.fa-pied-piper-square:before {
+  content: "\e01e";
+}
+
+.fa-piggy-bank:before {
+  content: "\f4d3";
+}
+
+.fa-pills:before {
+  content: "\f484";
+}
+
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+
+.fa-pinterest-square:before {
+  content: "\f0d3";
+}
+
+.fa-pizza-slice:before {
+  content: "\f818";
+}
+
+.fa-place-of-worship:before {
+  content: "\f67f";
+}
+
+.fa-plane:before {
+  content: "\f072";
+}
+
+.fa-plane-arrival:before {
+  content: "\f5af";
+}
+
+.fa-plane-departure:before {
+  content: "\f5b0";
+}
+
+.fa-plane-slash:before {
+  content: "\e069";
+}
+
+.fa-play:before {
+  content: "\f04b";
+}
+
+.fa-play-circle:before {
+  content: "\f144";
+}
+
+.fa-playstation:before {
+  content: "\f3df";
+}
+
+.fa-plug:before {
+  content: "\f1e6";
+}
+
+.fa-plus:before {
+  content: "\f067";
+}
+
+.fa-plus-circle:before {
+  content: "\f055";
+}
+
+.fa-plus-square:before {
+  content: "\f0fe";
+}
+
+.fa-podcast:before {
+  content: "\f2ce";
+}
+
+.fa-poll:before {
+  content: "\f681";
+}
+
+.fa-poll-h:before {
+  content: "\f682";
+}
+
+.fa-poo:before {
+  content: "\f2fe";
+}
+
+.fa-poo-storm:before {
+  content: "\f75a";
+}
+
+.fa-poop:before {
+  content: "\f619";
+}
+
+.fa-portrait:before {
+  content: "\f3e0";
+}
+
+.fa-pound-sign:before {
+  content: "\f154";
+}
+
+.fa-power-off:before {
+  content: "\f011";
+}
+
+.fa-pray:before {
+  content: "\f683";
+}
+
+.fa-praying-hands:before {
+  content: "\f684";
+}
+
+.fa-prescription:before {
+  content: "\f5b1";
+}
+
+.fa-prescription-bottle:before {
+  content: "\f485";
+}
+
+.fa-prescription-bottle-alt:before {
+  content: "\f486";
+}
+
+.fa-print:before {
+  content: "\f02f";
+}
+
+.fa-procedures:before {
+  content: "\f487";
+}
+
+.fa-product-hunt:before {
+  content: "\f288";
+}
+
+.fa-project-diagram:before {
+  content: "\f542";
+}
+
+.fa-pump-medical:before {
+  content: "\e06a";
+}
+
+.fa-pump-soap:before {
+  content: "\e06b";
+}
+
+.fa-pushed:before {
+  content: "\f3e1";
+}
+
+.fa-puzzle-piece:before {
+  content: "\f12e";
+}
+
+.fa-python:before {
+  content: "\f3e2";
+}
+
+.fa-qq:before {
+  content: "\f1d6";
+}
+
+.fa-qrcode:before {
+  content: "\f029";
+}
+
+.fa-question:before {
+  content: "\f128";
+}
+
+.fa-question-circle:before {
+  content: "\f059";
+}
+
+.fa-quidditch:before {
+  content: "\f458";
+}
+
+.fa-quinscape:before {
+  content: "\f459";
+}
+
+.fa-quora:before {
+  content: "\f2c4";
+}
+
+.fa-quote-left:before {
+  content: "\f10d";
+}
+
+.fa-quote-right:before {
+  content: "\f10e";
+}
+
+.fa-quran:before {
+  content: "\f687";
+}
+
+.fa-r-project:before {
+  content: "\f4f7";
+}
+
+.fa-radiation:before {
+  content: "\f7b9";
+}
+
+.fa-radiation-alt:before {
+  content: "\f7ba";
+}
+
+.fa-rainbow:before {
+  content: "\f75b";
+}
+
+.fa-random:before {
+  content: "\f074";
+}
+
+.fa-raspberry-pi:before {
+  content: "\f7bb";
+}
+
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+
+.fa-react:before {
+  content: "\f41b";
+}
+
+.fa-reacteurope:before {
+  content: "\f75d";
+}
+
+.fa-readme:before {
+  content: "\f4d5";
+}
+
+.fa-rebel:before {
+  content: "\f1d0";
+}
+
+.fa-receipt:before {
+  content: "\f543";
+}
+
+.fa-record-vinyl:before {
+  content: "\f8d9";
+}
+
+.fa-recycle:before {
+  content: "\f1b8";
+}
+
+.fa-red-river:before {
+  content: "\f3e3";
+}
+
+.fa-reddit:before {
+  content: "\f1a1";
+}
+
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+
+.fa-reddit-square:before {
+  content: "\f1a2";
+}
+
+.fa-redhat:before {
+  content: "\f7bc";
+}
+
+.fa-redo:before {
+  content: "\f01e";
+}
+
+.fa-redo-alt:before {
+  content: "\f2f9";
+}
+
+.fa-registered:before {
+  content: "\f25d";
+}
+
+.fa-remove-format:before {
+  content: "\f87d";
+}
+
+.fa-renren:before {
+  content: "\f18b";
+}
+
+.fa-reply:before {
+  content: "\f3e5";
+}
+
+.fa-reply-all:before {
+  content: "\f122";
+}
+
+.fa-replyd:before {
+  content: "\f3e6";
+}
+
+.fa-republican:before {
+  content: "\f75e";
+}
+
+.fa-researchgate:before {
+  content: "\f4f8";
+}
+
+.fa-resolving:before {
+  content: "\f3e7";
+}
+
+.fa-restroom:before {
+  content: "\f7bd";
+}
+
+.fa-retweet:before {
+  content: "\f079";
+}
+
+.fa-rev:before {
+  content: "\f5b2";
+}
+
+.fa-ribbon:before {
+  content: "\f4d6";
+}
+
+.fa-ring:before {
+  content: "\f70b";
+}
+
+.fa-road:before {
+  content: "\f018";
+}
+
+.fa-robot:before {
+  content: "\f544";
+}
+
+.fa-rocket:before {
+  content: "\f135";
+}
+
+.fa-rocketchat:before {
+  content: "\f3e8";
+}
+
+.fa-rockrms:before {
+  content: "\f3e9";
+}
+
+.fa-route:before {
+  content: "\f4d7";
+}
+
+.fa-rss:before {
+  content: "\f09e";
+}
+
+.fa-rss-square:before {
+  content: "\f143";
+}
+
+.fa-ruble-sign:before {
+  content: "\f158";
+}
+
+.fa-ruler:before {
+  content: "\f545";
+}
+
+.fa-ruler-combined:before {
+  content: "\f546";
+}
+
+.fa-ruler-horizontal:before {
+  content: "\f547";
+}
+
+.fa-ruler-vertical:before {
+  content: "\f548";
+}
+
+.fa-running:before {
+  content: "\f70c";
+}
+
+.fa-rupee-sign:before {
+  content: "\f156";
+}
+
+.fa-rust:before {
+  content: "\e07a";
+}
+
+.fa-sad-cry:before {
+  content: "\f5b3";
+}
+
+.fa-sad-tear:before {
+  content: "\f5b4";
+}
+
+.fa-safari:before {
+  content: "\f267";
+}
+
+.fa-salesforce:before {
+  content: "\f83b";
+}
+
+.fa-sass:before {
+  content: "\f41e";
+}
+
+.fa-satellite:before {
+  content: "\f7bf";
+}
+
+.fa-satellite-dish:before {
+  content: "\f7c0";
+}
+
+.fa-save:before {
+  content: "\f0c7";
+}
+
+.fa-schlix:before {
+  content: "\f3ea";
+}
+
+.fa-school:before {
+  content: "\f549";
+}
+
+.fa-screwdriver:before {
+  content: "\f54a";
+}
+
+.fa-scribd:before {
+  content: "\f28a";
+}
+
+.fa-scroll:before {
+  content: "\f70e";
+}
+
+.fa-sd-card:before {
+  content: "\f7c2";
+}
+
+.fa-search:before {
+  content: "\f002";
+}
+
+.fa-search-dollar:before {
+  content: "\f688";
+}
+
+.fa-search-location:before {
+  content: "\f689";
+}
+
+.fa-search-minus:before {
+  content: "\f010";
+}
+
+.fa-search-plus:before {
+  content: "\f00e";
+}
+
+.fa-searchengin:before {
+  content: "\f3eb";
+}
+
+.fa-seedling:before {
+  content: "\f4d8";
+}
+
+.fa-sellcast:before {
+  content: "\f2da";
+}
+
+.fa-sellsy:before {
+  content: "\f213";
+}
+
+.fa-server:before {
+  content: "\f233";
+}
+
+.fa-servicestack:before {
+  content: "\f3ec";
+}
+
+.fa-shapes:before {
+  content: "\f61f";
+}
+
+.fa-share:before {
+  content: "\f064";
+}
+
+.fa-share-alt:before {
+  content: "\f1e0";
+}
+
+.fa-share-alt-square:before {
+  content: "\f1e1";
+}
+
+.fa-share-square:before {
+  content: "\f14d";
+}
+
+.fa-shekel-sign:before {
+  content: "\f20b";
+}
+
+.fa-shield-alt:before {
+  content: "\f3ed";
+}
+
+.fa-shield-virus:before {
+  content: "\e06c";
+}
+
+.fa-ship:before {
+  content: "\f21a";
+}
+
+.fa-shipping-fast:before {
+  content: "\f48b";
+}
+
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+
+.fa-shoe-prints:before {
+  content: "\f54b";
+}
+
+.fa-shopify:before {
+  content: "\e057";
+}
+
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+
+.fa-shopping-cart:before {
+  content: "\f07a";
+}
+
+.fa-shopware:before {
+  content: "\f5b5";
+}
+
+.fa-shower:before {
+  content: "\f2cc";
+}
+
+.fa-shuttle-van:before {
+  content: "\f5b6";
+}
+
+.fa-sign:before {
+  content: "\f4d9";
+}
+
+.fa-sign-in-alt:before {
+  content: "\f2f6";
+}
+
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+
+.fa-sign-out-alt:before {
+  content: "\f2f5";
+}
+
+.fa-signal:before {
+  content: "\f012";
+}
+
+.fa-signature:before {
+  content: "\f5b7";
+}
+
+.fa-sim-card:before {
+  content: "\f7c4";
+}
+
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+
+.fa-sink:before {
+  content: "\e06d";
+}
+
+.fa-sistrix:before {
+  content: "\f3ee";
+}
+
+.fa-sitemap:before {
+  content: "\f0e8";
+}
+
+.fa-sith:before {
+  content: "\f512";
+}
+
+.fa-skating:before {
+  content: "\f7c5";
+}
+
+.fa-sketch:before {
+  content: "\f7c6";
+}
+
+.fa-skiing:before {
+  content: "\f7c9";
+}
+
+.fa-skiing-nordic:before {
+  content: "\f7ca";
+}
+
+.fa-skull:before {
+  content: "\f54c";
+}
+
+.fa-skull-crossbones:before {
+  content: "\f714";
+}
+
+.fa-skyatlas:before {
+  content: "\f216";
+}
+
+.fa-skype:before {
+  content: "\f17e";
+}
+
+.fa-slack:before {
+  content: "\f198";
+}
+
+.fa-slack-hash:before {
+  content: "\f3ef";
+}
+
+.fa-slash:before {
+  content: "\f715";
+}
+
+.fa-sleigh:before {
+  content: "\f7cc";
+}
+
+.fa-sliders-h:before {
+  content: "\f1de";
+}
+
+.fa-slideshare:before {
+  content: "\f1e7";
+}
+
+.fa-smile:before {
+  content: "\f118";
+}
+
+.fa-smile-beam:before {
+  content: "\f5b8";
+}
+
+.fa-smile-wink:before {
+  content: "\f4da";
+}
+
+.fa-smog:before {
+  content: "\f75f";
+}
+
+.fa-smoking:before {
+  content: "\f48d";
+}
+
+.fa-smoking-ban:before {
+  content: "\f54d";
+}
+
+.fa-sms:before {
+  content: "\f7cd";
+}
+
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+
+.fa-snowboarding:before {
+  content: "\f7ce";
+}
+
+.fa-snowflake:before {
+  content: "\f2dc";
+}
+
+.fa-snowman:before {
+  content: "\f7d0";
+}
+
+.fa-snowplow:before {
+  content: "\f7d2";
+}
+
+.fa-soap:before {
+  content: "\e06e";
+}
+
+.fa-socks:before {
+  content: "\f696";
+}
+
+.fa-solar-panel:before {
+  content: "\f5ba";
+}
+
+.fa-sort:before {
+  content: "\f0dc";
+}
+
+.fa-sort-alpha-down:before {
+  content: "\f15d";
+}
+
+.fa-sort-alpha-down-alt:before {
+  content: "\f881";
+}
+
+.fa-sort-alpha-up:before {
+  content: "\f15e";
+}
+
+.fa-sort-alpha-up-alt:before {
+  content: "\f882";
+}
+
+.fa-sort-amount-down:before {
+  content: "\f160";
+}
+
+.fa-sort-amount-down-alt:before {
+  content: "\f884";
+}
+
+.fa-sort-amount-up:before {
+  content: "\f161";
+}
+
+.fa-sort-amount-up-alt:before {
+  content: "\f885";
+}
+
+.fa-sort-down:before {
+  content: "\f0dd";
+}
+
+.fa-sort-numeric-down:before {
+  content: "\f162";
+}
+
+.fa-sort-numeric-down-alt:before {
+  content: "\f886";
+}
+
+.fa-sort-numeric-up:before {
+  content: "\f163";
+}
+
+.fa-sort-numeric-up-alt:before {
+  content: "\f887";
+}
+
+.fa-sort-up:before {
+  content: "\f0de";
+}
+
+.fa-soundcloud:before {
+  content: "\f1be";
+}
+
+.fa-sourcetree:before {
+  content: "\f7d3";
+}
+
+.fa-spa:before {
+  content: "\f5bb";
+}
+
+.fa-space-shuttle:before {
+  content: "\f197";
+}
+
+.fa-speakap:before {
+  content: "\f3f3";
+}
+
+.fa-speaker-deck:before {
+  content: "\f83c";
+}
+
+.fa-spell-check:before {
+  content: "\f891";
+}
+
+.fa-spider:before {
+  content: "\f717";
+}
+
+.fa-spinner:before {
+  content: "\f110";
+}
+
+.fa-splotch:before {
+  content: "\f5bc";
+}
+
+.fa-spotify:before {
+  content: "\f1bc";
+}
+
+.fa-spray-can:before {
+  content: "\f5bd";
+}
+
+.fa-square:before {
+  content: "\f0c8";
+}
+
+.fa-square-full:before {
+  content: "\f45c";
+}
+
+.fa-square-root-alt:before {
+  content: "\f698";
+}
+
+.fa-squarespace:before {
+  content: "\f5be";
+}
+
+.fa-stack-exchange:before {
+  content: "\f18d";
+}
+
+.fa-stack-overflow:before {
+  content: "\f16c";
+}
+
+.fa-stackpath:before {
+  content: "\f842";
+}
+
+.fa-stamp:before {
+  content: "\f5bf";
+}
+
+.fa-star:before {
+  content: "\f005";
+}
+
+.fa-star-and-crescent:before {
+  content: "\f699";
+}
+
+.fa-star-half:before {
+  content: "\f089";
+}
+
+.fa-star-half-alt:before {
+  content: "\f5c0";
+}
+
+.fa-star-of-david:before {
+  content: "\f69a";
+}
+
+.fa-star-of-life:before {
+  content: "\f621";
+}
+
+.fa-staylinked:before {
+  content: "\f3f5";
+}
+
+.fa-steam:before {
+  content: "\f1b6";
+}
+
+.fa-steam-square:before {
+  content: "\f1b7";
+}
+
+.fa-steam-symbol:before {
+  content: "\f3f6";
+}
+
+.fa-step-backward:before {
+  content: "\f048";
+}
+
+.fa-step-forward:before {
+  content: "\f051";
+}
+
+.fa-stethoscope:before {
+  content: "\f0f1";
+}
+
+.fa-sticker-mule:before {
+  content: "\f3f7";
+}
+
+.fa-sticky-note:before {
+  content: "\f249";
+}
+
+.fa-stop:before {
+  content: "\f04d";
+}
+
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+
+.fa-stopwatch:before {
+  content: "\f2f2";
+}
+
+.fa-stopwatch-20:before {
+  content: "\e06f";
+}
+
+.fa-store:before {
+  content: "\f54e";
+}
+
+.fa-store-alt:before {
+  content: "\f54f";
+}
+
+.fa-store-alt-slash:before {
+  content: "\e070";
+}
+
+.fa-store-slash:before {
+  content: "\e071";
+}
+
+.fa-strava:before {
+  content: "\f428";
+}
+
+.fa-stream:before {
+  content: "\f550";
+}
+
+.fa-street-view:before {
+  content: "\f21d";
+}
+
+.fa-strikethrough:before {
+  content: "\f0cc";
+}
+
+.fa-stripe:before {
+  content: "\f429";
+}
+
+.fa-stripe-s:before {
+  content: "\f42a";
+}
+
+.fa-stroopwafel:before {
+  content: "\f551";
+}
+
+.fa-studiovinari:before {
+  content: "\f3f8";
+}
+
+.fa-stumbleupon:before {
+  content: "\f1a4";
+}
+
+.fa-stumbleupon-circle:before {
+  content: "\f1a3";
+}
+
+.fa-subscript:before {
+  content: "\f12c";
+}
+
+.fa-subway:before {
+  content: "\f239";
+}
+
+.fa-suitcase:before {
+  content: "\f0f2";
+}
+
+.fa-suitcase-rolling:before {
+  content: "\f5c1";
+}
+
+.fa-sun:before {
+  content: "\f185";
+}
+
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+
+.fa-superscript:before {
+  content: "\f12b";
+}
+
+.fa-supple:before {
+  content: "\f3f9";
+}
+
+.fa-surprise:before {
+  content: "\f5c2";
+}
+
+.fa-suse:before {
+  content: "\f7d6";
+}
+
+.fa-swatchbook:before {
+  content: "\f5c3";
+}
+
+.fa-swift:before {
+  content: "\f8e1";
+}
+
+.fa-swimmer:before {
+  content: "\f5c4";
+}
+
+.fa-swimming-pool:before {
+  content: "\f5c5";
+}
+
+.fa-symfony:before {
+  content: "\f83d";
+}
+
+.fa-synagogue:before {
+  content: "\f69b";
+}
+
+.fa-sync:before {
+  content: "\f021";
+}
+
+.fa-sync-alt:before {
+  content: "\f2f1";
+}
+
+.fa-syringe:before {
+  content: "\f48e";
+}
+
+.fa-table:before {
+  content: "\f0ce";
+}
+
+.fa-table-tennis:before {
+  content: "\f45d";
+}
+
+.fa-tablet:before {
+  content: "\f10a";
+}
+
+.fa-tablet-alt:before {
+  content: "\f3fa";
+}
+
+.fa-tablets:before {
+  content: "\f490";
+}
+
+.fa-tachometer-alt:before {
+  content: "\f3fd";
+}
+
+.fa-tag:before {
+  content: "\f02b";
+}
+
+.fa-tags:before {
+  content: "\f02c";
+}
+
+.fa-tape:before {
+  content: "\f4db";
+}
+
+.fa-tasks:before {
+  content: "\f0ae";
+}
+
+.fa-taxi:before {
+  content: "\f1ba";
+}
+
+.fa-teamspeak:before {
+  content: "\f4f9";
+}
+
+.fa-teeth:before {
+  content: "\f62e";
+}
+
+.fa-teeth-open:before {
+  content: "\f62f";
+}
+
+.fa-telegram:before {
+  content: "\f2c6";
+}
+
+.fa-telegram-plane:before {
+  content: "\f3fe";
+}
+
+.fa-temperature-high:before {
+  content: "\f769";
+}
+
+.fa-temperature-low:before {
+  content: "\f76b";
+}
+
+.fa-tencent-weibo:before {
+  content: "\f1d5";
+}
+
+.fa-tenge:before {
+  content: "\f7d7";
+}
+
+.fa-terminal:before {
+  content: "\f120";
+}
+
+.fa-text-height:before {
+  content: "\f034";
+}
+
+.fa-text-width:before {
+  content: "\f035";
+}
+
+.fa-th:before {
+  content: "\f00a";
+}
+
+.fa-th-large:before {
+  content: "\f009";
+}
+
+.fa-th-list:before {
+  content: "\f00b";
+}
+
+.fa-the-red-yeti:before {
+  content: "\f69d";
+}
+
+.fa-theater-masks:before {
+  content: "\f630";
+}
+
+.fa-themeco:before {
+  content: "\f5c6";
+}
+
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+
+.fa-thermometer:before {
+  content: "\f491";
+}
+
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+
+.fa-think-peaks:before {
+  content: "\f731";
+}
+
+.fa-thumbs-down:before {
+  content: "\f165";
+}
+
+.fa-thumbs-up:before {
+  content: "\f164";
+}
+
+.fa-thumbtack:before {
+  content: "\f08d";
+}
+
+.fa-ticket-alt:before {
+  content: "\f3ff";
+}
+
+.fa-tiktok:before {
+  content: "\e07b";
+}
+
+.fa-times:before {
+  content: "\f00d";
+}
+
+.fa-times-circle:before {
+  content: "\f057";
+}
+
+.fa-tint:before {
+  content: "\f043";
+}
+
+.fa-tint-slash:before {
+  content: "\f5c7";
+}
+
+.fa-tired:before {
+  content: "\f5c8";
+}
+
+.fa-toggle-off:before {
+  content: "\f204";
+}
+
+.fa-toggle-on:before {
+  content: "\f205";
+}
+
+.fa-toilet:before {
+  content: "\f7d8";
+}
+
+.fa-toilet-paper:before {
+  content: "\f71e";
+}
+
+.fa-toilet-paper-slash:before {
+  content: "\e072";
+}
+
+.fa-toolbox:before {
+  content: "\f552";
+}
+
+.fa-tools:before {
+  content: "\f7d9";
+}
+
+.fa-tooth:before {
+  content: "\f5c9";
+}
+
+.fa-torah:before {
+  content: "\f6a0";
+}
+
+.fa-torii-gate:before {
+  content: "\f6a1";
+}
+
+.fa-tractor:before {
+  content: "\f722";
+}
+
+.fa-trade-federation:before {
+  content: "\f513";
+}
+
+.fa-trademark:before {
+  content: "\f25c";
+}
+
+.fa-traffic-light:before {
+  content: "\f637";
+}
+
+.fa-trailer:before {
+  content: "\e041";
+}
+
+.fa-train:before {
+  content: "\f238";
+}
+
+.fa-tram:before {
+  content: "\f7da";
+}
+
+.fa-transgender:before {
+  content: "\f224";
+}
+
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+
+.fa-trash:before {
+  content: "\f1f8";
+}
+
+.fa-trash-alt:before {
+  content: "\f2ed";
+}
+
+.fa-trash-restore:before {
+  content: "\f829";
+}
+
+.fa-trash-restore-alt:before {
+  content: "\f82a";
+}
+
+.fa-tree:before {
+  content: "\f1bb";
+}
+
+.fa-trello:before {
+  content: "\f181";
+}
+
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+
+.fa-trophy:before {
+  content: "\f091";
+}
+
+.fa-truck:before {
+  content: "\f0d1";
+}
+
+.fa-truck-loading:before {
+  content: "\f4de";
+}
+
+.fa-truck-monster:before {
+  content: "\f63b";
+}
+
+.fa-truck-moving:before {
+  content: "\f4df";
+}
+
+.fa-truck-pickup:before {
+  content: "\f63c";
+}
+
+.fa-tshirt:before {
+  content: "\f553";
+}
+
+.fa-tty:before {
+  content: "\f1e4";
+}
+
+.fa-tumblr:before {
+  content: "\f173";
+}
+
+.fa-tumblr-square:before {
+  content: "\f174";
+}
+
+.fa-tv:before {
+  content: "\f26c";
+}
+
+.fa-twitch:before {
+  content: "\f1e8";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+.fa-typo3:before {
+  content: "\f42b";
+}
+
+.fa-uber:before {
+  content: "\f402";
+}
+
+.fa-ubuntu:before {
+  content: "\f7df";
+}
+
+.fa-uikit:before {
+  content: "\f403";
+}
+
+.fa-umbraco:before {
+  content: "\f8e8";
+}
+
+.fa-umbrella:before {
+  content: "\f0e9";
+}
+
+.fa-umbrella-beach:before {
+  content: "\f5ca";
+}
+
+.fa-underline:before {
+  content: "\f0cd";
+}
+
+.fa-undo:before {
+  content: "\f0e2";
+}
+
+.fa-undo-alt:before {
+  content: "\f2ea";
+}
+
+.fa-uniregistry:before {
+  content: "\f404";
+}
+
+.fa-unity:before {
+  content: "\e049";
+}
+
+.fa-universal-access:before {
+  content: "\f29a";
+}
+
+.fa-university:before {
+  content: "\f19c";
+}
+
+.fa-unlink:before {
+  content: "\f127";
+}
+
+.fa-unlock:before {
+  content: "\f09c";
+}
+
+.fa-unlock-alt:before {
+  content: "\f13e";
+}
+
+.fa-unsplash:before {
+  content: "\e07c";
+}
+
+.fa-untappd:before {
+  content: "\f405";
+}
+
+.fa-upload:before {
+  content: "\f093";
+}
+
+.fa-ups:before {
+  content: "\f7e0";
+}
+
+.fa-usb:before {
+  content: "\f287";
+}
+
+.fa-user:before {
+  content: "\f007";
+}
+
+.fa-user-alt:before {
+  content: "\f406";
+}
+
+.fa-user-alt-slash:before {
+  content: "\f4fa";
+}
+
+.fa-user-astronaut:before {
+  content: "\f4fb";
+}
+
+.fa-user-check:before {
+  content: "\f4fc";
+}
+
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+
+.fa-user-clock:before {
+  content: "\f4fd";
+}
+
+.fa-user-cog:before {
+  content: "\f4fe";
+}
+
+.fa-user-edit:before {
+  content: "\f4ff";
+}
+
+.fa-user-friends:before {
+  content: "\f500";
+}
+
+.fa-user-graduate:before {
+  content: "\f501";
+}
+
+.fa-user-injured:before {
+  content: "\f728";
+}
+
+.fa-user-lock:before {
+  content: "\f502";
+}
+
+.fa-user-md:before {
+  content: "\f0f0";
+}
+
+.fa-user-minus:before {
+  content: "\f503";
+}
+
+.fa-user-ninja:before {
+  content: "\f504";
+}
+
+.fa-user-nurse:before {
+  content: "\f82f";
+}
+
+.fa-user-plus:before {
+  content: "\f234";
+}
+
+.fa-user-secret:before {
+  content: "\f21b";
+}
+
+.fa-user-shield:before {
+  content: "\f505";
+}
+
+.fa-user-slash:before {
+  content: "\f506";
+}
+
+.fa-user-tag:before {
+  content: "\f507";
+}
+
+.fa-user-tie:before {
+  content: "\f508";
+}
+
+.fa-user-times:before {
+  content: "\f235";
+}
+
+.fa-users:before {
+  content: "\f0c0";
+}
+
+.fa-users-cog:before {
+  content: "\f509";
+}
+
+.fa-users-slash:before {
+  content: "\e073";
+}
+
+.fa-usps:before {
+  content: "\f7e1";
+}
+
+.fa-ussunnah:before {
+  content: "\f407";
+}
+
+.fa-utensil-spoon:before {
+  content: "\f2e5";
+}
+
+.fa-utensils:before {
+  content: "\f2e7";
+}
+
+.fa-vaadin:before {
+  content: "\f408";
+}
+
+.fa-vector-square:before {
+  content: "\f5cb";
+}
+
+.fa-venus:before {
+  content: "\f221";
+}
+
+.fa-venus-double:before {
+  content: "\f226";
+}
+
+.fa-venus-mars:before {
+  content: "\f228";
+}
+
+.fa-viacoin:before {
+  content: "\f237";
+}
+
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+
+.fa-vial:before {
+  content: "\f492";
+}
+
+.fa-vials:before {
+  content: "\f493";
+}
+
+.fa-viber:before {
+  content: "\f409";
+}
+
+.fa-video:before {
+  content: "\f03d";
+}
+
+.fa-video-slash:before {
+  content: "\f4e2";
+}
+
+.fa-vihara:before {
+  content: "\f6a7";
+}
+
+.fa-vimeo:before {
+  content: "\f40a";
+}
+
+.fa-vimeo-square:before {
+  content: "\f194";
+}
+
+.fa-vimeo-v:before {
+  content: "\f27d";
+}
+
+.fa-vine:before {
+  content: "\f1ca";
+}
+
+.fa-virus:before {
+  content: "\e074";
+}
+
+.fa-virus-slash:before {
+  content: "\e075";
+}
+
+.fa-viruses:before {
+  content: "\e076";
+}
+
+.fa-vk:before {
+  content: "\f189";
+}
+
+.fa-vnv:before {
+  content: "\f40b";
+}
+
+.fa-voicemail:before {
+  content: "\f897";
+}
+
+.fa-volleyball-ball:before {
+  content: "\f45f";
+}
+
+.fa-volume-down:before {
+  content: "\f027";
+}
+
+.fa-volume-mute:before {
+  content: "\f6a9";
+}
+
+.fa-volume-off:before {
+  content: "\f026";
+}
+
+.fa-volume-up:before {
+  content: "\f028";
+}
+
+.fa-vote-yea:before {
+  content: "\f772";
+}
+
+.fa-vr-cardboard:before {
+  content: "\f729";
+}
+
+.fa-vuejs:before {
+  content: "\f41f";
+}
+
+.fa-walking:before {
+  content: "\f554";
+}
+
+.fa-wallet:before {
+  content: "\f555";
+}
+
+.fa-warehouse:before {
+  content: "\f494";
+}
+
+.fa-water:before {
+  content: "\f773";
+}
+
+.fa-wave-square:before {
+  content: "\f83e";
+}
+
+.fa-waze:before {
+  content: "\f83f";
+}
+
+.fa-weebly:before {
+  content: "\f5cc";
+}
+
+.fa-weibo:before {
+  content: "\f18a";
+}
+
+.fa-weight:before {
+  content: "\f496";
+}
+
+.fa-weight-hanging:before {
+  content: "\f5cd";
+}
+
+.fa-weixin:before {
+  content: "\f1d7";
+}
+
+.fa-whatsapp:before {
+  content: "\f232";
+}
+
+.fa-whatsapp-square:before {
+  content: "\f40c";
+}
+
+.fa-wheelchair:before {
+  content: "\f193";
+}
+
+.fa-whmcs:before {
+  content: "\f40d";
+}
+
+.fa-wifi:before {
+  content: "\f1eb";
+}
+
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+
+.fa-wind:before {
+  content: "\f72e";
+}
+
+.fa-window-close:before {
+  content: "\f410";
+}
+
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+
+.fa-windows:before {
+  content: "\f17a";
+}
+
+.fa-wine-bottle:before {
+  content: "\f72f";
+}
+
+.fa-wine-glass:before {
+  content: "\f4e3";
+}
+
+.fa-wine-glass-alt:before {
+  content: "\f5ce";
+}
+
+.fa-wix:before {
+  content: "\f5cf";
+}
+
+.fa-wizards-of-the-coast:before {
+  content: "\f730";
+}
+
+.fa-wolf-pack-battalion:before {
+  content: "\f514";
+}
+
+.fa-won-sign:before {
+  content: "\f159";
+}
+
+.fa-wordpress:before {
+  content: "\f19a";
+}
+
+.fa-wordpress-simple:before {
+  content: "\f411";
+}
+
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+
+.fa-wpforms:before {
+  content: "\f298";
+}
+
+.fa-wpressr:before {
+  content: "\f3e4";
+}
+
+.fa-wrench:before {
+  content: "\f0ad";
+}
+
+.fa-x-ray:before {
+  content: "\f497";
+}
+
+.fa-xbox:before {
+  content: "\f412";
+}
+
+.fa-xing:before {
+  content: "\f168";
+}
+
+.fa-xing-square:before {
+  content: "\f169";
+}
+
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+
+.fa-yahoo:before {
+  content: "\f19e";
+}
+
+.fa-yammer:before {
+  content: "\f840";
+}
+
+.fa-yandex:before {
+  content: "\f413";
+}
+
+.fa-yandex-international:before {
+  content: "\f414";
+}
+
+.fa-yarn:before {
+  content: "\f7e3";
+}
+
+.fa-yelp:before {
+  content: "\f1e9";
+}
+
+.fa-yen-sign:before {
+  content: "\f157";
+}
+
+.fa-yin-yang:before {
+  content: "\f6ad";
+}
+
+.fa-yoast:before {
+  content: "\f2b1";
+}
+
+.fa-youtube:before {
+  content: "\f167";
+}
+
+.fa-youtube-square:before {
+  content: "\f431";
+}
+
+.fa-zhihu:before {
+  content: "\f63f";
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Removing known styled images in menu and the background of the menu. OBS: If you want to remove all unknown images in menu, please use: div#t div, div#t{background-image:none!important;} - This change to support unknown plugins as well.*/
+div#t,
+div#t div#add,
+div#t div#create,
+div#t div#remove,
+div#t div#start,
+div#t div#pause,
+div#t div#stop,
+div#t div#moveu,
+div#t div#moved,
+div#t div#search,
+div#t div#rss,
+div#t div#setting,
+div#t div#help,
+div#t div#plugins,
+div#t div#webuiRefresh,
+div#t div#autodl-tb {
+  background-image: none !important;
+  margin-top: 3px;
+}
+
+/* FontAwesomeIcons Icons */
+div#t div#add:after {
+  content: "\f0ac";
+}
+
+div#t div#create:after {
+  content: "\f055";
+}
+
+div#t div#remove:after {
+  content: "\f1f8";
+}
+
+div#t div#start:after {
+  content: "\f04b";
+  content: "\f04b";
+}
+
+div#t div#pause:after {
+  content: "\f04c";
+}
+
+div#t div#stop:after {
+  content: "\f04d";
+}
+
+div#t div#moveu:after {
+  content: "\f139";
+}
+
+div#t div#moved:after {
+  content: "\f13a";
+  content: "\f13a";
+}
+
+div#t div#search:after {
+  content: "\f002";
+}
+
+div#t div#rss:after {
+  content: "\f09e";
+}
+
+div#t div#setting:after {
+  content: "\f013";
+}
+
+div#t div#help:after {
+  content: "\f129";
+  padding-left: 5px;
+}
+
+/* Use f128 (?) insted of (i) */
+div#t div#plugins:after {
+  content: "\f12e";
+}
+
+/* Add-on style: PluginPause - https://github.com/Novik/ruTorrent/wiki/PluginPause */
+div#t div#webuiUpdateToggle:before {
+  content: "\f0c8";
+}
+
+div#t div#webuiUpdateToggle:after {
+  content: "\f04c";
+}
+
+div#t div#webuiUpdateToggle {
+  background-image: none !important;
+}
+
+div#t div#webuiRefresh:before {
+  content: "\f0c8";
+}
+
+div#t div#webuiRefresh:after {
+  content: "\f021";
+}
+
+/* Add-on style: autodl-rutorrent - https://github.com/autodl-community/autodl-rutorrent */
+div#t div#autodl-tb:after {
+  content: "\f0d0";
+}
+
+/* Adding FontAwesome To catpanel - Will be search. All the other ones is defined below this... Search is (for some reason, named as "flabel" and.. NOT "fsearch" */
+.catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before {
+  content: "\f002";
+}
+
+/* Adding FontAwesome To catpanel headers*/
+.catpanel#plabel:before {
+  content: "\f02c";
+}
+
+.catpanel#pstate:before {
+  content: "\f01c";
+}
+
+.catpanel#psearch:before {
+  content: "\f002";
+}
+
+.catpanel#ptrackers:before {
+  content: "\f233";
+}
+
+.catpanel#prss:before {
+  content: "\f143";
+}
+
+/* Adding FontAwesome Icons in StatusBar */
+#StatusBar #meter-disk-td:before,
+#StatusBar #meter-cpu-td:before,
+#st_up > tbody > tr > td:nth-child(1):before,
+#st_down > tbody > tr > td:nth-child(1):before,
+#StatusBar #port-td.pstatus0:before,
+#StatusBar #port-td.pstatus1:before,
+#StatusBar #port-td.pstatus2:before {
+  font-size: 14px;
+}
+
+#StatusBar #meter-disk-td:before {
+  display: fixed !important;
+  float: left;
+  margin-left: 5px;
+  content: "\f0a0";
+}
+
+#StatusBar #meter-cpu-td:before {
+  display: fixed !important;
+  float: left;
+  margin-left: 5px;
+  content: "\f2db";
+}
+
+#st_up > tbody > tr > td:nth-child(1):before {
+  display: fixed !important;
+  float: left;
+  content: "\f093";
+}
+
+#st_down > tbody > tr > td:nth-child(1):before {
+  display: fixed !important;
+  float: left;
+  content: "\f019";
+}
+
+/* Attention */
+#StatusBar #port-td.pstatus0:before {
+  display: fixed !important;
+  float: left;
+  content: "\f256";
+}
+
+/* Warning*/
+#StatusBar #port-td.pstatus1:before {
+  display: fixed !important;
+  float: left;
+  content: "\f165";
+}
+
+/* OK */
+#StatusBar #port-td.pstatus2:before {
+  display: fixed !important;
+  float: left;
+  content: "\f164";
+}
+
+/* Adding FontAwesome Icons to Options-popup, Help-popup, Label-popup, Delete Torrent-popup, Add Torrent and Create Torrent */
+#stg-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f013";
+}
+
+#dlgEditRules-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f085";
+}
+
+#dlgHelp-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f129";
+}
+
+#dlgAddRSS-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f09e";
+}
+
+div#dlgLabel div.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f02b";
+}
+
+div#yesnoDlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f071";
+}
+
+div#tadd-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f0ac";
+}
+
+div#tcreate-header:before {
+  display: fixed !important;
+  float: left;
+  content: "\f005";
+}
+
+/* Adding Icon to Torrent Data Directory, Torrent Properties and Rules Manager */
+div#dlgProps div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#tedit div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before {
+  content: "\f085";
+  display: fixed !important;
+  float: left;
+}
+
+/* Status Icons */
+.Status_Down:before {
+  content: "\f019";
+}
+
+.Status_Up:before {
+  content: "\f093";
+}
+
+.Status_Incompleted:before {
+  content: "\f251";
+}
+
+.Status_Paused:before {
+  content: "\f04c";
+}
+
+.Status_Error_Down:before {
+  content: "\f12a";
+}
+
+.Status_Error_Up:before {
+  content: "\f12a";
+}
+
+.Status_Error:before {
+  content: "\f12a";
+}
+
+.Status_Completed:before {
+  content: "\f00c";
+}
+
+.Status_Queued_Down:before {
+  content: "\f017";
+}
+
+.Status_Queued_Up:before {
+  content: "\f017";
+}
+
+.Status_Up_Down:before {
+  content: "\f1fe";
+}
+
+.Status_Checking:before {
+  content: "\f06e";
+}
+
+.Status_RSS:before {
+  content: "\f09e";
+}
+
+#port-td {
+  padding-left: 15px;
+}
+
+/* Footer Loading Icon */
+div#t #ind {
+  background-image: none !important;
+}
+
+div#t #ind:after {
+  content: "\f110";
+  margin: 11px;
+  font-size: 16px;
+  -webkit-animation: rotation 2s infinite linear;
+          animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+/* Status Bar - Torrents */
+#StatusBar #firstStatusRow td.statusCell {
+  /* Torrent Count in Footer .statusCell is the only one with uppercase C.. */
+}
+
+#StatusBar #firstStatusRow td.statusCell #st_system .stval:before {
+  content: "\f01c";
+}
+
+/* Removing Icons from Create Torrent, StatusBar, Data Directory, Traficgraph and ExtRatio*/
+div#tcreate-header,
+#meter-disk-td,
+#meter-cpu-td,
+div#dlg_datadir div.dlg-header,
+#traf_graph > div.legend > div,
+div#tedit div.dlg-header,
+div#dlgEditRatioRules div.dlg-header,
+div#dlgEditRules div.dlg-header {
+  background: none !important;
+}
+
+/* Removing HR's - Borders.. */
+hr, div.dlg-header {
+  border: none;
+}
+
+/* Font Awesome */
+@font-face {
+  font-family: 'Font Awesome 5 Free Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("webfonts/fa-regular-400.eot");
+  src: url("webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-regular-400.woff2") format("woff2"), url("webfonts/fa-regular-400.woff") format("woff"), url("webfonts/fa-regular-400.ttf") format("truetype"), url("webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+
+.far,
+div#t div#webuiUpdateToggle:before,
+div#t div#webuiRefresh:before {
+  font-family: 'Font Awesome 5 Free Regular';
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free Solid';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("webfonts/fa-solid-900.eot");
+  src: url("webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-solid-900.woff2") format("woff2"), url("webfonts/fa-solid-900.woff") format("woff"), url("webfonts/fa-solid-900.ttf") format("truetype"), url("webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa,
+.fas,
+div#t div#add:after,
+div#t div#create:after,
+div#t div#remove:after,
+div#t div#start:after,
+div#t div#pause:after,
+div#t div#stop:after,
+div#t div#moveu:after,
+div#t div#moved:after,
+div#t div#search:after,
+div#t div#rss:after,
+div#t div#setting:after,
+div#t div#help:after,
+div#t div#plugins:after,
+div#t div#webuiUpdateToggle:after,
+div#t div#webuiRefresh:after,
+div#t div#autodl-tb:after,
+.catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before,
+.catpanel#plabel:before,
+.catpanel#pstate:before,
+.catpanel#psearch:before,
+.catpanel#ptrackers:before,
+.catpanel#prss:before,
+#StatusBar #meter-disk-td:before,
+#StatusBar #meter-cpu-td:before,
+#st_up > tbody > tr > td:nth-child(1):before,
+#st_down > tbody > tr > td:nth-child(1):before,
+#StatusBar #port-td.pstatus0:before,
+#StatusBar #port-td.pstatus1:before,
+#StatusBar #port-td.pstatus2:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+#dlgHelp-header.dlg-header:before,
+#dlgAddRSS-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tadd-header:before,
+div#tcreate-header:before,
+div#t #ind:after,
+#StatusBar #firstStatusRow td.statusCell #st_system .stval:before,
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before,
+#-_-_-dls-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-err-_-_-:before,
+li.teg:before {
+  font-family: 'Font Awesome 5 Free Solid';
+  font-weight: 900;
+}
+
+/* Google Fonts */
+/* Define font-families */
+.catpanel,
+div#gcont table td.Header {
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* New font and Bold + Uppercase */
+.stable-head tr td {
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+}
 
 /* Adding FontAwesome for spefic classes - Before and after content filter */
-.catpanel:before,.catpanel:after,div#t div:after,div#t div:before,#-_-_-all-_-_-:before,#-_-_-dls-_-_-:before,#-_-_-com-_-_-:before,#-_-_-act-_-_-:before,#-_-_-iac-_-_-:before,#-_-_-err-_-_-:before,
+.catpanel:before,
+.catpanel:after,
+div#t div:after,
+div#t div:before,
 #StatusBar #meter-disk-td:before,
 #st_up > tbody > tr > td:nth-child(1):before,
 #st_down > tbody > tr > td:nth-child(1):before,
 #StatusBar #port-td:before,
-#dlgAddRSS-header.dlg-header:before,#stg-header.dlg-header:before,#dlgEditRules-header.dlg-header:before,.dlg-close:before,#dlgHelp-header.dlg-header:before, div#dlgLabel div.dlg-header:before,div#dlg_datadir div.dlg-header:before,div#dlgProps div.dlg-header:before,div#tedit div.dlg-header:before,div#dlgEditRatioRules div.dlg-header:before,div#yesnoDlg-header:before, div#tcreate-header:before, div#tadd-header:before,
+#dlgAddRSS-header.dlg-header:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+.dlg-close:before,
+#dlgHelp-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#dlgProps div.dlg-header:before,
+div#tedit div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tcreate-header:before,
+div#tadd-header:before,
 .stable-icon,
-ul.CMenu li a.exp:before, ul.CMenu li a.sel:before,div#CatList ul li.RSS:before{
-	font-family: FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	display:inline-block;
+ul.CMenu li a.exp:before,
+ul.CMenu li a.sel:before {
+  font-family: 'Font Awesome 5 Free Solid';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
 }
 
-* { -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0,0,0,1.0); }
-html, body {border: 0; margin: 0; padding: 0; cursor: default; overflow: hidden; background-color: #FFF; height: 100%; }
-form{margin:0;}
-div#preload {width: 0px; height: 0px; display: none; background-image: url(images/toolbar.png); background-image: url(images/tstatus.png); background-image: url(images/t_bg.png); background-image: url(images/r_bg.gif); background-image: url(images/i_bg.gif); background-image: url(images/asc.gif); background-image: url(images/desc.gif); background-image: url(images/close.png); background-image: url(images/file.gif); background-image: url(images/dir.gif); background-image: url(images/pnl_open.gif); background-image: url(images/pnl_close.gif)}
-div#cover {width: 100%; height: 100%; left: 0px; top: 0px; position: absolute; z-index: 500; background: #FFFFFF}
-div#msg {width: 100%; height: 100px; position: relative; top: 50%; margin-top: -50px; line-height: 100px; font-size: 11px; font-weight: bold; font-family: Tahoma, Arial, Helvetica, sans-serif; text-align: center; background: #FDFDFD; border-top: 1px solid #D0D0D0; border-bottom: 1px solid #D0D0D0}
-div#modalbg {width: 100%; height: 100%; left: 0px; top: 0px; position: absolute; z-index: 500; display: none; opacity: 0.5; background-color: #CCCCCC;}
-.konqueror div#modalbg { background: none; }
-.ie div#modalbg { filter:alpha(opacity=50); }
+/* Fixing Padding and size for FontAwesome Icons */
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+#-_-_-dls-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-err-_-_-:before,
+#dlgAddRSS-header.dlg-header:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+.dlg-close:before,
+#dlgHelp-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#dlgProps div.dlg-header:before,
+div#tedit,
+div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tedit div.dlg-header:before,
+div#tcreate-header:before,
+div#tadd-header:before,
+div#CatList ul li.RSS:before {
+  font-size: 14px;
+  padding-right: 7px;
+}
 
-div.aright {text-align: right}
-div.dlg-window{position: absolute; left: 0px; top: 0px; background-color: #FAFAFA; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; color: #000000; border:none; display: none; overflow: hidden;}
-div.fxcaret {overflow: auto}
-div.dlg-header {padding: 2px 7px; line-height: 20px; background-image:none; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; font-weight: bold; border:none;}
-a.dlg-close:link, a.dlg-close:visited {width: 14px; height: 14px; margin: 5px; background:none; float: right; border: 0}
-a.dlg-close:hover {width: 14px; height: 14px; background: none; float: right; border: 0;}
-a.dlg-close:active {width: 14px; height: 14px; background:none; float: right; border: 0}
+.catpanel,
+div#gcont table td.Header {
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
 
-div#sc {width: 150px; right: 57px; top: 40px; position: absolute; display: none; border: 1px solid #808080; background-color: #E0E0E0; z-index: 100}
-div#sc ul {margin: 0; padding: 0; list-style: none}
-div#sc ul li {margin: 0; padding: 0}
-div#sc li div {line-height: 14px; padding: 4px; font-weight: bold; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif}
-div#sc li.se_act div {background-color: #808080; color: #FFFFFF}
-
-
-ul.CMenu {width: 150px; left: 0px; top: 0px; display: none; border:none; border:none; text-decoration: none; padding: 2px 0 0 2px; margin: 0; list-style-type: none; z-index: 1000}
-ul.CMenu li {float: left; margin-right: 1px; position: relative; width: 150px; background: #FFFFFF}
-ul.CMenu li a {display: block}
-ul.CMenu li a.dis {color: #C0C0C0; text-decoration: line-through; font-size:8px;}
-ul.CMenu li a.dis:hover {background-color: #FFFFFF; color: #C0C0C0}
-ul.CMenu li a {line-height: 16px; padding: 3px 4px 3px 16px; font-weight: normal}
-ul.CMenu li hr {width: 90%; border-top: 1px solid #D0D0D0; height: 0px; margin-top: 2px; margin-bottom: 2px; }
-.ie ul.CMenu li hr { line-height:1px; font-size:1px; margin: 0 }
-ul.CMenu li a.exp {background: transparent url(images/menuexp.gif) no-repeat scroll 140px center; }
-ul.CMenu li a.sel {background:none}
-ul.CMenu li a:hover {background-color: #CFDEEF; color: #000000;}
-
-.menu-line{display:none;}
-
-ul.CMenu li:hover ul {display: block; position: absolute; top: 0; left: 146px; width:150px;}
-ul.CMenu li:hover ul li ul {display: none;}
-ul.CMenu li:hover ul li a {display: block; background-color: #FFFFFF; color: #000000}
-ul.CMenu li:hover ul li a:hover {background-color: #CFDEEF; color: #000000}
-ul.CMenu li:hover ul.left {left: -150px}
-ul.CMenu li ul li a.dis {color: #C0C0C0}
-ul.CMenu li ul li a.dis:hover {background-color: #FFFFFF; color: #C0C0C0}
-
-span.htkey {text-align:right; position: absolute; right: 16px; z-index:100}
-#sel {width: 0px; height: 0px; position: absolute; left: 0px; top: 0px; border: 1px dotted #000000; display: none; z-index: 1000}
-
-div#t {width: 100%; height: 34px; background: #F0F0F0 url(images/t_bg.png) repeat-x center center; line-height: 36px; border:none; white-space: nowrap}
-div#t a {float: left; margin: 0 0 0 5px; padding: 5px}
-div#t a:hover {background-image:none;}
-div#t a:active {padding: 4px 2px 2px 4px}
-div#t div {width: 24px; height: 24px; float: left; cursor: pointer}
-div#t div.TB_Separator {width: 1px; height: 22px; margin: 7px 0 0 5px; padding: 0; border: 0; background-color: #A0A0A0}
-
-/* Welcome Message */
-div#cover #msg{border:none; font-size:0;}
-div#cover #msg span#loadimg{background-image:none!important; height:0px}
-div#cover #msg span#loadimg:before{content: "FlatUI"; font-size:30px;}
-div#cover #msg span#loadimg:after{content: "by exetico"; padding-left:10px; font-size:15px;}
+/* New font and Bold + Uppercase */
+.stable-head tr td {
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+}
 
 /* TOPMENU */
-
 /* Hiding content to Search in top-menu */
-#rrow > td:nth-child(3){display:none;}
+#rrow > td:nth-child(3) {
+  display: none;
+}
 
-div#t div:after{
-	font-size: 22px;
-	margin-top:-6px;
-	margin-left:3px;
+div#t div:after {
+  font-size: 20px;
+  margin-top: -2px;
+  margin-left: 3px;
 }
 
 /* Stack box-icon around menu-icons */
-div#t div:before{
-	font-size: 25px;
-	margin-top:-4px;
-	margin-left:3px;
+div#t div:before {
+  font-size: 25px;
+  margin-top: -4px;
+  margin-left: 3px;
 }
 
 /* Smaller size for icons on box */
-div#t div#webuiUpdateToggle:after,div#t div#webuiRefresh:after{
+div#t div#webuiUpdateToggle:after,
+div#t div#webuiRefresh:after {
   font-size: 9px;
   vertical-align: top;
   margin-left: -14px;
 }
 
-/* Removing known styled images in menu and the background of the menu. OBS: If you want to remove all unknown images in menu, please use: div#t div, div#t{background-image:none!important;} - This change to support unknown plugins as well.*/
-div#t,div#t div#add, div#t div#create, div#t div#remove, div#t div#start, div#t div#pause, div#t div#stop, div#t div#moveu, div#t div#moved, div#t div#search, div#t div#rss, div#t div#setting, div#t div#help, div#t div#plugins
-{background-image:none!important;}
+div#t #mnu_add {
+  margin-left: 0;
+}
 
+div#t tr#rrow input#query {
+  margin: -5px 0 0 5px !important;
+  height: 30px;
+}
 
-/* FontAwesomeIcons Icons */
-div#t div#add:after {content: "\f0ac";}
-div#t div#create:after {content: "\f055";}
-div#t div#remove:after {content: "\f014";}
-div#t div#start:after {content: "\f04b";}
-div#t div#pause:after {content: "\f04c";}
-div#t div#stop:after {content: "\f04d";}
-div#t div#moveu:after {content: "\f139";}
-div#t div#moved:after {content: "\f13a";}
-div#t div#search:after {content: "\f002";}
-div#t div#rss:after {content: "\f09e";}
-div#t div#setting:after {content: "\f013";}
+div#t {
+  width: 100%;
+  height: 34px;
+  background: #F0F0F0 url(images/t_bg.png) repeat-x center center;
+  line-height: 36px;
+  border: none;
+  white-space: nowrap;
+}
 
-div#t div#help:after {content: "\f129";padding-left:5px;} /* Use f128 (?) insted of (i) */
-div#t div#plugins:after {content: "\f12e";}
+div#t a {
+  float: left;
+  margin: 0 0 0 6px;
+  padding: 5px;
+}
 
-/* Add-on style: PluginPause - https://github.com/Novik/ruTorrent/wiki/PluginPause */
-div#t div#webuiUpdateToggle:before {content: "\f096";} div#t div#webuiUpdateToggle:after {content: "\f04c";} div#t div#webuiUpdateToggle{background-image:none!important;}
-div#t div#webuiRefresh:before {content: "\f096";} div#t div#webuiRefresh:after {content: "\f021";} div#t div#webuiRefresh{background-image:none!important;}
+div#t a:hover {
+  background-image: none;
+}
 
-/* Add-on style: autodl-rutorrent - https://github.com/autodl-community/autodl-rutorrent */
-div#t div#autodl-tb:after {content: "\f0d0";}
-div#t div#autodl-tb{background-image:none!important;}
+div#t a:active {
+  padding: 4px 2px 2px 4px;
+}
 
-#rc {float: right; }
-#go {display:none;}
-#query {margin:;height:100%;padding: 0px 7px;}
-div#t a#mnu_go {margin: 3px 0 0 0; padding: 3px}
-div#t #ind {margin-top: 2px; background: transparent url(images/ajax-loader.gif) no-repeat 0px center; width: 32px; margin-right: 2px; line-height: 26px; cursor: default; }
+div#t div {
+  width: 24px;
+  height: 24px;
+  float: left;
+  cursor: pointer;
+}
 
-input.Textbox, input.Button, select {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px}
-Input.TextboxShort {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 50px}
-Input.TextboxMid {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 110px}
-Input.TextboxLarge {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 220px}
-Input.TextboxVShort {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 30px}
-input.Button {padding: 1px 10px; background:none; width: 80px; height: 19px; border: 1px solid #A0A0A0; cursor: pointer }
-input.Button#fMan_showconsole,input.Button#FS_refresh,input.Button#clear_log{height: 15px;margin-top: 1px;}
-Input{border:none!important;}
-Input{outline:0;}
+div#t div.TB_Separator {
+  width: 1px;
+  height: 22px;
+  margin: 7px 0 0 5px;
+  padding: 0;
+  border: 0;
+  background-color: #A0A0A0;
+}
 
-select {margin-top: 5px}
-a {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; color: #686868}
-table#maincont {margin:0}
-table#maincont td.uicell {vertical-align: top; padding: 0 }
+#rc {
+  float: right;
+}
 
-/* CatList Styling - Including adding of FontAwesome */
+#go {
+  display: none;
+}
 
-div#CatList {width: 0px; border:none; background-color: #FFFFFF; overflow-y: auto; overflow-x: hidden}
-div#CatList ul {padding: 0; margin: 0; list-style: none; white-space: nowrap}
-div#CatList ul li {padding: 2px 25px; margin: 0; line-height: 14px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; cursor: pointer; border:none; background-repeat: no-repeat}
+#query {
+  height: 100%;
+  padding: 0px 7px;
+}
 
-#-_-_-all-_-_-,#-_-_-dls-_-_-,#-_-_-com-_-_-,#-_-_-act-_-_-,#-_-_-iac-_-_-,#-_-_-err-_-_-{background-image:none;}
-#-_-_-all-_-_-:before{content: "\f022";}
-#-_-_-dls-_-_-:before{content: "\f019";}
-#-_-_-com-_-_-:before{content: "\f093";}
-#-_-_-act-_-_-:before{content: "\f251";}
-#-_-_-iac-_-_-:before{content: "\f250";}
-#-_-_-err-_-_-:before{content: "\f06a";}
-div#CatList ul li.RSS:before{content:"\f09e";}
+div#t a#mnu_go {
+  margin: 3px 0 0 0;
+  padding: 3px;
+}
 
-div#CatList ul li.RSS {background:none;}
-div#CatList ul li.disRSS {background-image: url(images/tstatus.png); background-position: 4px -190px}
+div#t #ind {
+  margin-top: 2px;
+  background: transparent url(images/ajax-loader.gif) no-repeat 0px center;
+  width: 32px;
+  margin-right: 2px;
+  line-height: 26px;
+  cursor: default;
+}
 
-/* Adding FontAwesome to Stablelist */
-.stable-icon {background:none;}
-.Status_Down:before {content: "\f019";}
-.Status_Up:before {content: "\f093";}
-.Status_Incompleted:before {content: "\f251";}
-.Status_Paused:before {content: "\f04c";}
-.Status_Error_Down:before {content: "\f12a";}
-.Status_Error_Up:before {content: "\f12a";}
-.Status_Error:before {content: "\f12a";}
-.Status_Completed:before {content: "\f00c";}
-.Status_Queued_Down:before {content: "\f017";}
-.Status_Queued_Up:before {content: "\f017";}
-.Status_Up_Down:before {content: "\f1fe";}
-.Status_Checking:before {content: "\f06e";}
-.Status_RSS:before {content: "\f09e";}
+input.Textbox,
+input.Button,
+select {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+}
 
-div#HDivider, div#VDivider { font-size: 0; }
-div#HDivider { width: 3px; height: 0px; padding: 0; margin: 0; cursor: e-resize; }
-div#VDivider { width: 100%; height: 3px; padding: 0; margin: 0; cursor: n-resize; }
-div#dividerDrag { width: 3px; height: 3px; padding: 0; margin: 0; background: #A0A0A0; position: absolute; display: none }
+Input.TextboxShort {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 50px;
+}
 
-div#stg {width: 600px; height: 460px; position: absolute; left: 0px; top: 50px; display: none; overflow: visible}
-div#stg_c {overflow: hidden}
-div#stg-header, div#dlgAddRSS-header{ background-image:none!important; }
+Input.TextboxMid {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 110px;
+}
 
-div#stg .lm {width: 120px; height: 413px; margin: 5px; margin-right: 0; padding: 5px; float: left; position: relative; background-color: #FFFFFF; border:none; overflow: auto}
-.ie div#stg .lm {width: 125px; position: static;}
-.ie9 div#stg .lm {position: static}
-.ie div#stg {width: 605px;}
-div.op100l {width: 400px; float: left}
-div.op50l {width: 200px; float: left; clear: left}
-div.op50l select {padding: 0}
-div.algnright {text-align: right; clear: right}
-.ie div.op50l {clear: none}
-.ie div.algnright {clear: none}
-.ie9 div.op50l {clear: left}
-.ie9 div.algnright {clear: right}
+Input.TextboxLarge {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 220px;
+}
 
-.lm ul {width: 100%; margin: 0; padding: 0; list-style-position: inside; list-style: none}
-.lm li {margin: 0 5px; padding: 0 12px; line-height: 16px !important; background:none;}
-.lm ul.child {margin: 0 0 0 5px; display: none}
-.lm ul.child li {margin: 0 0 0 9px}
-.lm li.first {background:none;}
-.lm li.last {background:none;}
-.lm li div.toggle {width: 10px; height: 10px; background: transparent url(images/exp.gif) no-repeat scroll center center; float: left; margin: 3px 0 0 -16px; cursor: pointer}
-.lm li a {color: #000000; padding: 1px 2px}
-.lm li a.focus {display:block;font-weight:bold;}
-.ie .lm li a {margin: 0 0 0 -5px; padding: 0}
-.stg_con {float: right; position: relative; width: 450px; height: 400px; margin: 4px; background-color: #FAFAFA}
-.ie9 .stg_con {position: static}
-fieldset {margin: 4px}
-* > fieldset {border:none; -moz-border-radius: 6px; -webkit-border-radius:6px; border-radius:6px;}
-.stg_con table {width: 100%}
-.stg_con td {font-weight: normal; height: 19px}
-.stg_con td.alr {text-align: right}
-.stg_con td input {margin: 0 4px; font-size: 11px; padding: 1px 4px}
-.stg_con select {margin: 1px 4px; font-size: 11px; padding: 1px 4px}
-input.num {text-align: right; width: 50px}
-input.str {text-align: left; width: 130px}
-td label, div label {cursor: pointer}
-input.disabled {background-color: #FAFAFA; color: #C0C0C0; border: 1px solid #C0C0C0}
-td.disabled, label.disabled, span.disabled, div.disabled {color: #C0C0C0; cursor: default}
-fieldset div {padding: 2px}
-.ie7 fieldset div {padding: 0px}
-div input, div select {margin: 0 0 0 4px; font-size: 11px; padding: 1px 4px}
-legend {color: #000000; font-weight: bold}
-div.indent {padding-left: 16px}
-#st_gl {display: block}
-#st_dl, #st_con, #st_bt, #st_que, #st_sch, #st_ao, #st_dc {display: none}
-#st_btns {float: right; position: relative; width: 450px; height: 20px; padding: 3px; text-align: right; }
-#st_btns input {margin-left: 5px}
-a {text-decoration: none}
-#st_ao_h {width: 420px; height: 270px; overflow: auto; }
-#st_ao_h table {width: 400px}
-select.cols {border: 1px solid #808080; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 120px}
-div#dragmask {width: 10px; height: 10px; left: 0px; top: 0px; position: absolute; z-index: 5000; display: none; border: 1px dotted #A0A0A0}
-div#tdetails {height: 50%; padding:0;}
-div#tdetails a.h {margin: 0}
-div#tdcont {height: 200px; background: #FFFFFF; border:none; padding: 0; overflow: hidden }
+Input.TextboxVShort {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 30px;
+}
 
-div.tab { height:100%;overflow: auto }
-div#lcont {font-size: 9px; font-family: Tahoma, Arial, Helvetica, sans-serif; line-height: 11px;}
-div#lcont div.mono {font-size: 11px; font-family: monospace; line-height: 11px; background: #F5F5F5; white-space: pre}
-div#lcont div.std {padding: 2px}
+input.Button {
+  padding: 1px 10px;
+  background: none;
+  width: 80px;
+  height: 19px;
+  border: 1px solid #A0A0A0;
+  cursor: pointer;
+}
 
-div#gcont table {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; line-height: 10px}
-div#gcont table td.Header {font-weight: bold;}
+input.Button#fMan_showconsole,
+input.Button#FS_refresh,
+input.Button#clear_log {
+  height: 15px;
+  margin-top: 1px;
+}
 
-div.graph_tab {background-color: #FFFFFF; overflow: hidden; display: block; -moz-user-select: none; -moz-user-focus: normal; -moz-user-input: enabled}
-div.graph_tab {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; line-height: 11px; color: #545454}
+Input {
+  border: none !important;
+}
 
-div.table_tab {background-color: #FFFFFF; overflow: hidden; display: block; -moz-user-select: none; -moz-user-focus: normal; -moz-user-input: enabled}
-div#List {border: none;}
-div#List.table_tab{width:100%!important;}
+Input {
+  outline: 0;
+}
 
-div.cont {padding: 6px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif}
+/* Left Sidebar - CatList Styling - Including adding of FontAwesome */
+.catpanel {
+  background: url(images/pnl_open.gif) 2px no-repeat;
+  background-color: #F0F0F0;
+  border: none;
+  padding: 2px 21px;
+  margin: 0px;
+  line-height: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -moz-user-focus: normal;
+  -moz-user-input: enabled;
+}
 
-.tabbar {height: 16px; margin: 0; padding: 0; list-style-type: none; text-align: left}
-.tabbar li {margin: 0; padding: 0; display: inline; white-space: nowrap;}
-.tabbar li a {position: relative; top: 3px; text-decoration: none; border:none; border-bottom: 0; margin: -5px 1px 0 1px; padding: 1px 5px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; -moz-border-radius: 0; -webkit-border-radius:0; border-radius:0; vertical-align: top; cursor: pointer}
-.tabbar li a:hover {border-top:none;}
-.tabbar li.selected a {margin: 0 -2px 0 0; padding: 1px 7px 4px 7px; position: relative; top: 2px; vertical-align: top; border-top:none; background:none;}
-div#dlgLabel {width: 250px; height: 140px}
-div#dlgLabel div.dlg-header {background:none;}
-div#dlgLabel div.content {width: 230px; margin: 5px; padding: 5px; line-height: 16px}
-div#dlgLabel div.content input {margin-top: 5px}
-#txtLabel {width: 200px}
-div#padd {width: 250px; height: 120px}
-div#padd div.dlg-header {background-image: url(images/props.gif)}
-div#padd div.content {width: 230px; margin: 5px; padding: 5px; line-height: 16px}
-div#padd div.content input {margin-top: 5px}
-#peerIP {width: 200px}
-div#dlgAbout {width: 250px; height: 250px}
-div#dlgAbout div.dlg-header {background-image: url(images/about.gif)}
-div#dlgAbout div.content {width: 230px; margin: 5px; padding: 5px}
-div#dlgHelp {width: 250px; height: 250px}
-div#dlgHelp div.dlg-header {background-image:none}
-div#dlgHelp div.content {width: 230px; margin: 5px; padding: 5px}
+div#CatList {
+  width: 0px;
+  border: none;
+  background-color: #FFFFFF;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
-div#dlgProps {width: 395px; height: 215px}
-div#dlgProps div.dlg-header {background:none;}
-div#dlgProps div.content {width: 380px; margin-left: 5px; }
-div#dlgProps textarea#prop-trackers {width: 100%; height: 70px; background: #FFFFFF; border: 1px solid #D0D0D0}
-div#dlgProps fieldset {margin-bottom: 5px; }
-div#dlgProps fieldset div {line-height: 16px; }
-div#dlgProps fieldset div.props-spacer {width: 90%; float: left}
-input#prop-tracker_numwant {width: 60px; float: right}
-input#prop-ulslots {width: 60px; float: right}
-input#prop-peers_min {width: 60px; float: right}
-input#prop-peers_max {width: 60px; float: right}
-input#prop-seed_ratio {width: 40px}
+a div#CatList ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+}
 
-div#yesnoDlg {width: 280px; height: 100px}
-div#yesnoDlg div.dlg-header {background:none;}
-div#yesnoDlg div.content {width: 260px; margin: 5px; padding: 5px; line-height: 16px}
-div#yesnoDlg div.content input {margin-top: 5px}
+div#CatList ul li {
+  padding: 2px 25px;
+  margin: 0;
+  line-height: 14px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  border: none;
+  background-repeat: no-repeat;
+}
 
-span#loadimg {padding: 20px; background: transparent url(images/ajax-loader.gif) no-repeat center center; }
-.webkit div#msg {position: fixed;}
-.konqueror div#msg {position: fixed;}
+/* No Label Styling */
+#plabel_cont .-_-_-all-_-_- img {
+  display: none;
+}
 
-.Icon_File {background: transparent url(images/file.gif) no-repeat left center}
-.Icon_Dir {background: transparent url(images/dir.gif) no-repeat left center}
-.Icon_Share {background: transparent url(images/share.gif) no-repeat left center}
+/* Left Sidebar Icons */
+div#CatList ul li.RSS,
+#-_-_-all-_-_-,
+.-_-_-all-_-_-,
+#-_-_-dls-_-_-,
+#-_-_-com-_-_-,
+#-_-_-act-_-_-,
+#-_-_-iac-_-_-,
+#-_-_-err-_-_-,
+#-_-_-nlb-_-_-,
+li.teg {
+  background-image: none;
+}
 
-div#HDivider:hover, div#VDivider:hover { background: #A0A0A0; }
-textarea { overflow: auto; }
+div#CatList ul li.RSS:before,
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+#-_-_-dls-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-err-_-_-:before,
+#-_-_-nlb-_-_-:before,
+li.teg:before {
+  opacity: 0.7;
+}
 
-.catpanel { background: url(images/pnl_open.gif) 2px no-repeat; background-color: #F0F0F0; border:none; padding: 2px 21px; margin: 0px; line-height: 16px; font-size: 12px;
-font-family: 'Titillium Web', sans-serif;
-cursor: pointer; -moz-user-select: none; -moz-user-focus: normal; -moz-user-input: enabled }
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before {
+  width: 15px;
+  text-align: center;
+  content: "\f07b";
+}
 
-div#tadd-header {background:none;}
-div#tadd {display: none; width: 380px; height: 290px; left: 100px; top: 100px; position: absolute; margin: 0 auto }
-div#tadd label {text-align: right; width: 75px; padding-right: 20px; float: left }
-div#tadd br {clear: left; line-height: 0}
-div#tadd input {margin-bottom: 1px}
-div#tadd select { width: 220px }
+#-_-_-dls-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "\f019";
+}
 
-.konqueror div#tadd label { width: 80px; }
-.konqueror div#tadd { height: 290px; }
-.konqueror #st_con { height: 340px; overflow: auto; }
+#-_-_-com-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "\f093";
+}
 
-#StatusBar { border-top:none; background-color: #FFFFFF; margin-top:0; height: 24px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; color: #000000; white-space: nowrap; overflow: hidden;padding:3px;}
-#StatusBar table { line-height: 24px; }
-#st_up, #st_down, td.pstatus0, td.pstatus1, td.pstatus2{ background:none!important;}
-#st_up td:first-child .sthdr { margin-left: 25px }
-#st_down td:first-child .sthdr { margin-left: 25px }
-.statuscell {height: 20px; line-height: 20px; border-right: none;}
-.sthdr { font-weight: bold; padding-right: 3px; text-align: right; }
-.stval { padding-right: 3px; overflow: hidden; width: 65px; }
-.speedEdit { width: 320px }
-.statuscell td { padding: 0 }
-#st_system .sthdr { padding-left: 8px }
+#-_-_-act-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "\f252";
+}
 
-.ie fieldset {padding: 5px}
-.buttons-list {  margin-bottom: 5px }
-#servertime { text-align: center }
+#-_-_-iac-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "\f254";
+}
 
-#bf {white-space:pre}
+#-_-_-err-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "\f06a";
+}
 
-@media only screen and (orientation:portrait)
-{
-	#go { display: none }
-	#query { width: 80px }
+li.teg:before {
+  /* Search Result Lines */
+  content: "\f22d";
+  width: 15px;
+  text-align: center;
+  padding-right: 9px;
+}
+
+div#CatList ul li.disRSS {
+  background-image: url(images/tstatus.png);
+  background-position: 4px -190px;
+}
+
+img.lbl_nlb {
+  position: relative;
+  left: -99999px;
+}
+
+/* Hiding toggle-image */
+.catpanel {
+  background-image: none !important;
+  padding: 8px 14px 6px 10px;
+  line-height: 22px;
+}
+
+div#CatList ul li,
+li.cat,
+.cat.tracker {
+  padding: 5px 10px !important;
+}
+
+.catpanel:before {
+  font-size: 16px;
+  padding-right: 10px;
+  margin-top: 2px;
+  margin-left: -2px;
+  width: 17px;
+}
+
+/* Style Cat Header, if it's closed */
+.catpanel[style*="pnl_close.gif"] {
+  opacity: 0.3;
+}
+
+.catpanel[style*="pnl_close.gif"]:hover:after, .catpanel[style*="pnl_close.gif"]:after {
+  content: 'Hidden';
+  position: absolute;
+  margin-top: 8px;
+  font-size: 8px;
+  font-weight: bold;
+  margin-left: 25px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.catpanel[style*="pnl_close.gif"]:hover:after {
+  content: 'Click to fold out';
+}
+
+#CatList .catpanel:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+/* Position of img icons - categories */
+#CatList .tfavicon {
+  margin-left: -1px;
+  margin-right: 8px;
+}
+
+#CatList li img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#CatList li:hover img {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+#CatList {
+  /* Headers i CatList */
+  /* Hide Menu */
+  width: 32px !important;
+  overflow: hidden;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+#CatList div.catpanel {
+  width: 100%;
+}
+
+#CatList div.catpanel {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#CatList:hover {
+  width: 200px !important;
+}
+
+/* Padding to the "all"-text in tracker catList */
+#ptrackers_cont .-_-_-all-_-_-::before {
+  padding-right: 10px;
+}
+
+/* Padding to the "all"-text in rss catList */
+div#CatList ul li.RSS::before {
+  padding-right: 11px;
+}
+
+div#CatList #prss #rsstimer {
+  padding: 0 5px;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+/* Search Results */
+li.teg {
+  margin-left: 6px;
+}
+
+ul.CMenu {
+  width: 150px;
+  left: 0px;
+  top: 0px;
+  display: none;
+  border: none;
+  border: none;
+  text-decoration: none;
+  padding: 2px 0 0 2px;
+  margin: 0;
+  list-style-type: none;
+  z-index: 1000;
+}
+
+ul.CMenu li {
+  float: left;
+  margin-right: 1px;
+  position: relative;
+  width: 150px;
+  background: #FFFFFF;
+}
+
+ul.CMenu li a {
+  display: block;
+}
+
+ul.CMenu li a.dis {
+  color: #C0C0C0;
+  text-decoration: line-through;
+  font-size: 8px;
+}
+
+ul.CMenu li a.dis:hover {
+  background-color: #FFFFFF;
+  color: #C0C0C0;
+}
+
+ul.CMenu li a {
+  line-height: 16px;
+  padding: 3px 4px 3px 16px;
+  font-weight: normal;
+}
+
+ul.CMenu li hr {
+  width: 90%;
+  border-top: 1px solid #D0D0D0;
+  height: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.ie ul.CMenu li hr {
+  line-height: 1px;
+  font-size: 1px;
+  margin: 0;
+}
+
+ul.CMenu li a.exp {
+  background: transparent url(images/menuexp.gif) no-repeat scroll 140px center;
+}
+
+ul.CMenu li a.sel {
+  background: none;
+}
+
+ul.CMenu li a:hover {
+  background-color: #CFDEEF;
+  color: #000000;
+}
+
+.menu-line {
+  display: none;
+}
+
+ul.CMenu li:hover ul {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 146px;
+  width: 150px;
+}
+
+ul.CMenu li:hover ul li ul {
+  display: none;
+}
+
+ul.CMenu li:hover ul li a {
+  display: block;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+ul.CMenu li:hover ul li a:hover {
+  background-color: #CFDEEF;
+  color: #000000;
+}
+
+ul.CMenu li:hover ul.left {
+  left: -150px;
+}
+
+ul.CMenu li ul li a.dis {
+  color: #C0C0C0;
+}
+
+ul.CMenu li ul li a.dis:hover {
+  background-color: #FFFFFF;
+  color: #C0C0C0;
+}
+
+/* Adding Icon to exp - submenu */
+ul.CMenu li a.exp:before {
+  content: "\f061";
+  display: fixed !important;
+  float: right;
+  font-size: 8px;
+}
+
+/* Adding Icon to submenu - sel selected item*/
+ul.CMenu li a.sel:before {
+  content: "\f00c";
+  display: fixed !important;
+  float: left;
+  font-size: 8px;
+  margin-left: -12px;
+}
+
+/*
+### Dialog 
+*/
+div.dlg-window {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #FAFAFA;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  color: #000000;
+  border: none;
+  display: none;
+  overflow: hidden;
+  height: auto !important;
+}
+
+.dlg-header {
+  padding: 2px 7px;
+  line-height: 20px;
+  background-image: none;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: none;
+}
+
+a.dlg-close:link,
+a.dlg-close:visited {
+  width: 14px;
+  height: 14px;
+  margin: 5px;
+  background: none;
+  float: right;
+  border: 0;
+}
+
+a.dlg-close:hover {
+  width: 14px;
+  height: 14px;
+  background: none;
+  float: right;
+  border: 0;
+}
+
+a.dlg-close:active {
+  width: 14px;
+  height: 14px;
+  background: none;
+  float: right;
+  border: 0;
+}
+
+/* Adding Closing Icon to Popups*/
+.dlg-close:before {
+  content: "\f057";
+  display: fixed !important;
+  float: left;
+}
+
+/* Fixing space for buttons-list in Popups */
+.dlg-window .aright.buttons-list {
+  padding-right: 8px !important;
+}
+
+/*
+### Dialog
+### Torrent Data Directory
+*/
+/* Fixing width of btn_datadir_browse (In Popups) */
+input#btn_datadir_browse,
+.Button.browseButton {
+  width: 35px;
+}
+
+/* Fixing height for Torrent Data Directory */
+#dlg_datadir.dlg-window {
+  padding-bottom: 15px;
+}
+
+/*
+### Dialog
+### Label
+*/
+div#dlgLabel {
+  width: 250px;
+  height: 140px;
+}
+
+div#dlgLabel div.dlg-header {
+  background: none;
+}
+
+div#dlgLabel div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+div#dlgLabel div.content input {
+  margin-top: 5px;
+}
+
+/*
+### Dialog
+### Properties
+*/
+div#dlgProps {
+  width: 395px;
+  height: 215px;
+}
+
+div#dlgProps div.dlg-header {
+  background: none;
+}
+
+div#dlgProps div.content {
+  width: 380px;
+  margin-left: 5px;
+}
+
+div#dlgProps textarea#prop-trackers {
+  width: 100%;
+  height: 70px;
+  background: #FFFFFF;
+  border: 1px solid #D0D0D0;
+}
+
+div#dlgProps fieldset {
+  margin-bottom: 5px;
+}
+
+div#dlgProps fieldset div {
+  line-height: 16px;
+}
+
+div#dlgProps fieldset div.props-spacer {
+  width: 90%;
+  float: left;
+}
+
+input#prop-tracker_numwant {
+  width: 60px;
+  float: right;
+}
+
+input#prop-ulslots {
+  width: 60px;
+  float: right;
+}
+
+input#prop-peers_min {
+  width: 60px;
+  float: right;
+}
+
+input#prop-peers_max {
+  width: 60px;
+  float: right;
+}
+
+input#prop-seed_ratio {
+  width: 40px;
+}
+
+/*
+### Dialog
+### About
+*/
+div#dlgAbout {
+  width: 250px;
+  height: 250px;
+}
+
+div#dlgAbout div.dlg-header {
+  background-image: url(images/about.gif);
+}
+
+div#dlgAbout div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+}
+
+/*
+### Dialog
+### Help
+*/
+div#dlgHelp {
+  width: 250px;
+  height: 250px;
+}
+
+div#dlgHelp div.dlg-header {
+  background-image: none;
+}
+
+div#dlgHelp div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+}
+
+div#yesnoDlg {
+  width: 280px;
+  height: 100px;
+}
+
+/*
+### Dialog
+### Yes/No
+*/
+div#yesnoDlg div.dlg-header {
+  background: none;
+}
+
+div#yesnoDlg div.content {
+  width: 260px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+div#yesnoDlg div.content input {
+  margin-top: 5px;
+}
+
+/*
+### 
+###
+### Settings
+###
+###
+*/
+div#stg {
+  width: 600px;
+  height: 460px;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  display: none;
+  overflow: visible;
+}
+
+div#stg_c {
+  overflow: hidden;
+}
+
+div#stg-header,
+div#dlgAddRSS-header {
+  background-image: none !important;
+}
+
+/*
+### Settings
+### Connections
+*/
+.stg_con {
+  float: right;
+  position: relative;
+  width: 450px;
+  height: 400px;
+  margin: 4px;
+  background-color: #FAFAFA;
+}
+
+.ie9 .stg_con {
+  position: static;
+}
+
+fieldset {
+  margin: 4px;
+}
+
+* > fieldset {
+  border: none;
+  border-radius: 6px;
+}
+
+.stg_con table {
+  width: 100%;
+}
+
+.stg_con td {
+  font-weight: normal;
+  height: 19px;
+}
+
+.stg_con td.alr {
+  text-align: right;
+}
+
+.stg_con td input {
+  margin: 0 4px;
+  font-size: 11px;
+  padding: 1px 4px;
+}
+
+.stg_con select {
+  margin: 1px 4px;
+  font-size: 11px;
+  padding: 1px 4px;
+}
+
+/*
+### Settings
+### Not categorised, yet...
+*/
+div#stg .lm {
+  width: 120px;
+  height: 413px;
+  margin: 5px;
+  margin-right: 0;
+  padding: 5px;
+  float: left;
+  position: relative;
+  background-color: #FFFFFF;
+  border: none;
+  overflow: auto;
+}
+
+.ie div#stg .lm {
+  width: 125px;
+  position: static;
+}
+
+.ie9 div#stg .lm {
+  position: static;
+}
+
+.ie div#stg {
+  width: 605px;
+}
+
+/*
+### 
+###
+### Add Torrent
+###
+###
+*/
+div#tadd-header {
+  background: none;
+}
+
+div#tadd {
+  display: none;
+  width: 380px;
+  height: 290px;
+  left: 100px;
+  top: 100px;
+  position: absolute;
+  margin: 0 auto;
+}
+
+div#tadd label {
+  text-align: right;
+  width: 75px;
+  padding-right: 20px;
+  float: left;
+}
+
+div#tadd br {
+  clear: left;
+  line-height: 0;
+}
+
+div#tadd input {
+  margin-bottom: 1px;
+}
+
+div#tadd select {
+  width: 220px;
+}
+
+.konqueror div#tadd label {
+  width: 80px;
+}
+
+.konqueror div#tadd {
+  height: 290px;
+}
+
+.konqueror #st_con {
+  height: 340px;
+  overflow: auto;
+}
+
+/* Transparent amount */
+div#gcont table {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  line-height: 10px;
+}
+
+div#gcont table td.Header {
+  font-weight: bold;
+}
+
+div.graph_tab {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  display: block;
+  -moz-user-select: none;
+  -moz-user-focus: normal;
+  -moz-user-input: enabled;
+}
+
+div.graph_tab {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  line-height: 11px;
+  color: #545454;
+}
+
+div.cont {
+  padding: 6px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.tabbar {
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.tabbar li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  white-space: nowrap;
+}
+
+.tabbar li a {
+  position: relative;
+  top: 3px;
+  text-decoration: none;
+  border: none;
+  border-bottom: 0;
+  margin: -5px 1px 0 1px;
+  padding: 1px 5px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  border-radius: 0;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.tabbar li a:hover {
+  border-top: none;
+}
+
+.tabbar li.selected a {
+  margin: 0 -2px 0 0;
+  padding: 1px 7px 4px 7px;
+  position: relative;
+  top: 2px;
+  vertical-align: top;
+  border-top: none;
+  background: none;
+}
+
+div#tdetails {
+  height: 50%;
+  padding: 0;
+  width: 100% !important;
+  /* Speed Section */
+  /* autodl-irrsi styling for better spacing */
+}
+
+div#tdetails div#Speed div[style*="255"] {
+  background-color: rgba(38, 38, 38, 0.4) !important;
+}
+
+div#tdetails div#Speed table tr td.legendLabel {
+  color: #ddddd1 !important;
+  font-weight: bold;
+}
+
+div#tdetails div#autodl-irssi-tab div#autodl-log-buttons {
+  padding: 10px 5px;
+}
+
+div#tdetails div#autodl-irssi-tab div#autodl-log-buttons input[type="button"] {
+  margin: 0px 10px 5px 0px;
+  padding: 6px 9px !important;
+  height: auto;
+  width: auto;
+}
+
+div#tdetails div#autodl-irssi-tab form#autodl-restore input#autodl-log-restore-button {
+  margin-left: 0;
+}
+
+div#tdetails div#autodl-irssi-tab form#autodl-restore input#autodl-restore-file {
+  background: transparent !important;
+}
+
+div#tdetails a.h {
+  margin: 0;
+}
+
+#StatusBar {
+  border-top: none;
+  background-color: #FFFFFF;
+  margin-top: 0;
+  height: 24px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 3px;
+}
+
+#StatusBar td.statusCell #st_system {
+  /* Hide "Torrents:"-text */
+}
+
+#StatusBar td.statusCell #st_system .sthdr {
+  font-size: 0px;
+  display: none;
+}
+
+#StatusBar table {
+  line-height: 24px;
+}
+
+#st_up,
+#st_down,
+td.pstatus0,
+td.pstatus1,
+td.pstatus2 {
+  background: none !important;
+}
+
+#st_up td:first-child .sthdr {
+  margin-left: 25px;
+}
+
+#st_down td:first-child .sthdr {
+  margin-left: 25px;
+}
+
+.statusCell #st_system {
+  /* Torrent Count in Footer .statusCell is the only one with uppercase C.. */
+}
+
+.statusCell #st_system .stval:before {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.statuscell {
+  height: 20px;
+  line-height: 20px;
+  border-right: none;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.statuscell#st_up td:before, .statuscell#st_down td:before {
+  font-size: 14px !important;
+  margin-top: 3px;
+}
+
+.sthdr {
+  font-weight: bold;
+  padding-right: 3px;
+  text-align: right;
+}
+
+.stval {
+  padding-right: 3px;
+  overflow: hidden;
+  width: 65px;
+}
+
+.speedEdit {
+  width: 320px;
+}
+
+.statuscell td {
+  padding: 0;
+}
+
+#st_system .sthdr {
+  padding-left: 8px;
+}
+
+.ie fieldset {
+  padding: 5px;
+}
+
+.buttons-list {
+  margin-bottom: 5px;
+}
+
+#servertime {
+  text-align: center;
+}
+
+#bf {
+  white-space: pre;
+}
+
+@media only screen and (orientation: portrait) {
+  #go {
+    display: none;
+  }
+  #query {
+    width: 80px;
+  }
 }
 
 /* No borders om the meter-disk-value in bottom info-bar, Rules Manager and Hostcookies in settings*/
-#meter-disk-value,#hostcookies,td.legendColorBox > div,.lf_rru,div#RSSList,select,input,textarea{border:none!important;outline: 0;}
+#meter-disk-value,
+#hostcookies,
+td.legendColorBox > div,
+.lf_rru,
+div#RSSList,
+select,
+input,
+textarea {
+  border: none !important;
+  outline: 0;
+}
 
 /* No BG at the Traffic > Traffic Grap in the right corner */
-{background:none!important;}
+/*{background:none!important;}*/
+/* Text information for disk-text, CPU text and torrent count */
+td.statusCell .statuscell .stval,
+.meter-text,
+#meter-disk-text {
+  overflow: visible !important;
+  height: 17px !important;
+  width: 33px !important;
+  line-height: 17px !important;
+  border-radius: 5px !important;
+  background-color: rgba(26, 26, 26, 0.1) !important;
+  text-align: center !important;
+  position: relative !important;
+}
 
-.meter-text, #meter-disk-text{
-	overflow: visible!important;
-    height: 17px!important;
-    width: 33px!important;
-    line-height: 17px!important;
-    -moz-border-radius: 5px!important;
-    border-radius: 5px!important;
-    background-color: rgba(26,26,26,0.1)!important;
-    text-align: center!important;
-    position: relative!important;
-    margin-bottom: -19px!important;}
+.meter-text,
+#meter-disk-text {
+  margin-bottom: -20px !important;
+}
+
+td.statusCell .statuscell .stval, #StatusBar td#port-td {
+  margin-top: 2px;
+}
 
 /* Position of Loading-icon at the bottom, right. */
-div#t #ind{
-    position: absolute;
-    bottom: 0;
-    z-index: 1000;
-    right: 0;
-    padding-bottom: 8px;
+div#t #ind {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  right: 0;
+  padding-bottom: 8px;
 }
 
-/* togglePanel - Panel - pnl_open and closed fixes for Font Awesome */
-/* State */
-.catpanel:nth-of-type(1){}
-/* Labels */
-.catpanel:nth-of-type(2){}
-/* Search */
-.catpanel:nth-of-type(3){}
-/* Trackers */
-.catpanel:nth-of-type(4){}
-
-/* Hiding toggle-image */
-.catpanel{background-image:none!important; padding:10px;}
-div#CatList ul li,li.cat,.cat.tracker{padding:5px 10px!important;}
-
-/* Fixing Padding and size for FontAwesome Icons */
-#-_-_-all-_-_-:before,#-_-_-dls-_-_-:before,#-_-_-com-_-_-:before,#-_-_-act-_-_-:before,#-_-_-iac-_-_-:before,#-_-_-err-_-_-:before,#dlgAddRSS-header.dlg-header:before,#stg-header.dlg-header:before,#dlgEditRules-header.dlg-header:before,.dlg-close:before,#dlgHelp-header.dlg-header:before,div#dlgLabel div.dlg-header:before,div#dlg_datadir div.dlg-header:before,div#dlgProps div.dlg-header:before,div#tedit, div.dlg-header:before,div#dlgEditRatioRules div.dlg-header:before,div#yesnoDlg-header:before,div#tedit div.dlg-header:before, div#tcreate-header:before, div#tadd-header:before,div#CatList ul li.RSS:before{
-	font-size:14px;
-	padding-right:7px;
+/* Divider */
+div#HDivider,
+div#VDivider {
+  font-size: 0;
 }
 
-.catpanel, div#gcont table td.Header{font-family: 'Biryani', sans-serif;	text-transform:uppercase; font-weight:900;}
-
-/* New font and Bold + Uppercase */
-.stable-head tr td{font-family: 'Biryani', sans-serif;	text-transform:uppercase; font-weight:900;font-size:20px;}
-
-.catpanel:before{
-	font-size:12px;
-	padding-right:5px;
-	margin-top:-1px;
+div#HDivider {
+  width: 0px;
+  height: 0px;
+  padding: 0;
+  margin: 0;
+  cursor: e-resize;
 }
 
-/* Removing Icons from Create Torrent, StatusBar, Data Directory, Traficgraph and ExtRatio*/
-div#tcreate-header,#meter-disk-td,div#dlg_datadir div.dlg-header,#traf_graph > div.legend > div,div#tedit div.dlg-header,div#dlgEditRatioRules div.dlg-header, div#dlgEditRules div.dlg-header{background:none!important;}
-
-/* Removing HR's - Borders.. */
-hr{border:none;}
-
-/* Adding FontAwesome Icons before closed tab */
-.catpanel[style*="pnl_close.gif"]:before{
-	content: "\f0a9";
+div#HDivider:hover {
+  background: #A0A0A0;
 }
 
-/* Adding FontAwesome Icons before opened tab */
-.catpanel[style*="pnl_open.gif"]:before{
-	content:"\f0ab";
+div#VDivider {
+  width: 100%;
+  height: 3px;
+  padding: 0;
+  margin: 0;
+  cursor: n-resize;
 }
 
-/* Adding FontAwesome Icons in StatusBar */
-#StatusBar #meter-disk-td:before,#st_up > tbody > tr > td:nth-child(1):before,#st_down > tbody > tr > td:nth-child(1):before,#StatusBar #port-td.pstatus0:before,#StatusBar #port-td.pstatus1:before,#StatusBar #port-td.pstatus2:before{
-	font-size:14px;
+div#VDivider:hover {
+  background: #A0A0A0;
 }
-#StatusBar #meter-disk-td:before{content: "\f0a0";display:fixed!important;float:left;margin-left:5px;}
-#st_up > tbody > tr > td:nth-child(1):before{content: "\f093";display:fixed!important;float:left;}
-#st_down > tbody > tr > td:nth-child(1):before{content: "\f019";display:fixed!important;float:left;}
-/* Attention */
-#StatusBar #port-td.pstatus0:before{content: "\f255";display:fixed!important;float:left;}
-/* Warning*/
-#StatusBar #port-td.pstatus1:before{content: "\f088";display:fixed!important;float:left;}
-/* OK */
-#StatusBar #port-td.pstatus2:before{content: "\f087";display:fixed!important;float:left;}
 
-/* Adding FontAwesome Icons to Options-popup, Help-popup, Label-popup, Delete Torrent-popup, Add Torrent and Create Torrent */
-#stg-header.dlg-header:before{content: "\f013";display:fixed!important;float:left;}
+div#dividerDrag {
+  width: 3px;
+  height: 3px;
+  padding: 0;
+  margin: 0;
+  background: #A0A0A0;
+  position: absolute;
+  display: none;
+}
 
-#dlgEditRules-header.dlg-header:before{content: "\f085";display:fixed!important;float:left;}
+/* Table Lines-area */
+div.table_tab {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  display: block;
+  -moz-user-select: none;
+  -moz-user-focus: normal;
+  -moz-user-input: enabled;
+}
 
-#dlgHelp-header.dlg-header:before{content: "\f129";display:fixed!important;float:left;}
+div#List.table_tab {
+  width: 100% !important;
+}
 
-#dlgAddRSS-header.dlg-header:before{content: "\f09e";display:fixed!important;float:left;}
+div#List {
+  border: none;
+}
 
-div#dlgLabel div.dlg-header:before{content: "\f02b";display:fixed!important;float:left;}
+/*
 
-div#yesnoDlg-header:before{content: "\f071";display:fixed!important;float:left;}
+    Target(s): Console in "Make Torrent" dialog
+    Description: The console is showing while a torrent is "in the making", and we need to change the colors of that, too.
 
-div#tadd-header:before{content: "\f0ac";display:fixed!important;float:left;}
+*/
+/* Transparent amount */
+#tskConsole #tskcmdlog {
+  background-color: #333333 !important;
+  padding: 5px;
+  overflow-y: auto;
+}
 
-div#tcreate-header:before{content: "\f005";display:fixed!important;float:left;}
+/* Mobile Corrections */
+@media only screen and (hover: none) and (pointer: coarse) {
+  /*
+###
+### Menu 
+###
+*/
+  div#t a {
+    margin: 0;
+    padding: 3px;
+  }
+  div#t a:first-of-type {
+    padding-left: 5px;
+  }
+  #t #rc {
+    /* Hide Search on mobile */
+    display: none;
+  }
+  /*
+###
+### Sidenar 
+###
+*/
+  /* Remove Scrollbars */
+  div#CatList {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  div#CatList::-webkit-scrollbar {
+    /* Chrome */
+    display: none;
+  }
+  /*
+###
+### Table Elements (Torrents) 
+###
+*/
+  div#List.table_tab .stable-body {
+    /* Icon Size */
+    /* Remove Scrollbars */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  text-align:center div#List.table_tab .stable-body span.stable-icon:before {
+    font-size: 12px;
+  }
+  div#List.table_tab .stable-body::-webkit-scrollbar {
+    /* Chrome */
+    display: none;
+  }
+  /*
+###
+### Footer (StatusBar)
+###
+*/
+  #StatusBar {
+    /* Hide most information in statusbar on mobile */
+  }
+  #StatusBar #meter-disk-holder,
+  #StatusBar #meter-cpu-holder {
+    width: 35px !important;
+  }
+  #StatusBar #meter-disk-holder #meter-disk-text,
+  #StatusBar #meter-disk-holder #meter-cpu-text,
+  #StatusBar #meter-cpu-holder #meter-disk-text,
+  #StatusBar #meter-cpu-holder #meter-cpu-text {
+    left: initial;
+    margin-left: 5px;
+  }
+  #StatusBar .stval {
+    width: auto;
+  }
+  #StatusBar td:not(.statusCell) table#st_system.statuscell:first-of-type .stval {
+    /*rTorrent version */
+    display: none;
+  }
+  #StatusBar table#st_up tr td:nth-child(n+3), #StatusBar table#st_down tr td:nth-child(n+3) {
+    display: none;
+  }
+  #StatusBar table#st_up tr td .sthdr, #StatusBar table#st_down tr td .sthdr {
+    font-size: 0px;
+  }
+  #StatusBar #st_system .sthdr {
+    font-size: 0px;
+    display: none;
+  }
+  #StatusBar #servertime {
+    display: none;
+  }
+}
 
-/* Adding Icon to Torrent Data Directory, Torrent Properties and Rules Manager */
-div#dlgProps div.dlg-header:before,div#dlg_datadir div.dlg-header:before,div#tedit div.dlg-header:before,div#dlgEditRatioRules div.dlg-header:before{content: "\f085";display:fixed!important;float:left;}
+/* Not categoried */
+.Icon_File {
+  background: transparent url(images/file.gif) no-repeat left center;
+}
 
-/* Fixing height for Torrent Data Directory */
-#dlg_datadir.dlg-window{padding-bottom:15px}
+.Icon_Dir {
+  background: transparent url(images/dir.gif) no-repeat left center;
+}
 
-/* Fixing space for buttons-list in Popups */
-.dlg-window .aright.buttons-list{padding-right:8px!important;}
+.Icon_Share {
+  background: transparent url(images/share.gif) no-repeat left center;
+}
 
-/* Fixing width of btn_datadir_browse (In Popups) */
-input#btn_datadir_browse,.Button.browseButton{width:35px}
+/*
+### 
+### OTHER
+### 
+*/
+/* FlatUI - Simple and beautiful theme for ruTorrent by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing - Download at https://github.com/exetico/FlatUI */
+div#cover {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 500;
+  background: #FFFFFF;
+}
+
+div#msg {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  margin-top: -50px;
+  line-height: 100px;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: #FDFDFD;
+  border-top: 1px solid #D0D0D0;
+  border-bottom: 1px solid #D0D0D0;
+}
+
+div#modalbg {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 500;
+  display: none;
+  opacity: 0.5;
+  background-color: #CCCCCC;
+}
+
+.konqueror div#modalbg {
+  background: none;
+}
+
+.ie div#modalbg {
+  filter: alpha(opacity=50);
+}
+
+div.aright {
+  text-align: right;
+}
+
+div.fxcaret {
+  overflow: auto;
+}
+
+/* sc */
+div#sc {
+  width: 150px;
+  right: 57px;
+  top: 40px;
+  position: absolute;
+  display: none;
+  border: 1px solid #808080;
+  background-color: #E0E0E0;
+  z-index: 100;
+}
+
+div#sc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div#sc ul li {
+  margin: 0;
+  padding: 0;
+}
+
+div#sc li div {
+  line-height: 14px;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+div#sc li.se_act div {
+  background-color: #808080;
+  color: #FFFFFF;
+}
+
+span.htkey {
+  text-align: right;
+  position: absolute;
+  right: 16px;
+  z-index: 100;
+}
+
+#sel {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 1px dotted #000000;
+  display: none;
+  z-index: 1000;
+}
+
+select {
+  margin-top: 5px;
+}
+
+a {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  color: #686868;
+}
+
+table#maincont {
+  margin: 0;
+}
+
+table#maincont td.uicell {
+  vertical-align: top;
+  padding: 0;
+}
+
+/* Adding FontAwesome to Stablelist */
+div#List .stable-icon {
+  background: none;
+}
+
+div.op100l {
+  width: 400px;
+  float: left;
+}
+
+div.op50l {
+  width: 200px;
+  float: left;
+  clear: left;
+}
+
+div.op50l select {
+  padding: 0;
+}
+
+div.algnright {
+  text-align: right;
+  clear: right;
+}
+
+.ie div.op50l {
+  clear: none;
+}
+
+.ie div.algnright {
+  clear: none;
+}
+
+.ie9 div.op50l {
+  clear: left;
+}
+
+.ie9 div.algnright {
+  clear: right;
+}
+
+/* lm */
+.lm ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style: none;
+}
+
+.lm li {
+  margin: 0 5px;
+  padding: 0 12px;
+  line-height: 16px !important;
+  background: none;
+}
+
+.lm ul.child {
+  margin: 0 0 0 5px;
+  display: none;
+}
+
+.lm ul.child li {
+  margin: 0 0 0 9px;
+}
+
+.lm li.first {
+  background: none;
+}
+
+.lm li.last {
+  background: none;
+}
+
+.lm li div.toggle {
+  width: 10px;
+  height: 10px;
+  background: transparent url(images/exp.gif) no-repeat scroll center center;
+  float: left;
+  margin: 3px 0 0 -16px;
+  cursor: pointer;
+}
+
+.lm li a {
+  color: #000000;
+  padding: 1px 2px;
+}
+
+.lm li a.focus {
+  display: block;
+  font-weight: bold;
+}
+
+.ie .lm li a {
+  margin: 0 0 0 -5px;
+  padding: 0;
+}
+
+input.num {
+  text-align: right;
+  width: 50px;
+}
+
+input.str {
+  text-align: left;
+  width: 130px;
+}
+
+td label,
+div label {
+  cursor: pointer;
+}
+
+input.disabled {
+  background-color: #FAFAFA;
+  color: #C0C0C0;
+  border: 1px solid #C0C0C0;
+}
+
+td.disabled,
+label.disabled,
+span.disabled,
+div.disabled {
+  color: #C0C0C0;
+  cursor: default;
+}
+
+fieldset div {
+  padding: 2px;
+}
+
+.ie7 fieldset div {
+  padding: 0px;
+}
+
+div input,
+div select {
+  margin: 0 0 0 4px;
+  font-size: 11px;
+  padding: 1px 4px;
+}
+
+legend {
+  color: #000000;
+  font-weight: bold;
+}
+
+div.indent {
+  padding-left: 16px;
+}
+
+select.cols {
+  border: 1px solid #808080;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 120px;
+}
+
+div#dragmask {
+  width: 10px;
+  height: 10px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 5000;
+  display: none;
+  border: 1px dotted #A0A0A0;
+}
+
+div#tdcont {
+  height: 200px;
+  background: #FFFFFF;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+div.tab {
+  height: 100%;
+  overflow: auto;
+}
+
+div#lcont {
+  font-size: 9px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  line-height: 11px;
+}
+
+div#lcont div.mono {
+  font-size: 11px;
+  font-family: monospace;
+  line-height: 11px;
+  background: #F5F5F5;
+  white-space: pre;
+}
+
+div#lcont div.std {
+  padding: 2px;
+}
+
+#txtLabel {
+  width: 200px;
+}
+
+div#padd {
+  width: 250px;
+  height: 120px;
+}
+
+div#padd div.dlg-header {
+  background-image: url(images/props.gif);
+}
+
+div#padd div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+div#padd div.content input {
+  margin-top: 5px;
+}
+
+#peerIP {
+  width: 200px;
+}
+
+span#loadimg {
+  padding: 20px;
+  background: transparent url(images/ajax-loader.gif) no-repeat center center;
+}
+
+.webkit div#msg {
+  position: fixed;
+}
+
+.konqueror div#msg {
+  position: fixed;
+}
+
+textarea {
+  overflow: auto;
+}
 
 /* Fixing width, border and padding for edit - Torrent Properties */
-div#tedit .text-wrapper{border:none!important;padding:0!important;outline: 0;}
-
-
-/* Adding Closing Icon to Popups*/
-.dlg-close:before{content: "\f057";display:fixed!important;float:left;}
-
-/* Adding Icon to exp - submenu */
-ul.CMenu li a.exp:before{content: "\f061";display:fixed!important;float:right; font-size:8px;}
-
-/* Adding Icon to submenu - sel selected item*/
-ul.CMenu li a.sel:before{content: "\f00c";display:fixed!important;float:left; font-size:8px;margin-left:-12px;}
+div#tedit .text-wrapper {
+  border: none !important;
+  padding: 0 !important;
+  outline: 0;
+}
 
 /* Removing border line */
-.lf_rur,.rf_rur{border:none!important;}
-
-/* ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
-
-  WARNING: COLORS AND BG BEGINS HEREAFTER
-
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ */
-
-/* BG's, used for Sidebar etc and Topmenu */
-div#cover,body,.catpanel,div#t,div#CatList,div#HDivider,div#VDivider,div#t div.TB_Separator,#StatusBar,table#maincont td.uicell,
-div#tdetails,div.tab,.stable-body tr,div.dlg-header,div#tdcont,div.table_tab,div#gcont table td.Header,.stable-head,ul.CMenu li a:hover,ul.CMenu li:hover ul li a:hover,div#RSSList{
-	background-color:#262626!important;
+.lf_rur,
+.rf_rur {
+  border: none !important;
 }
 
-.catpanel:hover,div#t:hover,div#CatList:hover,li.cat:hover,a.dlg-close:hover,input.Button:hover,.lm li a:hover{color:#fff!important;}
+/* Colors */
+/* Transparent amount */
+/* BG's, used for Sidebar etc and Topmenu */
+div#cover,
+body,
+.catpanel,
+div#t,
+div#CatList,
+div#HDivider,
+div#VDivider,
+div#t div.TB_Separator,
+#StatusBar,
+table#maincont td.uicell,
+div#tdetails,
+div.tab,
+.stable-body tr,
+div.dlg-header,
+div#tdcont,
+div.table_tab,
+div#gcont table td.Header,
+.stable-head,
+ul.CMenu li a:hover,
+ul.CMenu li:hover ul li a:hover,
+div#RSSList {
+  background-color: #262626 !important;
+}
+
+.catpanel:hover,
+div#t:hover,
+div#CatList:hover,
+li.cat:hover,
+a.dlg-close:hover,
+input.Button:hover,
+.lm li a:hover {
+  color: white !important;
+}
 
 /* BG's used for li.sel and BG for hover-items */
-.lf_rur,.rf_rur,div#cover #msg,div#CatList ul li.sel,div#t a:hover,#query,.tabbar li:hover,
-.tabbar li#tab_gcont.selected a,.stable-body tr.selected td,
-#stg_c,.stg_con, div#stg .lm,div.dlg-window,ul.CMenu,ul.CMenu li,ul.CMenu li:hover ul li a,ul.CMenu li a.dis:hover,ul.CMenu li > ul > li > a.dis:hover,.lf_rru,.rf_rru,.lf_rru li input.TextboxNormal
-{
-	background-color:#2B2B2B!important;
+.lf_rur,
+.rf_rur,
+div#cover #msg,
+div#t a:hover,
+#query,
+.tabbar li:hover,
+.tabbar li#tab_gcont.selected a,
+.stable-body tr.selected td,
+#stg_c,
+.stg_con,
+div#stg .lm,
+div.dlg-window,
+ul.CMenu,
+ul.CMenu li,
+ul.CMenu li:hover ul li a,
+ul.CMenu li a.dis:hover,
+ul.CMenu li > ul > li > a.dis:hover,
+.lf_rru,
+.rf_rru,
+.lf_rru li input.TextboxNormal {
+  background-color: #2b2b2b !important;
 }
 
-div#CatList ul li,.tabbar li.selected,input.Button,div#lcont,div.graph_tab,#hostcookies,.lm li a.focus,.lf_rru li input.TextboxFocus,input, select,textarea,.stable-body tr.odd td{
-	background-color:#333333!important;
+.tabbar li.selected,
+input.Button,
+div#lcont,
+div.graph_tab,
+#hostcookies,
+.lm li a.focus,
+.lf_rru li input.TextboxFocus,
+input,
+select,
+textarea,
+.stable-body tr.odd td {
+  background-color: #333333 !important;
 }
 
 /* Font and FontAweSome icons Colors */
-div#cover #msg span#loadimg:before,div#cover #msg span#loadimg:after,.catpanel,div#CatList ul li,.catpanel[style*="pnl_close.gif"]:before,.catpanel[style*="pnl_open.gif"]:before,div#t div:after,#query,#StatusBar,
-div#lcont,div#tdetails,a,.tabbar li.selected a,input.Button,.stable-body tr,.stable-head,
-.meter-text,div.dlg-header,.stg_con,fieldset legend,#hostcookies,.lm li a,div.dlg-window,#traf_graph > div.legend > table,.tickLabel,ul.CMenu li a.exp:before,ul.CMenu li a:hover,ul.CMenu li:hover ul li a:hover, ul.CMenu li:hover ul li a,ul.CMenu li a.dis:hover,ul.CMenu li a.dis,.lf_rru li input.TextboxNormal,.lf_rru li input.TextboxFocus,select,input,textarea,td.disabled, label.disabled, span.disabled, div.disabled,#meter-disk-text{
-	color:#ddddd1;
+div#cover #msg span#loadimg:before,
+div#cover #msg span#loadimg:after,
+.catpanel,
+div#CatList ul li,
+.catpanel[style*="pnl_close.gif"]:before,
+.catpanel[style*="pnl_open.gif"]:before,
+div#t div:after,
+#query,
+#StatusBar,
+div#lcont,
+div#tdetails,
+a,
+.tabbar li.selected a,
+input.Button,
+.stable-body tr,
+.stable-head,
+.meter-text,
+div.dlg-header,
+.stg_con,
+fieldset legend,
+#hostcookies,
+.lm li a,
+div.dlg-window,
+#traf_graph > div.legend > table,
+.tickLabel,
+ul.CMenu li a.exp:before,
+ul.CMenu li a:hover,
+ul.CMenu li:hover ul li a:hover,
+ul.CMenu li:hover ul li a,
+ul.CMenu li a.dis:hover,
+ul.CMenu li a.dis,
+.lf_rru li input.TextboxNormal,
+.lf_rru li input.TextboxFocus,
+select,
+input,
+textarea,
+td.disabled,
+label.disabled,
+span.disabled,
+div.disabled,
+#meter-disk-text,
+#meter-cpu-text {
+  color: #ddddd1;
 }
 
-/* Scrollstyling */
-
-::-webkit-scrollbar-track,.stable-body::-webkit-scrollbar-corner,::-webkit-scrollbar{
-	background-color: #262626;
+div.dlg-window,
+.CMenu {
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(38, 38, 38, 0.5);
+  box-shadow: 3px 3px 10px 0px rgba(38, 38, 38, 0.5);
 }
 
-::-webkit-scrollbar{
-	height:8px;
+/* Sidebar */
+#CatList {
+  /* Headers i CatList */
 }
 
-::-webkit-scrollbar-thumb{
-	background-color: #333333;
+#CatList div.catpanel {
+  background-color: rgba(221, 221, 209, 0.08) !important;
 }
 
-/* Using #262626 in RGB - Boxshadow to settingsbox */
-div.dlg-window,.CMenu{-webkit-box-shadow: 3px 3px 10px 0px rgba(38,38,38,0.5);
--moz-box-shadow: 3px 3px 10px 0px rgba(38,38,38,0.5);
-box-shadow: 3px 3px 10px 0px rgba(38,38,38,0.5);}
+#CatList ul li:not(.sel) {
+  background-color: transparent !important;
+}
+
+#CatList ul li:not(.sel):hover {
+  background-color: rgba(221, 221, 209, 0.02) !important;
+}
+
+#CatList ul li.sel {
+  background-color: rgba(221, 221, 209, 0.04) !important;
+}
+
+/* Scrollbars - Between element-list and details of selected item */
+table#maincont #List div.stable-body, #tskConsole #tskcmdlog {
+  /* Firefox */
+  scrollbar-color: rgba(221, 221, 209, 0.08) rgba(221, 221, 209, 0.02);
+  scrollbar-width: thin;
+}
+
+/* Scrollbars - Overall */
+::-webkit-scrollbar-track,
+.stable-body::-webkit-scrollbar-corner,
+::-webkit-scrollbar {
+  background-color: #262626;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333333;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: black;
+}
+
+html,
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  overflow: hidden;
+  background-color: #FFF;
+  height: 100%;
+}
+
+/* Margin 0 */
+form {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
