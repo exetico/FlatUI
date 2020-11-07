@@ -1,0 +1,239 @@
+/* Left Sidebar - CatList Styling - Including adding of FontAwesome */
+.catpanel {
+	background: url(images/pnl_open.gif) 2px no-repeat;
+	background-color: #F0F0F0;
+	border: none;
+	padding: 2px 21px;
+	margin: 0px;
+	line-height: 16px;
+	font-size: 12px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-moz-user-focus: normal;
+	-moz-user-input: enabled
+}
+
+div#CatList {
+    width: 0px;
+    border: none;
+    background-color: #FFFFFF;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+a
+div#CatList ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap
+}
+
+div#CatList ul li {
+    padding: 2px 25px;
+    margin: 0;
+    line-height: 14px;
+    font-size: 11px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: none;
+    background-repeat: no-repeat
+}
+
+/* No Label Styling */
+#plabel_cont .-_-_-all-_-_- img{
+    display:none;
+}
+/* Left Sidebar Icons */
+div#CatList ul li.RSS,
+#-_-_-all-_-_-, /* 0.9.6 is using "class" for the all-element */
+.-_-_-all-_-_-, /* 0.9.8 is using "class" for the all-element */
+#-_-_-dls-_-_-,
+#-_-_-com-_-_-,
+#-_-_-act-_-_-,
+#-_-_-iac-_-_-,
+#-_-_-err-_-_-,
+#-_-_-nlb-_-_-,
+li.teg {
+
+    background-image: none;
+    &:before{
+        opacity:0.7;
+    }
+}
+
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before{
+    width:15px;
+    text-align:center;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-folder);
+}
+
+#-_-_-dls-_-_-:before {
+    width:15px;
+    text-align:center;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-download);
+}
+
+#-_-_-com-_-_-:before {
+    width:15px;
+    text-align:center;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-upload);
+}
+
+#-_-_-act-_-_-:before {
+    @extend %fa-icon;
+    @extend .fas;
+    width:15px;
+    text-align:center;
+    content: fa-content($fa-var-hourglass-half);
+}
+
+#-_-_-iac-_-_-:before {
+    @extend %fa-icon;
+    @extend .fas;
+    width:15px;
+    text-align:center;
+    content: fa-content($fa-var-hourglass);
+}
+
+#-_-_-err-_-_-:before {
+    @extend %fa-icon;
+    @extend .fas;
+    width:15px;
+    text-align:center;
+    content: fa-content($fa-var-exclamation-circle);
+}
+
+li.teg:before{ /* Search Result Lines */
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-genderless);
+    width:15px;
+    text-align:center;
+    padding-right:9px;
+}
+
+div#CatList ul li.disRSS {
+    background-image: url(images/tstatus.png);
+    background-position: 4px -190px
+}
+
+img.lbl_nlb
+
+/* Labels > No Label-icon */
+    {
+    position: relative;
+    left: -99999px;
+}
+
+/* Hiding toggle-image */
+.catpanel {
+	background-image: none !important;
+    padding: 8px 14px 6px 10px;
+    line-height:22px;
+}
+
+div#CatList ul li,
+li.cat,
+.cat.tracker {
+	padding: 5px 10px !important;
+}
+
+.catpanel:before {
+	font-size: 16px;
+	padding-right: 10px;
+    margin-top: 2px;
+    margin-left:-2px;
+    width:17px;
+    
+}
+
+/* Style Cat Header, if it's closed */
+.catpanel[style*="pnl_close.gif"] {
+    opacity:0.3;
+}
+
+.catpanel[style*="pnl_close.gif"]:hover:after,.catpanel[style*="pnl_close.gif"]:after {
+    content: 'Hidden';
+    position: absolute;
+    margin-top: 8px;
+    font-size: 8px;
+    font-weight:bold;
+    margin-left: 25px;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.catpanel[style*="pnl_close.gif"]:hover:after {
+    content: 'Click to fold out';
+}
+
+
+
+#CatList .catpanel:not(:first-of-type) {
+    margin-top:10px;
+}
+
+/* Position of img icons - categories */
+#CatList .tfavicon{
+    margin-left:-1px;
+    margin-right:8px;    
+}
+
+#CatList li{
+    img{
+        filter: grayscale(100%);
+    }
+
+    &:hover img{
+        filter: grayscale(0%);
+    }
+}
+
+#CatList{
+    /* Headers i CatList */
+    div.catpanel{
+        width:100%;
+    }
+    /* Hide Menu */ 
+    width: 32px!important;
+    overflow: hidden;
+    transition: width 0.3s;
+
+    div.catpanel{
+        display:inline-flex;
+
+    }
+
+    &:hover{
+        width:200px!important;
+    }
+}
+
+
+/* Padding to the "all"-text in tracker catList */
+#ptrackers_cont .-_-_-all-_-_-::before {
+    padding-right: 10px;
+}
+
+/* Padding to the "all"-text in rss catList */
+div#CatList ul li.RSS::before{
+    padding-right: 11px;
+}
+
+div#CatList #prss #rsstimer{
+    padding:0 5px;
+    font-size:0.8em;
+    white-space: nowrap;
+}
+
+/* Search Results */ 
+li.teg{
+    margin-left:6px;
+}

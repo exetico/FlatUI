@@ -1,0 +1,105 @@
+/* TOPMENU */
+
+/* Hiding content to Search in top-menu */
+#rrow>td:nth-child(3) {
+	display: none;
+}
+
+div#t div:after {
+	font-size: 20px;
+	margin-top: -2px;
+	margin-left: 3px;
+}
+
+/* Stack box-icon around menu-icons */
+div#t div:before {
+	font-size: 25px;
+	margin-top: -4px;
+	margin-left: 3px;
+}
+
+/* Smaller size for icons on box */
+div#t div#webuiUpdateToggle:after,
+div#t div#webuiRefresh:after {
+	font-size: 9px;
+	vertical-align: top;
+	margin-left: -14px;
+}
+
+div#t{
+    #mnu_add{
+        margin-left: 0;
+    }
+
+    tr#rrow input#query{
+        margin: -5px 0 0 5px !important;
+        height:30px;
+    }
+}
+
+div#t {
+	width: 100%;
+	height: 34px;
+	background: #F0F0F0 url(images/t_bg.png) repeat-x center center;
+	line-height: 36px;
+	border: none;
+	white-space: nowrap
+}
+
+div#t a {
+	float: left;
+	margin: 0 0 0 6px;
+	padding: 5px
+}
+
+div#t a:hover {
+	background-image: none;
+}
+
+div#t a:active {
+	padding: 4px 2px 2px 4px
+}
+
+div#t div {
+	width: 24px;
+	height: 24px;
+	float: left;
+	cursor: pointer
+}
+
+div#t div.TB_Separator {
+	width: 1px;
+	height: 22px;
+	margin: 7px 0 0 5px;
+	padding: 0;
+	border: 0;
+	background-color: #A0A0A0
+}
+
+
+#rc {
+	float: right;
+}
+
+#go {
+	display: none;
+}
+
+#query {
+	height: 100%;
+	padding: 0px 7px;
+}
+
+div#t a#mnu_go {
+	margin: 3px 0 0 0;
+	padding: 3px
+}
+
+div#t #ind {
+	margin-top: 2px;
+	background: transparent url(images/ajax-loader.gif) no-repeat 0px center;
+	width: 32px;
+	margin-right: 2px;
+	line-height: 26px;
+	cursor: default;
+}

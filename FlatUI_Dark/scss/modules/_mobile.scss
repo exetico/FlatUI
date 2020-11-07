@@ -1,0 +1,113 @@
+/*
+###
+### Menu 
+###
+*/
+div#t a {
+    margin: 0;
+    padding: 3px;
+
+    &:first-of-type {
+        padding-left: 5px;
+    }
+}
+
+#t #rc {
+    /* Hide Search on mobile */
+    display: none;
+}
+
+/*
+###
+### Sidenar 
+###
+*/
+
+/* Remove Scrollbars */
+div#CatList {
+    &::-webkit-scrollbar {
+        /* Chrome */
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/*
+###
+### Table Elements (Torrents) 
+###
+*/
+
+div#List.table_tab .stable-body {
+    /* Icon Size */
+    span.stable-icon{
+        text-align:center
+
+        &:before{
+            font-size:12px;
+        }
+    }
+    /* Remove Scrollbars */
+    &::-webkit-scrollbar {
+        /* Chrome */
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/*
+###
+### Footer (StatusBar)
+###
+*/
+
+#StatusBar {
+
+    #meter-disk-holder,
+    #meter-cpu-holder {
+        width: 35px !important;
+
+        #meter-disk-text,
+        #meter-cpu-text {
+            left: initial;
+            margin-left: 5px;
+        }
+    }
+
+    /* Hide most information in statusbar on mobile */
+    .stval{
+        width:auto;
+    }
+    td:not(.statusCell) table#st_system.statuscell:first-of-type .stval{ /*rTorrent version */
+        display:none;
+    }
+    
+    table#st_up tr td, table#st_down tr td {
+        &:nth-child(n+3) {
+            display: none;
+        }
+
+        .sthdr {
+            font-size: 0px;
+        }
+    }
+
+    #st_system{
+        .sthdr{
+            font-size:0px;
+            display:none;
+        }
+    }
+    
+    #servertime{
+        display:none;
+    }
+}

@@ -1,0 +1,425 @@
+/* Removing known styled images in menu and the background of the menu. OBS: If you want to remove all unknown images in menu, please use: div#t div, div#t{background-image:none!important;} - This change to support unknown plugins as well.*/
+div#t,
+div#t div#add,
+div#t div#create,
+div#t div#remove,
+div#t div#start,
+div#t div#pause,
+div#t div#stop,
+div#t div#moveu,
+div#t div#moved,
+div#t div#search,
+div#t div#rss,
+div#t div#setting,
+div#t div#help,
+div#t div#plugins,
+div#t div#webuiRefresh,
+div#t div#autodl-tb {
+    background-image: none !important;
+    margin-top: 3px;
+}
+
+/* FontAwesomeIcons Icons */
+div#t div#add:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-globe);
+}
+
+div#t div#create:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-plus-circle);
+}
+
+div#t div#remove:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-trash);
+}
+
+div#t div#start:after {
+    content: "\f04b";
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-play);
+}
+
+div#t div#pause:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-pause);
+}
+
+div#t div#stop:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-stop);
+}
+
+div#t div#moveu:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-chevron-circle-up);
+}
+
+div#t div#moved:after {
+    content: "\f13a";
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-chevron-circle-down);
+}
+
+div#t div#search:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-search);
+}
+
+div#t div#rss:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-rss);
+}
+
+div#t div#setting:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-cog);
+}
+
+div#t div#help:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-info);
+    padding-left: 5px;
+}
+
+/* Use f128 (?) insted of (i) */
+div#t div#plugins:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-puzzle-piece);
+}
+
+/* Add-on style: PluginPause - https://github.com/Novik/ruTorrent/wiki/PluginPause */
+div#t div#webuiUpdateToggle:before {
+    @extend %fa-icon;
+    @extend .far;
+    content: fa-content($fa-var-square);
+}
+
+div#t div#webuiUpdateToggle:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-pause);
+}
+
+div#t div#webuiUpdateToggle {
+    background-image: none !important;
+}
+
+div#t div#webuiRefresh:before {
+    @extend %fa-icon;
+    @extend .far;
+    content: fa-content($fa-var-square);
+}
+
+div#t div#webuiRefresh:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-sync);
+}
+
+
+/* Add-on style: autodl-rutorrent - https://github.com/autodl-community/autodl-rutorrent */
+div#t div#autodl-tb:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-magic);
+}
+
+/* Adding FontAwesome To catpanel - Will be search. All the other ones is defined below this... Search is (for some reason, named as "flabel" and.. NOT "fsearch" */
+.catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-search);
+}
+
+/* Adding FontAwesome To catpanel headers*/
+.catpanel {
+    &#plabel:before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-tags);
+    }
+
+    &#pstate:before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-inbox);
+    }
+
+    &#psearch:before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-search);
+    }
+
+    &#ptrackers:before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-server);
+    }
+
+    &#prss:before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-rss-square);
+    }
+
+
+}
+
+/* Adding FontAwesome Icons in StatusBar */
+#StatusBar #meter-disk-td:before,
+#StatusBar #meter-cpu-td:before,
+#st_up>tbody>tr>td:nth-child(1):before,
+#st_down>tbody>tr>td:nth-child(1):before,
+#StatusBar #port-td.pstatus0:before,
+#StatusBar #port-td.pstatus1:before,
+#StatusBar #port-td.pstatus2:before {
+    font-size: 14px;
+}
+
+#StatusBar #meter-disk-td:before {
+    display: fixed !important;
+    float: left;
+    margin-left: 5px;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-hdd);
+}
+
+#StatusBar #meter-cpu-td:before {
+    display: fixed !important;
+    float: left;
+    margin-left: 5px;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-microchip);
+}
+
+#st_up>tbody>tr>td:nth-child(1):before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-upload);
+}
+
+#st_down>tbody>tr>td:nth-child(1):before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-download);
+}
+
+/* Attention */
+#StatusBar #port-td.pstatus0:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-hand-paper);
+}
+
+/* Warning*/
+#StatusBar #port-td.pstatus1:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-thumbs-down);
+}
+
+/* OK */
+#StatusBar #port-td.pstatus2:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-thumbs-up);
+}
+
+/* Adding FontAwesome Icons to Options-popup, Help-popup, Label-popup, Delete Torrent-popup, Add Torrent and Create Torrent */
+#stg-header.dlg-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-cog);
+}
+
+#dlgEditRules-header.dlg-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-cogs);
+}
+
+#dlgHelp-header.dlg-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-info);
+}
+
+#dlgAddRSS-header.dlg-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-rss);
+}
+
+div#dlgLabel div.dlg-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-tag);
+}
+
+div#yesnoDlg-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-exclamation-triangle);
+}
+
+div#tadd-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-globe);
+}
+
+div#tcreate-header:before {
+    display: fixed !important;
+    float: left;
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-star);
+}
+
+/* Adding Icon to Torrent Data Directory, Torrent Properties and Rules Manager */
+div#dlgProps div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#tedit div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before {
+    content: "\f085";
+    display: fixed !important;
+    float: left;
+}
+
+
+/* Status Icons */
+.Status_Down:before {
+    content: "\f019";
+}
+
+.Status_Up:before {
+    content: "\f093";
+}
+
+.Status_Incompleted:before {
+    content: "\f251";
+}
+
+.Status_Paused:before {
+    content: "\f04c";
+}
+
+.Status_Error_Down:before {
+    content: "\f12a";
+}
+
+.Status_Error_Up:before {
+    content: "\f12a";
+}
+
+.Status_Error:before {
+    content: "\f12a";
+}
+
+.Status_Completed:before {
+    content: "\f00c";
+}
+
+.Status_Queued_Down:before {
+    content: "\f017";
+}
+
+.Status_Queued_Up:before {
+    content: "\f017";
+}
+
+.Status_Up_Down:before {
+    content: "\f1fe";
+}
+
+.Status_Checking:before {
+    content: "\f06e";
+}
+
+.Status_RSS:before {
+    content: "\f09e";
+}
+
+
+#port-td {
+    padding-left: 15px;
+}
+
+
+/* Footer Loading Icon */
+div#t #ind {
+    background-image: none !important;
+}
+
+div#t #ind:after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-spinner);
+    margin: 11px;
+    font-size: 16px;
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+/* Status Bar - Torrents */
+#StatusBar #firstStatusRow td.statusCell { /* Torrent Count in Footer .statusCell is the only one with uppercase C.. */
+    #st_system {
+        .stval:before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-inbox);
+        }
+    }
+}

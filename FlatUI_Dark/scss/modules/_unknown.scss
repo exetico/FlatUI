@@ -1,0 +1,430 @@
+.Icon_File {
+	background: transparent url(images/file.gif) no-repeat left center
+}
+
+.Icon_Dir {
+	background: transparent url(images/dir.gif) no-repeat left center
+}
+
+.Icon_Share {
+	background: transparent url(images/share.gif) no-repeat left center
+}
+
+
+/*
+### 
+### OTHER
+### 
+*/
+
+/* FlatUI - Simple and beautiful theme for ruTorrent by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing - Download at https://github.com/exetico/FlatUI */
+
+// div#preload {
+// 	width: 0px;
+// 	height: 0px;
+// 	display: none;
+// 	background-image: url(images/toolbar.png);
+// 	background-image: url(images/tstatus.png);
+// 	background-image: url(images/t_bg.png);
+// 	background-image: url(images/r_bg.gif);
+// 	background-image: url(images/i_bg.gif);
+// 	background-image: url(images/asc.gif);
+// 	background-image: url(images/desc.gif);
+// 	background-image: url(images/close.png);
+// 	background-image: url(images/file.gif);
+// 	background-image: url(images/dir.gif);
+// 	background-image: url(images/pnl_open.gif);
+// 	background-image: url(images/pnl_close.gif)
+// }
+
+div#cover {
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	z-index: 500;
+	background: #FFFFFF
+}
+
+div#msg {
+	width: 100%;
+	height: 100px;
+	position: relative;
+	top: 50%;
+	margin-top: -50px;
+	line-height: 100px;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	text-align: center;
+	background: #FDFDFD;
+	border-top: 1px solid #D0D0D0;
+	border-bottom: 1px solid #D0D0D0
+}
+
+div#modalbg {
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	z-index: 500;
+	display: none;
+	opacity: 0.5;
+	background-color: #CCCCCC;
+}
+
+.konqueror div#modalbg {
+	background: none;
+}
+
+.ie div#modalbg {
+	filter: alpha(opacity=50);
+}
+
+div.aright {
+	text-align: right
+}
+
+div.fxcaret {
+	overflow: auto
+}
+
+/* sc */
+div#sc {
+	width: 150px;
+	right: 57px;
+	top: 40px;
+	position: absolute;
+	display: none;
+	border: 1px solid #808080;
+	background-color: #E0E0E0;
+	z-index: 100
+}
+
+div#sc ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+div#sc ul li {
+	margin: 0;
+	padding: 0
+}
+
+div#sc li div {
+	line-height: 14px;
+	padding: 4px;
+	font-weight: bold;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif
+}
+
+div#sc li.se_act div {
+	background-color: #808080;
+	color: #FFFFFF
+}
+
+
+span.htkey {
+	text-align: right;
+	position: absolute;
+	right: 16px;
+	z-index: 100
+}
+
+#sel {
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border: 1px dotted #000000;
+	display: none;
+	z-index: 1000
+}
+
+
+select {
+	margin-top: 5px
+}
+
+a {
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	color: #686868
+}
+
+table#maincont {
+	margin: 0
+}
+
+table#maincont td.uicell {
+	vertical-align: top;
+	padding: 0
+}
+
+
+/* Adding FontAwesome to Stablelist */
+div#List .stable-icon {
+	background: none;
+}
+
+
+div.op100l {
+	width: 400px;
+	float: left
+}
+
+div.op50l {
+	width: 200px;
+	float: left;
+	clear: left
+}
+
+div.op50l select {
+	padding: 0
+}
+
+div.algnright {
+	text-align: right;
+	clear: right
+}
+
+.ie div.op50l {
+	clear: none
+}
+
+.ie div.algnright {
+	clear: none
+}
+
+.ie9 div.op50l {
+	clear: left
+}
+
+.ie9 div.algnright {
+	clear: right
+}
+
+/* lm */
+.lm ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+	list-style: none
+}
+
+.lm li {
+	margin: 0 5px;
+	padding: 0 12px;
+	line-height: 16px !important;
+	background: none;
+}
+
+.lm ul.child {
+	margin: 0 0 0 5px;
+	display: none
+}
+
+.lm ul.child li {
+	margin: 0 0 0 9px
+}
+
+.lm li.first {
+	background: none;
+}
+
+.lm li.last {
+	background: none;
+}
+
+.lm li div.toggle {
+	width: 10px;
+	height: 10px;
+	background: transparent url(images/exp.gif) no-repeat scroll center center;
+	float: left;
+	margin: 3px 0 0 -16px;
+	cursor: pointer
+}
+
+.lm li a {
+	color: #000000;
+	padding: 1px 2px
+}
+
+.lm li a.focus {
+	display: block;
+	font-weight: bold;
+}
+
+.ie .lm li a {
+	margin: 0 0 0 -5px;
+	padding: 0
+}
+
+
+input.num {
+	text-align: right;
+	width: 50px
+}
+
+input.str {
+	text-align: left;
+	width: 130px
+}
+
+td label,
+div label {
+	cursor: pointer
+}
+
+input.disabled {
+	background-color: #FAFAFA;
+	color: #C0C0C0;
+	border: 1px solid #C0C0C0
+}
+
+td.disabled,
+label.disabled,
+span.disabled,
+div.disabled {
+	color: #C0C0C0;
+	cursor: default
+}
+
+fieldset div {
+	padding: 2px
+}
+
+.ie7 fieldset div {
+	padding: 0px
+}
+
+div input,
+div select {
+	margin: 0 0 0 4px;
+	font-size: 11px;
+	padding: 1px 4px
+}
+
+legend {
+	color: #000000;
+	font-weight: bold
+}
+
+div.indent {
+	padding-left: 16px
+}
+
+
+select.cols {
+	border: 1px solid #808080;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	padding: 2px;
+	width: 120px
+}
+
+div#dragmask {
+	width: 10px;
+	height: 10px;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	z-index: 5000;
+	display: none;
+	border: 1px dotted #A0A0A0
+}
+
+div#tdcont {
+	height: 200px;
+	background: #FFFFFF;
+	border: none;
+	padding: 0;
+	overflow: hidden
+}
+
+div.tab {
+	height: 100%;
+	overflow: auto
+}
+
+div#lcont {
+	font-size: 9px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 11px;
+}
+
+div#lcont div.mono {
+	font-size: 11px;
+	font-family: monospace;
+	line-height: 11px;
+	background: #F5F5F5;
+	white-space: pre
+}
+
+div#lcont div.std {
+	padding: 2px
+}
+
+#txtLabel {
+	width: 200px
+}
+
+div#padd {
+	width: 250px;
+	height: 120px
+}
+
+div#padd div.dlg-header {
+	background-image: url(images/props.gif)
+}
+
+div#padd div.content {
+	width: 230px;
+	margin: 5px;
+	padding: 5px;
+	line-height: 16px
+}
+
+div#padd div.content input {
+	margin-top: 5px
+}
+
+#peerIP {
+	width: 200px
+}
+
+span#loadimg {
+	padding: 20px;
+	background: transparent url(images/ajax-loader.gif) no-repeat center center;
+}
+
+.webkit div#msg {
+	position: fixed;
+}
+
+.konqueror div#msg {
+	position: fixed;
+}
+
+textarea {
+	overflow: auto;
+}
+
+/* Fixing width, border and padding for edit - Torrent Properties */
+div#tedit .text-wrapper {
+	border: none !important;
+	padding: 0 !important;
+	outline: 0;
+}
+
+/* Removing border line */
+.lf_rur,
+.rf_rur {
+	border: none !important;
+}

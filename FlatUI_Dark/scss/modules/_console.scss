@@ -1,0 +1,16 @@
+/*
+
+    Target(s): Console in "Make Torrent" dialog
+    Description: The console is showing while a torrent is "in the making", and we need to change the colors of that, too.
+
+*/
+
+@import 'variables.scss';
+
+#tskConsole{
+    #tskcmdlog{
+        background-color: $primary-dark-lighter !important;
+        padding:5px;
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,15 @@
+$contrast: rgb(221, 221, 209);
+
+$contrast-low: 0.02; /* Transparent amount */
+$contrast-mid: $contrast-low*2;
+$contrast-high: $contrast-mid*2;
+
+$bg-high: rgba($contrast,$contrast-high);
+$bg-mid: rgba($contrast,$contrast-mid);
+$bg-low: rgba($contrast,$contrast-low);
+
+$primary-dark: rgb(38, 38, 38);
+$primary-dark-light: lighten($primary-dark,2%);
+$primary-dark-lighter: lighten($primary-dark,5%);
+
+$secondary-hover: rgb(255, 255, 255);

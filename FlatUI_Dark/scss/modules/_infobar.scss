@@ -1,0 +1,126 @@
+@import 'variables.scss';
+
+div#gcont table {
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 10px
+}
+
+div#gcont table td.Header {
+	font-weight: bold;
+}
+
+div.graph_tab {
+	background-color: #FFFFFF;
+	overflow: hidden;
+	display: block;
+	-moz-user-select: none;
+	-moz-user-focus: normal;
+	-moz-user-input: enabled
+}
+
+div.graph_tab {
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 11px;
+	color: #545454
+}
+
+div.cont {
+	padding: 6px;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif
+}
+
+.tabbar {
+	height: 16px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: left
+}
+
+.tabbar li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	white-space: nowrap;
+}
+
+.tabbar li a {
+	position: relative;
+	top: 3px;
+	text-decoration: none;
+	border: none;
+	border-bottom: 0;
+	margin: -5px 1px 0 1px;
+	padding: 1px 5px;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	vertical-align: top;
+	cursor: pointer
+}
+
+.tabbar li a:hover {
+	border-top: none;
+}
+
+.tabbar li.selected a {
+	margin: 0 -2px 0 0;
+	padding: 1px 7px 4px 7px;
+	position: relative;
+	top: 2px;
+	vertical-align: top;
+	border-top: none;
+	background: none;
+}
+
+div#tdetails {
+	height: 50%;
+	padding: 0;
+	width: 100% !important;
+
+	/* Speed Section */
+	div#Speed {
+
+		div[style*="255"] {
+			background-color: rgba($primary-dark, 0.4) !important;
+		}
+
+		table tr td.legendLabel {
+			color:  $contrast !important;
+			font-weight:bold;
+		}
+	}
+
+	/* autodl-irrsi styling for better spacing */
+	div#autodl-irssi-tab{
+		div#autodl-log-buttons{
+			padding:10px 5px;
+
+			input[type="button"]{
+				margin: 0px 10px 5px 0px;
+				padding: 6px 9px !important;
+				height: auto;
+				width:auto;
+			}
+		}
+
+		form#autodl-restore{
+			input#autodl-log-restore-button{
+				margin-left:0;
+			}
+
+			input#autodl-restore-file{
+				background:transparent!important;
+			}
+		}
+	}
+}
+
+div#tdetails a.h {
+	margin: 0
+}
