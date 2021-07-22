@@ -1,0 +1,169 @@
+//@import 'variables.scss';
+
+/* BG's, used for Sidebar etc and Topmenu */
+div#cover,
+body,
+.catpanel,
+div#t,
+div#CatList,
+div#HDivider,
+div#VDivider,
+div#t div.TB_Separator,
+#StatusBar,
+table#maincont td.uicell,
+div#tdetails,
+div.tab,
+.stable-body tr,
+div.dlg-header,
+div#tdcont,
+div.table_tab,
+div#gcont table td.Header,
+.stable-head,
+ul.CMenu li a:hover,
+ul.CMenu li:hover ul li a:hover,
+div#RSSList {
+  background-color: $primary-dark !important;
+}
+
+.catpanel:hover,
+div#t:hover,
+div#CatList:hover,
+li.cat:hover,
+a.dlg-close:hover,
+input.Button:hover,
+.lm li a:hover {
+  color: $secondary-hover !important;
+}
+
+/* BG's used for li.sel and BG for hover-items */
+.lf_rur,
+.rf_rur,
+div#cover #msg,
+div#t a:hover,
+#query,
+.tabbar li:hover,
+.tabbar li#tab_gcont.selected a,
+.stable-body tr.selected td,
+#stg_c,
+.stg_con,
+div#stg .lm,
+div.dlg-window,
+ul.CMenu,
+ul.CMenu li,
+ul.CMenu li:hover ul li a,
+ul.CMenu li a.dis:hover,
+ul.CMenu li > ul > li > a.dis:hover,
+.lf_rru,
+.rf_rru,
+.lf_rru li input.TextboxNormal {
+  background-color: $primary-dark-light !important;
+}
+.tabbar li.selected,
+input.Button,
+div#lcont,
+div.graph_tab,
+#hostcookies,
+.lm li a.focus,
+.lf_rru li input.TextboxFocus,
+input,
+select,
+textarea,
+.stable-body tr.odd td {
+  background-color: $primary-dark-lighter !important;
+}
+
+/* Font and FontAweSome icons Colors */
+div#cover #msg span#loadimg:before,
+div#cover #msg span#loadimg:after,
+.catpanel,
+div#CatList ul li,
+.catpanel[style*="pnl_close.gif"]:before,
+.catpanel[style*="pnl_open.gif"]:before,
+div#t div:after,
+#query,
+#StatusBar,
+div#lcont,
+div#tdetails,
+a,
+.tabbar li.selected a,
+input.Button,
+.stable-body tr,
+.stable-head,
+.meter-text,
+div.dlg-header,
+.stg_con,
+fieldset legend,
+#hostcookies,
+.lm li a,
+div.dlg-window,
+#traf_graph > div.legend > table,
+.tickLabel,
+ul.CMenu li a.exp:before,
+ul.CMenu li a:hover,
+ul.CMenu li:hover ul li a:hover,
+ul.CMenu li:hover ul li a,
+ul.CMenu li a.dis:hover,
+ul.CMenu li a.dis,
+.lf_rru li input.TextboxNormal,
+.lf_rru li input.TextboxFocus,
+select,
+input,
+textarea,
+td.disabled,
+label.disabled,
+span.disabled,
+div.disabled,
+#meter-disk-text,
+#meter-cpu-text {
+  color: $contrast;
+}
+
+div.dlg-window,
+.CMenu {
+  -webkit-box-shadow: 3px 3px 10px 0px rgba($primary-dark, 0.5);
+  -moz-box-shadow: 3px 3px 10px 0px rgba($primary-dark, 0.5);
+  box-shadow: 3px 3px 10px 0px rgba($primary-dark, 0.5);
+}
+
+/* Sidebar */
+#CatList {
+  /* Headers i CatList */
+  div.catpanel {
+    background-color: $bg-high !important;
+  }
+
+  ul li:not(.sel) {
+    background-color: transparent !important;
+
+    &:hover {
+      background-color: $bg-low !important;
+    }
+  }
+
+  ul li.sel {
+    background-color: $bg-mid !important;
+  }
+}
+
+/* Scrollbars - Between element-list and details of selected item */
+table#maincont #List div.stable-body,
+#tskConsole #tskcmdlog {
+  /* Firefox */
+  scrollbar-color: $bg-high $bg-low;
+  scrollbar-width: thin;
+}
+
+/* Scrollbars - Overall */
+::-webkit-scrollbar-track,
+.stable-body::-webkit-scrollbar-corner,
+::-webkit-scrollbar {
+  background-color: $primary-dark;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-dark-lighter;
+}
