@@ -4,40 +4,57 @@ Looking for a flat and awesome ruTorrent (rTorrent WebUI) theme?
 
 FlatUI will give you:
 * A Borderless design
-* Nice icons
-* Just a bit more easy, then using it on a tablet?
+* Flat icons
+* Collapsed side-menu
+* And other cool stuff, too...
 
 This is the theme you’re looking for :-)!
 
-Todo’s (*Sometime before 2020*)
-------------------------------
-* Cleaning up (images etc.)
-* Toggle-buttons
 
-Please let me know, if you find areas, where the style is missing. Just make a issue, and please let me know your current version of ruTorrent and rTorrent. Remember to add a link, if the issues is with a specific plugin. Screenshots of the issue, will be much appreciated.
+Issues
+------------------------------
+Having issues with the current version? Please create a issue. Kindly remember to attach both screenshots and other detilas too. If the problem are related to a specific plugin, please remember to mention the name of the plugin in the issue-title, and attach a link to the plugin in the body, too. Thanks!
 
 Screenshots
 ------------------------------
-__FlatUI_Dark__
 
-<img title="Overview" src="http://i.imgur.com/JG8QhqQ.png" width="48%">
-<img title="Options, Menu and other stuff" src="http://i.imgur.com/9UIIN6N.png" width="48%">
+Please note that FlatUI comes with **more than a one theme**. So this is just for people dropping my, to get the first impressions right. Check the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a> for all themes.
 
-__FlatUI_Light__
+<table align="center">
+<tr>
+<td>
+<h1 align="center">
+📸 Find all themes in the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a> 📸 
+</h1>
+<p align="center">
+Yep! That's right. See all screenshots in the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a>.<br><br>
+</p>
+</td>
+</tr>
+</table>
 
-<img title="Overview" src="http://i.imgur.com/OS1ArXa.png" width="48%">
-<img title="Options, Menu and other stuff" src="http://i.imgur.com/FGLSrTm.png" width="48%">
+![FlatUI_Dark 1](https://raw.githubusercontent.com/exetico/FlatUI/master/docs/assets/images/themes/dark-1.png)
 
-__FlatUI_Material__
+![FlatUI_Dark 1](https://raw.githubusercontent.com/exetico/FlatUI/master/docs/assets/images/previews/preview-1.png)
 
-<img title="Overview" src="http://i.imgur.com/kvnQPXx.png" width="48%">
-<img title="Options, Menu and other stuff" src="http://i.imgur.com/IqXlkuf.png" width="48%">
+<details>
+  <summary>See more...</summary>
+  
+  Remember to visit the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a> for more screenshots... there's more a single theme!
+  
+![FlatUI_Dark 1](https://raw.githubusercontent.com/exetico/FlatUI/master/docs/assets/images/previews/preview-2.png)
+
+![FlatUI_Dark 1](https://raw.githubusercontent.com/exetico/FlatUI/master/docs/assets/images/previews/preview-3.png)
+
+</details>
+
+
 
 How to use
 ------------------------------
 * Install the [theme plugin](https://code.google.com/p/rutorrent/wiki/PluginTheme).
 * Copy the master of git, or clone it if you like.
-* Add it to the “themes” folder, located in you’re ruTorrent installation under plugins > theme.
+* Add each "FlatUI_" folders to the “themes” folder, located in you’re ruTorrent installation under plugins > theme.
 * Change theme in ruTorrent settings.
 
 Lazy-script for adding the themes
@@ -61,7 +78,6 @@ Colorrequests & Tips and other requests
 ------------------------------
 * Need another color-version of FlatUI theme? Just make a report with the color scales, and i will try to fix it and add it to the repo.
 * Need styling for a specific plugin to ruTorrent? Please let me know. Just create a new issue, and i will give it a look.
-* Looking for a mobile-theme? I really recommend you to use [this plugin, by xombiemp](https://github.com/xombiemp/rutorrentMobile).
 
 Other themes
 * [Agent34](https://code.google.com/p/agent34/)
