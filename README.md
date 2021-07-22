@@ -31,6 +31,7 @@
 	•
   <a href="https://github.com/exetico/FlatUI/wiki" target="_blank">Wiki</a> •
   <a href="https://github.com/exetico/FlatUI/wiki/Themes" target="_blank">Theme Screenshots</a> •
+  <a href="https://github.com/exetico/FlatUI/wiki/How-to-contribute-(Building,-testing-and-more)" target="_blank">How to contribute</a> •
 </p>
 
 <hr>
