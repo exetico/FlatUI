@@ -103,7 +103,7 @@ Make sure `curl` and `git` is installed before running below command.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/exetico/FlatUI/master/install.sh)"
 ```
 
-The lazy-script will move all themes to the current location, and remove the folder called "FlatUI".
+The lazy-script will move all themes to the current location, and remove the folder called "FlatUI". The script won't work with [fish shell](https://fishshell.com/), so if that's your thing, start `bash` before executing the lazy script.
 
 FAQ
 ------------------------------
