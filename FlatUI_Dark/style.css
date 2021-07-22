@@ -1,562 +1,8699 @@
-/* FlatUI - Simple and beautiful theme for ruTorrent by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing - Download at https://github.com/exetico/FlatUI */
+@charset "UTF-8";
+/*
+ *
+ *    Hi! :-)
+ *
+ *    If you're looking at this, you're properly going to change the... colors.
+ *    Correct? Cool! Please read the small info-text for each of the three colors (1-3) to change. Else, you'd make thinks much harder for yourself...
+ *    As FlatUI_* was meant to be dark, the primary color are "primary-dark". That can be a bit confusing.. But that's just how it's worked out. 
+ *
+ */
+/* 
 
-/*  Since 23 Jan - 2017. Bug-fixes and so on */
-.dlg-window{height:auto!important;}
+DO NOT CHANGE ANYTHING BELOW THIS LINE 
 
-
-/* Original content */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot');
-  src: url('fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2') format('woff2'), url('fonts/fontawesome-webfont.woff') format('woff'), url('fonts/fontawesome-webfont.ttf') format('truetype'), url('fonts/fontawesome-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+**/
+/* Variables - Other */
+/* Transparent amount */
+/* Variables - Background */
+/* Icons, Fonts and Branding */
+/* Welcome Message */
+@import url("https://fonts.googleapis.com/css?family=Biryani:400,900");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+div#cover #msg {
+  border: none;
+  font-size: 0;
 }
-@import url(https://fonts.googleapis.com/css?family=Biryani:400,900);
 
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+div#cover #msg span#loadimg {
+  background-image: none !important;
+  height: 0px;
+}
+
+div#cover #msg span#loadimg:before {
+  content: "FlatUI";
+  font-size: 30px;
+}
+
+div#cover #msg span#loadimg:after {
+  content: "by exetico";
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+/*!
+ * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+li.teg:before,
+#-_-_-err-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-dls-_-_-:before,
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before,
+#StatusBar #firstStatusRow td.statusCell #st_system .stval:before,
+div#t #ind:after,
+div#tcreate-header:before,
+div#tadd-header:before,
+div#yesnoDlg-header:before,
+div#dlgLabel div.dlg-header:before,
+#dlgAddRSS-header.dlg-header:before,
+#dlgHelp-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+#stg-header.dlg-header:before,
+#StatusBar #port-td.pstatus2:before,
+#StatusBar #port-td.pstatus1:before,
+#StatusBar #port-td.pstatus0:before,
+#st_down > tbody > tr > td:nth-child(1):before,
+#st_up > tbody > tr > td:nth-child(1):before,
+#StatusBar #meter-cpu-td:before,
+#StatusBar #meter-disk-td:before,
+.catpanel#prss:before,
+.catpanel#ptrackers:before,
+.catpanel#psearch:before,
+.catpanel#pstate:before,
+.catpanel#plabel:before,
+.catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before,
+div#t div#autodl-tb:after,
+div#t div#webuiRefresh:after,
+div#t div#webuiUpdateToggle:after,
+div#t div#plugins:after,
+div#t div#help:after,
+div#t div#setting:after,
+div#t div#rss:after,
+div#t div#search:after,
+div#t div#moved:after,
+div#t div#moveu:after,
+div#t div#stop:after,
+div#t div#pause:after,
+div#t div#start:after,
+div#t div#remove:after,
+div#t div#create:after,
+div#t div#add:after,
+.far,
+div#t div#webuiRefresh:before,
+div#t div#webuiUpdateToggle:before,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+li.teg:before, #-_-_-err-_-_-:before, #-_-_-iac-_-_-:before, #-_-_-act-_-_-:before, #-_-_-com-_-_-:before, #-_-_-dls-_-_-:before, #-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before, #StatusBar #firstStatusRow td.statusCell #st_system .stval:before, div#t #ind:after, div#tcreate-header:before, div#tadd-header:before, div#yesnoDlg-header:before, div#dlgLabel div.dlg-header:before, #dlgAddRSS-header.dlg-header:before, #dlgHelp-header.dlg-header:before, #dlgEditRules-header.dlg-header:before, #stg-header.dlg-header:before, #StatusBar #port-td.pstatus2:before, #StatusBar #port-td.pstatus1:before, #StatusBar #port-td.pstatus0:before, #st_down > tbody > tr > td:nth-child(1):before, #st_up > tbody > tr > td:nth-child(1):before, #StatusBar #meter-cpu-td:before, #StatusBar #meter-disk-td:before, .catpanel#prss:before, .catpanel#ptrackers:before, .catpanel#psearch:before, .catpanel#pstate:before, .catpanel#plabel:before, .catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before, div#t div#autodl-tb:after, div#t div#webuiRefresh:after, div#t div#webuiRefresh:before, div#t div#webuiUpdateToggle:after, div#t div#webuiUpdateToggle:before, div#t div#plugins:after, div#t div#help:after, div#t div#setting:after, div#t div#rss:after, div#t div#search:after, div#t div#moved:after, div#t div#moveu:after, div#t div#stop:after, div#t div#pause:after, div#t div#start:after, div#t div#remove:after, div#t div#create:after, div#t div#add:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fas.fa-pull-left,
+li.fa-pull-left.teg:before,
+.fa-pull-left#-_-_-err-_-_-:before,
+.fa-pull-left#-_-_-iac-_-_-:before,
+.fa-pull-left#-_-_-act-_-_-:before,
+.fa-pull-left#-_-_-com-_-_-:before,
+.fa-pull-left#-_-_-dls-_-_-:before,
+.fa-pull-left#-_-_-all-_-_-:before,
+.fa-pull-left.-_-_-all-_-_-:before,
+div#CatList ul li.fa-pull-left.RSS:before,
+#StatusBar #firstStatusRow td.statusCell #st_system .fa-pull-left.stval:before,
+div#t .fa-pull-left#ind:after,
+div.fa-pull-left#tcreate-header:before,
+div.fa-pull-left#tadd-header:before,
+div.fa-pull-left#yesnoDlg-header:before,
+div#dlgLabel div.fa-pull-left.dlg-header:before,
+.fa-pull-left#dlgAddRSS-header.dlg-header:before,
+.fa-pull-left#dlgHelp-header.dlg-header:before,
+.fa-pull-left#dlgEditRules-header.dlg-header:before,
+.fa-pull-left#stg-header.dlg-header:before,
+#StatusBar .fa-pull-left#port-td.pstatus2:before,
+#StatusBar .fa-pull-left#port-td.pstatus1:before,
+#StatusBar .fa-pull-left#port-td.pstatus0:before,
+#st_down > tbody > tr > td.fa-pull-left:nth-child(1):before,
+#st_up > tbody > tr > td.fa-pull-left:nth-child(1):before,
+#StatusBar .fa-pull-left#meter-cpu-td:before,
+#StatusBar .fa-pull-left#meter-disk-td:before,
+.fa-pull-left.catpanel#prss:before,
+.fa-pull-left.catpanel#ptrackers:before,
+.fa-pull-left.catpanel#psearch:before,
+.fa-pull-left.catpanel#pstate:before,
+.fa-pull-left.catpanel#plabel:before,
+.fa-pull-left.catpanel#flabel:not(:first-of-type):before,
+.fa-pull-left.catpanel#fsearch:before,
+div#t div.fa-pull-left#autodl-tb:after,
+div#t div.fa-pull-left#webuiRefresh:after,
+div#t div.fa-pull-left#webuiUpdateToggle:after,
+div#t div.fa-pull-left#plugins:after,
+div#t div.fa-pull-left#help:after,
+div#t div.fa-pull-left#setting:after,
+div#t div.fa-pull-left#rss:after,
+div#t div.fa-pull-left#search:after,
+div#t div.fa-pull-left#moved:after,
+div#t div.fa-pull-left#moveu:after,
+div#t div.fa-pull-left#stop:after,
+div#t div.fa-pull-left#pause:after,
+div#t div.fa-pull-left#start:after,
+div#t div.fa-pull-left#remove:after,
+div#t div.fa-pull-left#create:after,
+div#t div.fa-pull-left#add:after,
+.far.fa-pull-left,
+div#t div.fa-pull-left#webuiRefresh:before,
+div#t div.fa-pull-left#webuiUpdateToggle:before,
+.fal.fa-pull-left,
+.fab.fa-pull-left {
+  margin-right: 0.3em;
+}
+.fa.fa-pull-right,
+.fas.fa-pull-right,
+li.fa-pull-right.teg:before,
+.fa-pull-right#-_-_-err-_-_-:before,
+.fa-pull-right#-_-_-iac-_-_-:before,
+.fa-pull-right#-_-_-act-_-_-:before,
+.fa-pull-right#-_-_-com-_-_-:before,
+.fa-pull-right#-_-_-dls-_-_-:before,
+.fa-pull-right#-_-_-all-_-_-:before,
+.fa-pull-right.-_-_-all-_-_-:before,
+div#CatList ul li.fa-pull-right.RSS:before,
+#StatusBar #firstStatusRow td.statusCell #st_system .fa-pull-right.stval:before,
+div#t .fa-pull-right#ind:after,
+div.fa-pull-right#tcreate-header:before,
+div.fa-pull-right#tadd-header:before,
+div.fa-pull-right#yesnoDlg-header:before,
+div#dlgLabel div.fa-pull-right.dlg-header:before,
+.fa-pull-right#dlgAddRSS-header.dlg-header:before,
+.fa-pull-right#dlgHelp-header.dlg-header:before,
+.fa-pull-right#dlgEditRules-header.dlg-header:before,
+.fa-pull-right#stg-header.dlg-header:before,
+#StatusBar .fa-pull-right#port-td.pstatus2:before,
+#StatusBar .fa-pull-right#port-td.pstatus1:before,
+#StatusBar .fa-pull-right#port-td.pstatus0:before,
+#st_down > tbody > tr > td.fa-pull-right:nth-child(1):before,
+#st_up > tbody > tr > td.fa-pull-right:nth-child(1):before,
+#StatusBar .fa-pull-right#meter-cpu-td:before,
+#StatusBar .fa-pull-right#meter-disk-td:before,
+.fa-pull-right.catpanel#prss:before,
+.fa-pull-right.catpanel#ptrackers:before,
+.fa-pull-right.catpanel#psearch:before,
+.fa-pull-right.catpanel#pstate:before,
+.fa-pull-right.catpanel#plabel:before,
+.fa-pull-right.catpanel#flabel:not(:first-of-type):before,
+.fa-pull-right.catpanel#fsearch:before,
+div#t div.fa-pull-right#autodl-tb:after,
+div#t div.fa-pull-right#webuiRefresh:after,
+div#t div.fa-pull-right#webuiUpdateToggle:after,
+div#t div.fa-pull-right#plugins:after,
+div#t div.fa-pull-right#help:after,
+div#t div.fa-pull-right#setting:after,
+div#t div.fa-pull-right#rss:after,
+div#t div.fa-pull-right#search:after,
+div#t div.fa-pull-right#moved:after,
+div#t div.fa-pull-right#moveu:after,
+div#t div.fa-pull-right#stop:after,
+div#t div.fa-pull-right#pause:after,
+div#t div.fa-pull-right#start:after,
+div#t div.fa-pull-right#remove:after,
+div#t div.fa-pull-right#create:after,
+div#t div.fa-pull-right#add:after,
+.far.fa-pull-right,
+div#t div.fa-pull-right#webuiRefresh:before,
+div#t div.fa-pull-right#webuiUpdateToggle:before,
+.fal.fa-pull-right,
+.fab.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  transform: scale(1, -1);
+}
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  transform: scale(-1, -1);
+}
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-flip-both {
+  filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+readers do not read off random characters that represent icons */
+.fa-500px:before {
+  content: "";
+}
+
+.fa-accessible-icon:before {
+  content: "";
+}
+
+.fa-accusoft:before {
+  content: "";
+}
+
+.fa-acquisitions-incorporated:before {
+  content: "";
+}
+
+.fa-ad:before {
+  content: "";
+}
+
+.fa-address-book:before {
+  content: "";
+}
+
+.fa-address-card:before {
+  content: "";
+}
+
+.fa-adjust:before {
+  content: "";
+}
+
+.fa-adn:before {
+  content: "";
+}
+
+.fa-adobe:before {
+  content: "";
+}
+
+.fa-adversal:before {
+  content: "";
+}
+
+.fa-affiliatetheme:before {
+  content: "";
+}
+
+.fa-air-freshener:before {
+  content: "";
+}
+
+.fa-airbnb:before {
+  content: "";
+}
+
+.fa-algolia:before {
+  content: "";
+}
+
+.fa-align-center:before {
+  content: "";
+}
+
+.fa-align-justify:before {
+  content: "";
+}
+
+.fa-align-left:before {
+  content: "";
+}
+
+.fa-align-right:before {
+  content: "";
+}
+
+.fa-alipay:before {
+  content: "";
+}
+
+.fa-allergies:before {
+  content: "";
+}
+
+.fa-amazon:before {
+  content: "";
+}
+
+.fa-amazon-pay:before {
+  content: "";
+}
+
+.fa-ambulance:before {
+  content: "";
+}
+
+.fa-american-sign-language-interpreting:before {
+  content: "";
+}
+
+.fa-amilia:before {
+  content: "";
+}
+
+.fa-anchor:before {
+  content: "";
+}
+
+.fa-android:before {
+  content: "";
+}
+
+.fa-angellist:before {
+  content: "";
+}
+
+.fa-angle-double-down:before {
+  content: "";
+}
+
+.fa-angle-double-left:before {
+  content: "";
+}
+
+.fa-angle-double-right:before {
+  content: "";
+}
+
+.fa-angle-double-up:before {
+  content: "";
+}
+
+.fa-angle-down:before {
+  content: "";
+}
+
+.fa-angle-left:before {
+  content: "";
+}
+
+.fa-angle-right:before {
+  content: "";
+}
+
+.fa-angle-up:before {
+  content: "";
+}
+
+.fa-angry:before {
+  content: "";
+}
+
+.fa-angrycreative:before {
+  content: "";
+}
+
+.fa-angular:before {
+  content: "";
+}
+
+.fa-ankh:before {
+  content: "";
+}
+
+.fa-app-store:before {
+  content: "";
+}
+
+.fa-app-store-ios:before {
+  content: "";
+}
+
+.fa-apper:before {
+  content: "";
+}
+
+.fa-apple:before {
+  content: "";
+}
+
+.fa-apple-alt:before {
+  content: "";
+}
+
+.fa-apple-pay:before {
+  content: "";
+}
+
+.fa-archive:before {
+  content: "";
+}
+
+.fa-archway:before {
+  content: "";
+}
+
+.fa-arrow-alt-circle-down:before {
+  content: "";
+}
+
+.fa-arrow-alt-circle-left:before {
+  content: "";
+}
+
+.fa-arrow-alt-circle-right:before {
+  content: "";
+}
+
+.fa-arrow-alt-circle-up:before {
+  content: "";
+}
+
+.fa-arrow-circle-down:before {
+  content: "";
+}
+
+.fa-arrow-circle-left:before {
+  content: "";
+}
+
+.fa-arrow-circle-right:before {
+  content: "";
+}
+
+.fa-arrow-circle-up:before {
+  content: "";
+}
+
+.fa-arrow-down:before {
+  content: "";
+}
+
+.fa-arrow-left:before {
+  content: "";
+}
+
+.fa-arrow-right:before {
+  content: "";
+}
+
+.fa-arrow-up:before {
+  content: "";
+}
+
+.fa-arrows-alt:before {
+  content: "";
+}
+
+.fa-arrows-alt-h:before {
+  content: "";
+}
+
+.fa-arrows-alt-v:before {
+  content: "";
+}
+
+.fa-artstation:before {
+  content: "";
+}
+
+.fa-assistive-listening-systems:before {
+  content: "";
+}
+
+.fa-asterisk:before {
+  content: "";
+}
+
+.fa-asymmetrik:before {
+  content: "";
+}
+
+.fa-at:before {
+  content: "";
+}
+
+.fa-atlas:before {
+  content: "";
+}
+
+.fa-atlassian:before {
+  content: "";
+}
+
+.fa-atom:before {
+  content: "";
+}
+
+.fa-audible:before {
+  content: "";
+}
+
+.fa-audio-description:before {
+  content: "";
+}
+
+.fa-autoprefixer:before {
+  content: "";
+}
+
+.fa-avianex:before {
+  content: "";
+}
+
+.fa-aviato:before {
+  content: "";
+}
+
+.fa-award:before {
+  content: "";
+}
+
+.fa-aws:before {
+  content: "";
+}
+
+.fa-baby:before {
+  content: "";
+}
+
+.fa-baby-carriage:before {
+  content: "";
+}
+
+.fa-backspace:before {
+  content: "";
+}
+
+.fa-backward:before {
+  content: "";
+}
+
+.fa-bacon:before {
+  content: "";
+}
+
+.fa-bacteria:before {
+  content: "";
+}
+
+.fa-bacterium:before {
+  content: "";
+}
+
+.fa-bahai:before {
+  content: "";
+}
+
+.fa-balance-scale:before {
+  content: "";
+}
+
+.fa-balance-scale-left:before {
+  content: "";
+}
+
+.fa-balance-scale-right:before {
+  content: "";
+}
+
+.fa-ban:before {
+  content: "";
+}
+
+.fa-band-aid:before {
+  content: "";
+}
+
+.fa-bandcamp:before {
+  content: "";
+}
+
+.fa-barcode:before {
+  content: "";
+}
+
+.fa-bars:before {
+  content: "";
+}
+
+.fa-baseball-ball:before {
+  content: "";
+}
+
+.fa-basketball-ball:before {
+  content: "";
+}
+
+.fa-bath:before {
+  content: "";
+}
+
+.fa-battery-empty:before {
+  content: "";
+}
+
+.fa-battery-full:before {
+  content: "";
+}
+
+.fa-battery-half:before {
+  content: "";
+}
+
+.fa-battery-quarter:before {
+  content: "";
+}
+
+.fa-battery-three-quarters:before {
+  content: "";
+}
+
+.fa-battle-net:before {
+  content: "";
+}
+
+.fa-bed:before {
+  content: "";
+}
+
+.fa-beer:before {
+  content: "";
+}
+
+.fa-behance:before {
+  content: "";
+}
+
+.fa-behance-square:before {
+  content: "";
+}
+
+.fa-bell:before {
+  content: "";
+}
+
+.fa-bell-slash:before {
+  content: "";
+}
+
+.fa-bezier-curve:before {
+  content: "";
+}
+
+.fa-bible:before {
+  content: "";
+}
+
+.fa-bicycle:before {
+  content: "";
+}
+
+.fa-biking:before {
+  content: "";
+}
+
+.fa-bimobject:before {
+  content: "";
+}
+
+.fa-binoculars:before {
+  content: "";
+}
+
+.fa-biohazard:before {
+  content: "";
+}
+
+.fa-birthday-cake:before {
+  content: "";
+}
+
+.fa-bitbucket:before {
+  content: "";
+}
+
+.fa-bitcoin:before {
+  content: "";
+}
+
+.fa-bity:before {
+  content: "";
+}
+
+.fa-black-tie:before {
+  content: "";
+}
+
+.fa-blackberry:before {
+  content: "";
+}
+
+.fa-blender:before {
+  content: "";
+}
+
+.fa-blender-phone:before {
+  content: "";
+}
+
+.fa-blind:before {
+  content: "";
+}
+
+.fa-blog:before {
+  content: "";
+}
+
+.fa-blogger:before {
+  content: "";
+}
+
+.fa-blogger-b:before {
+  content: "";
+}
+
+.fa-bluetooth:before {
+  content: "";
+}
+
+.fa-bluetooth-b:before {
+  content: "";
+}
+
+.fa-bold:before {
+  content: "";
+}
+
+.fa-bolt:before {
+  content: "";
+}
+
+.fa-bomb:before {
+  content: "";
+}
+
+.fa-bone:before {
+  content: "";
+}
+
+.fa-bong:before {
+  content: "";
+}
+
+.fa-book:before {
+  content: "";
+}
+
+.fa-book-dead:before {
+  content: "";
+}
+
+.fa-book-medical:before {
+  content: "";
+}
+
+.fa-book-open:before {
+  content: "";
+}
+
+.fa-book-reader:before {
+  content: "";
+}
+
+.fa-bookmark:before {
+  content: "";
+}
+
+.fa-bootstrap:before {
+  content: "";
+}
+
+.fa-border-all:before {
+  content: "";
+}
+
+.fa-border-none:before {
+  content: "";
+}
+
+.fa-border-style:before {
+  content: "";
+}
+
+.fa-bowling-ball:before {
+  content: "";
+}
+
+.fa-box:before {
+  content: "";
+}
+
+.fa-box-open:before {
+  content: "";
+}
+
+.fa-box-tissue:before {
+  content: "";
+}
+
+.fa-boxes:before {
+  content: "";
+}
+
+.fa-braille:before {
+  content: "";
+}
+
+.fa-brain:before {
+  content: "";
+}
+
+.fa-bread-slice:before {
+  content: "";
+}
+
+.fa-briefcase:before {
+  content: "";
+}
+
+.fa-briefcase-medical:before {
+  content: "";
+}
+
+.fa-broadcast-tower:before {
+  content: "";
+}
+
+.fa-broom:before {
+  content: "";
+}
+
+.fa-brush:before {
+  content: "";
+}
+
+.fa-btc:before {
+  content: "";
+}
+
+.fa-buffer:before {
+  content: "";
+}
+
+.fa-bug:before {
+  content: "";
+}
+
+.fa-building:before {
+  content: "";
+}
+
+.fa-bullhorn:before {
+  content: "";
+}
+
+.fa-bullseye:before {
+  content: "";
+}
+
+.fa-burn:before {
+  content: "";
+}
+
+.fa-buromobelexperte:before {
+  content: "";
+}
+
+.fa-bus:before {
+  content: "";
+}
+
+.fa-bus-alt:before {
+  content: "";
+}
+
+.fa-business-time:before {
+  content: "";
+}
+
+.fa-buy-n-large:before {
+  content: "";
+}
+
+.fa-buysellads:before {
+  content: "";
+}
+
+.fa-calculator:before {
+  content: "";
+}
+
+.fa-calendar:before {
+  content: "";
+}
+
+.fa-calendar-alt:before {
+  content: "";
+}
+
+.fa-calendar-check:before {
+  content: "";
+}
+
+.fa-calendar-day:before {
+  content: "";
+}
+
+.fa-calendar-minus:before {
+  content: "";
+}
+
+.fa-calendar-plus:before {
+  content: "";
+}
+
+.fa-calendar-times:before {
+  content: "";
+}
+
+.fa-calendar-week:before {
+  content: "";
+}
+
+.fa-camera:before {
+  content: "";
+}
+
+.fa-camera-retro:before {
+  content: "";
+}
+
+.fa-campground:before {
+  content: "";
+}
+
+.fa-canadian-maple-leaf:before {
+  content: "";
+}
+
+.fa-candy-cane:before {
+  content: "";
+}
+
+.fa-cannabis:before {
+  content: "";
+}
+
+.fa-capsules:before {
+  content: "";
+}
+
+.fa-car:before {
+  content: "";
+}
+
+.fa-car-alt:before {
+  content: "";
+}
+
+.fa-car-battery:before {
+  content: "";
+}
+
+.fa-car-crash:before {
+  content: "";
+}
+
+.fa-car-side:before {
+  content: "";
+}
+
+.fa-caravan:before {
+  content: "";
+}
+
+.fa-caret-down:before {
+  content: "";
+}
+
+.fa-caret-left:before {
+  content: "";
+}
+
+.fa-caret-right:before {
+  content: "";
+}
+
+.fa-caret-square-down:before {
+  content: "";
+}
+
+.fa-caret-square-left:before {
+  content: "";
+}
+
+.fa-caret-square-right:before {
+  content: "";
+}
+
+.fa-caret-square-up:before {
+  content: "";
+}
+
+.fa-caret-up:before {
+  content: "";
+}
+
+.fa-carrot:before {
+  content: "";
+}
+
+.fa-cart-arrow-down:before {
+  content: "";
+}
+
+.fa-cart-plus:before {
+  content: "";
+}
+
+.fa-cash-register:before {
+  content: "";
+}
+
+.fa-cat:before {
+  content: "";
+}
+
+.fa-cc-amazon-pay:before {
+  content: "";
+}
+
+.fa-cc-amex:before {
+  content: "";
+}
+
+.fa-cc-apple-pay:before {
+  content: "";
+}
+
+.fa-cc-diners-club:before {
+  content: "";
+}
+
+.fa-cc-discover:before {
+  content: "";
+}
+
+.fa-cc-jcb:before {
+  content: "";
+}
+
+.fa-cc-mastercard:before {
+  content: "";
+}
+
+.fa-cc-paypal:before {
+  content: "";
+}
+
+.fa-cc-stripe:before {
+  content: "";
+}
+
+.fa-cc-visa:before {
+  content: "";
+}
+
+.fa-centercode:before {
+  content: "";
+}
+
+.fa-centos:before {
+  content: "";
+}
+
+.fa-certificate:before {
+  content: "";
+}
+
+.fa-chair:before {
+  content: "";
+}
+
+.fa-chalkboard:before {
+  content: "";
+}
+
+.fa-chalkboard-teacher:before {
+  content: "";
+}
+
+.fa-charging-station:before {
+  content: "";
+}
+
+.fa-chart-area:before {
+  content: "";
+}
+
+.fa-chart-bar:before {
+  content: "";
+}
+
+.fa-chart-line:before {
+  content: "";
+}
+
+.fa-chart-pie:before {
+  content: "";
+}
+
+.fa-check:before {
+  content: "";
+}
+
+.fa-check-circle:before {
+  content: "";
+}
+
+.fa-check-double:before {
+  content: "";
+}
+
+.fa-check-square:before {
+  content: "";
+}
+
+.fa-cheese:before {
+  content: "";
+}
+
+.fa-chess:before {
+  content: "";
+}
+
+.fa-chess-bishop:before {
+  content: "";
+}
+
+.fa-chess-board:before {
+  content: "";
+}
+
+.fa-chess-king:before {
+  content: "";
+}
+
+.fa-chess-knight:before {
+  content: "";
+}
+
+.fa-chess-pawn:before {
+  content: "";
+}
+
+.fa-chess-queen:before {
+  content: "";
+}
+
+.fa-chess-rook:before {
+  content: "";
+}
+
+.fa-chevron-circle-down:before {
+  content: "";
+}
+
+.fa-chevron-circle-left:before {
+  content: "";
+}
+
+.fa-chevron-circle-right:before {
+  content: "";
+}
+
+.fa-chevron-circle-up:before {
+  content: "";
+}
+
+.fa-chevron-down:before {
+  content: "";
+}
+
+.fa-chevron-left:before {
+  content: "";
+}
+
+.fa-chevron-right:before {
+  content: "";
+}
+
+.fa-chevron-up:before {
+  content: "";
+}
+
+.fa-child:before {
+  content: "";
+}
+
+.fa-chrome:before {
+  content: "";
+}
+
+.fa-chromecast:before {
+  content: "";
+}
+
+.fa-church:before {
+  content: "";
+}
+
+.fa-circle:before {
+  content: "";
+}
+
+.fa-circle-notch:before {
+  content: "";
+}
+
+.fa-city:before {
+  content: "";
+}
+
+.fa-clinic-medical:before {
+  content: "";
+}
+
+.fa-clipboard:before {
+  content: "";
+}
+
+.fa-clipboard-check:before {
+  content: "";
+}
+
+.fa-clipboard-list:before {
+  content: "";
+}
+
+.fa-clock:before {
+  content: "";
+}
+
+.fa-clone:before {
+  content: "";
+}
+
+.fa-closed-captioning:before {
+  content: "";
+}
+
+.fa-cloud:before {
+  content: "";
+}
+
+.fa-cloud-download-alt:before {
+  content: "";
+}
+
+.fa-cloud-meatball:before {
+  content: "";
+}
+
+.fa-cloud-moon:before {
+  content: "";
+}
+
+.fa-cloud-moon-rain:before {
+  content: "";
+}
+
+.fa-cloud-rain:before {
+  content: "";
+}
+
+.fa-cloud-showers-heavy:before {
+  content: "";
+}
+
+.fa-cloud-sun:before {
+  content: "";
+}
+
+.fa-cloud-sun-rain:before {
+  content: "";
+}
+
+.fa-cloud-upload-alt:before {
+  content: "";
+}
+
+.fa-cloudscale:before {
+  content: "";
+}
+
+.fa-cloudsmith:before {
+  content: "";
+}
+
+.fa-cloudversify:before {
+  content: "";
+}
+
+.fa-cocktail:before {
+  content: "";
+}
+
+.fa-code:before {
+  content: "";
+}
+
+.fa-code-branch:before {
+  content: "";
+}
+
+.fa-codepen:before {
+  content: "";
+}
+
+.fa-codiepie:before {
+  content: "";
+}
+
+.fa-coffee:before {
+  content: "";
+}
+
+.fa-cog:before {
+  content: "";
+}
+
+.fa-cogs:before {
+  content: "";
+}
+
+.fa-coins:before {
+  content: "";
+}
+
+.fa-columns:before {
+  content: "";
+}
+
+.fa-comment:before {
+  content: "";
+}
+
+.fa-comment-alt:before {
+  content: "";
+}
+
+.fa-comment-dollar:before {
+  content: "";
+}
+
+.fa-comment-dots:before {
+  content: "";
+}
+
+.fa-comment-medical:before {
+  content: "";
+}
+
+.fa-comment-slash:before {
+  content: "";
+}
+
+.fa-comments:before {
+  content: "";
+}
+
+.fa-comments-dollar:before {
+  content: "";
+}
+
+.fa-compact-disc:before {
+  content: "";
+}
+
+.fa-compass:before {
+  content: "";
+}
+
+.fa-compress:before {
+  content: "";
+}
+
+.fa-compress-alt:before {
+  content: "";
+}
+
+.fa-compress-arrows-alt:before {
+  content: "";
+}
+
+.fa-concierge-bell:before {
+  content: "";
+}
+
+.fa-confluence:before {
+  content: "";
+}
+
+.fa-connectdevelop:before {
+  content: "";
+}
+
+.fa-contao:before {
+  content: "";
+}
+
+.fa-cookie:before {
+  content: "";
+}
+
+.fa-cookie-bite:before {
+  content: "";
+}
+
+.fa-copy:before {
+  content: "";
+}
+
+.fa-copyright:before {
+  content: "";
+}
+
+.fa-cotton-bureau:before {
+  content: "";
+}
+
+.fa-couch:before {
+  content: "";
+}
+
+.fa-cpanel:before {
+  content: "";
+}
+
+.fa-creative-commons:before {
+  content: "";
+}
+
+.fa-creative-commons-by:before {
+  content: "";
+}
+
+.fa-creative-commons-nc:before {
+  content: "";
+}
+
+.fa-creative-commons-nc-eu:before {
+  content: "";
+}
+
+.fa-creative-commons-nc-jp:before {
+  content: "";
+}
+
+.fa-creative-commons-nd:before {
+  content: "";
+}
+
+.fa-creative-commons-pd:before {
+  content: "";
+}
+
+.fa-creative-commons-pd-alt:before {
+  content: "";
+}
+
+.fa-creative-commons-remix:before {
+  content: "";
+}
+
+.fa-creative-commons-sa:before {
+  content: "";
+}
+
+.fa-creative-commons-sampling:before {
+  content: "";
+}
+
+.fa-creative-commons-sampling-plus:before {
+  content: "";
+}
+
+.fa-creative-commons-share:before {
+  content: "";
+}
+
+.fa-creative-commons-zero:before {
+  content: "";
+}
+
+.fa-credit-card:before {
+  content: "";
+}
+
+.fa-critical-role:before {
+  content: "";
+}
+
+.fa-crop:before {
+  content: "";
+}
+
+.fa-crop-alt:before {
+  content: "";
+}
+
+.fa-cross:before {
+  content: "";
+}
+
+.fa-crosshairs:before {
+  content: "";
+}
+
+.fa-crow:before {
+  content: "";
+}
+
+.fa-crown:before {
+  content: "";
+}
+
+.fa-crutch:before {
+  content: "";
+}
+
+.fa-css3:before {
+  content: "";
+}
+
+.fa-css3-alt:before {
+  content: "";
+}
+
+.fa-cube:before {
+  content: "";
+}
+
+.fa-cubes:before {
+  content: "";
+}
+
+.fa-cut:before {
+  content: "";
+}
+
+.fa-cuttlefish:before {
+  content: "";
+}
+
+.fa-d-and-d:before {
+  content: "";
+}
+
+.fa-d-and-d-beyond:before {
+  content: "";
+}
+
+.fa-dailymotion:before {
+  content: "";
+}
+
+.fa-dashcube:before {
+  content: "";
+}
+
+.fa-database:before {
+  content: "";
+}
+
+.fa-deaf:before {
+  content: "";
+}
+
+.fa-deezer:before {
+  content: "";
+}
+
+.fa-delicious:before {
+  content: "";
+}
+
+.fa-democrat:before {
+  content: "";
+}
+
+.fa-deploydog:before {
+  content: "";
+}
+
+.fa-deskpro:before {
+  content: "";
+}
+
+.fa-desktop:before {
+  content: "";
+}
+
+.fa-dev:before {
+  content: "";
+}
+
+.fa-deviantart:before {
+  content: "";
+}
+
+.fa-dharmachakra:before {
+  content: "";
+}
+
+.fa-dhl:before {
+  content: "";
+}
+
+.fa-diagnoses:before {
+  content: "";
+}
+
+.fa-diaspora:before {
+  content: "";
+}
+
+.fa-dice:before {
+  content: "";
+}
+
+.fa-dice-d20:before {
+  content: "";
+}
+
+.fa-dice-d6:before {
+  content: "";
+}
+
+.fa-dice-five:before {
+  content: "";
+}
+
+.fa-dice-four:before {
+  content: "";
+}
+
+.fa-dice-one:before {
+  content: "";
+}
+
+.fa-dice-six:before {
+  content: "";
+}
+
+.fa-dice-three:before {
+  content: "";
+}
+
+.fa-dice-two:before {
+  content: "";
+}
+
+.fa-digg:before {
+  content: "";
+}
+
+.fa-digital-ocean:before {
+  content: "";
+}
+
+.fa-digital-tachograph:before {
+  content: "";
+}
+
+.fa-directions:before {
+  content: "";
+}
+
+.fa-discord:before {
+  content: "";
+}
+
+.fa-discourse:before {
+  content: "";
+}
+
+.fa-disease:before {
+  content: "";
+}
+
+.fa-divide:before {
+  content: "";
+}
+
+.fa-dizzy:before {
+  content: "";
+}
+
+.fa-dna:before {
+  content: "";
+}
+
+.fa-dochub:before {
+  content: "";
+}
+
+.fa-docker:before {
+  content: "";
+}
+
+.fa-dog:before {
+  content: "";
+}
+
+.fa-dollar-sign:before {
+  content: "";
+}
+
+.fa-dolly:before {
+  content: "";
+}
+
+.fa-dolly-flatbed:before {
+  content: "";
+}
+
+.fa-donate:before {
+  content: "";
+}
+
+.fa-door-closed:before {
+  content: "";
+}
+
+.fa-door-open:before {
+  content: "";
+}
+
+.fa-dot-circle:before {
+  content: "";
+}
+
+.fa-dove:before {
+  content: "";
+}
+
+.fa-download:before {
+  content: "";
+}
+
+.fa-draft2digital:before {
+  content: "";
+}
+
+.fa-drafting-compass:before {
+  content: "";
+}
+
+.fa-dragon:before {
+  content: "";
+}
+
+.fa-draw-polygon:before {
+  content: "";
+}
+
+.fa-dribbble:before {
+  content: "";
+}
+
+.fa-dribbble-square:before {
+  content: "";
+}
+
+.fa-dropbox:before {
+  content: "";
+}
+
+.fa-drum:before {
+  content: "";
+}
+
+.fa-drum-steelpan:before {
+  content: "";
+}
+
+.fa-drumstick-bite:before {
+  content: "";
+}
+
+.fa-drupal:before {
+  content: "";
+}
+
+.fa-dumbbell:before {
+  content: "";
+}
+
+.fa-dumpster:before {
+  content: "";
+}
+
+.fa-dumpster-fire:before {
+  content: "";
+}
+
+.fa-dungeon:before {
+  content: "";
+}
+
+.fa-dyalog:before {
+  content: "";
+}
+
+.fa-earlybirds:before {
+  content: "";
+}
+
+.fa-ebay:before {
+  content: "";
+}
+
+.fa-edge:before {
+  content: "";
+}
+
+.fa-edge-legacy:before {
+  content: "";
+}
+
+.fa-edit:before {
+  content: "";
+}
+
+.fa-egg:before {
+  content: "";
+}
+
+.fa-eject:before {
+  content: "";
+}
+
+.fa-elementor:before {
+  content: "";
+}
+
+.fa-ellipsis-h:before {
+  content: "";
+}
+
+.fa-ellipsis-v:before {
+  content: "";
+}
+
+.fa-ello:before {
+  content: "";
+}
+
+.fa-ember:before {
+  content: "";
+}
+
+.fa-empire:before {
+  content: "";
+}
+
+.fa-envelope:before {
+  content: "";
+}
+
+.fa-envelope-open:before {
+  content: "";
+}
+
+.fa-envelope-open-text:before {
+  content: "";
+}
+
+.fa-envelope-square:before {
+  content: "";
+}
+
+.fa-envira:before {
+  content: "";
+}
+
+.fa-equals:before {
+  content: "";
+}
+
+.fa-eraser:before {
+  content: "";
+}
+
+.fa-erlang:before {
+  content: "";
+}
+
+.fa-ethereum:before {
+  content: "";
+}
+
+.fa-ethernet:before {
+  content: "";
+}
+
+.fa-etsy:before {
+  content: "";
+}
+
+.fa-euro-sign:before {
+  content: "";
+}
+
+.fa-evernote:before {
+  content: "";
+}
+
+.fa-exchange-alt:before {
+  content: "";
+}
+
+.fa-exclamation:before {
+  content: "";
+}
+
+.fa-exclamation-circle:before {
+  content: "";
+}
+
+.fa-exclamation-triangle:before {
+  content: "";
+}
+
+.fa-expand:before {
+  content: "";
+}
+
+.fa-expand-alt:before {
+  content: "";
+}
+
+.fa-expand-arrows-alt:before {
+  content: "";
+}
+
+.fa-expeditedssl:before {
+  content: "";
+}
+
+.fa-external-link-alt:before {
+  content: "";
+}
+
+.fa-external-link-square-alt:before {
+  content: "";
+}
+
+.fa-eye:before {
+  content: "";
+}
+
+.fa-eye-dropper:before {
+  content: "";
+}
+
+.fa-eye-slash:before {
+  content: "";
+}
+
+.fa-facebook:before {
+  content: "";
+}
+
+.fa-facebook-f:before {
+  content: "";
+}
+
+.fa-facebook-messenger:before {
+  content: "";
+}
+
+.fa-facebook-square:before {
+  content: "";
+}
+
+.fa-fan:before {
+  content: "";
+}
+
+.fa-fantasy-flight-games:before {
+  content: "";
+}
+
+.fa-fast-backward:before {
+  content: "";
+}
+
+.fa-fast-forward:before {
+  content: "";
+}
+
+.fa-faucet:before {
+  content: "";
+}
+
+.fa-fax:before {
+  content: "";
+}
+
+.fa-feather:before {
+  content: "";
+}
+
+.fa-feather-alt:before {
+  content: "";
+}
+
+.fa-fedex:before {
+  content: "";
+}
+
+.fa-fedora:before {
+  content: "";
+}
+
+.fa-female:before {
+  content: "";
+}
+
+.fa-fighter-jet:before {
+  content: "";
+}
+
+.fa-figma:before {
+  content: "";
+}
+
+.fa-file:before {
+  content: "";
+}
+
+.fa-file-alt:before {
+  content: "";
+}
+
+.fa-file-archive:before {
+  content: "";
+}
+
+.fa-file-audio:before {
+  content: "";
+}
+
+.fa-file-code:before {
+  content: "";
+}
+
+.fa-file-contract:before {
+  content: "";
+}
+
+.fa-file-csv:before {
+  content: "";
+}
+
+.fa-file-download:before {
+  content: "";
+}
+
+.fa-file-excel:before {
+  content: "";
+}
+
+.fa-file-export:before {
+  content: "";
+}
+
+.fa-file-image:before {
+  content: "";
+}
+
+.fa-file-import:before {
+  content: "";
+}
+
+.fa-file-invoice:before {
+  content: "";
+}
+
+.fa-file-invoice-dollar:before {
+  content: "";
+}
+
+.fa-file-medical:before {
+  content: "";
+}
+
+.fa-file-medical-alt:before {
+  content: "";
+}
+
+.fa-file-pdf:before {
+  content: "";
+}
+
+.fa-file-powerpoint:before {
+  content: "";
+}
+
+.fa-file-prescription:before {
+  content: "";
+}
+
+.fa-file-signature:before {
+  content: "";
+}
+
+.fa-file-upload:before {
+  content: "";
+}
+
+.fa-file-video:before {
+  content: "";
+}
+
+.fa-file-word:before {
+  content: "";
+}
+
+.fa-fill:before {
+  content: "";
+}
+
+.fa-fill-drip:before {
+  content: "";
+}
+
+.fa-film:before {
+  content: "";
+}
+
+.fa-filter:before {
+  content: "";
+}
+
+.fa-fingerprint:before {
+  content: "";
+}
+
+.fa-fire:before {
+  content: "";
+}
+
+.fa-fire-alt:before {
+  content: "";
+}
+
+.fa-fire-extinguisher:before {
+  content: "";
+}
+
+.fa-firefox:before {
+  content: "";
+}
+
+.fa-firefox-browser:before {
+  content: "";
+}
+
+.fa-first-aid:before {
+  content: "";
+}
+
+.fa-first-order:before {
+  content: "";
+}
+
+.fa-first-order-alt:before {
+  content: "";
+}
+
+.fa-firstdraft:before {
+  content: "";
+}
+
+.fa-fish:before {
+  content: "";
+}
+
+.fa-fist-raised:before {
+  content: "";
+}
+
+.fa-flag:before {
+  content: "";
+}
+
+.fa-flag-checkered:before {
+  content: "";
+}
+
+.fa-flag-usa:before {
+  content: "";
+}
+
+.fa-flask:before {
+  content: "";
+}
+
+.fa-flickr:before {
+  content: "";
+}
+
+.fa-flipboard:before {
+  content: "";
+}
+
+.fa-flushed:before {
+  content: "";
+}
+
+.fa-fly:before {
+  content: "";
+}
+
+.fa-folder:before {
+  content: "";
+}
+
+.fa-folder-minus:before {
+  content: "";
+}
+
+.fa-folder-open:before {
+  content: "";
+}
+
+.fa-folder-plus:before {
+  content: "";
+}
+
+.fa-font:before {
+  content: "";
+}
+
+.fa-font-awesome:before {
+  content: "";
+}
+
+.fa-font-awesome-alt:before {
+  content: "";
+}
+
+.fa-font-awesome-flag:before {
+  content: "";
+}
+
+.fa-font-awesome-logo-full:before {
+  content: "";
+}
+
+.fa-fonticons:before {
+  content: "";
+}
+
+.fa-fonticons-fi:before {
+  content: "";
+}
+
+.fa-football-ball:before {
+  content: "";
+}
+
+.fa-fort-awesome:before {
+  content: "";
+}
+
+.fa-fort-awesome-alt:before {
+  content: "";
+}
+
+.fa-forumbee:before {
+  content: "";
+}
+
+.fa-forward:before {
+  content: "";
+}
+
+.fa-foursquare:before {
+  content: "";
+}
+
+.fa-free-code-camp:before {
+  content: "";
+}
+
+.fa-freebsd:before {
+  content: "";
+}
+
+.fa-frog:before {
+  content: "";
+}
+
+.fa-frown:before {
+  content: "";
+}
+
+.fa-frown-open:before {
+  content: "";
+}
+
+.fa-fulcrum:before {
+  content: "";
+}
+
+.fa-funnel-dollar:before {
+  content: "";
+}
+
+.fa-futbol:before {
+  content: "";
+}
+
+.fa-galactic-republic:before {
+  content: "";
+}
+
+.fa-galactic-senate:before {
+  content: "";
+}
+
+.fa-gamepad:before {
+  content: "";
+}
+
+.fa-gas-pump:before {
+  content: "";
+}
+
+.fa-gavel:before {
+  content: "";
+}
+
+.fa-gem:before {
+  content: "";
+}
+
+.fa-genderless:before {
+  content: "";
+}
+
+.fa-get-pocket:before {
+  content: "";
+}
+
+.fa-gg:before {
+  content: "";
+}
+
+.fa-gg-circle:before {
+  content: "";
+}
+
+.fa-ghost:before {
+  content: "";
+}
+
+.fa-gift:before {
+  content: "";
+}
+
+.fa-gifts:before {
+  content: "";
+}
+
+.fa-git:before {
+  content: "";
+}
+
+.fa-git-alt:before {
+  content: "";
+}
+
+.fa-git-square:before {
+  content: "";
+}
+
+.fa-github:before {
+  content: "";
+}
+
+.fa-github-alt:before {
+  content: "";
+}
+
+.fa-github-square:before {
+  content: "";
+}
+
+.fa-gitkraken:before {
+  content: "";
+}
+
+.fa-gitlab:before {
+  content: "";
+}
+
+.fa-gitter:before {
+  content: "";
+}
+
+.fa-glass-cheers:before {
+  content: "";
+}
+
+.fa-glass-martini:before {
+  content: "";
+}
+
+.fa-glass-martini-alt:before {
+  content: "";
+}
+
+.fa-glass-whiskey:before {
+  content: "";
+}
+
+.fa-glasses:before {
+  content: "";
+}
+
+.fa-glide:before {
+  content: "";
+}
+
+.fa-glide-g:before {
+  content: "";
+}
+
+.fa-globe:before {
+  content: "";
+}
+
+.fa-globe-africa:before {
+  content: "";
+}
+
+.fa-globe-americas:before {
+  content: "";
+}
+
+.fa-globe-asia:before {
+  content: "";
+}
+
+.fa-globe-europe:before {
+  content: "";
+}
+
+.fa-gofore:before {
+  content: "";
+}
+
+.fa-golf-ball:before {
+  content: "";
+}
+
+.fa-goodreads:before {
+  content: "";
+}
+
+.fa-goodreads-g:before {
+  content: "";
+}
+
+.fa-google:before {
+  content: "";
+}
+
+.fa-google-drive:before {
+  content: "";
+}
+
+.fa-google-pay:before {
+  content: "";
+}
+
+.fa-google-play:before {
+  content: "";
+}
+
+.fa-google-plus:before {
+  content: "";
+}
+
+.fa-google-plus-g:before {
+  content: "";
+}
+
+.fa-google-plus-square:before {
+  content: "";
+}
+
+.fa-google-wallet:before {
+  content: "";
+}
+
+.fa-gopuram:before {
+  content: "";
+}
+
+.fa-graduation-cap:before {
+  content: "";
+}
+
+.fa-gratipay:before {
+  content: "";
+}
+
+.fa-grav:before {
+  content: "";
+}
+
+.fa-greater-than:before {
+  content: "";
+}
+
+.fa-greater-than-equal:before {
+  content: "";
+}
+
+.fa-grimace:before {
+  content: "";
+}
+
+.fa-grin:before {
+  content: "";
+}
+
+.fa-grin-alt:before {
+  content: "";
+}
+
+.fa-grin-beam:before {
+  content: "";
+}
+
+.fa-grin-beam-sweat:before {
+  content: "";
+}
+
+.fa-grin-hearts:before {
+  content: "";
+}
+
+.fa-grin-squint:before {
+  content: "";
+}
+
+.fa-grin-squint-tears:before {
+  content: "";
+}
+
+.fa-grin-stars:before {
+  content: "";
+}
+
+.fa-grin-tears:before {
+  content: "";
+}
+
+.fa-grin-tongue:before {
+  content: "";
+}
+
+.fa-grin-tongue-squint:before {
+  content: "";
+}
+
+.fa-grin-tongue-wink:before {
+  content: "";
+}
+
+.fa-grin-wink:before {
+  content: "";
+}
+
+.fa-grip-horizontal:before {
+  content: "";
+}
+
+.fa-grip-lines:before {
+  content: "";
+}
+
+.fa-grip-lines-vertical:before {
+  content: "";
+}
+
+.fa-grip-vertical:before {
+  content: "";
+}
+
+.fa-gripfire:before {
+  content: "";
+}
+
+.fa-grunt:before {
+  content: "";
+}
+
+.fa-guitar:before {
+  content: "";
+}
+
+.fa-gulp:before {
+  content: "";
+}
+
+.fa-h-square:before {
+  content: "";
+}
+
+.fa-hacker-news:before {
+  content: "";
+}
+
+.fa-hacker-news-square:before {
+  content: "";
+}
+
+.fa-hackerrank:before {
+  content: "";
+}
+
+.fa-hamburger:before {
+  content: "";
+}
+
+.fa-hammer:before {
+  content: "";
+}
+
+.fa-hamsa:before {
+  content: "";
+}
+
+.fa-hand-holding:before {
+  content: "";
+}
+
+.fa-hand-holding-heart:before {
+  content: "";
+}
+
+.fa-hand-holding-medical:before {
+  content: "";
+}
+
+.fa-hand-holding-usd:before {
+  content: "";
+}
+
+.fa-hand-holding-water:before {
+  content: "";
+}
+
+.fa-hand-lizard:before {
+  content: "";
+}
+
+.fa-hand-middle-finger:before {
+  content: "";
+}
+
+.fa-hand-paper:before {
+  content: "";
+}
+
+.fa-hand-peace:before {
+  content: "";
+}
+
+.fa-hand-point-down:before {
+  content: "";
+}
+
+.fa-hand-point-left:before {
+  content: "";
+}
+
+.fa-hand-point-right:before {
+  content: "";
+}
+
+.fa-hand-point-up:before {
+  content: "";
+}
+
+.fa-hand-pointer:before {
+  content: "";
+}
+
+.fa-hand-rock:before {
+  content: "";
+}
+
+.fa-hand-scissors:before {
+  content: "";
+}
+
+.fa-hand-sparkles:before {
+  content: "";
+}
+
+.fa-hand-spock:before {
+  content: "";
+}
+
+.fa-hands:before {
+  content: "";
+}
+
+.fa-hands-helping:before {
+  content: "";
+}
+
+.fa-hands-wash:before {
+  content: "";
+}
+
+.fa-handshake:before {
+  content: "";
+}
+
+.fa-handshake-alt-slash:before {
+  content: "";
+}
+
+.fa-handshake-slash:before {
+  content: "";
+}
+
+.fa-hanukiah:before {
+  content: "";
+}
+
+.fa-hard-hat:before {
+  content: "";
+}
+
+.fa-hashtag:before {
+  content: "";
+}
+
+.fa-hat-cowboy:before {
+  content: "";
+}
+
+.fa-hat-cowboy-side:before {
+  content: "";
+}
+
+.fa-hat-wizard:before {
+  content: "";
+}
+
+.fa-hdd:before {
+  content: "";
+}
+
+.fa-head-side-cough:before {
+  content: "";
+}
+
+.fa-head-side-cough-slash:before {
+  content: "";
+}
+
+.fa-head-side-mask:before {
+  content: "";
+}
+
+.fa-head-side-virus:before {
+  content: "";
+}
+
+.fa-heading:before {
+  content: "";
+}
+
+.fa-headphones:before {
+  content: "";
+}
+
+.fa-headphones-alt:before {
+  content: "";
+}
+
+.fa-headset:before {
+  content: "";
+}
+
+.fa-heart:before {
+  content: "";
+}
+
+.fa-heart-broken:before {
+  content: "";
+}
+
+.fa-heartbeat:before {
+  content: "";
+}
+
+.fa-helicopter:before {
+  content: "";
+}
+
+.fa-highlighter:before {
+  content: "";
+}
+
+.fa-hiking:before {
+  content: "";
+}
+
+.fa-hippo:before {
+  content: "";
+}
+
+.fa-hips:before {
+  content: "";
+}
+
+.fa-hire-a-helper:before {
+  content: "";
+}
+
+.fa-history:before {
+  content: "";
+}
+
+.fa-hockey-puck:before {
+  content: "";
+}
+
+.fa-holly-berry:before {
+  content: "";
+}
+
+.fa-home:before {
+  content: "";
+}
+
+.fa-hooli:before {
+  content: "";
+}
+
+.fa-hornbill:before {
+  content: "";
+}
+
+.fa-horse:before {
+  content: "";
+}
+
+.fa-horse-head:before {
+  content: "";
+}
+
+.fa-hospital:before {
+  content: "";
+}
+
+.fa-hospital-alt:before {
+  content: "";
+}
+
+.fa-hospital-symbol:before {
+  content: "";
+}
+
+.fa-hospital-user:before {
+  content: "";
+}
+
+.fa-hot-tub:before {
+  content: "";
+}
+
+.fa-hotdog:before {
+  content: "";
+}
+
+.fa-hotel:before {
+  content: "";
+}
+
+.fa-hotjar:before {
+  content: "";
+}
+
+.fa-hourglass:before {
+  content: "";
+}
+
+.fa-hourglass-end:before {
+  content: "";
+}
+
+.fa-hourglass-half:before {
+  content: "";
+}
+
+.fa-hourglass-start:before {
+  content: "";
+}
+
+.fa-house-damage:before {
+  content: "";
+}
+
+.fa-house-user:before {
+  content: "";
+}
+
+.fa-houzz:before {
+  content: "";
+}
+
+.fa-hryvnia:before {
+  content: "";
+}
+
+.fa-html5:before {
+  content: "";
+}
+
+.fa-hubspot:before {
+  content: "";
+}
+
+.fa-i-cursor:before {
+  content: "";
+}
+
+.fa-ice-cream:before {
+  content: "";
+}
+
+.fa-icicles:before {
+  content: "";
+}
+
+.fa-icons:before {
+  content: "";
+}
+
+.fa-id-badge:before {
+  content: "";
+}
+
+.fa-id-card:before {
+  content: "";
+}
+
+.fa-id-card-alt:before {
+  content: "";
+}
+
+.fa-ideal:before {
+  content: "";
+}
+
+.fa-igloo:before {
+  content: "";
+}
+
+.fa-image:before {
+  content: "";
+}
+
+.fa-images:before {
+  content: "";
+}
+
+.fa-imdb:before {
+  content: "";
+}
+
+.fa-inbox:before {
+  content: "";
+}
+
+.fa-indent:before {
+  content: "";
+}
+
+.fa-industry:before {
+  content: "";
+}
+
+.fa-infinity:before {
+  content: "";
+}
+
+.fa-info:before {
+  content: "";
+}
+
+.fa-info-circle:before {
+  content: "";
+}
+
+.fa-instagram:before {
+  content: "";
+}
+
+.fa-instagram-square:before {
+  content: "";
+}
+
+.fa-intercom:before {
+  content: "";
+}
+
+.fa-internet-explorer:before {
+  content: "";
+}
+
+.fa-invision:before {
+  content: "";
+}
+
+.fa-ioxhost:before {
+  content: "";
+}
+
+.fa-italic:before {
+  content: "";
+}
+
+.fa-itch-io:before {
+  content: "";
+}
+
+.fa-itunes:before {
+  content: "";
+}
+
+.fa-itunes-note:before {
+  content: "";
+}
+
+.fa-java:before {
+  content: "";
+}
+
+.fa-jedi:before {
+  content: "";
+}
+
+.fa-jedi-order:before {
+  content: "";
+}
+
+.fa-jenkins:before {
+  content: "";
+}
+
+.fa-jira:before {
+  content: "";
+}
+
+.fa-joget:before {
+  content: "";
+}
+
+.fa-joint:before {
+  content: "";
+}
+
+.fa-joomla:before {
+  content: "";
+}
+
+.fa-journal-whills:before {
+  content: "";
+}
+
+.fa-js:before {
+  content: "";
+}
+
+.fa-js-square:before {
+  content: "";
+}
+
+.fa-jsfiddle:before {
+  content: "";
+}
+
+.fa-kaaba:before {
+  content: "";
+}
+
+.fa-kaggle:before {
+  content: "";
+}
+
+.fa-key:before {
+  content: "";
+}
+
+.fa-keybase:before {
+  content: "";
+}
+
+.fa-keyboard:before {
+  content: "";
+}
+
+.fa-keycdn:before {
+  content: "";
+}
+
+.fa-khanda:before {
+  content: "";
+}
+
+.fa-kickstarter:before {
+  content: "";
+}
+
+.fa-kickstarter-k:before {
+  content: "";
+}
+
+.fa-kiss:before {
+  content: "";
+}
+
+.fa-kiss-beam:before {
+  content: "";
+}
+
+.fa-kiss-wink-heart:before {
+  content: "";
+}
+
+.fa-kiwi-bird:before {
+  content: "";
+}
+
+.fa-korvue:before {
+  content: "";
+}
+
+.fa-landmark:before {
+  content: "";
+}
+
+.fa-language:before {
+  content: "";
+}
+
+.fa-laptop:before {
+  content: "";
+}
+
+.fa-laptop-code:before {
+  content: "";
+}
+
+.fa-laptop-house:before {
+  content: "";
+}
+
+.fa-laptop-medical:before {
+  content: "";
+}
+
+.fa-laravel:before {
+  content: "";
+}
+
+.fa-lastfm:before {
+  content: "";
+}
+
+.fa-lastfm-square:before {
+  content: "";
+}
+
+.fa-laugh:before {
+  content: "";
+}
+
+.fa-laugh-beam:before {
+  content: "";
+}
+
+.fa-laugh-squint:before {
+  content: "";
+}
+
+.fa-laugh-wink:before {
+  content: "";
+}
+
+.fa-layer-group:before {
+  content: "";
+}
+
+.fa-leaf:before {
+  content: "";
+}
+
+.fa-leanpub:before {
+  content: "";
+}
+
+.fa-lemon:before {
+  content: "";
+}
+
+.fa-less:before {
+  content: "";
+}
+
+.fa-less-than:before {
+  content: "";
+}
+
+.fa-less-than-equal:before {
+  content: "";
+}
+
+.fa-level-down-alt:before {
+  content: "";
+}
+
+.fa-level-up-alt:before {
+  content: "";
+}
+
+.fa-life-ring:before {
+  content: "";
+}
+
+.fa-lightbulb:before {
+  content: "";
+}
+
+.fa-line:before {
+  content: "";
+}
+
+.fa-link:before {
+  content: "";
+}
+
+.fa-linkedin:before {
+  content: "";
+}
+
+.fa-linkedin-in:before {
+  content: "";
+}
+
+.fa-linode:before {
+  content: "";
+}
+
+.fa-linux:before {
+  content: "";
+}
+
+.fa-lira-sign:before {
+  content: "";
+}
+
+.fa-list:before {
+  content: "";
+}
+
+.fa-list-alt:before {
+  content: "";
+}
+
+.fa-list-ol:before {
+  content: "";
+}
+
+.fa-list-ul:before {
+  content: "";
+}
+
+.fa-location-arrow:before {
+  content: "";
+}
+
+.fa-lock:before {
+  content: "";
+}
+
+.fa-lock-open:before {
+  content: "";
+}
+
+.fa-long-arrow-alt-down:before {
+  content: "";
+}
+
+.fa-long-arrow-alt-left:before {
+  content: "";
+}
+
+.fa-long-arrow-alt-right:before {
+  content: "";
+}
+
+.fa-long-arrow-alt-up:before {
+  content: "";
+}
+
+.fa-low-vision:before {
+  content: "";
+}
+
+.fa-luggage-cart:before {
+  content: "";
+}
+
+.fa-lungs:before {
+  content: "";
+}
+
+.fa-lungs-virus:before {
+  content: "";
+}
+
+.fa-lyft:before {
+  content: "";
+}
+
+.fa-magento:before {
+  content: "";
+}
+
+.fa-magic:before {
+  content: "";
+}
+
+.fa-magnet:before {
+  content: "";
+}
+
+.fa-mail-bulk:before {
+  content: "";
+}
+
+.fa-mailchimp:before {
+  content: "";
+}
+
+.fa-male:before {
+  content: "";
+}
+
+.fa-mandalorian:before {
+  content: "";
+}
+
+.fa-map:before {
+  content: "";
+}
+
+.fa-map-marked:before {
+  content: "";
+}
+
+.fa-map-marked-alt:before {
+  content: "";
+}
+
+.fa-map-marker:before {
+  content: "";
+}
+
+.fa-map-marker-alt:before {
+  content: "";
+}
+
+.fa-map-pin:before {
+  content: "";
+}
+
+.fa-map-signs:before {
+  content: "";
+}
+
+.fa-markdown:before {
+  content: "";
+}
+
+.fa-marker:before {
+  content: "";
+}
+
+.fa-mars:before {
+  content: "";
+}
+
+.fa-mars-double:before {
+  content: "";
+}
+
+.fa-mars-stroke:before {
+  content: "";
+}
+
+.fa-mars-stroke-h:before {
+  content: "";
+}
+
+.fa-mars-stroke-v:before {
+  content: "";
+}
+
+.fa-mask:before {
+  content: "";
+}
+
+.fa-mastodon:before {
+  content: "";
+}
+
+.fa-maxcdn:before {
+  content: "";
+}
+
+.fa-mdb:before {
+  content: "";
+}
+
+.fa-medal:before {
+  content: "";
+}
+
+.fa-medapps:before {
+  content: "";
+}
+
+.fa-medium:before {
+  content: "";
+}
+
+.fa-medium-m:before {
+  content: "";
+}
+
+.fa-medkit:before {
+  content: "";
+}
+
+.fa-medrt:before {
+  content: "";
+}
+
+.fa-meetup:before {
+  content: "";
+}
+
+.fa-megaport:before {
+  content: "";
+}
+
+.fa-meh:before {
+  content: "";
+}
+
+.fa-meh-blank:before {
+  content: "";
+}
+
+.fa-meh-rolling-eyes:before {
+  content: "";
+}
+
+.fa-memory:before {
+  content: "";
+}
+
+.fa-mendeley:before {
+  content: "";
+}
+
+.fa-menorah:before {
+  content: "";
+}
+
+.fa-mercury:before {
+  content: "";
+}
+
+.fa-meteor:before {
+  content: "";
+}
+
+.fa-microblog:before {
+  content: "";
+}
+
+.fa-microchip:before {
+  content: "";
+}
+
+.fa-microphone:before {
+  content: "";
+}
+
+.fa-microphone-alt:before {
+  content: "";
+}
+
+.fa-microphone-alt-slash:before {
+  content: "";
+}
+
+.fa-microphone-slash:before {
+  content: "";
+}
+
+.fa-microscope:before {
+  content: "";
+}
+
+.fa-microsoft:before {
+  content: "";
+}
+
+.fa-minus:before {
+  content: "";
+}
+
+.fa-minus-circle:before {
+  content: "";
+}
+
+.fa-minus-square:before {
+  content: "";
+}
+
+.fa-mitten:before {
+  content: "";
+}
+
+.fa-mix:before {
+  content: "";
+}
+
+.fa-mixcloud:before {
+  content: "";
+}
+
+.fa-mixer:before {
+  content: "";
+}
+
+.fa-mizuni:before {
+  content: "";
+}
+
+.fa-mobile:before {
+  content: "";
+}
+
+.fa-mobile-alt:before {
+  content: "";
+}
+
+.fa-modx:before {
+  content: "";
+}
+
+.fa-monero:before {
+  content: "";
+}
+
+.fa-money-bill:before {
+  content: "";
+}
+
+.fa-money-bill-alt:before {
+  content: "";
+}
+
+.fa-money-bill-wave:before {
+  content: "";
+}
+
+.fa-money-bill-wave-alt:before {
+  content: "";
+}
+
+.fa-money-check:before {
+  content: "";
+}
+
+.fa-money-check-alt:before {
+  content: "";
+}
+
+.fa-monument:before {
+  content: "";
+}
+
+.fa-moon:before {
+  content: "";
+}
+
+.fa-mortar-pestle:before {
+  content: "";
+}
+
+.fa-mosque:before {
+  content: "";
+}
+
+.fa-motorcycle:before {
+  content: "";
+}
+
+.fa-mountain:before {
+  content: "";
+}
+
+.fa-mouse:before {
+  content: "";
+}
+
+.fa-mouse-pointer:before {
+  content: "";
+}
+
+.fa-mug-hot:before {
+  content: "";
+}
+
+.fa-music:before {
+  content: "";
+}
+
+.fa-napster:before {
+  content: "";
+}
+
+.fa-neos:before {
+  content: "";
+}
+
+.fa-network-wired:before {
+  content: "";
+}
+
+.fa-neuter:before {
+  content: "";
+}
+
+.fa-newspaper:before {
+  content: "";
+}
+
+.fa-nimblr:before {
+  content: "";
+}
+
+.fa-node:before {
+  content: "";
+}
+
+.fa-node-js:before {
+  content: "";
+}
+
+.fa-not-equal:before {
+  content: "";
+}
+
+.fa-notes-medical:before {
+  content: "";
+}
+
+.fa-npm:before {
+  content: "";
+}
+
+.fa-ns8:before {
+  content: "";
+}
+
+.fa-nutritionix:before {
+  content: "";
+}
+
+.fa-object-group:before {
+  content: "";
+}
+
+.fa-object-ungroup:before {
+  content: "";
+}
+
+.fa-odnoklassniki:before {
+  content: "";
+}
+
+.fa-odnoklassniki-square:before {
+  content: "";
+}
+
+.fa-oil-can:before {
+  content: "";
+}
+
+.fa-old-republic:before {
+  content: "";
+}
+
+.fa-om:before {
+  content: "";
+}
+
+.fa-opencart:before {
+  content: "";
+}
+
+.fa-openid:before {
+  content: "";
+}
+
+.fa-opera:before {
+  content: "";
+}
+
+.fa-optin-monster:before {
+  content: "";
+}
+
+.fa-orcid:before {
+  content: "";
+}
+
+.fa-osi:before {
+  content: "";
+}
+
+.fa-otter:before {
+  content: "";
+}
+
+.fa-outdent:before {
+  content: "";
+}
+
+.fa-page4:before {
+  content: "";
+}
+
+.fa-pagelines:before {
+  content: "";
+}
+
+.fa-pager:before {
+  content: "";
+}
+
+.fa-paint-brush:before {
+  content: "";
+}
+
+.fa-paint-roller:before {
+  content: "";
+}
+
+.fa-palette:before {
+  content: "";
+}
+
+.fa-palfed:before {
+  content: "";
+}
+
+.fa-pallet:before {
+  content: "";
+}
+
+.fa-paper-plane:before {
+  content: "";
+}
+
+.fa-paperclip:before {
+  content: "";
+}
+
+.fa-parachute-box:before {
+  content: "";
+}
+
+.fa-paragraph:before {
+  content: "";
+}
+
+.fa-parking:before {
+  content: "";
+}
+
+.fa-passport:before {
+  content: "";
+}
+
+.fa-pastafarianism:before {
+  content: "";
+}
+
+.fa-paste:before {
+  content: "";
+}
+
+.fa-patreon:before {
+  content: "";
+}
+
+.fa-pause:before {
+  content: "";
+}
+
+.fa-pause-circle:before {
+  content: "";
+}
+
+.fa-paw:before {
+  content: "";
+}
+
+.fa-paypal:before {
+  content: "";
+}
+
+.fa-peace:before {
+  content: "";
+}
+
+.fa-pen:before {
+  content: "";
+}
+
+.fa-pen-alt:before {
+  content: "";
+}
+
+.fa-pen-fancy:before {
+  content: "";
+}
+
+.fa-pen-nib:before {
+  content: "";
+}
+
+.fa-pen-square:before {
+  content: "";
+}
+
+.fa-pencil-alt:before {
+  content: "";
+}
+
+.fa-pencil-ruler:before {
+  content: "";
+}
+
+.fa-penny-arcade:before {
+  content: "";
+}
+
+.fa-people-arrows:before {
+  content: "";
+}
+
+.fa-people-carry:before {
+  content: "";
+}
+
+.fa-pepper-hot:before {
+  content: "";
+}
+
+.fa-percent:before {
+  content: "";
+}
+
+.fa-percentage:before {
+  content: "";
+}
+
+.fa-periscope:before {
+  content: "";
+}
+
+.fa-person-booth:before {
+  content: "";
+}
+
+.fa-phabricator:before {
+  content: "";
+}
+
+.fa-phoenix-framework:before {
+  content: "";
+}
+
+.fa-phoenix-squadron:before {
+  content: "";
+}
+
+.fa-phone:before {
+  content: "";
+}
+
+.fa-phone-alt:before {
+  content: "";
+}
+
+.fa-phone-slash:before {
+  content: "";
+}
+
+.fa-phone-square:before {
+  content: "";
+}
+
+.fa-phone-square-alt:before {
+  content: "";
+}
+
+.fa-phone-volume:before {
+  content: "";
+}
+
+.fa-photo-video:before {
+  content: "";
+}
+
+.fa-php:before {
+  content: "";
+}
+
+.fa-pied-piper:before {
+  content: "";
+}
+
+.fa-pied-piper-alt:before {
+  content: "";
+}
+
+.fa-pied-piper-hat:before {
+  content: "";
+}
+
+.fa-pied-piper-pp:before {
+  content: "";
+}
+
+.fa-pied-piper-square:before {
+  content: "";
+}
+
+.fa-piggy-bank:before {
+  content: "";
+}
+
+.fa-pills:before {
+  content: "";
+}
+
+.fa-pinterest:before {
+  content: "";
+}
+
+.fa-pinterest-p:before {
+  content: "";
+}
+
+.fa-pinterest-square:before {
+  content: "";
+}
+
+.fa-pizza-slice:before {
+  content: "";
+}
+
+.fa-place-of-worship:before {
+  content: "";
+}
+
+.fa-plane:before {
+  content: "";
+}
+
+.fa-plane-arrival:before {
+  content: "";
+}
+
+.fa-plane-departure:before {
+  content: "";
+}
+
+.fa-plane-slash:before {
+  content: "";
+}
+
+.fa-play:before {
+  content: "";
+}
+
+.fa-play-circle:before {
+  content: "";
+}
+
+.fa-playstation:before {
+  content: "";
+}
+
+.fa-plug:before {
+  content: "";
+}
+
+.fa-plus:before {
+  content: "";
+}
+
+.fa-plus-circle:before {
+  content: "";
+}
+
+.fa-plus-square:before {
+  content: "";
+}
+
+.fa-podcast:before {
+  content: "";
+}
+
+.fa-poll:before {
+  content: "";
+}
+
+.fa-poll-h:before {
+  content: "";
+}
+
+.fa-poo:before {
+  content: "";
+}
+
+.fa-poo-storm:before {
+  content: "";
+}
+
+.fa-poop:before {
+  content: "";
+}
+
+.fa-portrait:before {
+  content: "";
+}
+
+.fa-pound-sign:before {
+  content: "";
+}
+
+.fa-power-off:before {
+  content: "";
+}
+
+.fa-pray:before {
+  content: "";
+}
+
+.fa-praying-hands:before {
+  content: "";
+}
+
+.fa-prescription:before {
+  content: "";
+}
+
+.fa-prescription-bottle:before {
+  content: "";
+}
+
+.fa-prescription-bottle-alt:before {
+  content: "";
+}
+
+.fa-print:before {
+  content: "";
+}
+
+.fa-procedures:before {
+  content: "";
+}
+
+.fa-product-hunt:before {
+  content: "";
+}
+
+.fa-project-diagram:before {
+  content: "";
+}
+
+.fa-pump-medical:before {
+  content: "";
+}
+
+.fa-pump-soap:before {
+  content: "";
+}
+
+.fa-pushed:before {
+  content: "";
+}
+
+.fa-puzzle-piece:before {
+  content: "";
+}
+
+.fa-python:before {
+  content: "";
+}
+
+.fa-qq:before {
+  content: "";
+}
+
+.fa-qrcode:before {
+  content: "";
+}
+
+.fa-question:before {
+  content: "";
+}
+
+.fa-question-circle:before {
+  content: "";
+}
+
+.fa-quidditch:before {
+  content: "";
+}
+
+.fa-quinscape:before {
+  content: "";
+}
+
+.fa-quora:before {
+  content: "";
+}
+
+.fa-quote-left:before {
+  content: "";
+}
+
+.fa-quote-right:before {
+  content: "";
+}
+
+.fa-quran:before {
+  content: "";
+}
+
+.fa-r-project:before {
+  content: "";
+}
+
+.fa-radiation:before {
+  content: "";
+}
+
+.fa-radiation-alt:before {
+  content: "";
+}
+
+.fa-rainbow:before {
+  content: "";
+}
+
+.fa-random:before {
+  content: "";
+}
+
+.fa-raspberry-pi:before {
+  content: "";
+}
+
+.fa-ravelry:before {
+  content: "";
+}
+
+.fa-react:before {
+  content: "";
+}
+
+.fa-reacteurope:before {
+  content: "";
+}
+
+.fa-readme:before {
+  content: "";
+}
+
+.fa-rebel:before {
+  content: "";
+}
+
+.fa-receipt:before {
+  content: "";
+}
+
+.fa-record-vinyl:before {
+  content: "";
+}
+
+.fa-recycle:before {
+  content: "";
+}
+
+.fa-red-river:before {
+  content: "";
+}
+
+.fa-reddit:before {
+  content: "";
+}
+
+.fa-reddit-alien:before {
+  content: "";
+}
+
+.fa-reddit-square:before {
+  content: "";
+}
+
+.fa-redhat:before {
+  content: "";
+}
+
+.fa-redo:before {
+  content: "";
+}
+
+.fa-redo-alt:before {
+  content: "";
+}
+
+.fa-registered:before {
+  content: "";
+}
+
+.fa-remove-format:before {
+  content: "";
+}
+
+.fa-renren:before {
+  content: "";
+}
+
+.fa-reply:before {
+  content: "";
+}
+
+.fa-reply-all:before {
+  content: "";
+}
+
+.fa-replyd:before {
+  content: "";
+}
+
+.fa-republican:before {
+  content: "";
+}
+
+.fa-researchgate:before {
+  content: "";
+}
+
+.fa-resolving:before {
+  content: "";
+}
+
+.fa-restroom:before {
+  content: "";
+}
+
+.fa-retweet:before {
+  content: "";
+}
+
+.fa-rev:before {
+  content: "";
+}
+
+.fa-ribbon:before {
+  content: "";
+}
+
+.fa-ring:before {
+  content: "";
+}
+
+.fa-road:before {
+  content: "";
+}
+
+.fa-robot:before {
+  content: "";
+}
+
+.fa-rocket:before {
+  content: "";
+}
+
+.fa-rocketchat:before {
+  content: "";
+}
+
+.fa-rockrms:before {
+  content: "";
+}
+
+.fa-route:before {
+  content: "";
+}
+
+.fa-rss:before {
+  content: "";
+}
+
+.fa-rss-square:before {
+  content: "";
+}
+
+.fa-ruble-sign:before {
+  content: "";
+}
+
+.fa-ruler:before {
+  content: "";
+}
+
+.fa-ruler-combined:before {
+  content: "";
+}
+
+.fa-ruler-horizontal:before {
+  content: "";
+}
+
+.fa-ruler-vertical:before {
+  content: "";
+}
+
+.fa-running:before {
+  content: "";
+}
+
+.fa-rupee-sign:before {
+  content: "";
+}
+
+.fa-rust:before {
+  content: "";
+}
+
+.fa-sad-cry:before {
+  content: "";
+}
+
+.fa-sad-tear:before {
+  content: "";
+}
+
+.fa-safari:before {
+  content: "";
+}
+
+.fa-salesforce:before {
+  content: "";
+}
+
+.fa-sass:before {
+  content: "";
+}
+
+.fa-satellite:before {
+  content: "";
+}
+
+.fa-satellite-dish:before {
+  content: "";
+}
+
+.fa-save:before {
+  content: "";
+}
+
+.fa-schlix:before {
+  content: "";
+}
+
+.fa-school:before {
+  content: "";
+}
+
+.fa-screwdriver:before {
+  content: "";
+}
+
+.fa-scribd:before {
+  content: "";
+}
+
+.fa-scroll:before {
+  content: "";
+}
+
+.fa-sd-card:before {
+  content: "";
+}
+
+.fa-search:before {
+  content: "";
+}
+
+.fa-search-dollar:before {
+  content: "";
+}
+
+.fa-search-location:before {
+  content: "";
+}
+
+.fa-search-minus:before {
+  content: "";
+}
+
+.fa-search-plus:before {
+  content: "";
+}
+
+.fa-searchengin:before {
+  content: "";
+}
+
+.fa-seedling:before {
+  content: "";
+}
+
+.fa-sellcast:before {
+  content: "";
+}
+
+.fa-sellsy:before {
+  content: "";
+}
+
+.fa-server:before {
+  content: "";
+}
+
+.fa-servicestack:before {
+  content: "";
+}
+
+.fa-shapes:before {
+  content: "";
+}
+
+.fa-share:before {
+  content: "";
+}
+
+.fa-share-alt:before {
+  content: "";
+}
+
+.fa-share-alt-square:before {
+  content: "";
+}
+
+.fa-share-square:before {
+  content: "";
+}
+
+.fa-shekel-sign:before {
+  content: "";
+}
+
+.fa-shield-alt:before {
+  content: "";
+}
+
+.fa-shield-virus:before {
+  content: "";
+}
+
+.fa-ship:before {
+  content: "";
+}
+
+.fa-shipping-fast:before {
+  content: "";
+}
+
+.fa-shirtsinbulk:before {
+  content: "";
+}
+
+.fa-shoe-prints:before {
+  content: "";
+}
+
+.fa-shopify:before {
+  content: "";
+}
+
+.fa-shopping-bag:before {
+  content: "";
+}
+
+.fa-shopping-basket:before {
+  content: "";
+}
+
+.fa-shopping-cart:before {
+  content: "";
+}
+
+.fa-shopware:before {
+  content: "";
+}
+
+.fa-shower:before {
+  content: "";
+}
+
+.fa-shuttle-van:before {
+  content: "";
+}
+
+.fa-sign:before {
+  content: "";
+}
+
+.fa-sign-in-alt:before {
+  content: "";
+}
+
+.fa-sign-language:before {
+  content: "";
+}
+
+.fa-sign-out-alt:before {
+  content: "";
+}
+
+.fa-signal:before {
+  content: "";
+}
+
+.fa-signature:before {
+  content: "";
+}
+
+.fa-sim-card:before {
+  content: "";
+}
+
+.fa-simplybuilt:before {
+  content: "";
+}
+
+.fa-sink:before {
+  content: "";
+}
+
+.fa-sistrix:before {
+  content: "";
+}
+
+.fa-sitemap:before {
+  content: "";
+}
+
+.fa-sith:before {
+  content: "";
+}
+
+.fa-skating:before {
+  content: "";
+}
+
+.fa-sketch:before {
+  content: "";
+}
+
+.fa-skiing:before {
+  content: "";
+}
+
+.fa-skiing-nordic:before {
+  content: "";
+}
+
+.fa-skull:before {
+  content: "";
+}
+
+.fa-skull-crossbones:before {
+  content: "";
+}
+
+.fa-skyatlas:before {
+  content: "";
+}
+
+.fa-skype:before {
+  content: "";
+}
+
+.fa-slack:before {
+  content: "";
+}
+
+.fa-slack-hash:before {
+  content: "";
+}
+
+.fa-slash:before {
+  content: "";
+}
+
+.fa-sleigh:before {
+  content: "";
+}
+
+.fa-sliders-h:before {
+  content: "";
+}
+
+.fa-slideshare:before {
+  content: "";
+}
+
+.fa-smile:before {
+  content: "";
+}
+
+.fa-smile-beam:before {
+  content: "";
+}
+
+.fa-smile-wink:before {
+  content: "";
+}
+
+.fa-smog:before {
+  content: "";
+}
+
+.fa-smoking:before {
+  content: "";
+}
+
+.fa-smoking-ban:before {
+  content: "";
+}
+
+.fa-sms:before {
+  content: "";
+}
+
+.fa-snapchat:before {
+  content: "";
+}
+
+.fa-snapchat-ghost:before {
+  content: "";
+}
+
+.fa-snapchat-square:before {
+  content: "";
+}
+
+.fa-snowboarding:before {
+  content: "";
+}
+
+.fa-snowflake:before {
+  content: "";
+}
+
+.fa-snowman:before {
+  content: "";
+}
+
+.fa-snowplow:before {
+  content: "";
+}
+
+.fa-soap:before {
+  content: "";
+}
+
+.fa-socks:before {
+  content: "";
+}
+
+.fa-solar-panel:before {
+  content: "";
+}
+
+.fa-sort:before {
+  content: "";
+}
+
+.fa-sort-alpha-down:before {
+  content: "";
+}
+
+.fa-sort-alpha-down-alt:before {
+  content: "";
+}
+
+.fa-sort-alpha-up:before {
+  content: "";
+}
+
+.fa-sort-alpha-up-alt:before {
+  content: "";
+}
+
+.fa-sort-amount-down:before {
+  content: "";
+}
+
+.fa-sort-amount-down-alt:before {
+  content: "";
+}
+
+.fa-sort-amount-up:before {
+  content: "";
+}
+
+.fa-sort-amount-up-alt:before {
+  content: "";
+}
+
+.fa-sort-down:before {
+  content: "";
+}
+
+.fa-sort-numeric-down:before {
+  content: "";
+}
+
+.fa-sort-numeric-down-alt:before {
+  content: "";
+}
+
+.fa-sort-numeric-up:before {
+  content: "";
+}
+
+.fa-sort-numeric-up-alt:before {
+  content: "";
+}
+
+.fa-sort-up:before {
+  content: "";
+}
+
+.fa-soundcloud:before {
+  content: "";
+}
+
+.fa-sourcetree:before {
+  content: "";
+}
+
+.fa-spa:before {
+  content: "";
+}
+
+.fa-space-shuttle:before {
+  content: "";
+}
+
+.fa-speakap:before {
+  content: "";
+}
+
+.fa-speaker-deck:before {
+  content: "";
+}
+
+.fa-spell-check:before {
+  content: "";
+}
+
+.fa-spider:before {
+  content: "";
+}
+
+.fa-spinner:before {
+  content: "";
+}
+
+.fa-splotch:before {
+  content: "";
+}
+
+.fa-spotify:before {
+  content: "";
+}
+
+.fa-spray-can:before {
+  content: "";
+}
+
+.fa-square:before {
+  content: "";
+}
+
+.fa-square-full:before {
+  content: "";
+}
+
+.fa-square-root-alt:before {
+  content: "";
+}
+
+.fa-squarespace:before {
+  content: "";
+}
+
+.fa-stack-exchange:before {
+  content: "";
+}
+
+.fa-stack-overflow:before {
+  content: "";
+}
+
+.fa-stackpath:before {
+  content: "";
+}
+
+.fa-stamp:before {
+  content: "";
+}
+
+.fa-star:before {
+  content: "";
+}
+
+.fa-star-and-crescent:before {
+  content: "";
+}
+
+.fa-star-half:before {
+  content: "";
+}
+
+.fa-star-half-alt:before {
+  content: "";
+}
+
+.fa-star-of-david:before {
+  content: "";
+}
+
+.fa-star-of-life:before {
+  content: "";
+}
+
+.fa-staylinked:before {
+  content: "";
+}
+
+.fa-steam:before {
+  content: "";
+}
+
+.fa-steam-square:before {
+  content: "";
+}
+
+.fa-steam-symbol:before {
+  content: "";
+}
+
+.fa-step-backward:before {
+  content: "";
+}
+
+.fa-step-forward:before {
+  content: "";
+}
+
+.fa-stethoscope:before {
+  content: "";
+}
+
+.fa-sticker-mule:before {
+  content: "";
+}
+
+.fa-sticky-note:before {
+  content: "";
+}
+
+.fa-stop:before {
+  content: "";
+}
+
+.fa-stop-circle:before {
+  content: "";
+}
+
+.fa-stopwatch:before {
+  content: "";
+}
+
+.fa-stopwatch-20:before {
+  content: "";
+}
+
+.fa-store:before {
+  content: "";
+}
+
+.fa-store-alt:before {
+  content: "";
+}
+
+.fa-store-alt-slash:before {
+  content: "";
+}
+
+.fa-store-slash:before {
+  content: "";
+}
+
+.fa-strava:before {
+  content: "";
+}
+
+.fa-stream:before {
+  content: "";
+}
+
+.fa-street-view:before {
+  content: "";
+}
+
+.fa-strikethrough:before {
+  content: "";
+}
+
+.fa-stripe:before {
+  content: "";
+}
+
+.fa-stripe-s:before {
+  content: "";
+}
+
+.fa-stroopwafel:before {
+  content: "";
+}
+
+.fa-studiovinari:before {
+  content: "";
+}
+
+.fa-stumbleupon:before {
+  content: "";
+}
+
+.fa-stumbleupon-circle:before {
+  content: "";
+}
+
+.fa-subscript:before {
+  content: "";
+}
+
+.fa-subway:before {
+  content: "";
+}
+
+.fa-suitcase:before {
+  content: "";
+}
+
+.fa-suitcase-rolling:before {
+  content: "";
+}
+
+.fa-sun:before {
+  content: "";
+}
+
+.fa-superpowers:before {
+  content: "";
+}
+
+.fa-superscript:before {
+  content: "";
+}
+
+.fa-supple:before {
+  content: "";
+}
+
+.fa-surprise:before {
+  content: "";
+}
+
+.fa-suse:before {
+  content: "";
+}
+
+.fa-swatchbook:before {
+  content: "";
+}
+
+.fa-swift:before {
+  content: "";
+}
+
+.fa-swimmer:before {
+  content: "";
+}
+
+.fa-swimming-pool:before {
+  content: "";
+}
+
+.fa-symfony:before {
+  content: "";
+}
+
+.fa-synagogue:before {
+  content: "";
+}
+
+.fa-sync:before {
+  content: "";
+}
+
+.fa-sync-alt:before {
+  content: "";
+}
+
+.fa-syringe:before {
+  content: "";
+}
+
+.fa-table:before {
+  content: "";
+}
+
+.fa-table-tennis:before {
+  content: "";
+}
+
+.fa-tablet:before {
+  content: "";
+}
+
+.fa-tablet-alt:before {
+  content: "";
+}
+
+.fa-tablets:before {
+  content: "";
+}
+
+.fa-tachometer-alt:before {
+  content: "";
+}
+
+.fa-tag:before {
+  content: "";
+}
+
+.fa-tags:before {
+  content: "";
+}
+
+.fa-tape:before {
+  content: "";
+}
+
+.fa-tasks:before {
+  content: "";
+}
+
+.fa-taxi:before {
+  content: "";
+}
+
+.fa-teamspeak:before {
+  content: "";
+}
+
+.fa-teeth:before {
+  content: "";
+}
+
+.fa-teeth-open:before {
+  content: "";
+}
+
+.fa-telegram:before {
+  content: "";
+}
+
+.fa-telegram-plane:before {
+  content: "";
+}
+
+.fa-temperature-high:before {
+  content: "";
+}
+
+.fa-temperature-low:before {
+  content: "";
+}
+
+.fa-tencent-weibo:before {
+  content: "";
+}
+
+.fa-tenge:before {
+  content: "";
+}
+
+.fa-terminal:before {
+  content: "";
+}
+
+.fa-text-height:before {
+  content: "";
+}
+
+.fa-text-width:before {
+  content: "";
+}
+
+.fa-th:before {
+  content: "";
+}
+
+.fa-th-large:before {
+  content: "";
+}
+
+.fa-th-list:before {
+  content: "";
+}
+
+.fa-the-red-yeti:before {
+  content: "";
+}
+
+.fa-theater-masks:before {
+  content: "";
+}
+
+.fa-themeco:before {
+  content: "";
+}
+
+.fa-themeisle:before {
+  content: "";
+}
+
+.fa-thermometer:before {
+  content: "";
+}
+
+.fa-thermometer-empty:before {
+  content: "";
+}
+
+.fa-thermometer-full:before {
+  content: "";
+}
+
+.fa-thermometer-half:before {
+  content: "";
+}
+
+.fa-thermometer-quarter:before {
+  content: "";
+}
+
+.fa-thermometer-three-quarters:before {
+  content: "";
+}
+
+.fa-think-peaks:before {
+  content: "";
+}
+
+.fa-thumbs-down:before {
+  content: "";
+}
+
+.fa-thumbs-up:before {
+  content: "";
+}
+
+.fa-thumbtack:before {
+  content: "";
+}
+
+.fa-ticket-alt:before {
+  content: "";
+}
+
+.fa-tiktok:before {
+  content: "";
+}
+
+.fa-times:before {
+  content: "";
+}
+
+.fa-times-circle:before {
+  content: "";
+}
+
+.fa-tint:before {
+  content: "";
+}
+
+.fa-tint-slash:before {
+  content: "";
+}
+
+.fa-tired:before {
+  content: "";
+}
+
+.fa-toggle-off:before {
+  content: "";
+}
+
+.fa-toggle-on:before {
+  content: "";
+}
+
+.fa-toilet:before {
+  content: "";
+}
+
+.fa-toilet-paper:before {
+  content: "";
+}
+
+.fa-toilet-paper-slash:before {
+  content: "";
+}
+
+.fa-toolbox:before {
+  content: "";
+}
+
+.fa-tools:before {
+  content: "";
+}
+
+.fa-tooth:before {
+  content: "";
+}
+
+.fa-torah:before {
+  content: "";
+}
+
+.fa-torii-gate:before {
+  content: "";
+}
+
+.fa-tractor:before {
+  content: "";
+}
+
+.fa-trade-federation:before {
+  content: "";
+}
+
+.fa-trademark:before {
+  content: "";
+}
+
+.fa-traffic-light:before {
+  content: "";
+}
+
+.fa-trailer:before {
+  content: "";
+}
+
+.fa-train:before {
+  content: "";
+}
+
+.fa-tram:before {
+  content: "";
+}
+
+.fa-transgender:before {
+  content: "";
+}
+
+.fa-transgender-alt:before {
+  content: "";
+}
+
+.fa-trash:before {
+  content: "";
+}
+
+.fa-trash-alt:before {
+  content: "";
+}
+
+.fa-trash-restore:before {
+  content: "";
+}
+
+.fa-trash-restore-alt:before {
+  content: "";
+}
+
+.fa-tree:before {
+  content: "";
+}
+
+.fa-trello:before {
+  content: "";
+}
+
+.fa-tripadvisor:before {
+  content: "";
+}
+
+.fa-trophy:before {
+  content: "";
+}
+
+.fa-truck:before {
+  content: "";
+}
+
+.fa-truck-loading:before {
+  content: "";
+}
+
+.fa-truck-monster:before {
+  content: "";
+}
+
+.fa-truck-moving:before {
+  content: "";
+}
+
+.fa-truck-pickup:before {
+  content: "";
+}
+
+.fa-tshirt:before {
+  content: "";
+}
+
+.fa-tty:before {
+  content: "";
+}
+
+.fa-tumblr:before {
+  content: "";
+}
+
+.fa-tumblr-square:before {
+  content: "";
+}
+
+.fa-tv:before {
+  content: "";
+}
+
+.fa-twitch:before {
+  content: "";
+}
+
+.fa-twitter:before {
+  content: "";
+}
+
+.fa-twitter-square:before {
+  content: "";
+}
+
+.fa-typo3:before {
+  content: "";
+}
+
+.fa-uber:before {
+  content: "";
+}
+
+.fa-ubuntu:before {
+  content: "";
+}
+
+.fa-uikit:before {
+  content: "";
+}
+
+.fa-umbraco:before {
+  content: "";
+}
+
+.fa-umbrella:before {
+  content: "";
+}
+
+.fa-umbrella-beach:before {
+  content: "";
+}
+
+.fa-underline:before {
+  content: "";
+}
+
+.fa-undo:before {
+  content: "";
+}
+
+.fa-undo-alt:before {
+  content: "";
+}
+
+.fa-uniregistry:before {
+  content: "";
+}
+
+.fa-unity:before {
+  content: "";
+}
+
+.fa-universal-access:before {
+  content: "";
+}
+
+.fa-university:before {
+  content: "";
+}
+
+.fa-unlink:before {
+  content: "";
+}
+
+.fa-unlock:before {
+  content: "";
+}
+
+.fa-unlock-alt:before {
+  content: "";
+}
+
+.fa-unsplash:before {
+  content: "";
+}
+
+.fa-untappd:before {
+  content: "";
+}
+
+.fa-upload:before {
+  content: "";
+}
+
+.fa-ups:before {
+  content: "";
+}
+
+.fa-usb:before {
+  content: "";
+}
+
+.fa-user:before {
+  content: "";
+}
+
+.fa-user-alt:before {
+  content: "";
+}
+
+.fa-user-alt-slash:before {
+  content: "";
+}
+
+.fa-user-astronaut:before {
+  content: "";
+}
+
+.fa-user-check:before {
+  content: "";
+}
+
+.fa-user-circle:before {
+  content: "";
+}
+
+.fa-user-clock:before {
+  content: "";
+}
+
+.fa-user-cog:before {
+  content: "";
+}
+
+.fa-user-edit:before {
+  content: "";
+}
+
+.fa-user-friends:before {
+  content: "";
+}
+
+.fa-user-graduate:before {
+  content: "";
+}
+
+.fa-user-injured:before {
+  content: "";
+}
+
+.fa-user-lock:before {
+  content: "";
+}
+
+.fa-user-md:before {
+  content: "";
+}
+
+.fa-user-minus:before {
+  content: "";
+}
+
+.fa-user-ninja:before {
+  content: "";
+}
+
+.fa-user-nurse:before {
+  content: "";
+}
+
+.fa-user-plus:before {
+  content: "";
+}
+
+.fa-user-secret:before {
+  content: "";
+}
+
+.fa-user-shield:before {
+  content: "";
+}
+
+.fa-user-slash:before {
+  content: "";
+}
+
+.fa-user-tag:before {
+  content: "";
+}
+
+.fa-user-tie:before {
+  content: "";
+}
+
+.fa-user-times:before {
+  content: "";
+}
+
+.fa-users:before {
+  content: "";
+}
+
+.fa-users-cog:before {
+  content: "";
+}
+
+.fa-users-slash:before {
+  content: "";
+}
+
+.fa-usps:before {
+  content: "";
+}
+
+.fa-ussunnah:before {
+  content: "";
+}
+
+.fa-utensil-spoon:before {
+  content: "";
+}
+
+.fa-utensils:before {
+  content: "";
+}
+
+.fa-vaadin:before {
+  content: "";
+}
+
+.fa-vector-square:before {
+  content: "";
+}
+
+.fa-venus:before {
+  content: "";
+}
+
+.fa-venus-double:before {
+  content: "";
+}
+
+.fa-venus-mars:before {
+  content: "";
+}
+
+.fa-viacoin:before {
+  content: "";
+}
+
+.fa-viadeo:before {
+  content: "";
+}
+
+.fa-viadeo-square:before {
+  content: "";
+}
+
+.fa-vial:before {
+  content: "";
+}
+
+.fa-vials:before {
+  content: "";
+}
+
+.fa-viber:before {
+  content: "";
+}
+
+.fa-video:before {
+  content: "";
+}
+
+.fa-video-slash:before {
+  content: "";
+}
+
+.fa-vihara:before {
+  content: "";
+}
+
+.fa-vimeo:before {
+  content: "";
+}
+
+.fa-vimeo-square:before {
+  content: "";
+}
+
+.fa-vimeo-v:before {
+  content: "";
+}
+
+.fa-vine:before {
+  content: "";
+}
+
+.fa-virus:before {
+  content: "";
+}
+
+.fa-virus-slash:before {
+  content: "";
+}
+
+.fa-viruses:before {
+  content: "";
+}
+
+.fa-vk:before {
+  content: "";
+}
+
+.fa-vnv:before {
+  content: "";
+}
+
+.fa-voicemail:before {
+  content: "";
+}
+
+.fa-volleyball-ball:before {
+  content: "";
+}
+
+.fa-volume-down:before {
+  content: "";
+}
+
+.fa-volume-mute:before {
+  content: "";
+}
+
+.fa-volume-off:before {
+  content: "";
+}
+
+.fa-volume-up:before {
+  content: "";
+}
+
+.fa-vote-yea:before {
+  content: "";
+}
+
+.fa-vr-cardboard:before {
+  content: "";
+}
+
+.fa-vuejs:before {
+  content: "";
+}
+
+.fa-walking:before {
+  content: "";
+}
+
+.fa-wallet:before {
+  content: "";
+}
+
+.fa-warehouse:before {
+  content: "";
+}
+
+.fa-water:before {
+  content: "";
+}
+
+.fa-wave-square:before {
+  content: "";
+}
+
+.fa-waze:before {
+  content: "";
+}
+
+.fa-weebly:before {
+  content: "";
+}
+
+.fa-weibo:before {
+  content: "";
+}
+
+.fa-weight:before {
+  content: "";
+}
+
+.fa-weight-hanging:before {
+  content: "";
+}
+
+.fa-weixin:before {
+  content: "";
+}
+
+.fa-whatsapp:before {
+  content: "";
+}
+
+.fa-whatsapp-square:before {
+  content: "";
+}
+
+.fa-wheelchair:before {
+  content: "";
+}
+
+.fa-whmcs:before {
+  content: "";
+}
+
+.fa-wifi:before {
+  content: "";
+}
+
+.fa-wikipedia-w:before {
+  content: "";
+}
+
+.fa-wind:before {
+  content: "";
+}
+
+.fa-window-close:before {
+  content: "";
+}
+
+.fa-window-maximize:before {
+  content: "";
+}
+
+.fa-window-minimize:before {
+  content: "";
+}
+
+.fa-window-restore:before {
+  content: "";
+}
+
+.fa-windows:before {
+  content: "";
+}
+
+.fa-wine-bottle:before {
+  content: "";
+}
+
+.fa-wine-glass:before {
+  content: "";
+}
+
+.fa-wine-glass-alt:before {
+  content: "";
+}
+
+.fa-wix:before {
+  content: "";
+}
+
+.fa-wizards-of-the-coast:before {
+  content: "";
+}
+
+.fa-wolf-pack-battalion:before {
+  content: "";
+}
+
+.fa-won-sign:before {
+  content: "";
+}
+
+.fa-wordpress:before {
+  content: "";
+}
+
+.fa-wordpress-simple:before {
+  content: "";
+}
+
+.fa-wpbeginner:before {
+  content: "";
+}
+
+.fa-wpexplorer:before {
+  content: "";
+}
+
+.fa-wpforms:before {
+  content: "";
+}
+
+.fa-wpressr:before {
+  content: "";
+}
+
+.fa-wrench:before {
+  content: "";
+}
+
+.fa-x-ray:before {
+  content: "";
+}
+
+.fa-xbox:before {
+  content: "";
+}
+
+.fa-xing:before {
+  content: "";
+}
+
+.fa-xing-square:before {
+  content: "";
+}
+
+.fa-y-combinator:before {
+  content: "";
+}
+
+.fa-yahoo:before {
+  content: "";
+}
+
+.fa-yammer:before {
+  content: "";
+}
+
+.fa-yandex:before {
+  content: "";
+}
+
+.fa-yandex-international:before {
+  content: "";
+}
+
+.fa-yarn:before {
+  content: "";
+}
+
+.fa-yelp:before {
+  content: "";
+}
+
+.fa-yen-sign:before {
+  content: "";
+}
+
+.fa-yin-yang:before {
+  content: "";
+}
+
+.fa-yoast:before {
+  content: "";
+}
+
+.fa-youtube:before {
+  content: "";
+}
+
+.fa-youtube-square:before {
+  content: "";
+}
+
+.fa-zhihu:before {
+  content: "";
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Removing known styled images in menu and the background of the menu. OBS: If you want to remove all unknown images in menu, please use: div#t div, div#t{background-image:none!important;} - This change to support unknown plugins as well.*/
+div#t,
+div#t div#add,
+div#t div#create,
+div#t div#remove,
+div#t div#start,
+div#t div#pause,
+div#t div#stop,
+div#t div#moveu,
+div#t div#moved,
+div#t div#search,
+div#t div#rss,
+div#t div#setting,
+div#t div#help,
+div#t div#plugins,
+div#t div#webuiRefresh,
+div#t div#autodl-tb {
+  background-image: none !important;
+  margin-top: 3px;
+}
+
+/* FontAwesomeIcons Icons */
+div#t div#add:after {
+  content: "";
+}
+
+div#t div#create:after {
+  content: "";
+}
+
+div#t div#remove:after {
+  content: "";
+}
+
+div#t div#start:after {
+  content: "";
+  content: "";
+}
+
+div#t div#pause:after {
+  content: "";
+}
+
+div#t div#stop:after {
+  content: "";
+}
+
+div#t div#moveu:after {
+  content: "";
+}
+
+div#t div#moved:after {
+  content: "";
+  content: "";
+}
+
+div#t div#search:after {
+  content: "";
+}
+
+div#t div#rss:after {
+  content: "";
+}
+
+div#t div#setting:after {
+  content: "";
+}
+
+div#t div#help:after {
+  content: "";
+  padding-left: 5px;
+}
+
+/* Use f128 (?) insted of (i) */
+div#t div#plugins:after {
+  content: "";
+}
+
+/* Add-on style: PluginPause - https://github.com/Novik/ruTorrent/wiki/PluginPause */
+div#t div#webuiUpdateToggle:before {
+  content: "";
+}
+
+div#t div#webuiUpdateToggle:after {
+  content: "";
+}
+
+div#t div#webuiUpdateToggle {
+  background-image: none !important;
+}
+
+div#t div#webuiRefresh:before {
+  content: "";
+}
+
+div#t div#webuiRefresh:after {
+  content: "";
+}
+
+/* Add-on style: autodl-rutorrent - https://github.com/autodl-community/autodl-rutorrent */
+div#t div#autodl-tb:after {
+  content: "";
+}
+
+/* Adding FontAwesome To catpanel - Will be search. All the other ones is defined below this... Search is (for some reason, named as "flabel" and.. NOT "fsearch" */
+.catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before {
+  content: "";
+}
+
+/* Adding FontAwesome To catpanel headers*/
+.catpanel#plabel:before {
+  content: "";
+}
+.catpanel#pstate:before {
+  content: "";
+}
+.catpanel#psearch:before {
+  content: "";
+}
+.catpanel#ptrackers:before {
+  content: "";
+}
+.catpanel#prss:before {
+  content: "";
+}
+
+/* Adding FontAwesome Icons in StatusBar */
+#StatusBar #meter-disk-td:before,
+#StatusBar #meter-cpu-td:before,
+#st_up > tbody > tr > td:nth-child(1):before,
+#st_down > tbody > tr > td:nth-child(1):before,
+#StatusBar #port-td.pstatus0:before,
+#StatusBar #port-td.pstatus1:before,
+#StatusBar #port-td.pstatus2:before {
+  font-size: 14px;
+}
+
+#StatusBar #meter-disk-td:before {
+  display: fixed !important;
+  float: left;
+  margin-left: 5px;
+  content: "";
+}
+
+#StatusBar #meter-cpu-td:before {
+  display: fixed !important;
+  float: left;
+  margin-left: 5px;
+  content: "";
+}
+
+#st_up > tbody > tr > td:nth-child(1):before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+#st_down > tbody > tr > td:nth-child(1):before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+/* Attention */
+#StatusBar #port-td.pstatus0:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+/* Warning*/
+#StatusBar #port-td.pstatus1:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+/* OK */
+#StatusBar #port-td.pstatus2:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+/* Adding FontAwesome Icons to Options-popup, Help-popup, Label-popup, Delete Torrent-popup, Add Torrent and Create Torrent */
+#stg-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+#dlgEditRules-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+#dlgHelp-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+#dlgAddRSS-header.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+div#dlgLabel div.dlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+div#yesnoDlg-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+div#tadd-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+div#tcreate-header:before {
+  display: fixed !important;
+  float: left;
+  content: "";
+}
+
+/* Adding Icon to Torrent Data Directory, Torrent Properties and Rules Manager */
+div#dlgProps div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#tedit div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before {
+  content: "";
+  display: fixed !important;
+  float: left;
+}
+
+/* Status Icons */
+.Status_Down:before {
+  content: "";
+}
+
+.Status_Up:before {
+  content: "";
+}
+
+.Status_Incompleted:before {
+  content: "";
+}
+
+.Status_Paused:before {
+  content: "";
+}
+
+.Status_Error_Down:before {
+  content: "";
+}
+
+.Status_Error_Up:before {
+  content: "";
+}
+
+.Status_Error:before {
+  content: "";
+}
+
+.Status_Completed:before {
+  content: "";
+}
+
+.Status_Queued_Down:before {
+  content: "";
+}
+
+.Status_Queued_Up:before {
+  content: "";
+}
+
+.Status_Up_Down:before {
+  content: "";
+}
+
+.Status_Checking:before {
+  content: "";
+}
+
+.Status_RSS:before {
+  content: "";
+}
+
+#port-td {
+  padding-left: 15px;
+}
+
+/* Footer Loading Icon */
+div#t #ind {
+  background-image: none !important;
+}
+
+div#t #ind:after {
+  content: "";
+  margin: 11px;
+  font-size: 16px;
+  -webkit-animation: rotation 2s infinite linear;
+          animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+/* Status Bar - Torrents */
+#StatusBar #firstStatusRow td.statusCell {
+  /* Torrent Count in Footer .statusCell is the only one with uppercase C.. */
+}
+#StatusBar #firstStatusRow td.statusCell #st_system .stval:before {
+  content: "";
+}
+
+/* Removing Icons from Create Torrent, StatusBar, Data Directory, Traficgraph and ExtRatio*/
+div#tcreate-header,
+#meter-disk-td,
+#meter-cpu-td,
+div#dlg_datadir div.dlg-header,
+#traf_graph > div.legend > div,
+div#tedit div.dlg-header,
+div#dlgEditRatioRules div.dlg-header,
+div#dlgEditRules div.dlg-header {
+  background: none !important;
+}
+
+/* Removing HR's - Borders.. */
+hr, div.dlg-header {
+  border: none;
+}
+
+/* Font Awesome */
+@font-face {
+  font-family: "Font Awesome 5 Free Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("webfonts/fa-regular-400.eot");
+  src: url("webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-regular-400.woff2") format("woff2"), url("webfonts/fa-regular-400.woff") format("woff"), url("webfonts/fa-regular-400.ttf") format("truetype"), url("webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far, div#t div#webuiUpdateToggle:before, div#t div#webuiRefresh:before {
+  font-family: "Font Awesome 5 Free Regular";
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free Solid";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("webfonts/fa-solid-900.eot");
+  src: url("webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-solid-900.woff2") format("woff2"), url("webfonts/fa-solid-900.woff") format("woff"), url("webfonts/fa-solid-900.ttf") format("truetype"), url("webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+.fa,
+.fas,
+li.teg:before,
+#-_-_-err-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-dls-_-_-:before,
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before,
+div#t div#add:after,
+div#t div#create:after,
+div#t div#remove:after,
+div#t div#start:after,
+div#t div#pause:after,
+div#t div#stop:after,
+div#t div#moveu:after,
+div#t div#moved:after,
+div#t div#search:after,
+div#t div#rss:after,
+div#t div#setting:after,
+div#t div#help:after,
+div#t div#plugins:after,
+div#t div#webuiUpdateToggle:after,
+div#t div#webuiRefresh:after,
+div#t div#autodl-tb:after,
+.catpanel#flabel:not(:first-of-type):before,
+.catpanel#fsearch:before,
+.catpanel#plabel:before,
+.catpanel#pstate:before,
+.catpanel#psearch:before,
+.catpanel#ptrackers:before,
+.catpanel#prss:before,
+#StatusBar #meter-disk-td:before,
+#StatusBar #meter-cpu-td:before,
+#st_up > tbody > tr > td:nth-child(1):before,
+#st_down > tbody > tr > td:nth-child(1):before,
+#StatusBar #port-td.pstatus0:before,
+#StatusBar #port-td.pstatus1:before,
+#StatusBar #port-td.pstatus2:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+#dlgHelp-header.dlg-header:before,
+#dlgAddRSS-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tadd-header:before,
+div#tcreate-header:before,
+div#t #ind:after,
+#StatusBar #firstStatusRow td.statusCell #st_system .stval:before {
+  font-family: "Font Awesome 5 Free Solid";
+  font-weight: 900;
+}
+
+/* Google Fonts */
+/* Define font-families */
+.catpanel,
+div#gcont table td.Header {
+  font-family: "Biryani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* New font and Bold + Uppercase */
+.stable-head tr td {
+  font-family: "Biryani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+}
 
 /* Adding FontAwesome for spefic classes - Before and after content filter */
-.catpanel:before,.catpanel:after,div#t div:after,div#t div:before,#-_-_-all-_-_-:before,#-_-_-dls-_-_-:before,#-_-_-com-_-_-:before,#-_-_-act-_-_-:before,#-_-_-iac-_-_-:before,#-_-_-err-_-_-:before,
+.catpanel:before,
+.catpanel:after,
+div#t div:after,
+div#t div:before,
 #StatusBar #meter-disk-td:before,
 #st_up > tbody > tr > td:nth-child(1):before,
 #st_down > tbody > tr > td:nth-child(1):before,
 #StatusBar #port-td:before,
-#dlgAddRSS-header.dlg-header:before,#stg-header.dlg-header:before,#dlgEditRules-header.dlg-header:before,.dlg-close:before,#dlgHelp-header.dlg-header:before, div#dlgLabel div.dlg-header:before,div#dlg_datadir div.dlg-header:before,div#dlgProps div.dlg-header:before,div#tedit div.dlg-header:before,div#dlgEditRatioRules div.dlg-header:before,div#yesnoDlg-header:before, div#tcreate-header:before, div#tadd-header:before,
+#dlgAddRSS-header.dlg-header:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+.dlg-close:before,
+#dlgHelp-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#dlgProps div.dlg-header:before,
+div#tedit div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tcreate-header:before,
+div#tadd-header:before,
 .stable-icon,
-ul.CMenu li a.exp:before, ul.CMenu li a.sel:before,div#CatList ul li.RSS:before{
-	font-family: FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	display:inline-block;
+ul.CMenu li a.exp:before,
+ul.CMenu li a.sel:before {
+  font-family: "Font Awesome 5 Free Solid";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
 }
 
-* { -webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0,0,0,1.0); }
-html, body {border: 0; margin: 0; padding: 0; cursor: default; overflow: hidden; background-color: #FFF; height: 100%; }
-form{margin:0;}
-div#preload {width: 0px; height: 0px; display: none; background-image: url(images/toolbar.png); background-image: url(images/tstatus.png); background-image: url(images/t_bg.png); background-image: url(images/r_bg.gif); background-image: url(images/i_bg.gif); background-image: url(images/asc.gif); background-image: url(images/desc.gif); background-image: url(images/close.png); background-image: url(images/file.gif); background-image: url(images/dir.gif); background-image: url(images/pnl_open.gif); background-image: url(images/pnl_close.gif)}
-div#cover {width: 100%; height: 100%; left: 0px; top: 0px; position: absolute; z-index: 500; background: #FFFFFF}
-div#msg {width: 100%; height: 100px; position: relative; top: 50%; margin-top: -50px; line-height: 100px; font-size: 11px; font-weight: bold; font-family: Tahoma, Arial, Helvetica, sans-serif; text-align: center; background: #FDFDFD; border-top: 1px solid #D0D0D0; border-bottom: 1px solid #D0D0D0}
-div#modalbg {width: 100%; height: 100%; left: 0px; top: 0px; position: absolute; z-index: 500; display: none; opacity: 0.5; background-color: #CCCCCC;}
-.konqueror div#modalbg { background: none; }
-.ie div#modalbg { filter:alpha(opacity=50); }
+/* Fixing Padding and size for FontAwesome Icons */
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+#-_-_-dls-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-err-_-_-:before,
+#dlgAddRSS-header.dlg-header:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+.dlg-close:before,
+#dlgHelp-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#dlgProps div.dlg-header:before,
+div#tedit,
+div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tedit div.dlg-header:before,
+div#tcreate-header:before,
+div#tadd-header:before,
+div#CatList ul li.RSS:before {
+  font-size: 14px;
+  padding-right: 7px;
+}
 
-div.aright {text-align: right}
-div.dlg-window{position: absolute; left: 0px; top: 0px; background-color: #FAFAFA; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; color: #000000; border:none; display: none; overflow: hidden;}
-div.fxcaret {overflow: auto}
-div.dlg-header {padding: 2px 7px; line-height: 20px; background-image:none; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; font-weight: bold; border:none;}
-a.dlg-close:link, a.dlg-close:visited {width: 14px; height: 14px; margin: 5px; background:none; float: right; border: 0}
-a.dlg-close:hover {width: 14px; height: 14px; background: none; float: right; border: 0;}
-a.dlg-close:active {width: 14px; height: 14px; background:none; float: right; border: 0}
+.catpanel,
+div#gcont table td.Header {
+  font-family: "Biryani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
 
-div#sc {width: 150px; right: 57px; top: 40px; position: absolute; display: none; border: 1px solid #808080; background-color: #E0E0E0; z-index: 100}
-div#sc ul {margin: 0; padding: 0; list-style: none}
-div#sc ul li {margin: 0; padding: 0}
-div#sc li div {line-height: 14px; padding: 4px; font-weight: bold; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif}
-div#sc li.se_act div {background-color: #808080; color: #FFFFFF}
-
-
-ul.CMenu {width: 150px; left: 0px; top: 0px; display: none; border:none; border:none; text-decoration: none; padding: 2px 0 0 2px; margin: 0; list-style-type: none; z-index: 1000}
-ul.CMenu li {float: left; margin-right: 1px; position: relative; width: 150px; background: #FFFFFF}
-ul.CMenu li a {display: block}
-ul.CMenu li a.dis {color: #C0C0C0; text-decoration: line-through; font-size:8px;}
-ul.CMenu li a.dis:hover {background-color: #FFFFFF; color: #C0C0C0}
-ul.CMenu li a {line-height: 16px; padding: 3px 4px 3px 16px; font-weight: normal}
-ul.CMenu li hr {width: 90%; border-top: 1px solid #D0D0D0; height: 0px; margin-top: 2px; margin-bottom: 2px; }
-.ie ul.CMenu li hr { line-height:1px; font-size:1px; margin: 0 }
-ul.CMenu li a.exp {background: transparent url(images/menuexp.gif) no-repeat scroll 140px center; }
-ul.CMenu li a.sel {background:none}
-ul.CMenu li a:hover {background-color: #CFDEEF; color: #000000;}
-
-.menu-line{display:none;}
-
-ul.CMenu li:hover ul {display: block; position: absolute; top: 0; left: 146px; width:150px;}
-ul.CMenu li:hover ul li ul {display: none;}
-ul.CMenu li:hover ul li a {display: block; background-color: #FFFFFF; color: #000000}
-ul.CMenu li:hover ul li a:hover {background-color: #CFDEEF; color: #000000}
-ul.CMenu li:hover ul.left {left: -150px}
-ul.CMenu li ul li a.dis {color: #C0C0C0}
-ul.CMenu li ul li a.dis:hover {background-color: #FFFFFF; color: #C0C0C0}
-
-span.htkey {text-align:right; position: absolute; right: 16px; z-index:100}
-#sel {width: 0px; height: 0px; position: absolute; left: 0px; top: 0px; border: 1px dotted #000000; display: none; z-index: 1000}
-
-div#t {width: 100%; height: 34px; background: #F0F0F0 url(images/t_bg.png) repeat-x center center; line-height: 36px; border:none; white-space: nowrap}
-div#t a {float: left; margin: 0 0 0 5px; padding: 5px}
-div#t a:hover {background-image:none;}
-div#t a:active {padding: 4px 2px 2px 4px}
-div#t div {width: 24px; height: 24px; float: left; cursor: pointer}
-div#t div.TB_Separator {width: 1px; height: 22px; margin: 7px 0 0 5px; padding: 0; border: 0; background-color: #A0A0A0}
-
-/* Welcome Message */
-div#cover #msg{border:none; font-size:0;}
-div#cover #msg span#loadimg{background-image:none!important; height:0px}
-div#cover #msg span#loadimg:before{content: "FlatUI"; font-size:30px;}
-div#cover #msg span#loadimg:after{content: "by exetico"; padding-left:10px; font-size:15px;}
+/* New font and Bold + Uppercase */
+.stable-head tr td {
+  font-family: "Biryani", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+}
 
 /* TOPMENU */
-
 /* Hiding content to Search in top-menu */
-#rrow > td:nth-child(3){display:none;}
+#rrow > td:nth-child(3) {
+  display: none;
+}
 
-div#t div:after{
-	font-size: 22px;
-	margin-top:-6px;
-	margin-left:3px;
+div#t div:after {
+  font-size: 20px;
+  margin-top: -2px;
+  margin-left: 3px;
 }
 
 /* Stack box-icon around menu-icons */
-div#t div:before{
-	font-size: 25px;
-	margin-top:-4px;
-	margin-left:3px;
+div#t div:before {
+  font-size: 25px;
+  margin-top: -4px;
+  margin-left: 3px;
 }
 
 /* Smaller size for icons on box */
-div#t div#webuiUpdateToggle:after,div#t div#webuiRefresh:after{
+div#t div#webuiUpdateToggle:after,
+div#t div#webuiRefresh:after {
   font-size: 9px;
   vertical-align: top;
   margin-left: -14px;
 }
 
-/* Removing known styled images in menu and the background of the menu. OBS: If you want to remove all unknown images in menu, please use: div#t div, div#t{background-image:none!important;} - This change to support unknown plugins as well.*/
-div#t,div#t div#add, div#t div#create, div#t div#remove, div#t div#start, div#t div#pause, div#t div#stop, div#t div#moveu, div#t div#moved, div#t div#search, div#t div#rss, div#t div#setting, div#t div#help, div#t div#plugins
-{background-image:none!important;}
-
-
-/* FontAwesomeIcons Icons */
-div#t div#add:after {content: "\f0ac";}
-div#t div#create:after {content: "\f055";}
-div#t div#remove:after {content: "\f014";}
-div#t div#start:after {content: "\f04b";}
-div#t div#pause:after {content: "\f04c";}
-div#t div#stop:after {content: "\f04d";}
-div#t div#moveu:after {content: "\f139";}
-div#t div#moved:after {content: "\f13a";}
-div#t div#search:after {content: "\f002";}
-div#t div#rss:after {content: "\f09e";}
-div#t div#setting:after {content: "\f013";}
-
-div#t div#help:after {content: "\f129";padding-left:5px;} /* Use f128 (?) insted of (i) */
-div#t div#plugins:after {content: "\f12e";}
-
-/* Add-on style: PluginPause - https://github.com/Novik/ruTorrent/wiki/PluginPause */
-div#t div#webuiUpdateToggle:before {content: "\f096";} div#t div#webuiUpdateToggle:after {content: "\f04c";} div#t div#webuiUpdateToggle{background-image:none!important;}
-div#t div#webuiRefresh:before {content: "\f096";} div#t div#webuiRefresh:after {content: "\f021";} div#t div#webuiRefresh{background-image:none!important;}
-
-/* Add-on style: autodl-rutorrent - https://github.com/autodl-community/autodl-rutorrent */
-div#t div#autodl-tb:after {content: "\f0d0";}
-div#t div#autodl-tb{background-image:none!important;}
-
-#rc {float: right; }
-#go {display:none;}
-#query {margin:;height:100%;padding: 0px 7px;}
-div#t a#mnu_go {margin: 3px 0 0 0; padding: 3px}
-div#t #ind {margin-top: 2px; background: transparent url(images/ajax-loader.gif) no-repeat 0px center; width: 32px; margin-right: 2px; line-height: 26px; cursor: default; }
-
-input.Textbox, input.Button, select {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px}
-Input.TextboxShort {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 50px}
-Input.TextboxMid {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 110px}
-Input.TextboxLarge {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 220px}
-Input.TextboxVShort {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 30px}
-input.Button {padding: 1px 10px; background:none; width: 80px; height: 19px; border: 1px solid #A0A0A0; cursor: pointer }
-input.Button#fMan_showconsole,input.Button#FS_refresh,input.Button#clear_log{height: 15px;margin-top: 1px;}
-Input{border:none!important;}
-Input{outline:0;}
-
-select {margin-top: 5px}
-a {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; color: #686868}
-table#maincont {margin:0}
-table#maincont td.uicell {vertical-align: top; padding: 0 }
-
-/* CatList Styling - Including adding of FontAwesome */
-
-div#CatList {width: 0px; border:none; background-color: #FFFFFF; overflow-y: auto; overflow-x: hidden}
-div#CatList ul {padding: 0; margin: 0; list-style: none; white-space: nowrap}
-div#CatList ul li {padding: 2px 25px; margin: 0; line-height: 14px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; cursor: pointer; border:none; background-repeat: no-repeat}
-
-#-_-_-all-_-_-,#-_-_-dls-_-_-,#-_-_-com-_-_-,#-_-_-act-_-_-,#-_-_-iac-_-_-,#-_-_-err-_-_-{background-image:none;}
-#-_-_-all-_-_-:before{content: "\f022";}
-#-_-_-dls-_-_-:before{content: "\f019";}
-#-_-_-com-_-_-:before{content: "\f093";}
-#-_-_-act-_-_-:before{content: "\f251";}
-#-_-_-iac-_-_-:before{content: "\f250";}
-#-_-_-err-_-_-:before{content: "\f06a";}
-div#CatList ul li.RSS:before{content:"\f09e";}
-
-div#CatList ul li.RSS {background:none;}
-div#CatList ul li.disRSS {background-image: url(images/tstatus.png); background-position: 4px -190px}
-
-/* Adding FontAwesome to Stablelist */
-.stable-icon {background:none;}
-.Status_Down:before {content: "\f019";}
-.Status_Up:before {content: "\f093";}
-.Status_Incompleted:before {content: "\f251";}
-.Status_Paused:before {content: "\f04c";}
-.Status_Error_Down:before {content: "\f12a";}
-.Status_Error_Up:before {content: "\f12a";}
-.Status_Error:before {content: "\f12a";}
-.Status_Completed:before {content: "\f00c";}
-.Status_Queued_Down:before {content: "\f017";}
-.Status_Queued_Up:before {content: "\f017";}
-.Status_Up_Down:before {content: "\f1fe";}
-.Status_Checking:before {content: "\f06e";}
-.Status_RSS:before {content: "\f09e";}
-
-div#HDivider, div#VDivider { font-size: 0; }
-div#HDivider { width: 3px; height: 0px; padding: 0; margin: 0; cursor: e-resize; }
-div#VDivider { width: 100%; height: 3px; padding: 0; margin: 0; cursor: n-resize; }
-div#dividerDrag { width: 3px; height: 3px; padding: 0; margin: 0; background: #A0A0A0; position: absolute; display: none }
-
-div#stg {width: 600px; height: 460px; position: absolute; left: 0px; top: 50px; display: none; overflow: visible}
-div#stg_c {overflow: hidden}
-div#stg-header, div#dlgAddRSS-header{ background-image:none!important; }
-
-div#stg .lm {width: 120px; height: 413px; margin: 5px; margin-right: 0; padding: 5px; float: left; position: relative; background-color: #FFFFFF; border:none; overflow: auto}
-.ie div#stg .lm {width: 125px; position: static;}
-.ie9 div#stg .lm {position: static}
-.ie div#stg {width: 605px;}
-div.op100l {width: 400px; float: left}
-div.op50l {width: 200px; float: left; clear: left}
-div.op50l select {padding: 0}
-div.algnright {text-align: right; clear: right}
-.ie div.op50l {clear: none}
-.ie div.algnright {clear: none}
-.ie9 div.op50l {clear: left}
-.ie9 div.algnright {clear: right}
-
-.lm ul {width: 100%; margin: 0; padding: 0; list-style-position: inside; list-style: none}
-.lm li {margin: 0 5px; padding: 0 12px; line-height: 16px !important; background:none;}
-.lm ul.child {margin: 0 0 0 5px; display: none}
-.lm ul.child li {margin: 0 0 0 9px}
-.lm li.first {background:none;}
-.lm li.last {background:none;}
-.lm li div.toggle {width: 10px; height: 10px; background: transparent url(images/exp.gif) no-repeat scroll center center; float: left; margin: 3px 0 0 -16px; cursor: pointer}
-.lm li a {color: #000000; padding: 1px 2px}
-.lm li a.focus {display:block;font-weight:bold;}
-.ie .lm li a {margin: 0 0 0 -5px; padding: 0}
-.stg_con {float: right; position: relative; width: 450px; height: 400px; margin: 4px; background-color: #FAFAFA}
-.ie9 .stg_con {position: static}
-fieldset {margin: 4px}
-* > fieldset {border:none; -moz-border-radius: 6px; -webkit-border-radius:6px; border-radius:6px;}
-.stg_con table {width: 100%}
-.stg_con td {font-weight: normal; height: 19px}
-.stg_con td.alr {text-align: right}
-.stg_con td input {margin: 0 4px; font-size: 11px; padding: 1px 4px}
-.stg_con select {margin: 1px 4px; font-size: 11px; padding: 1px 4px}
-input.num {text-align: right; width: 50px}
-input.str {text-align: left; width: 130px}
-td label, div label {cursor: pointer}
-input.disabled {background-color: #FAFAFA; color: #C0C0C0; border: 1px solid #C0C0C0}
-td.disabled, label.disabled, span.disabled, div.disabled {color: #C0C0C0; cursor: default}
-fieldset div {padding: 2px}
-.ie7 fieldset div {padding: 0px}
-div input, div select {margin: 0 0 0 4px; font-size: 11px; padding: 1px 4px}
-legend {color: #000000; font-weight: bold}
-div.indent {padding-left: 16px}
-#st_gl {display: block}
-#st_dl, #st_con, #st_bt, #st_que, #st_sch, #st_ao, #st_dc {display: none}
-#st_btns {float: right; position: relative; width: 450px; height: 20px; padding: 3px; text-align: right; }
-#st_btns input {margin-left: 5px}
-a {text-decoration: none}
-#st_ao_h {width: 420px; height: 270px; overflow: auto; }
-#st_ao_h table {width: 400px}
-select.cols {border: 1px solid #808080; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; padding: 2px; width: 120px}
-div#dragmask {width: 10px; height: 10px; left: 0px; top: 0px; position: absolute; z-index: 5000; display: none; border: 1px dotted #A0A0A0}
-div#tdetails {height: 50%; padding:0;}
-div#tdetails a.h {margin: 0}
-div#tdcont {height: 200px; background: #FFFFFF; border:none; padding: 0; overflow: hidden }
-
-div.tab { height:100%;overflow: auto }
-div#lcont {font-size: 9px; font-family: Tahoma, Arial, Helvetica, sans-serif; line-height: 11px;}
-div#lcont div.mono {font-size: 11px; font-family: monospace; line-height: 11px; background: #F5F5F5; white-space: pre}
-div#lcont div.std {padding: 2px}
-
-div#gcont table {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; line-height: 10px}
-div#gcont table td.Header {font-weight: bold;}
-
-div.graph_tab {background-color: #FFFFFF; overflow: hidden; display: block; -moz-user-select: none; -moz-user-focus: normal; -moz-user-input: enabled}
-div.graph_tab {font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; line-height: 11px; color: #545454}
-
-div.table_tab {background-color: #FFFFFF; overflow: hidden; display: block; -moz-user-select: none; -moz-user-focus: normal; -moz-user-input: enabled}
-div#List {border: none;}
-div#List.table_tab{width:100%!important;}
-
-div.cont {padding: 6px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif}
-
-.tabbar {height: 16px; margin: 0; padding: 0; list-style-type: none; text-align: left}
-.tabbar li {margin: 0; padding: 0; display: inline; white-space: nowrap;}
-.tabbar li a {position: relative; top: 3px; text-decoration: none; border:none; border-bottom: 0; margin: -5px 1px 0 1px; padding: 1px 5px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; -moz-border-radius: 0; -webkit-border-radius:0; border-radius:0; vertical-align: top; cursor: pointer}
-.tabbar li a:hover {border-top:none;}
-.tabbar li.selected a {margin: 0 -2px 0 0; padding: 1px 7px 4px 7px; position: relative; top: 2px; vertical-align: top; border-top:none; background:none;}
-div#dlgLabel {width: 250px; height: 140px}
-div#dlgLabel div.dlg-header {background:none;}
-div#dlgLabel div.content {width: 230px; margin: 5px; padding: 5px; line-height: 16px}
-div#dlgLabel div.content input {margin-top: 5px}
-#txtLabel {width: 200px}
-div#padd {width: 250px; height: 120px}
-div#padd div.dlg-header {background-image: url(images/props.gif)}
-div#padd div.content {width: 230px; margin: 5px; padding: 5px; line-height: 16px}
-div#padd div.content input {margin-top: 5px}
-#peerIP {width: 200px}
-div#dlgAbout {width: 250px; height: 250px}
-div#dlgAbout div.dlg-header {background-image: url(images/about.gif)}
-div#dlgAbout div.content {width: 230px; margin: 5px; padding: 5px}
-div#dlgHelp {width: 250px; height: 250px}
-div#dlgHelp div.dlg-header {background-image:none}
-div#dlgHelp div.content {width: 230px; margin: 5px; padding: 5px}
-
-div#dlgProps {width: 395px; height: 215px}
-div#dlgProps div.dlg-header {background:none;}
-div#dlgProps div.content {width: 380px; margin-left: 5px; }
-div#dlgProps textarea#prop-trackers {width: 100%; height: 70px; background: #FFFFFF; border: 1px solid #D0D0D0}
-div#dlgProps fieldset {margin-bottom: 5px; }
-div#dlgProps fieldset div {line-height: 16px; }
-div#dlgProps fieldset div.props-spacer {width: 90%; float: left}
-input#prop-tracker_numwant {width: 60px; float: right}
-input#prop-ulslots {width: 60px; float: right}
-input#prop-peers_min {width: 60px; float: right}
-input#prop-peers_max {width: 60px; float: right}
-input#prop-seed_ratio {width: 40px}
-
-div#yesnoDlg {width: 280px; height: 100px}
-div#yesnoDlg div.dlg-header {background:none;}
-div#yesnoDlg div.content {width: 260px; margin: 5px; padding: 5px; line-height: 16px}
-div#yesnoDlg div.content input {margin-top: 5px}
-
-span#loadimg {padding: 20px; background: transparent url(images/ajax-loader.gif) no-repeat center center; }
-.webkit div#msg {position: fixed;}
-.konqueror div#msg {position: fixed;}
-
-.Icon_File {background: transparent url(images/file.gif) no-repeat left center}
-.Icon_Dir {background: transparent url(images/dir.gif) no-repeat left center}
-.Icon_Share {background: transparent url(images/share.gif) no-repeat left center}
-
-div#HDivider:hover, div#VDivider:hover { background: #A0A0A0; }
-textarea { overflow: auto; }
-
-.catpanel { background: url(images/pnl_open.gif) 2px no-repeat; background-color: #F0F0F0; border:none; padding: 2px 21px; margin: 0px; line-height: 16px; font-size: 12px;
-font-family: 'Titillium Web', sans-serif;
-cursor: pointer; -moz-user-select: none; -moz-user-focus: normal; -moz-user-input: enabled }
-
-div#tadd-header {background:none;}
-div#tadd {display: none; width: 380px; height: 290px; left: 100px; top: 100px; position: absolute; margin: 0 auto }
-div#tadd label {text-align: right; width: 75px; padding-right: 20px; float: left }
-div#tadd br {clear: left; line-height: 0}
-div#tadd input {margin-bottom: 1px}
-div#tadd select { width: 220px }
-
-.konqueror div#tadd label { width: 80px; }
-.konqueror div#tadd { height: 290px; }
-.konqueror #st_con { height: 340px; overflow: auto; }
-
-#StatusBar { border-top:none; background-color: #FFFFFF; margin-top:0; height: 24px; font-size: 11px; font-family: Tahoma, Arial, Helvetica, sans-serif; color: #000000; white-space: nowrap; overflow: hidden;padding:3px;}
-#StatusBar table { line-height: 24px; }
-#st_up, #st_down, td.pstatus0, td.pstatus1, td.pstatus2{ background:none!important;}
-#st_up td:first-child .sthdr { margin-left: 25px }
-#st_down td:first-child .sthdr { margin-left: 25px }
-.statuscell {height: 20px; line-height: 20px; border-right: none;}
-.sthdr { font-weight: bold; padding-right: 3px; text-align: right; }
-.stval { padding-right: 3px; overflow: hidden; width: 65px; }
-.speedEdit { width: 320px }
-.statuscell td { padding: 0 }
-#st_system .sthdr { padding-left: 8px }
-
-.ie fieldset {padding: 5px}
-.buttons-list {  margin-bottom: 5px }
-#servertime { text-align: center }
-
-#bf {white-space:pre}
-
-@media only screen and (orientation:portrait)
-{
-	#go { display: none }
-	#query { width: 80px }
+div#t #mnu_add {
+  margin-left: 0;
+}
+div#t tr#rrow input#query {
+  margin: -5px 0 0 5px !important;
+  height: 30px;
 }
 
-/* No borders om the meter-disk-value in bottom info-bar, Rules Manager and Hostcookies in settings*/
-#meter-disk-value,#hostcookies,td.legendColorBox > div,.lf_rru,div#RSSList,select,input,textarea{border:none!important;outline: 0;}
-
-/* No BG at the Traffic > Traffic Grap in the right corner */
-{background:none!important;}
-
-.meter-text, #meter-disk-text{
-	overflow: visible!important;
-    height: 17px!important;
-    width: 33px!important;
-    line-height: 17px!important;
-    -moz-border-radius: 5px!important;
-    border-radius: 5px!important;
-    background-color: rgba(26,26,26,0.1)!important;
-    text-align: center!important;
-    position: relative!important;
-    margin-bottom: -19px!important;}
-
-/* Position of Loading-icon at the bottom, right. */
-div#t #ind{
-    position: absolute;
-    bottom: 0;
-    z-index: 1000;
-    right: 0;
-    padding-bottom: 8px;
+div#t {
+  width: 100%;
+  height: 34px;
+  background: #F0F0F0 url(images/t_bg.png) repeat-x center center;
+  line-height: 36px;
+  border: none;
+  white-space: nowrap;
 }
 
-/* togglePanel - Panel - pnl_open and closed fixes for Font Awesome */
-/* State */
-.catpanel:nth-of-type(1){}
-/* Labels */
-.catpanel:nth-of-type(2){}
-/* Search */
-.catpanel:nth-of-type(3){}
-/* Trackers */
-.catpanel:nth-of-type(4){}
+div#t a {
+  float: left;
+  margin: 0 0 0 6px;
+  padding: 5px;
+}
+
+div#t a:hover {
+  background-image: none;
+}
+
+div#t a:active {
+  padding: 4px 2px 2px 4px;
+}
+
+div#t div {
+  width: 24px;
+  height: 24px;
+  float: left;
+  cursor: pointer;
+}
+
+div#t div.TB_Separator {
+  width: 1px;
+  height: 22px;
+  margin: 7px 0 0 5px;
+  padding: 0;
+  border: 0;
+  background-color: #A0A0A0;
+}
+
+#rc {
+  float: right;
+}
+
+#go {
+  display: none;
+}
+
+#query {
+  height: 100%;
+  padding: 0px 7px;
+}
+
+div#t a#mnu_go {
+  margin: 3px 0 0 0;
+  padding: 3px;
+}
+
+div#t #ind {
+  margin-top: 2px;
+  background: transparent url(images/ajax-loader.gif) no-repeat 0px center;
+  width: 32px;
+  margin-right: 2px;
+  line-height: 26px;
+  cursor: default;
+}
+
+input.Textbox,
+input.Button,
+select {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+}
+
+Input.TextboxShort {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 50px;
+}
+
+Input.TextboxMid {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 110px;
+}
+
+Input.TextboxLarge {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 220px;
+}
+
+Input.TextboxVShort {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 30px;
+}
+
+input.Button {
+  padding: 1px 10px;
+  background: none;
+  width: 80px;
+  height: 19px;
+  border: 1px solid #A0A0A0;
+  cursor: pointer;
+}
+
+input.Button#fMan_showconsole,
+input.Button#FS_refresh,
+input.Button#clear_log {
+  height: 15px;
+  margin-top: 1px;
+}
+
+Input {
+  border: none !important;
+}
+
+Input {
+  outline: 0;
+}
+
+/* Left Sidebar - CatList Styling - Including adding of FontAwesome */
+.catpanel {
+  background: url(images/pnl_open.gif) 2px no-repeat;
+  background-color: #F0F0F0;
+  border: none;
+  padding: 2px 21px;
+  margin: 0px;
+  line-height: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -moz-user-focus: normal;
+  -moz-user-input: enabled;
+}
+
+div#CatList {
+  width: 0px;
+  border: none;
+  background-color: #FFFFFF;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+a div#CatList ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+div#CatList ul li {
+  padding: 2px 25px;
+  margin: 0;
+  line-height: 14px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  border: none;
+  background-repeat: no-repeat;
+}
+
+/* No Label Styling */
+#plabel_cont .-_-_-all-_-_- img {
+  display: none;
+}
+
+/* Left Sidebar Icons */
+div#CatList ul li.RSS,
+#-_-_-all-_-_-,
+.-_-_-all-_-_-,
+#-_-_-dls-_-_-,
+#-_-_-com-_-_-,
+#-_-_-act-_-_-,
+#-_-_-iac-_-_-,
+#-_-_-err-_-_-,
+#-_-_-nlb-_-_-,
+li.teg {
+  background-image: none;
+}
+div#CatList ul li.RSS:before,
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+#-_-_-dls-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-err-_-_-:before,
+#-_-_-nlb-_-_-:before,
+li.teg:before {
+  opacity: 0.7;
+}
+
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+div#CatList ul li.RSS:before {
+  width: 15px;
+  text-align: center;
+  content: "";
+}
+
+#-_-_-dls-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "";
+}
+
+#-_-_-com-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "";
+}
+
+#-_-_-act-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "";
+}
+
+#-_-_-iac-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "";
+}
+
+#-_-_-err-_-_-:before {
+  width: 15px;
+  text-align: center;
+  content: "";
+}
+
+li.teg:before {
+  /* Search Result Lines */
+  content: "";
+  width: 15px;
+  text-align: center;
+  padding-right: 9px;
+}
+
+div#CatList ul li.disRSS {
+  background-image: url(images/tstatus.png);
+  background-position: 4px -190px;
+}
+
+img.lbl_nlb {
+  position: relative;
+  left: -99999px;
+}
 
 /* Hiding toggle-image */
-.catpanel{background-image:none!important; padding:10px;}
-div#CatList ul li,li.cat,.cat.tracker{padding:5px 10px!important;}
-
-/* Fixing Padding and size for FontAwesome Icons */
-#-_-_-all-_-_-:before,#-_-_-dls-_-_-:before,#-_-_-com-_-_-:before,#-_-_-act-_-_-:before,#-_-_-iac-_-_-:before,#-_-_-err-_-_-:before,#dlgAddRSS-header.dlg-header:before,#stg-header.dlg-header:before,#dlgEditRules-header.dlg-header:before,.dlg-close:before,#dlgHelp-header.dlg-header:before,div#dlgLabel div.dlg-header:before,div#dlg_datadir div.dlg-header:before,div#dlgProps div.dlg-header:before,div#tedit, div.dlg-header:before,div#dlgEditRatioRules div.dlg-header:before,div#yesnoDlg-header:before,div#tedit div.dlg-header:before, div#tcreate-header:before, div#tadd-header:before,div#CatList ul li.RSS:before{
-	font-size:14px;
-	padding-right:7px;
+.catpanel {
+  background-image: none !important;
+  padding: 8px 14px 6px 10px;
+  line-height: 22px;
 }
 
-.catpanel, div#gcont table td.Header{font-family: 'Biryani', sans-serif;	text-transform:uppercase; font-weight:900;}
-
-/* New font and Bold + Uppercase */
-.stable-head tr td{font-family: 'Biryani', sans-serif;	text-transform:uppercase; font-weight:900;font-size:20px;}
-
-.catpanel:before{
-	font-size:12px;
-	padding-right:5px;
-	margin-top:-1px;
+div#CatList ul li,
+li.cat,
+.cat.tracker {
+  padding: 5px 10px !important;
 }
 
-/* Removing Icons from Create Torrent, StatusBar, Data Directory, Traficgraph and ExtRatio*/
-div#tcreate-header,#meter-disk-td,div#dlg_datadir div.dlg-header,#traf_graph > div.legend > div,div#tedit div.dlg-header,div#dlgEditRatioRules div.dlg-header, div#dlgEditRules div.dlg-header{background:none!important;}
-
-/* Removing HR's - Borders.. */
-hr{border:none;}
-
-/* Adding FontAwesome Icons before closed tab */
-.catpanel[style*="pnl_close.gif"]:before{
-	content: "\f0a9";
+.catpanel:before {
+  font-size: 16px;
+  padding-right: 10px;
+  margin-top: 2px;
+  margin-left: -2px;
+  width: 17px;
 }
 
-/* Adding FontAwesome Icons before opened tab */
-.catpanel[style*="pnl_open.gif"]:before{
-	content:"\f0ab";
+/* Style Cat Header, if it's closed */
+.catpanel[style*="pnl_close.gif"] {
+  opacity: 0.3;
 }
 
-/* Adding FontAwesome Icons in StatusBar */
-#StatusBar #meter-disk-td:before,#st_up > tbody > tr > td:nth-child(1):before,#st_down > tbody > tr > td:nth-child(1):before,#StatusBar #port-td.pstatus0:before,#StatusBar #port-td.pstatus1:before,#StatusBar #port-td.pstatus2:before{
-	font-size:14px;
+.catpanel[style*="pnl_close.gif"]:hover:after, .catpanel[style*="pnl_close.gif"]:after {
+  content: "Hidden";
+  position: absolute;
+  margin-top: 8px;
+  font-size: 8px;
+  font-weight: bold;
+  margin-left: 25px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
 }
-#StatusBar #meter-disk-td:before{content: "\f0a0";display:fixed!important;float:left;margin-left:5px;}
-#st_up > tbody > tr > td:nth-child(1):before{content: "\f093";display:fixed!important;float:left;}
-#st_down > tbody > tr > td:nth-child(1):before{content: "\f019";display:fixed!important;float:left;}
-/* Attention */
-#StatusBar #port-td.pstatus0:before{content: "\f255";display:fixed!important;float:left;}
-/* Warning*/
-#StatusBar #port-td.pstatus1:before{content: "\f088";display:fixed!important;float:left;}
-/* OK */
-#StatusBar #port-td.pstatus2:before{content: "\f087";display:fixed!important;float:left;}
 
-/* Adding FontAwesome Icons to Options-popup, Help-popup, Label-popup, Delete Torrent-popup, Add Torrent and Create Torrent */
-#stg-header.dlg-header:before{content: "\f013";display:fixed!important;float:left;}
+.catpanel[style*="pnl_close.gif"]:hover:after {
+  content: "Click to fold out";
+}
 
-#dlgEditRules-header.dlg-header:before{content: "\f085";display:fixed!important;float:left;}
+#CatList .catpanel:not(:first-of-type) {
+  margin-top: 10px;
+}
 
-#dlgHelp-header.dlg-header:before{content: "\f129";display:fixed!important;float:left;}
+/* Position of img icons - categories */
+#CatList .tfavicon {
+  margin-left: -1px;
+  margin-right: 8px;
+}
 
-#dlgAddRSS-header.dlg-header:before{content: "\f09e";display:fixed!important;float:left;}
+#CatList li img {
+  filter: grayscale(100%);
+}
+#CatList li:hover img {
+  filter: grayscale(0%);
+}
 
-div#dlgLabel div.dlg-header:before{content: "\f02b";display:fixed!important;float:left;}
+#CatList {
+  /* Headers i CatList */
+  /* Hide Menu */
+  width: 32px !important;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+#CatList div.catpanel {
+  width: 100%;
+}
+#CatList div.catpanel {
+  display: inline-flex;
+}
+#CatList:hover {
+  width: 200px !important;
+}
 
-div#yesnoDlg-header:before{content: "\f071";display:fixed!important;float:left;}
+/* Padding to the "all"-text in tracker catList */
+#ptrackers_cont .-_-_-all-_-_-::before {
+  padding-right: 10px;
+}
 
-div#tadd-header:before{content: "\f0ac";display:fixed!important;float:left;}
+/* Padding to the "all"-text in rss catList */
+div#CatList ul li.RSS::before {
+  padding-right: 11px;
+}
 
-div#tcreate-header:before{content: "\f005";display:fixed!important;float:left;}
+div#CatList #prss #rsstimer {
+  padding: 0 5px;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
 
-/* Adding Icon to Torrent Data Directory, Torrent Properties and Rules Manager */
-div#dlgProps div.dlg-header:before,div#dlg_datadir div.dlg-header:before,div#tedit div.dlg-header:before,div#dlgEditRatioRules div.dlg-header:before{content: "\f085";display:fixed!important;float:left;}
+/* Search Results */
+li.teg {
+  margin-left: 6px;
+}
 
-/* Fixing height for Torrent Data Directory */
-#dlg_datadir.dlg-window{padding-bottom:15px}
+ul.CMenu {
+  width: 150px;
+  left: 0px;
+  top: 0px;
+  display: none;
+  border: none;
+  border: none;
+  text-decoration: none;
+  padding: 2px 0 0 2px;
+  margin: 0;
+  list-style-type: none;
+  z-index: 1000;
+}
 
-/* Fixing space for buttons-list in Popups */
-.dlg-window .aright.buttons-list{padding-right:8px!important;}
+ul.CMenu li {
+  float: left;
+  margin-right: 1px;
+  position: relative;
+  width: 150px;
+  background: #FFFFFF;
+}
 
-/* Fixing width of btn_datadir_browse (In Popups) */
-input#btn_datadir_browse,.Button.browseButton{width:35px}
+ul.CMenu li a {
+  display: block;
+}
 
-/* Fixing width, border and padding for edit - Torrent Properties */
-div#tedit .text-wrapper{border:none!important;padding:0!important;outline: 0;}
+ul.CMenu li a.dis {
+  color: #C0C0C0;
+  text-decoration: line-through;
+  font-size: 8px;
+}
 
+ul.CMenu li a.dis:hover {
+  background-color: #FFFFFF;
+  color: #C0C0C0;
+}
 
-/* Adding Closing Icon to Popups*/
-.dlg-close:before{content: "\f057";display:fixed!important;float:left;}
+ul.CMenu li a {
+  line-height: 16px;
+  padding: 3px 4px 3px 16px;
+  font-weight: normal;
+}
+
+ul.CMenu li hr {
+  width: 90%;
+  border-top: 1px solid #D0D0D0;
+  height: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.ie ul.CMenu li hr {
+  line-height: 1px;
+  font-size: 1px;
+  margin: 0;
+}
+
+ul.CMenu li a.exp {
+  background: transparent url(images/menuexp.gif) no-repeat scroll 140px center;
+}
+
+ul.CMenu li a.sel {
+  background: none;
+}
+
+ul.CMenu li a:hover {
+  background-color: #CFDEEF;
+  color: #000000;
+}
+
+.menu-line {
+  display: none;
+}
+
+ul.CMenu li:hover ul {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 146px;
+  width: 150px;
+}
+
+ul.CMenu li:hover ul li ul {
+  display: none;
+}
+
+ul.CMenu li:hover ul li a {
+  display: block;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+ul.CMenu li:hover ul li a:hover {
+  background-color: #CFDEEF;
+  color: #000000;
+}
+
+ul.CMenu li:hover ul.left {
+  left: -150px;
+}
+
+ul.CMenu li ul li a.dis {
+  color: #C0C0C0;
+}
+
+ul.CMenu li ul li a.dis:hover {
+  background-color: #FFFFFF;
+  color: #C0C0C0;
+}
 
 /* Adding Icon to exp - submenu */
-ul.CMenu li a.exp:before{content: "\f061";display:fixed!important;float:right; font-size:8px;}
+ul.CMenu li a.exp:before {
+  content: "";
+  display: fixed !important;
+  float: right;
+  font-size: 8px;
+}
 
 /* Adding Icon to submenu - sel selected item*/
-ul.CMenu li a.sel:before{content: "\f00c";display:fixed!important;float:left; font-size:8px;margin-left:-12px;}
+ul.CMenu li a.sel:before {
+  content: "";
+  display: fixed !important;
+  float: left;
+  font-size: 8px;
+  margin-left: -12px;
+}
+
+/*
+### Dialog 
+*/
+div.dlg-window {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #FAFAFA;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  color: #000000;
+  border: none;
+  display: none;
+  overflow: hidden;
+  height: auto !important;
+}
+
+.dlg-header {
+  padding: 2px 7px;
+  line-height: 20px;
+  background-image: none;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: none;
+}
+
+a.dlg-close:link,
+a.dlg-close:visited {
+  width: 14px;
+  height: 14px;
+  margin: 5px;
+  background: none;
+  float: right;
+  border: 0;
+}
+
+a.dlg-close:hover {
+  width: 14px;
+  height: 14px;
+  background: none;
+  float: right;
+  border: 0;
+}
+
+a.dlg-close:active {
+  width: 14px;
+  height: 14px;
+  background: none;
+  float: right;
+  border: 0;
+}
+
+/* Adding Closing Icon to Popups*/
+.dlg-close:before {
+  content: "";
+  display: fixed !important;
+  float: left;
+}
+
+/* Fixing space for buttons-list in Popups */
+.dlg-window .aright.buttons-list {
+  padding-right: 8px !important;
+}
+
+/*
+### Dialog
+### Torrent Data Directory
+*/
+/* Fixing width of btn_datadir_browse (In Popups) */
+input#btn_datadir_browse,
+.Button.browseButton {
+  width: 35px;
+}
+
+/* Fixing height for Torrent Data Directory */
+#dlg_datadir.dlg-window {
+  padding-bottom: 15px;
+}
+
+/*
+### Dialog
+### Label
+*/
+div#dlgLabel {
+  width: 250px;
+  height: 140px;
+}
+
+div#dlgLabel div.dlg-header {
+  background: none;
+}
+
+div#dlgLabel div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+div#dlgLabel div.content input {
+  margin-top: 5px;
+}
+
+/*
+### Dialog
+### Properties
+*/
+div#dlgProps {
+  width: 395px;
+  height: 215px;
+}
+
+div#dlgProps div.dlg-header {
+  background: none;
+}
+
+div#dlgProps div.content {
+  width: 380px;
+  margin-left: 5px;
+}
+
+div#dlgProps textarea#prop-trackers {
+  width: 100%;
+  height: 70px;
+  background: #FFFFFF;
+  border: 1px solid #D0D0D0;
+}
+
+div#dlgProps fieldset {
+  margin-bottom: 5px;
+}
+
+div#dlgProps fieldset div {
+  line-height: 16px;
+}
+
+div#dlgProps fieldset div.props-spacer {
+  width: 90%;
+  float: left;
+}
+
+input#prop-tracker_numwant {
+  width: 60px;
+  float: right;
+}
+
+input#prop-ulslots {
+  width: 60px;
+  float: right;
+}
+
+input#prop-peers_min {
+  width: 60px;
+  float: right;
+}
+
+input#prop-peers_max {
+  width: 60px;
+  float: right;
+}
+
+input#prop-seed_ratio {
+  width: 40px;
+}
+
+/*
+### Dialog
+### About
+*/
+div#dlgAbout {
+  width: 250px;
+  height: 250px;
+}
+
+div#dlgAbout div.dlg-header {
+  background-image: url(images/about.gif);
+}
+
+div#dlgAbout div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+}
+
+/*
+### Dialog
+### Help
+*/
+div#dlgHelp {
+  width: 250px;
+  height: 250px;
+}
+
+div#dlgHelp div.dlg-header {
+  background-image: none;
+}
+
+div#dlgHelp div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+}
+
+div#yesnoDlg {
+  width: 280px;
+  height: 100px;
+}
+
+/*
+### Dialog
+### Yes/No
+*/
+div#yesnoDlg div.dlg-header {
+  background: none;
+}
+
+div#yesnoDlg div.content {
+  width: 260px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+div#yesnoDlg div.content input {
+  margin-top: 5px;
+}
+
+/*
+### 
+###
+### Settings
+###
+###
+*/
+div#stg {
+  width: 600px;
+  height: 460px;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  display: none;
+  overflow: visible;
+}
+div#stg div#stg_c {
+  overflow: hidden;
+}
+div#stg div#stg_c .stg_con {
+  overflow-y: auto;
+  overflow-x: clip;
+}
+
+div#stg-header,
+div#dlgAddRSS-header {
+  background-image: none !important;
+}
+
+/*
+### Settings
+### Connections
+*/
+.stg_con {
+  float: right;
+  position: relative;
+  width: 450px;
+  height: 400px;
+  margin: 4px;
+  background-color: #fafafa;
+}
+
+.ie9 .stg_con {
+  position: static;
+}
+
+fieldset {
+  margin: 4px;
+}
+
+* > fieldset {
+  border: none;
+  border-radius: 6px;
+}
+
+.stg_con table {
+  width: 100%;
+}
+
+.stg_con td {
+  font-weight: normal;
+  height: 19px;
+}
+
+.stg_con td.alr {
+  text-align: right;
+}
+
+.stg_con td input {
+  margin: 0 4px;
+  font-size: 11px;
+  padding: 1px 4px;
+}
+
+.stg_con select {
+  margin: 1px 4px;
+  font-size: 11px;
+  padding: 1px 4px;
+}
+
+/*
+### Settings
+### Not categorised, yet...
+*/
+div#stg .lm {
+  width: 120px;
+  height: 413px;
+  margin: 5px;
+  margin-right: 0;
+  padding: 5px;
+  float: left;
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+  overflow: auto;
+}
+
+.ie div#stg .lm {
+  width: 125px;
+  position: static;
+}
+
+.ie9 div#stg .lm {
+  position: static;
+}
+
+.ie div#stg {
+  width: 605px;
+}
+
+/*
+### 
+###
+### Add Torrent
+###
+###
+*/
+div#tadd-header {
+  background: none;
+}
+
+div#tadd {
+  display: none;
+  width: 380px;
+  height: 290px;
+  left: 100px;
+  top: 100px;
+  position: absolute;
+  margin: 0 auto;
+}
+
+div#tadd label {
+  text-align: right;
+  width: 75px;
+  padding-right: 20px;
+  float: left;
+}
+
+div#tadd br {
+  clear: left;
+  line-height: 0;
+}
+
+div#tadd input {
+  margin-bottom: 1px;
+}
+
+div#tadd select {
+  width: 220px;
+}
+
+.konqueror div#tadd label {
+  width: 80px;
+}
+
+.konqueror div#tadd {
+  height: 290px;
+}
+
+.konqueror #st_con {
+  height: 340px;
+  overflow: auto;
+}
+
+div#gcont table {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  line-height: 10px;
+}
+
+div#gcont table td.Header {
+  font-weight: bold;
+}
+
+div.graph_tab {
+  background-color: #ffffff;
+  overflow: hidden;
+  display: block;
+  -moz-user-select: none;
+  -moz-user-focus: normal;
+  -moz-user-input: enabled;
+}
+
+div.graph_tab {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  line-height: 11px;
+  color: #545454;
+}
+
+div.cont {
+  padding: 6px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.tabbar {
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.tabbar li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  white-space: nowrap;
+}
+
+.tabbar li a {
+  position: relative;
+  top: 3px;
+  text-decoration: none;
+  border: none;
+  border-bottom: 0;
+  margin: -5px 1px 0 1px;
+  padding: 1px 5px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  border-radius: 0;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.tabbar li a:hover {
+  border-top: none;
+}
+
+.tabbar li.selected a {
+  margin: 0 -2px 0 0;
+  padding: 1px 7px 4px 7px;
+  position: relative;
+  top: 2px;
+  vertical-align: top;
+  border-top: none;
+  background: none;
+}
+
+div#tdetails {
+  height: 50%;
+  padding: 0;
+  width: 100% !important;
+  /* Speed Section */
+  /* autodl-irrsi styling for better spacing */
+}
+div#tdetails div#Speed div[style*="255"] {
+  background-color: rgba(38, 38, 38, 0.4) !important;
+}
+div#tdetails div#Speed table tr td.legendLabel {
+  color: #ddddd1 !important;
+  font-weight: bold;
+}
+div#tdetails div#autodl-irssi-tab div#autodl-log-buttons {
+  padding: 10px 5px;
+}
+div#tdetails div#autodl-irssi-tab div#autodl-log-buttons input[type=button] {
+  margin: 0px 10px 5px 0px;
+  padding: 6px 9px !important;
+  height: auto;
+  width: auto;
+}
+div#tdetails div#autodl-irssi-tab form#autodl-restore input#autodl-log-restore-button {
+  margin-left: 0;
+}
+div#tdetails div#autodl-irssi-tab form#autodl-restore input#autodl-restore-file {
+  background: transparent !important;
+}
+
+div#tdetails a.h {
+  margin: 0;
+}
+
+#StatusBar {
+  border-top: none;
+  background-color: #FFFFFF;
+  margin-top: 0;
+  height: 24px;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 3px;
+}
+#StatusBar td.statusCell #st_system {
+  /* Hide "Torrents:"-text */
+}
+#StatusBar td.statusCell #st_system .sthdr {
+  font-size: 0px;
+  display: none;
+}
+
+#StatusBar table {
+  line-height: 24px;
+}
+
+#st_up,
+#st_down,
+td.pstatus0,
+td.pstatus1,
+td.pstatus2 {
+  background: none !important;
+}
+
+#st_up td:first-child .sthdr {
+  margin-left: 25px;
+}
+
+#st_down td:first-child .sthdr {
+  margin-left: 25px;
+}
+
+.statusCell #st_system {
+  /* Torrent Count in Footer .statusCell is the only one with uppercase C.. */
+}
+.statusCell #st_system .stval:before {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.statuscell {
+  height: 20px;
+  line-height: 20px;
+  border-right: none;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+.statuscell#st_up td:before, .statuscell#st_down td:before {
+  font-size: 14px !important;
+  margin-top: 3px;
+}
+
+.sthdr {
+  font-weight: bold;
+  padding-right: 3px;
+  text-align: right;
+}
+
+.stval {
+  padding-right: 3px;
+  overflow: hidden;
+  width: 65px;
+}
+
+.speedEdit {
+  width: 320px;
+}
+
+.statuscell td {
+  padding: 0;
+}
+
+#st_system .sthdr {
+  padding-left: 8px;
+}
+
+.ie fieldset {
+  padding: 5px;
+}
+
+.buttons-list {
+  margin-bottom: 5px;
+}
+
+#servertime {
+  text-align: center;
+}
+
+#bf {
+  white-space: pre;
+}
+
+@media only screen and (orientation: portrait) {
+  #go {
+    display: none;
+  }
+
+  #query {
+    width: 80px;
+  }
+}
+/* No borders om the meter-disk-value in bottom info-bar, Rules Manager and Hostcookies in settings*/
+#meter-disk-value,
+#hostcookies,
+td.legendColorBox > div,
+.lf_rru,
+div#RSSList,
+select,
+input,
+textarea {
+  border: none !important;
+  outline: 0;
+}
+
+/* No BG at the Traffic > Traffic Grap in the right corner */
+/*{background:none!important;}*/
+/* Text information for disk-text, CPU text and torrent count */
+td.statusCell .statuscell .stval,
+.meter-text,
+#meter-disk-text {
+  overflow: visible !important;
+  height: 17px !important;
+  width: 33px !important;
+  line-height: 17px !important;
+  border-radius: 5px !important;
+  background-color: rgba(26, 26, 26, 0.1) !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+.meter-text,
+#meter-disk-text {
+  margin-bottom: -20px !important;
+}
+
+td.statusCell .statuscell .stval, #StatusBar td#port-td {
+  margin-top: 2px;
+}
+
+/* Position of Loading-icon at the bottom, right. */
+div#t #ind {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  right: 0;
+  padding-bottom: 8px;
+}
+
+/* Divider */
+div#HDivider,
+div#VDivider {
+  font-size: 0;
+}
+
+div#HDivider {
+  width: 0px;
+  height: 0px;
+  padding: 0;
+  margin: 0;
+  cursor: e-resize;
+}
+div#HDivider:hover {
+  background: #A0A0A0;
+}
+
+div#VDivider {
+  width: 100%;
+  height: 3px;
+  padding: 0;
+  margin: 0;
+  cursor: n-resize;
+}
+div#VDivider:hover {
+  background: #A0A0A0;
+}
+
+div#dividerDrag {
+  width: 3px;
+  height: 3px;
+  padding: 0;
+  margin: 0;
+  background: #A0A0A0;
+  position: absolute;
+  display: none;
+}
+
+/* Table Lines-area */
+div.table_tab {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  display: block;
+  -moz-user-select: none;
+  -moz-user-focus: normal;
+  -moz-user-input: enabled;
+}
+
+div#List.table_tab {
+  width: 100% !important;
+}
+
+div#List {
+  border: none;
+}
+
+/*
+
+    Target(s): Console in "Make Torrent" dialog
+    Description: The console is showing while a torrent is "in the making", and we need to change the colors of that, too.
+
+*/
+#tskConsole #tskcmdlog {
+  background-color: #333333 !important;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+/* Mobile Corrections */
+@media only screen and (hover: none) and (pointer: coarse) {
+  /*
+  ###
+  ### Menu 
+  ###
+  */
+  div#t a {
+    margin: 0;
+    padding: 3px;
+  }
+  div#t a:first-of-type {
+    padding-left: 5px;
+  }
+
+  #t #rc {
+    /* Hide Search on mobile */
+    display: none;
+  }
+
+  /*
+  ###
+  ### Sidenar 
+  ###
+  */
+  /* Remove Scrollbars */
+  div#CatList {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  div#CatList::-webkit-scrollbar {
+    /* Chrome */
+    display: none;
+  }
+
+  /*
+  ###
+  ### Table Elements (Torrents) 
+  ###
+  */
+  div#List.table_tab .stable-body {
+    /* Icon Size */
+    /* Remove Scrollbars */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  text-align:center div#List.table_tab .stable-body span.stable-icon:before {
+    font-size: 12px;
+  }
+  div#List.table_tab .stable-body::-webkit-scrollbar {
+    /* Chrome */
+    display: none;
+  }
+
+  /*
+  ###
+  ### Footer (StatusBar)
+  ###
+  */
+  #StatusBar {
+    /* Hide most information in statusbar on mobile */
+  }
+  #StatusBar #meter-disk-holder,
+#StatusBar #meter-cpu-holder {
+    width: 35px !important;
+  }
+  #StatusBar #meter-disk-holder #meter-disk-text,
+#StatusBar #meter-disk-holder #meter-cpu-text,
+#StatusBar #meter-cpu-holder #meter-disk-text,
+#StatusBar #meter-cpu-holder #meter-cpu-text {
+    left: initial;
+    margin-left: 5px;
+  }
+  #StatusBar .stval {
+    width: auto;
+  }
+  #StatusBar td:not(.statusCell) table#st_system.statuscell:first-of-type .stval {
+    /*rTorrent version */
+    display: none;
+  }
+  #StatusBar table#st_up tr td:nth-child(n+3), #StatusBar table#st_down tr td:nth-child(n+3) {
+    display: none;
+  }
+  #StatusBar table#st_up tr td .sthdr, #StatusBar table#st_down tr td .sthdr {
+    font-size: 0px;
+  }
+  #StatusBar #st_system .sthdr {
+    font-size: 0px;
+    display: none;
+  }
+  #StatusBar #servertime {
+    display: none;
+  }
+}
+/* Not categoried */
+.Icon_File {
+  background: transparent url(images/file.gif) no-repeat left center;
+}
+
+.Icon_Dir {
+  background: transparent url(images/dir.gif) no-repeat left center;
+}
+
+.Icon_Share {
+  background: transparent url(images/share.gif) no-repeat left center;
+}
+
+/*
+### 
+### OTHER
+### 
+*/
+/* FlatUI - Simple and beautiful theme for ruTorrent by exetico . Thanks for FontAwesome for the nice looking icons, and ofc. Google Font the that, too. - Original Default theme, with a lot of customizing - Download at https://github.com/exetico/FlatUI */
+div#cover {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 500;
+  background: #FFFFFF;
+}
+
+div#msg {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  margin-top: -50px;
+  line-height: 100px;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: #FDFDFD;
+  border-top: 1px solid #D0D0D0;
+  border-bottom: 1px solid #D0D0D0;
+}
+
+div#modalbg {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 500;
+  display: none;
+  opacity: 0.5;
+  background-color: #CCCCCC;
+}
+
+.konqueror div#modalbg {
+  background: none;
+}
+
+.ie div#modalbg {
+  filter: alpha(opacity=50);
+}
+
+div.aright {
+  text-align: right;
+}
+
+div.fxcaret {
+  overflow: auto;
+}
+
+/* sc */
+div#sc {
+  width: 150px;
+  right: 57px;
+  top: 40px;
+  position: absolute;
+  display: none;
+  border: 1px solid #808080;
+  background-color: #E0E0E0;
+  z-index: 100;
+}
+
+div#sc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div#sc ul li {
+  margin: 0;
+  padding: 0;
+}
+
+div#sc li div {
+  line-height: 14px;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+div#sc li.se_act div {
+  background-color: #808080;
+  color: #FFFFFF;
+}
+
+span.htkey {
+  text-align: right;
+  position: absolute;
+  right: 16px;
+  z-index: 100;
+}
+
+#sel {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border: 1px dotted #000000;
+  display: none;
+  z-index: 1000;
+}
+
+select {
+  margin-top: 5px;
+}
+
+a {
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  color: #686868;
+}
+
+table#maincont {
+  margin: 0;
+}
+
+table#maincont td.uicell {
+  vertical-align: top;
+  padding: 0;
+}
+
+/* Adding FontAwesome to Stablelist */
+div#List .stable-icon {
+  background: none;
+}
+
+div.op100l {
+  width: 400px;
+  float: left;
+}
+
+div.op50l {
+  width: 200px;
+  float: left;
+  clear: left;
+}
+
+div.op50l select {
+  padding: 0;
+}
+
+div.algnright {
+  text-align: right;
+  clear: right;
+}
+
+.ie div.op50l {
+  clear: none;
+}
+
+.ie div.algnright {
+  clear: none;
+}
+
+.ie9 div.op50l {
+  clear: left;
+}
+
+.ie9 div.algnright {
+  clear: right;
+}
+
+/* lm */
+.lm ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style: none;
+}
+
+.lm li {
+  margin: 0 5px;
+  padding: 0 12px;
+  line-height: 16px !important;
+  background: none;
+}
+
+.lm ul.child {
+  margin: 0 0 0 5px;
+  display: none;
+}
+
+.lm ul.child li {
+  margin: 0 0 0 9px;
+}
+
+.lm li.first {
+  background: none;
+}
+
+.lm li.last {
+  background: none;
+}
+
+.lm li div.toggle {
+  width: 10px;
+  height: 10px;
+  background: transparent url(images/exp.gif) no-repeat scroll center center;
+  float: left;
+  margin: 3px 0 0 -16px;
+  cursor: pointer;
+}
+
+.lm li a {
+  color: #000000;
+  padding: 1px 2px;
+}
+
+.lm li a.focus {
+  display: block;
+  font-weight: bold;
+}
+
+.ie .lm li a {
+  margin: 0 0 0 -5px;
+  padding: 0;
+}
+
+input.num {
+  text-align: right;
+  width: 50px;
+}
+
+input.str {
+  text-align: left;
+  width: 130px;
+}
+
+td label,
+div label {
+  cursor: pointer;
+}
+
+input.disabled {
+  background-color: #FAFAFA;
+  color: #C0C0C0;
+  border: 1px solid #C0C0C0;
+}
+
+td.disabled,
+label.disabled,
+span.disabled,
+div.disabled {
+  color: #C0C0C0;
+  cursor: default;
+}
+
+fieldset div {
+  padding: 2px;
+}
+
+.ie7 fieldset div {
+  padding: 0px;
+}
+
+div input,
+div select {
+  margin: 0 0 0 4px;
+  font-size: 11px;
+  padding: 1px 4px;
+}
+
+legend {
+  color: #000000;
+  font-weight: bold;
+}
+
+div.indent {
+  padding-left: 16px;
+}
+
+select.cols {
+  border: 1px solid #808080;
+  font-size: 11px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  padding: 2px;
+  width: 120px;
+}
+
+div#dragmask {
+  width: 10px;
+  height: 10px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 5000;
+  display: none;
+  border: 1px dotted #A0A0A0;
+}
+
+div#tdcont {
+  height: 200px;
+  background: #FFFFFF;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+div.tab {
+  height: 100%;
+  overflow: auto;
+}
+
+div#lcont {
+  font-size: 9px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  line-height: 11px;
+}
+
+div#lcont div.mono {
+  font-size: 11px;
+  font-family: monospace;
+  line-height: 11px;
+  background: #F5F5F5;
+  white-space: pre;
+}
+
+div#lcont div.std {
+  padding: 2px;
+}
+
+#txtLabel {
+  width: 200px;
+}
+
+div#padd {
+  width: 250px;
+  height: 120px;
+}
+
+div#padd div.dlg-header {
+  background-image: url(images/props.gif);
+}
+
+div#padd div.content {
+  width: 230px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 16px;
+}
+
+div#padd div.content input {
+  margin-top: 5px;
+}
+
+#peerIP {
+  width: 200px;
+}
+
+span#loadimg {
+  padding: 20px;
+  background: transparent url(images/ajax-loader.gif) no-repeat center center;
+}
+
+.webkit div#msg {
+  position: fixed;
+}
+
+.konqueror div#msg {
+  position: fixed;
+}
+
+textarea {
+  overflow: auto;
+}
+
+/* Fixing width, border and padding for edit - Torrent Properties */
+div#tedit .text-wrapper {
+  border: none !important;
+  padding: 0 !important;
+  outline: 0;
+}
 
 /* Removing border line */
-.lf_rur,.rf_rur{border:none!important;}
-
-/* ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
-
-  WARNING: COLORS AND BG BEGINS HEREAFTER
-
-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ */
-
-/* BG's, used for Sidebar etc and Topmenu */
-div#cover,body,.catpanel,div#t,div#CatList,div#HDivider,div#VDivider,div#t div.TB_Separator,#StatusBar,table#maincont td.uicell,
-div#tdetails,div.tab,.stable-body tr,div.dlg-header,div#tdcont,div.table_tab,div#gcont table td.Header,.stable-head,ul.CMenu li a:hover,ul.CMenu li:hover ul li a:hover,div#RSSList{
-	background-color:#262626!important;
+.lf_rur,
+.rf_rur {
+  border: none !important;
 }
 
-.catpanel:hover,div#t:hover,div#CatList:hover,li.cat:hover,a.dlg-close:hover,input.Button:hover,.lm li a:hover{color:#fff!important;}
+/* Colors */
+/* BG's, used for Sidebar etc and Topmenu */
+div#cover,
+body,
+.catpanel,
+div#t,
+div#CatList,
+div#HDivider,
+div#VDivider,
+div#t div.TB_Separator,
+#StatusBar,
+table#maincont td.uicell,
+div#tdetails,
+div.tab,
+.stable-body tr,
+div.dlg-header,
+div#tdcont,
+div.table_tab,
+div#gcont table td.Header,
+.stable-head,
+ul.CMenu li a:hover,
+ul.CMenu li:hover ul li a:hover,
+div#RSSList {
+  background-color: #262626 !important;
+}
+
+.catpanel:hover,
+div#t:hover,
+div#CatList:hover,
+li.cat:hover,
+a.dlg-close:hover,
+input.Button:hover,
+.lm li a:hover {
+  color: white !important;
+}
 
 /* BG's used for li.sel and BG for hover-items */
-.lf_rur,.rf_rur,div#cover #msg,div#CatList ul li.sel,div#t a:hover,#query,.tabbar li:hover,
-.tabbar li#tab_gcont.selected a,.stable-body tr.selected td,
-#stg_c,.stg_con, div#stg .lm,div.dlg-window,ul.CMenu,ul.CMenu li,ul.CMenu li:hover ul li a,ul.CMenu li a.dis:hover,ul.CMenu li > ul > li > a.dis:hover,.lf_rru,.rf_rru,.lf_rru li input.TextboxNormal
-{
-	background-color:#2B2B2B!important;
+.lf_rur,
+.rf_rur,
+div#cover #msg,
+div#t a:hover,
+#query,
+.tabbar li:hover,
+.tabbar li#tab_gcont.selected a,
+.stable-body tr.selected td,
+#stg_c,
+.stg_con,
+div#stg .lm,
+div.dlg-window,
+ul.CMenu,
+ul.CMenu li,
+ul.CMenu li:hover ul li a,
+ul.CMenu li a.dis:hover,
+ul.CMenu li > ul > li > a.dis:hover,
+.lf_rru,
+.rf_rru,
+.lf_rru li input.TextboxNormal {
+  background-color: #2b2b2b !important;
 }
 
-div#CatList ul li,.tabbar li.selected,input.Button,div#lcont,div.graph_tab,#hostcookies,.lm li a.focus,.lf_rru li input.TextboxFocus,input, select,textarea,.stable-body tr.odd td{
-	background-color:#333333!important;
+.tabbar li.selected,
+input.Button,
+div#lcont,
+div.graph_tab,
+#hostcookies,
+.lm li a.focus,
+.lf_rru li input.TextboxFocus,
+input,
+select,
+textarea,
+.stable-body tr.odd td {
+  background-color: #333333 !important;
 }
 
 /* Font and FontAweSome icons Colors */
-div#cover #msg span#loadimg:before,div#cover #msg span#loadimg:after,.catpanel,div#CatList ul li,.catpanel[style*="pnl_close.gif"]:before,.catpanel[style*="pnl_open.gif"]:before,div#t div:after,#query,#StatusBar,
-div#lcont,div#tdetails,a,.tabbar li.selected a,input.Button,.stable-body tr,.stable-head,
-.meter-text,div.dlg-header,.stg_con,fieldset legend,#hostcookies,.lm li a,div.dlg-window,#traf_graph > div.legend > table,.tickLabel,ul.CMenu li a.exp:before,ul.CMenu li a:hover,ul.CMenu li:hover ul li a:hover, ul.CMenu li:hover ul li a,ul.CMenu li a.dis:hover,ul.CMenu li a.dis,.lf_rru li input.TextboxNormal,.lf_rru li input.TextboxFocus,select,input,textarea,td.disabled, label.disabled, span.disabled, div.disabled,#meter-disk-text{
-	color:#ddddd1;
+div#cover #msg span#loadimg:before,
+div#cover #msg span#loadimg:after,
+.catpanel,
+div#CatList ul li,
+.catpanel[style*="pnl_close.gif"]:before,
+.catpanel[style*="pnl_open.gif"]:before,
+div#t div:after,
+#query,
+#StatusBar,
+div#lcont,
+div#tdetails,
+a,
+.tabbar li.selected a,
+input.Button,
+.stable-body tr,
+.stable-head,
+.meter-text,
+div.dlg-header,
+.stg_con,
+fieldset legend,
+#hostcookies,
+.lm li a,
+div.dlg-window,
+#traf_graph > div.legend > table,
+.tickLabel,
+ul.CMenu li a.exp:before,
+ul.CMenu li a:hover,
+ul.CMenu li:hover ul li a:hover,
+ul.CMenu li:hover ul li a,
+ul.CMenu li a.dis:hover,
+ul.CMenu li a.dis,
+.lf_rru li input.TextboxNormal,
+.lf_rru li input.TextboxFocus,
+select,
+input,
+textarea,
+td.disabled,
+label.disabled,
+span.disabled,
+div.disabled,
+#meter-disk-text,
+#meter-cpu-text {
+  color: #ddddd1;
 }
 
-/* Scrollstyling */
-
-::-webkit-scrollbar-track,.stable-body::-webkit-scrollbar-corner,::-webkit-scrollbar{
-	background-color: #262626;
+div.dlg-window,
+.CMenu {
+  box-shadow: 3px 3px 10px 0px rgba(38, 38, 38, 0.5);
 }
 
-::-webkit-scrollbar{
-	height:8px;
+/* Sidebar */
+#CatList {
+  /* Headers i CatList */
+}
+#CatList div.catpanel {
+  background-color: rgba(221, 221, 209, 0.08) !important;
+}
+#CatList ul li:not(.sel) {
+  background-color: transparent !important;
+}
+#CatList ul li:not(.sel):hover {
+  background-color: rgba(221, 221, 209, 0.02) !important;
+}
+#CatList ul li.sel {
+  background-color: rgba(221, 221, 209, 0.04) !important;
 }
 
-::-webkit-scrollbar-thumb{
-	background-color: #333333;
+/* Scrollbars - Between element-list and details of selected item */
+table#maincont #List div.stable-body,
+#tskConsole #tskcmdlog {
+  /* Firefox */
+  scrollbar-color: rgba(221, 221, 209, 0.08) rgba(221, 221, 209, 0.02);
+  scrollbar-width: thin;
 }
 
-/* Using #262626 in RGB - Boxshadow to settingsbox */
-div.dlg-window,.CMenu{-webkit-box-shadow: 3px 3px 10px 0px rgba(38,38,38,0.5);
--moz-box-shadow: 3px 3px 10px 0px rgba(38,38,38,0.5);
-box-shadow: 3px 3px 10px 0px rgba(38,38,38,0.5);}
+/* Scrollbars - Overall */
+::-webkit-scrollbar-track,
+.stable-body::-webkit-scrollbar-corner,
+::-webkit-scrollbar {
+  background-color: #262626;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333333;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: black;
+}
+
+html,
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  overflow: hidden;
+  background-color: #fff;
+  height: 100%;
+}
+
+/* Margin 0 */
+form {
+  margin: 0;
+}
+
+/* Background image control */
+.stable-head table tr,
+.stable-head table tr td {
+  background-image: none !important;
+}

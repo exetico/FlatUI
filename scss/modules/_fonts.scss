@@ -1,0 +1,136 @@
+/* Font Awesome */
+@font-face {
+    font-family: 'Font Awesome 5 Free Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: $fa-font-display;
+    src: url('#{$fa-font-path}/fa-regular-400.eot');
+    src: url('#{$fa-font-path}/fa-regular-400.eot?#iefix') format('embedded-opentype'),
+    url('#{$fa-font-path}/fa-regular-400.woff2') format('woff2'),
+    url('#{$fa-font-path}/fa-regular-400.woff') format('woff'),
+    url('#{$fa-font-path}/fa-regular-400.ttf') format('truetype'),
+    url('#{$fa-font-path}/fa-regular-400.svg#fontawesome') format('svg');
+  }
+  
+  .far {
+    font-family: 'Font Awesome 5 Free Regular';
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Font Awesome 5 Free Solid';
+    font-style: normal;
+    font-weight: 900;
+    font-display: $fa-font-display;
+    src: url('#{$fa-font-path}/fa-solid-900.eot');
+    src: url('#{$fa-font-path}/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+    url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2'),
+    url('#{$fa-font-path}/fa-solid-900.woff') format('woff'),
+    url('#{$fa-font-path}/fa-solid-900.ttf') format('truetype'),
+    url('#{$fa-font-path}/fa-solid-900.svg#fontawesome') format('svg');
+  }
+  
+  .fa,
+  .fas {
+    font-family: 'Font Awesome 5 Free Solid';
+    font-weight: 900;
+  }
+
+  
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Biryani:400,900');
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+/* Define font-families */
+.catpanel,
+div#gcont table td.Header {
+    font-family: 'Biryani', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* New font and Bold + Uppercase */
+.stable-head tr td {
+    font-family: 'Biryani', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* Adding FontAwesome for spefic classes - Before and after content filter */
+.catpanel:before,
+.catpanel:after,
+div#t div:after,
+div#t div:before,
+#StatusBar #meter-disk-td:before,
+#st_up>tbody>tr>td:nth-child(1):before,
+#st_down>tbody>tr>td:nth-child(1):before,
+#StatusBar #port-td:before,
+#dlgAddRSS-header.dlg-header:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+.dlg-close:before,
+#dlgHelp-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#dlgProps div.dlg-header:before,
+div#tedit div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tcreate-header:before,
+div#tadd-header:before,
+.stable-icon,
+ul.CMenu li a.exp:before,
+ul.CMenu li a.sel:before,
+%font-awesome {
+	font-family: 'Font Awesome 5 Free Solid';
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+}
+
+/* Fixing Padding and size for FontAwesome Icons */
+#-_-_-all-_-_-:before,
+.-_-_-all-_-_-:before,
+#-_-_-dls-_-_-:before,
+#-_-_-com-_-_-:before,
+#-_-_-act-_-_-:before,
+#-_-_-iac-_-_-:before,
+#-_-_-err-_-_-:before,
+#dlgAddRSS-header.dlg-header:before,
+#stg-header.dlg-header:before,
+#dlgEditRules-header.dlg-header:before,
+.dlg-close:before,
+#dlgHelp-header.dlg-header:before,
+div#dlgLabel div.dlg-header:before,
+div#dlg_datadir div.dlg-header:before,
+div#dlgProps div.dlg-header:before,
+div#tedit,
+div.dlg-header:before,
+div#dlgEditRatioRules div.dlg-header:before,
+div#yesnoDlg-header:before,
+div#tedit div.dlg-header:before,
+div#tcreate-header:before,
+div#tadd-header:before,
+div#CatList ul li.RSS:before {
+	font-size: 14px;
+	padding-right: 7px;
+}
+
+.catpanel,
+div#gcont table td.Header {
+	font-family: 'Biryani', sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+/* New font and Bold + Uppercase */
+.stable-head tr td {
+	font-family: 'Biryani', sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 20px;
+}

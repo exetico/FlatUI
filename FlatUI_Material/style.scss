@@ -1,0 +1,25 @@
+/*
+ *
+ *    Hi! :-)
+ *
+ *    If you're looking at this, you're properly going to change the... colors.
+ *    Correct? Cool! Please read the small info-text for each of the three colors (1-3) to change. Else, you'd make thinks much harder for yourself...
+ *    As FlatUI_* was meant to be dark, the primary color are "primary-dark". That can be a bit confusing.. But that's just how it's worked out. 
+ *
+ */
+
+// 1. PRIMARY COLOR - Used for background, menus and more
+$primary-dark: rgb(69, 90, 100);
+
+// 2. CONTRAST - Used for text, labels, legends and more
+$contrast: lighten($primary-dark, 60%);
+
+// 3. HOVOR - Used for hovor colors. This could be dynamicly, but some changes aren't going that well, by using invert/lighten/darken
+$secondary-hover: rgb(255, 255, 255);
+
+/* 
+
+DO NOT CHANGE ANYTHING BELOW THIS LINE 
+
+**/
+@import "../scss/main";

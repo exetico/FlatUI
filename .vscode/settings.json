@@ -1,0 +1,12 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": ""
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["~/scss/**"],
+  "liveSassCompile.settings.includeItems": ["FlatUI_*/style.scss"],
+  "liveSassCompile.settings.generateMap": false
+}

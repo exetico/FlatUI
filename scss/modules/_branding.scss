@@ -1,0 +1,21 @@
+/* Welcome Message */
+div#cover #msg {
+	border: none;
+	font-size: 0;
+}
+
+div#cover #msg span#loadimg {
+	background-image: none !important;
+	height: 0px
+}
+
+div#cover #msg span#loadimg:before {
+	content: "FlatUI";
+	font-size: 30px;
+}
+
+div#cover #msg span#loadimg:after {
+	content: "by exetico";
+	padding-left: 10px;
+	font-size: 15px;
+}

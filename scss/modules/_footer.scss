@@ -1,0 +1,162 @@
+#StatusBar {
+	border-top: none;
+	background-color: #FFFFFF;
+	margin-top: 0;
+	height: 24px;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	color: #000000;
+	white-space: nowrap;
+	overflow: hidden;
+    padding: 3px;
+    
+    td.statusCell #st_system{ /* Hide "Torrents:"-text */
+        .sthdr{
+            font-size:0px;
+            display:none;
+        }
+    }
+}
+
+#StatusBar table {
+	line-height: 24px;
+}
+
+#st_up,
+#st_down,
+td.pstatus0,
+td.pstatus1,
+td.pstatus2 {
+	background: none !important;
+}
+
+#st_up td:first-child .sthdr {
+	margin-left: 25px
+}
+
+#st_down td:first-child .sthdr {
+	margin-left: 25px
+}
+
+$footer-iconSize: 14px;
+
+.statusCell #st_system{ /* Torrent Count in Footer .statusCell is the only one with uppercase C.. */
+    .stval:before{
+        font-size:$footer-iconSize;
+        margin-right:5px;
+    }
+}
+.statuscell {
+	height: 20px;
+	line-height: 20px;
+    border-right: none;
+    margin-left:5px;
+    padding-left:5px;
+    
+    &#st_up,&#st_down{
+        td:before{
+            font-size:$footer-iconSize!important;
+            margin-top:3px;
+        }
+    }
+}
+
+.sthdr {
+	font-weight: bold;
+	padding-right: 3px;
+	text-align: right;
+}
+
+.stval {
+	padding-right: 3px;
+	overflow: hidden;
+	width: 65px;
+}
+
+.speedEdit {
+	width: 320px
+}
+
+.statuscell td {
+	padding: 0
+}
+
+#st_system .sthdr {
+	padding-left: 8px
+}
+
+.ie fieldset {
+	padding: 5px
+}
+
+.buttons-list {
+	margin-bottom: 5px
+}
+
+#servertime {
+	text-align: center
+}
+
+#bf {
+	white-space: pre
+}
+
+@media only screen and (orientation:portrait) {
+	#go {
+		display: none
+	}
+
+	#query {
+		width: 80px
+	}
+}
+
+/* No borders om the meter-disk-value in bottom info-bar, Rules Manager and Hostcookies in settings*/
+#meter-disk-value,
+#hostcookies,
+td.legendColorBox>div,
+.lf_rru,
+div#RSSList,
+select,
+input,
+textarea {
+	border: none !important;
+	outline: 0;
+}
+
+/* No BG at the Traffic > Traffic Grap in the right corner */
+/*{background:none!important;}*/
+
+/* Text information for disk-text, CPU text and torrent count */
+td.statusCell .statuscell .stval,
+.meter-text,
+#meter-disk-text {
+	overflow: visible !important;
+	height: 17px !important;
+	width: 33px !important;
+	line-height: 17px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
+	background-color: rgba(26, 26, 26, 0.1) !important;
+	text-align: center !important;
+	position: relative !important;
+}
+
+.meter-text,
+#meter-disk-text {
+	margin-bottom: -20px !important;
+}
+
+td.statusCell .statuscell .stval, #StatusBar td#port-td{
+    margin-top:2px;
+}
+
+
+/* Position of Loading-icon at the bottom, right. */
+div#t #ind {
+	position: absolute;
+	bottom: 0;
+	z-index: 1000;
+	right: 0;
+	padding-bottom: 8px;
+}

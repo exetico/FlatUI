@@ -1,0 +1,16 @@
+/* Removing Icons from Create Torrent, StatusBar, Data Directory, Traficgraph and ExtRatio*/
+div#tcreate-header,
+#meter-disk-td,
+#meter-cpu-td,
+div#dlg_datadir div.dlg-header,
+#traf_graph>div.legend>div,
+div#tedit div.dlg-header,
+div#dlgEditRatioRules div.dlg-header,
+div#dlgEditRules div.dlg-header {
+	background: none !important;
+}
+
+/* Removing HR's - Borders.. */
+hr,div.dlg-header {
+	border: none;
+}

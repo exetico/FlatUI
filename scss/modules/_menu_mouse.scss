@@ -1,0 +1,126 @@
+ul.CMenu {
+	width: 150px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	border: none;
+	border: none;
+	text-decoration: none;
+	padding: 2px 0 0 2px;
+	margin: 0;
+	list-style-type: none;
+	z-index: 1000
+}
+
+ul.CMenu li {
+	float: left;
+	margin-right: 1px;
+	position: relative;
+	width: 150px;
+	background: #FFFFFF
+}
+
+ul.CMenu li a {
+	display: block
+}
+
+ul.CMenu li a.dis {
+	color: #C0C0C0;
+	text-decoration: line-through;
+	font-size: 8px;
+}
+
+ul.CMenu li a.dis:hover {
+	background-color: #FFFFFF;
+	color: #C0C0C0
+}
+
+ul.CMenu li a {
+	line-height: 16px;
+	padding: 3px 4px 3px 16px;
+	font-weight: normal
+}
+
+ul.CMenu li hr {
+	width: 90%;
+	border-top: 1px solid #D0D0D0;
+	height: 0px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.ie ul.CMenu li hr {
+	line-height: 1px;
+	font-size: 1px;
+	margin: 0
+}
+
+ul.CMenu li a.exp {
+	background: transparent url(images/menuexp.gif) no-repeat scroll 140px center;
+}
+
+ul.CMenu li a.sel {
+	background: none
+}
+
+ul.CMenu li a:hover {
+	background-color: #CFDEEF;
+	color: #000000;
+}
+
+.menu-line {
+	display: none;
+}
+
+ul.CMenu li:hover ul {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 146px;
+	width: 150px;
+}
+
+ul.CMenu li:hover ul li ul {
+	display: none;
+}
+
+ul.CMenu li:hover ul li a {
+	display: block;
+	background-color: #FFFFFF;
+	color: #000000
+}
+
+ul.CMenu li:hover ul li a:hover {
+	background-color: #CFDEEF;
+	color: #000000
+}
+
+ul.CMenu li:hover ul.left {
+	left: -150px
+}
+
+ul.CMenu li ul li a.dis {
+	color: #C0C0C0
+}
+
+ul.CMenu li ul li a.dis:hover {
+	background-color: #FFFFFF;
+	color: #C0C0C0
+}
+
+/* Adding Icon to exp - submenu */
+ul.CMenu li a.exp:before {
+	content: "\f061";
+	display: fixed !important;
+	float: right;
+	font-size: 8px;
+}
+
+/* Adding Icon to submenu - sel selected item*/
+ul.CMenu li a.sel:before {
+	content: "\f00c";
+	display: fixed !important;
+	float: left;
+	font-size: 8px;
+	margin-left: -12px;
+}

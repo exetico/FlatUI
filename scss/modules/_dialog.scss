@@ -1,0 +1,241 @@
+/*
+### Dialog 
+*/
+
+div.dlg-window {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #FAFAFA;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	color: #000000;
+	border: none;
+	display: none;
+	overflow: hidden;
+	height: auto !important;
+}
+
+.dlg-header {
+	padding: 2px 7px;
+	line-height: 20px;
+	background-image: none;
+	font-size: 11px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	border: none;
+}
+
+a.dlg-close:link,
+a.dlg-close:visited {
+	width: 14px;
+	height: 14px;
+	margin: 5px;
+	background: none;
+	float: right;
+	border: 0
+}
+
+a.dlg-close:hover {
+	width: 14px;
+	height: 14px;
+	background: none;
+	float: right;
+	border: 0;
+}
+
+a.dlg-close:active {
+	width: 14px;
+	height: 14px;
+	background: none;
+	float: right;
+	border: 0
+}
+
+/* Adding Closing Icon to Popups*/
+.dlg-close:before {
+	content: "\f057";
+	display: fixed !important;
+	float: left;
+}
+
+
+/* Fixing space for buttons-list in Popups */
+.dlg-window .aright.buttons-list {
+	padding-right: 8px !important;
+}
+
+
+
+/*
+### Dialog
+### Torrent Data Directory
+*/
+
+/* Fixing width of btn_datadir_browse (In Popups) */
+input#btn_datadir_browse,
+.Button.browseButton {
+	width: 35px
+}
+
+/* Fixing height for Torrent Data Directory */
+#dlg_datadir.dlg-window {
+	padding-bottom: 15px
+}
+
+
+
+/*
+### Dialog
+### Label
+*/
+div#dlgLabel {
+	width: 250px;
+	height: 140px
+}
+
+div#dlgLabel div.dlg-header {
+	background: none;
+}
+
+div#dlgLabel div.content {
+	width: 230px;
+	margin: 5px;
+	padding: 5px;
+	line-height: 16px
+}
+
+div#dlgLabel div.content input {
+	margin-top: 5px
+}
+
+/*
+### Dialog
+### Properties
+*/
+
+div#dlgProps {
+	width: 395px;
+	height: 215px
+}
+
+div#dlgProps div.dlg-header {
+	background: none;
+}
+
+div#dlgProps div.content {
+	width: 380px;
+	margin-left: 5px;
+}
+
+div#dlgProps textarea#prop-trackers {
+	width: 100%;
+	height: 70px;
+	background: #FFFFFF;
+	border: 1px solid #D0D0D0
+}
+
+div#dlgProps fieldset {
+	margin-bottom: 5px;
+}
+
+div#dlgProps fieldset div {
+	line-height: 16px;
+}
+
+div#dlgProps fieldset div.props-spacer {
+	width: 90%;
+	float: left
+}
+
+input#prop-tracker_numwant {
+	width: 60px;
+	float: right
+}
+
+input#prop-ulslots {
+	width: 60px;
+	float: right
+}
+
+input#prop-peers_min {
+	width: 60px;
+	float: right
+}
+
+input#prop-peers_max {
+	width: 60px;
+	float: right
+}
+
+input#prop-seed_ratio {
+	width: 40px
+}
+
+
+/*
+### Dialog
+### About
+*/
+
+div#dlgAbout {
+	width: 250px;
+	height: 250px
+}
+
+div#dlgAbout div.dlg-header {
+	background-image: url(images/about.gif)
+}
+
+div#dlgAbout div.content {
+	width: 230px;
+	margin: 5px;
+	padding: 5px
+}
+
+
+/*
+### Dialog
+### Help
+*/
+
+div#dlgHelp {
+	width: 250px;
+	height: 250px
+}
+
+div#dlgHelp div.dlg-header {
+	background-image: none
+}
+
+div#dlgHelp div.content {
+	width: 230px;
+	margin: 5px;
+	padding: 5px
+}
+
+div#yesnoDlg {
+	width: 280px;
+	height: 100px
+}
+
+
+/*
+### Dialog
+### Yes/No
+*/
+
+div#yesnoDlg div.dlg-header {
+	background: none;
+}
+
+div#yesnoDlg div.content {
+	width: 260px;
+	margin: 5px;
+	padding: 5px;
+	line-height: 16px
+}
+
+div#yesnoDlg div.content input {
+	margin-top: 5px
+}
