@@ -74,7 +74,7 @@ Yep! That's right. See all screenshots in the <a href="https://github.com/exetic
 <details>
   <summary>See more...</summary>
   
-  Remember to visit the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a> for more screenshots... there's more a single theme!
+  Remember to visit the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a> for more screenshots... there's more than a single color-theme!
   
 ![FlatUI_Dark 1](https://raw.githubusercontent.com/exetico/FlatUI/master/docs/assets/images/previews/preview-2.png)
 
