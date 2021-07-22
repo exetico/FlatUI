@@ -1,8 +1,45 @@
-FlatUI - Simple and beautiful theme for ruTorrent
-------------------------------
+<h1 align="center">
+	<img src="https://raw.githubusercontent.com/exetico/FlatUI/master/docs/assets/images/previews/preview-4.png">
+	<br>
+  <br>
+  FlatUI - Simple and beautiful theme for ruTorrent
+</h1>
+
+
+<h4 align="center">See all the screenshots in the wiki-section </h4>
+
+<p align="center">
+    <a href="https://github.com/exetico/FlatUI/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues-raw/exetico/FlatUI.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub Issues">
+         </a>
+    <a href="https://github.com/exetico/FlatUI/pulls" target="_blank">
+    <img src="https://img.shields.io/github/issues-pr-raw/exetico/FlatUI.svg?style=flat-square&logo=github&logoColor=white"
+         alt="GitHub Pull Requests">
+         </a>
+    <a href="https://github.com/exetico/FlatUI/releases" target="_blank">
+    <img src="https://img.shields.io/github/stars/exetico/FlatUI?style=flat-square"
+         alt="GitHub Stars">
+         </a>
+    <a href="https://github.com/exetico/FlatUI/releases" target="_blank">
+    <img src="https://img.shields.io/github/v/release/exetico/FlatUI.svg?style=flat-square&logo=github&logoColor=white"
+         alt="Current version">
+         </a>
+</p>
+
+<p align="center">
+	•
+  <a href="https://github.com/exetico/FlatUI/wiki" target="_blank">Wiki</a> •
+  <a href="https://github.com/exetico/FlatUI/wiki/Themes" target="_blank">Theme Screenshots</a> •
+</p>
+
+<hr>
+
+<br>
+
 Looking for a flat and awesome ruTorrent (rTorrent WebUI) theme?
 
-FlatUI will give you:
+**FlatUI will give you**:
 * A Borderless design
 * Flat icons
 * Collapsed side-menu
