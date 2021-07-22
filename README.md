@@ -49,14 +49,10 @@ Looking for a flat and awesome ruTorrent (rTorrent WebUI) theme?
 This is the theme you’re looking for :-)!
 
 
-Issues
-------------------------------
-Having issues with the current version? Please create a issue. Kindly remember to attach both screenshots and other detilas too. If the problem are related to a specific plugin, please remember to mention the name of the plugin in the issue-title, and attach a link to the plugin in the body, too. Thanks!
-
 Screenshots
 ------------------------------
 
-Please note that FlatUI comes with **more than a one theme**. So this is just for people dropping my, to get the first impressions right. Check the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a> for all themes.
+Please note that FlatUI comes with **more than a single color-theme**. So this is just for people dropping my, to get the first impressions right. Check the <a href="https://github.com/exetico/FlatUI/wiki/Themes"><b>wiki</b></a> for all themes.
 
 <table align="center">
 <tr>
@@ -104,6 +100,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/exetico/FlatUI/master/inst
 ```
 
 The lazy-script will move all themes to the current location, and remove the folder called "FlatUI". The script won't work with [fish shell](https://fishshell.com/), so if that's your thing, start `bash` before executing the lazy script.
+
+
+Issues
+------------------------------
+Having issues with the current version? Please create a issue. Kindly remember to attach both screenshots and other detilas too. If the problem are related to a specific plugin, please remember to mention the name of the plugin in the issue-title, and attach a link to the plugin in the body, too. Thanks!
+
 
 FAQ
 ------------------------------
